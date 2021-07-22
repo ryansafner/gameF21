@@ -20,8 +20,8 @@ hero_media = "game_hex.png"
   color = "#fff"
   
   # Background gradient.
-   gradient_start = "#5E81AC"
-   gradient_end = "#aec0d5"
+   gradient_start = "#3e8763"
+   gradient_end = "#5ac18e"
   
   # Background image.
   # image = ""  # Name of image in `static/img/`.
