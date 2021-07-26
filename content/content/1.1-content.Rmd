@@ -20,7 +20,7 @@ slides: "1.1-slides"
 
 ## <i class="fas fa-info-circle fa-lg"></i> Overview
 
-<span class="newthought">Welcome</span> to ECON 306 — Microeconomic Analysis! Today's lesson will be an overview of the content and the assignments of the course. Please read and familiarize yourself with the [syllabus](/syllabus). 
+<span class="newthought">Welcome</span> to ECON 316 — Game THeory! Today's lesson will be an overview of the content and the assignments of the course. Please read and familiarize yourself with the [syllabus](/syllabus). 
 
 This is not just a “syllabus day,” as we need to hit the ground running, but today will give you a “big picture” look at this semester, and how to use microeconomic analysis, by focusing on the two main tools/models: **optimization** and **equilibrium**. We will dive right into optimization models next class.
 
