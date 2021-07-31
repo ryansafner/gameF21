@@ -99,19 +99,19 @@ Edinburgh, 2019
 
 .pull-left[
 .center[
-![](../images/gamessports.png)
+![:scale 80%](../images/gamessports.png)
 
-![](../images/chess2.jpg)
+![:scale 80%](../images/chess2.jpg)
 ]
 ]
 
 .pull-right[
 .center[
-![](../images/poker.jpg)
+![:scale 80%](../images/poker.jpg)
 ]
 
 .center[
-![](../images/videogames.png)
+![:scale 80%](../images/videogames.png)
 ]
 ]
 
