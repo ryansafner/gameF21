@@ -1,25 +1,26 @@
 lessons:
-  - title: '<span class="fake-header-table">I. Basic Types of Games</span>'
+  - title: '<span class="fake-header-table">I. Basic Game Concepts</span>'
     header: True
-
-  - title: "Preliminary Survey"
-    assignment: "00-preliminary-survey"
 
   - title: "1.1 — Introduction to Game Theory"
     content: "1.1-content"
     slides: "1.1-slides"
 
-  - title: "1.2 — Sequential Games I"
+  - title: "1.2 — Basic Micro Concepts: Maximization, Equilibrium, & Efficiency"
+  
+  - title: "1.3 — Sequential Games I"
+  
+  - title: "1.4 — Sequential Games II"
 
-  - title: "1.3 — Sequential Games II"
+  - title: '<i class="fas fa-laptop-code"></i> **Problem Set 1**'
 
-  - title: '<i class="fas fa-laptop-code"></i> **Problem Set 1** due *Wed Feb 17*'
+  - title: "1.4 — Simultaneous Games & Normal Form"
+  
+  - title: "1.5 — Beliefs, Rationalizability, and Equilibrium"
 
-  - title: "1.4 — Simultaneous Games I"
-
-  - title: "1.5 — Simultaneous Games II"
-
-  - title: '<i class="fas fa-laptop-code"></i> **Problem Set 2** due Sun Feb 28'
+  - title: "1.6 — Coordination Games"
+  
+  - title: '<i class="fas fa-laptop-code"></i> **Problem Set 2**'
 
   - title: '<span class="fake-header-table">II. Application: Economic Competition</span>'
     header: True
@@ -34,9 +35,9 @@ lessons:
 
   - title: "2.5 — Contestable Markets"
 
-  - title: '<i class="fas fa-laptop-code"></i> **Problem Set 3** due Sun Mar 14/21'
+  - title: '<i class="fas fa-laptop-code"></i> **Problem Set 3**'
 
-  - title: '<i class="fas fa-star"></i> **Midterm Exam** week of April 5'
+  - title: '<i class="fas fa-star"></i> **Midterm Exam**'
 
   - title: '<span class="fake-header-table">III. Extending Simultaneous Games</span>'
     header: True
@@ -44,20 +45,20 @@ lessons:
   - title: "3.1 — Mixed Strategies I"
 
   - title: "3.2 — Mixed Strategies II"
-
-  - title: "3.3 — Prisoners' Dilemmas"
-
-  - title: "3.4 — Finitely-Repeated Games"
-    
-  - title: "3.5 — Infinitely-Repeated Games"
-    
-  - title: "3.6 — The Evolution of Cooperation"
   
-  - title: "3.7 — Evolutionarily Stable Strategies"
+  - title: "3.3 — Finitely-Repeated Games"
+    
+  - title: "3.4 — Infinitely-Repeated Games"
   
-  - title: "3.8 — Hawk-Dove Games"
+  - title: '<i class="fas fa-laptop-code"></i> **Problem Set 4**'
 
-  - title: '<i class="fas fa-laptop-code"></i> **Problem Set 4** due Sun Apr 25'
+  - title: "3.5 — The Evolution of Cooperation"
+  
+  - title: "3.6 — Evolutionarily Stable Strategies"
+  
+  - title: "3.7 — Hawk-Dove Games"
+
+  - title: '<i class="fas fa-laptop-code"></i> **Problem Set 5**'
 
   - title: '<span class="fake-header-table">IV. Commitment, Credibility, & Information</span>'
     header: True
@@ -70,13 +71,22 @@ lessons:
     
   - title: "4.4 — Asymmetric Information"
 
-  - title: "4.5 — Bayesian Statistics"
-    
-  - title: "4.6 — Signalling"
+  - title: "4.5 — Bayesian Games & Signalling"
     
   - title: "4.7 — Preference Falsification"
 
-  - title: '<i class="fas fa-laptop-code"></i> **Problem Set 6** (Ungraded Practice)'
+  - title: '<i class="fas fa-laptop-code"></i> **Problem Set 6**'
+
+  - title: '<span class="fake-header-table">V. Further Applications </span>'
+    header: True
+
+  - title: "5.1 — Voting"
+  
+  - title: "5.2 — Auctions"
+  
+  - title: "5.3 — Bargaining"
+
+  - title: '<i class="fas fa-laptop-code"></i> **Problem Set 7**'
 
   - title: '<i class="fas fa-laptop-code"></i> **Term Paper** Due Fri May 14'
 

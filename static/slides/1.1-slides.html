@@ -95,6 +95,205 @@ Edinburgh, 2019
 
 ---
 
+# You Are An Experienced Player of Many Games
+
+.pull-left[
+
+- You are *actively* playing *many* games
+  - Friends
+  - Enemies
+  - Family
+  - Employer
+  - Classmates
+  - Driving
+  - Reputation
+  - With me
+]
+
+.pull-right[
+.center[
+![](../images/familyannoy.jpg)
+
+![](../images/dresscode1.JPG)
+]
+]
+
+---
+
+# Applications of Game Theory
+
+.pull-left-3[
+.center[
+![:scale 100%](../images/auction.png)
+
+![:scale 100%](../images/hawkdove.png)
+]
+]
+
+.pull-middle-3[
+.center[
+![:scale 100%](../images/contract1.jpg)
+
+![:scale 100%](../images/marketcompetition.jpg)
+]
+]
+
+.pull-right-3[
+.center[
+![:scale 100%](../images/vote.jpg)
+
+![:scale 100%](../images/education.png)
+]
+]
+
+---
+
+# What A Game Is...in Math
+
+.pull-left[
+
+- A game is defined as `\(\Gamma = (s_1,s_2, \cdots, s_n;u_1, u_2, \cdots, u_n)\)`:
+
+1. Players `\(i \in \{1,2,\cdots, N\}: N \geq 2\)`
+2. Strategies `\(s_i \in \{S_i\}\)`
+  - `\(S_i\)` is the set of all strategies available to player `\(i\)`
+3. Payoffs `\(u_i \in \{s_i, s_{\neg i}\}\)`
+  - `\(u_i: S_i \times S \cdots S_{\neg i} \rightarrow \mathbb{R}\)`
+]
+
+.pull-right[
+
+]
+
+---
+
+# Now That I've Frightened You
+
+.pull-left[
+
+- 
+]
+
+.pull-right[
+
+]
+
+---
+
+# How We Will Define a Game
+
+.pull-left[
+
+- A game has three components
+
+]
+
+---
+
+# We Are Ruling Out Situations
+
+.pull-left[
+
+- Where strategy does not matter (i.e. pure chance)
+
+- Without strategic interaction between players (i.e. a “single-player” game) 
+]
+
+.pull-right[
+.center[
+![](../images/)
+]
+]
+
+---
+
+# Game Theory is *Not* Limited to Economics!
+
+.pull-left[
+
+- Political science
+- International relations
+- Business strategy
+- Negotiation
+- Law
+- Evolutionary biology
+- Sports
+
+]
+
+---
+
+# History of Game Theory
+
+.pull-left-3[
+.center[
+![:scale 80%](../images/vonneumann.jpg)
+
+.smallest[
+John von Neumann
+1903—1956
+]
+]
+]
+
+.pull-middle-3[
+.center[
+![:scale 100%](../images/theoryofgames.jpg)
+]
+]
+
+.pull-right-3[
+.center[
+![:scale 80%](../images/oskarmorgenstern.jpg)
+
+.smallest[
+Oskar Morgenstern
+1902—1977
+]
+]
+]
+
+---
+
+Information:
+- preserve6571f710c54d1b9a Perfect
+- preserve4542fae7c895cc5b Incomplete
+- preserve80c031659e292098 Asymmetric
+
+Timing:
+- preserve7a654ad2dfc71557 Simultaneous
+- preservec914eaac711c1a21 Sequential
+
+Repitition:
+- preserve42977b7bbc79dee1 One-shot
+- preserve03cfea82bd8265cb Finitely repeated
+- preserve0f4eeefa67d38000 Infinitely repeated
+
+---
+
+| Head 1 | Head 2 |
+|--------|--------|
+| Cell 1 | Cell 2 |
+| Cell 3 | Cell 4 |
+
+---
+
+\begin{table} \tiny 
+  \begin{tabular}{rlll}\toprule 
+  1 &amp; John Harsanyi &amp; U.S. &amp; \multirow[t]{3}{*}{\textbf{1994}: "for their pioneering analysis of equilibria in the theory of non-cooperative games."}\\ \cmidrule{1-3}
+  2 &amp; John Forbes Nash &amp; U.S. &amp; \\ \cmidrule{1-3}
+  3 &amp; Reinhard Selten &amp; Germany &amp; \\ \midrule 
+  4 &amp; James Mirrlees &amp; U.K. &amp; \multirow[t]{2}{*}{\textbf{1996}: "for their fundamental contributions to the economic theory of incentives under asymmetric information"}\\ \cmidrule{1-3}
+  5 &amp; William Vickrey &amp; Canada \&amp; U.S. &amp; \\ \midrule
+  6 &amp; Robert Aumann &amp; Israel \&amp; U.S. &amp; \multirow[t]{2}{*}{\textbf{2005}: "for having enhanced our understanding of conflict and cooperation through game-theory analysis."}\\ \cmidrule{1-3}
+  7 &amp; Thomas Schelling &amp; U.S. &amp; \\ \midrule
+  8 &amp; Leonard Hurwicz &amp; Poland \&amp; U.S. &amp; \multirow[t]{3}{*}{\textbf{2007}: "for having laid the foundations of mechanism design theory"} \\ \cmidrule{1-3}
+  9 &amp; Eric Maskin &amp; U.S. &amp; \\ \cmidrule{1-3}
+  10 &amp; Roger Myerson &amp; U.S. &amp; \\ \midrule 
+  11 &amp; Alvin Roth &amp; U.S. &amp; \multirow[t]{3}{*}{\textbf{2012}: "for the theory of stable allocations and the practice of market design"}\\ \cmidrule{1-3}
+  12 &amp; Lloyd Shapley &amp; U.S. &amp; \\ \bottomrule
+  \end{tabular}
+\end{table}
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
@@ -112,6 +311,117 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
 });
 (function(d) {
   var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
+k-slide-scaler");
   if (!r) return;
   s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
   d.head.appendChild(s);

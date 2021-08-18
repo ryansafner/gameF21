@@ -117,3 +117,263 @@ Edinburgh, 2019
 
 ---
 
+# You Are An Experienced Player of Many Games
+
+.pull-left[
+
+- You are *actively* playing *many* games
+  - Friends
+  - Enemies
+  - Family
+  - Employer
+  - Classmates
+  - Driving
+  - Reputation
+  - With me
+]
+
+.pull-right[
+.center[
+![](../images/familyannoy.jpg)
+
+![](../images/dresscode1.JPG)
+]
+]
+
+---
+
+# Applications of Game Theory
+
+.pull-left-3[
+.center[
+![:scale 100%](../images/auction.png)
+
+![:scale 100%](../images/hawkdove.png)
+]
+]
+
+.pull-middle-3[
+.center[
+![:scale 100%](../images/contract1.jpg)
+
+![:scale 100%](../images/marketcompetition.jpg)
+]
+]
+
+.pull-right-3[
+.center[
+![:scale 100%](../images/vote.jpg)
+
+![:scale 100%](../images/education.png)
+]
+]
+
+---
+
+# What A Game Is...in Math
+
+.pull-left[
+
+- A game is defined as $\Gamma = (s_1,s_2, \cdots, s_n;u_1, u_2, \cdots, u_n)$:
+
+1. Players $i \in \{1,2,\cdots, N\}: N \geq 2$
+2. Strategies $s_i \in \{S_i\}$
+  - $S_i$ is the set of all strategies available to player $i$
+3. Payoffs $u_i \in \{s_i, s_{\neg i}\}$
+  - $u_i: S_i \times S \cdots S_{\neg i} \rightarrow \mathbb{R}$
+]
+
+.pull-right[
+
+]
+
+---
+
+# Example: 2-person Game
+
+.pull-left[
+
+1. Players
+  - 1 and 2
+2. Strategies
+  - $s_1 \in S_1$ and $s_2 \in S_2$
+3. Payoffs
+  - $u_1 \in \{s_1, s_2\}$
+  - $u_2 \in \{s_1, s_2\}$
+]
+
+---
+# Now That I've Frightened You
+
+.pull-left[
+
+- 
+]
+
+.pull-right[
+
+]
+
+---
+
+# How We Will Define a Game
+
+.pull-left[
+
+- A game has three components
+
+]
+
+---
+
+# We Are Ruling Out Situations
+
+.pull-left[
+
+- Where strategy does not matter (i.e. pure chance)
+
+- Without strategic interaction between players (i.e. a “single-player” game) 
+]
+
+.pull-right[
+.center[
+![](../images/)
+]
+]
+
+---
+
+# Game Theory is *Not* Limited to Economics!
+
+.pull-left[
+
+- Political science
+- International relations
+- Business strategy
+- Negotiation
+- Law
+- Evolutionary biology
+- Sports
+
+]
+
+---
+
+# History of Game Theory
+
+.pull-left-3[
+.center[
+![:scale 80%](../images/vonneumann.jpg)
+
+.smallest[
+John von Neumann
+1903—1956
+]
+]
+]
+
+.pull-middle-3[
+.center[
+![:scale 100%](../images/theoryofgames.jpg)
+]
+]
+
+.pull-right-3[
+.center[
+![:scale 80%](../images/oskarmorgenstern.jpg)
+
+.smallest[
+Oskar Morgenstern
+1902—1977
+]
+]
+]
+
+---
+
+Information:
+- `r fa("toggle-off", fill = "gray")` Perfect
+- `r fa("toggle-on", fill = "green")` Incomplete
+- `r fa("toggle-off")` Asymmetric
+
+Timing:
+- `r fa("toggle-off", fill = "gray")` Simultaneous
+- `r fa("toggle-on", fill = "green")` Sequential
+
+Repetition:
+- `r fa("toggle-off", fill = "gray")` One-shot
+- `r fa("toggle-on", fill = "green")` Finitely repeated
+- `r fa("toggle-off")` Infinitely repeated
+
+---
+
+| Head 1 | Head 2 |
+|--------|--------|
+| Cell 1 | Cell 2 |
+| Cell 3 | Cell 4 |
+
+---
+
+# 
+
+- This is a game:
+  - More than 1 player
+  - Strategies available to each player
+  - Payoffs jointly determined by strategies chosen
+
+- You just don’t happen to know *who* the other player is
+  - But you still need to think about (how to respond to) their strategies
+
+---
+
+# We Can Represent This 
+
+- We can represent this (and any) game in two ways:
+  - Both describe all three elements of the game
+
+--
+
+.pull-left[
+
+- .hi[“Normal”] or .hi[“Strategic”] form (a matrix)
+]
+
+--
+
+.pull-right[
+
+- .hi[“Extensive”] form (a game tree)
+]
+
+---
+
+# Solution Concepts
+
+.pull-left[
+
+- In order to be a useful tool/model, need a .hi[solution concept] to predict outcome
+  - Otherwise, what’s the point of the model?
+
+- Game theory models are a special type of .hi[equilibrium model], so we want to find the .hi[equilibrium] of a game
+]
+
+.pull-right[
+
+]
+
+---
+
+# Solution Concepts
+
+.pull-left[
+
+- Recall from economics that an equilibrium:
+]
+
+---
+
+# Nash Equilibrium
+
+.pull-left[
+
+]
