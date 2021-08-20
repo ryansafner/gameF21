@@ -10,7 +10,7 @@ This page contains all of the following resources for each class meeting:
 
 <ul class="icon-list">
   <li> <i class="fas fa-info-circle"></i> **Content** materials contains suggested readings, more details about assignments, math appendices, and other helpful resources. I suggest you view these **before** each class.</li>
-  <li><i class="fas fa-chalkboard-teacher"></i> **Slides** directly link to the  "[Xaringan](https://github.com/yihui/xaringan)" presentations in html that can be opened in any browser (You can find a downloadable <i class="fas fa-file-pdf"></i> PDF in each respective <i class="fas fa-info-circle"></i> **content** page)</li>
+  <li><i class="fas fa-chalkboard-teacher"></i> **Slides** directly link to the  "[Xaringan](https://github.com/yihui/xaringan)" presentations in html that can be opened in any browser (You can find a downloadable PDF in each respective **content** page)</li>
   <li><i class="fas fa-dumbbell"></i> **Practice** problems we work on together in class to prepare for homeworks and exams</li>
   <li><i class="fas fa-laptop-code"></i> **Assignments** are listed with due dates</li>
 </ul>

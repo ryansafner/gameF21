@@ -51,8 +51,9 @@ hero_media = "game_hex.png"
 
 By the end of this course, you will:
 
-1. Recognize different types of strategic interactions across different domains of life (e.g. economics, political science, biology, etc.)
+1. Recognize different types of strategic interactions across different domains (e.g. economics, business, political science, biology, etc.)
 2. Recognize common types of games, e.g. prisoners' dilemma, stag hunt, battle of the sexes, chicken, hawk-dove
-3. Solve for equilibria of games in normal form, extended form, in pure & mixed strategies, 
+3. Solve for equilibria of games in normal form, extended form, in pure & mixed strategies, with perfect and imperfect information
 4. Understand the role of information, sequencing, credible commitments, repetition, etc.
 5. Become familiar with some of the economics (and other) literatures that use game theoretic tools
+6. Use game theory tools to explore a topic in writing
