@@ -19,7 +19,7 @@ library(kableExtra)
 
 `r blogdown::shortcode("courseinfo")`
 
-<p style="text-align:center;"><span class="btn btn-primary btn-lg"><a target"_blank" href="/syllabus/syllabus-pdf.pdf"><i class="fas fa-file-pdf"></i> Download PDF</span></a></p>
+<p style="text-align:center;"><span class="btn btn-primary btn-lg"><a target="_blank" href="/syllabus/syllabus-pdf.pdf"><i class="fas fa-file-pdf"></i> Download PDF</span></a></p>
 
 - **Last Updated**: August 20, 2021
 
