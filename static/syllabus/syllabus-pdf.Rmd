@@ -193,7 +193,7 @@ If you know you will be absent, you are not *required* to let me know, but it is
 
 I will accept late assignments, but will subtract a specified amount of points as a penalty. Even if it is the last week of the semester, I encourage you to turn in late work: some points are better than no points!
 
-**Homeworks**: If you turn in a homework after it is due but before it is graded or the answer key posted, I generally will not take off any points. However, **if you turn in a homework _after_ the answer key is posted, I will automatically deduct 15 points (so the maximum grade you can earn on it is an 80).**
+**Homeworks**: If you turn in a homework after it is due but before it is graded or the answer key posted, I generally will not take off any points. However, **if you turn in a homework _after_ the answer key is posted, I will automatically deduct 20 points (so the maximum grade you can earn on it is an 80).**
 
 **Exams**: If you know that you will be unable to complete an *in-class exam* as scheduled for a legitimate reason, please notify me at least *one week* in advance, and we will schedule a make-up exam date. Failure to do so, including desperate attempts to make arrangements only *after* the exam will result in a grade of 0 and little sympathy.
 

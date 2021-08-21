@@ -19,9 +19,7 @@ library(kableExtra)
 
 `r blogdown::shortcode("courseinfo")`
 
-<p style="text-align:center;"><span class="btn btn-primary btn-lg"><a target="_blank" href="/syllabus/syllabus-pdf.pdf"><i class="fas fa-file-pdf"></i> Download PDF</span></a></p>
-
-- **Last Updated**: August 20, 2021
+<p style="text-align:center"><a target="_blank" href="/syllabus/syllabus-pdf.pdf"><span class="btn btn-primary btn-lg"><i class="fas fa-file-pdf"></i> Download PDF</a></span></br>**Last Updated**: August 20, 2021</p>
 
 <span class="newthought">Game theory</span> is a collection of analytical tools used to rigorously study strategic interactions between rational agents. It is one of the most useful and powerful theoretical innovations in 20^th^ century social science, and has been applied extensively in economics, political science, psychology, sociology, logic, computer science, animal behavior, and evolutionary biology. At least twelve economists have won the Nobel Prize for research directly related to game theory (and arguably more have made tangential contributions). This is an *economics* course, so the majority of our focus and applications will be in economic settings, though we will examine a much wider scope of strategic interactions than the "narrow" economic domain of firms and consumers. 
 
@@ -29,7 +27,7 @@ Please don't get the wrong idea — this course is *not* the theory of "games" i
 
 Game theory is a direct extension of basic microeconomics, so this class assumes you have met the **required prerequisite course(s) — ECON 206**. My approach to game theory requires *some* math, but it will not be exclusively about the math.
 
-# Course Format and Covid
+# Course Format (and Covid)
 
 As of Fall 2021, all students are expected to be on campus except those with special approved exemptions. As such, this course will be taught **in-person** and **synchronously** until or unless otherwise announced.
 
@@ -72,7 +70,7 @@ Given these objectives, this course fulfills all three of the learning outcomes 
 
 See my [tips for success in this course](/reference#tips). 
 
-I reserve the right to change any part of this syllabus and course, at my discretion, with proper advance warning.
+**I reserve the right to change any part of this syllabus and course, at my discretion, with proper advance warning.**
 
 # Required Course materials 
 
@@ -174,7 +172,7 @@ If you know you will be absent, you are not *required* to let me know, but it is
 
 I will accept late assignments, but will subtract a specified amount of points as a penalty. Even if it is the last week of the semester, I encourage you to turn in late work: some points are better than no points!
 
-**Homeworks**: If you turn in a homework after it is due but before it is graded or the answer key posted, I generally will not take off any points. However, **if you turn in a homework _after_ the answer key is posted, I will automatically deduct 15 points (so the maximum grade you can earn on it is an 80).**
+**Homeworks**: If you turn in a homework after it is due but before it is graded or the answer key posted, I generally will not take off any points. However, **if you turn in a homework _after_ the answer key is posted, I will automatically deduct 20 points (so the maximum grade you can earn on it is an 80).**
 
 **Exams**: If you know that you will be unable to complete an *in-class exam* as scheduled for a legitimate reason, please notify me at least *one week* in advance, and we will schedule a make-up exam date. Failure to do so, including desperate attempts to make arrangements only *after* the exam will result in a grade of 0 and little sympathy.
 
