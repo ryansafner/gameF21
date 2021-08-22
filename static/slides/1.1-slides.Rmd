@@ -314,15 +314,22 @@ Repetition:
 
 ---
 
-# 
+# Why Is This a Game?
 
-- This is a game:
-  - More than 1 player
-  - Strategies available to each player
-  - Payoffs jointly determined by strategies chosen
+.pull-left[
+1. More than 1 player
+2. Strategies available to each player
+3. Payoffs jointly determined by strategies chosen
 
 - You just don’t happen to know *who* the other player is
-  - But you still need to think about (how to respond to) their strategies
+  - But you still need to think about (how to respond to) their strategies with your own
+]
+
+.pull-right[
+.center[
+![](../images/thinker2.jpg)
+]
+]
 
 ---
 
@@ -336,6 +343,10 @@ Repetition:
 .pull-left[
 
 - .hi[“Normal”] or .hi[“Strategic”] form (a matrix)
+
+.center[
+![](../images/gradegamenormal.png)
+]
 ]
 
 --
@@ -343,6 +354,10 @@ Repetition:
 .pull-right[
 
 - .hi[“Extensive”] form (a game tree)
+
+.center[
+![](../images/gradegameextended.png)
+]
 ]
 
 ---
@@ -376,4 +391,328 @@ Repetition:
 
 .pull-left[
 
+]
+
+---
+
+class: inverse, center, middle
+
+# Types of Games
+
+---
+
+# Simultaneous vs. Sequential Games
+
+.pull-left[
+
+- .hi[Simultaneous games]: players choose strategies simultaneously
+
+- Must *anticipate* what other players are likely to play *without knowing*
+
+- .hi-green[Examples]: prisoners' dilemma, coordination game, RTS games, most sports, sealed-bid auction, secret ballot
+]
+
+.pull-right[
+.center[
+![](../images/sealedbid.png)
+]
+]
+
+---
+
+# Simultaneous vs. Sequential Games
+
+.pull-left[
+
+- .hi[Sequential games]: players make moves one at a time
+
+- Often can *see the previous moves* of all players
+
+- Must *look to the future* of how others will respond in order to determine what is optimal *now*
+
+- .hi-green[Examples]: chess, poker, board games, strategy games, bargaining, negotiations
+]
+
+.pull-right[
+.center[
+![](../images/chesssequence.jpg)
+]
+]
+
+---
+
+# One-Shot vs. Repeated Games
+
+.pull-left[
+
+- .hi[One-shot game]: game between players with no *history* together, occurs only once
+
+- Players do not know much about each other, know they will never encounter one another again
+
+- .hi-green[Examples]: tipping while on vacation, strangers on a subway, game show contestants
+]
+
+.pull-right[
+.center[
+![](../images/strangers.jpg)
+]
+]
+
+---
+
+# One-Shot vs. Repeated Games
+
+.pull-left[
+
+- .hi[Repeated game]: game between *the same* players is played *more than once*
+
+- Players know the *history* of the game with each other
+
+- .hi-purple[Finitely-repeated game]: has a known final round
+
+- .hi-purple[Infinitely-repeated game]: has no (or an unknown) final round
+
+]
+
+.pull-right[
+.center[
+![](../images/infinitelyrepeated.JPG)
+]
+]
+
+---
+
+# One-Shot vs. Repeated Games
+
+.pull-left[
+
+- Reputation and history matters more in repeated games
+
+- More role for “emotional” responses
+  - Aggressiveness, vindictiveness, retribution, forgiveness
+
+- Some strategies may be good for a *one-shot* interaction but harmful in a *repeated* game
+
+- .hi-green[Examples]: bargaining too hard, rude to employees/customers, fraud
+]
+
+.pull-right[
+.center[
+![](../images/feedback.png)
+]
+]
+
+---
+
+# Information
+
+.pull-left[
+
+- .hi[Perfect information]: all players know all of the rules, possible strategies, payoffs, and move history of all players
+
+- All players know that all players know that all players know that ...
+  - .hi-purple[“Common knowledge”]
+]
+
+.pull-right[
+.center[
+![](../images/publicopinion.jpg)
+]
+]
+
+---
+
+# Information
+
+.pull-left[
+
+- .hi[Imperfect information]: all players *don’t* necessarily have all information
+
+- .hi-purple[“Strategic uncertainty”]: players may know the game, but not which strategies other players have chosen
+  - i.e. a simultaneous game
+
+]
+
+.pull-right[
+.center[
+![](../images/uncertainty.jpg)
+]
+]
+
+---
+
+# Information
+
+.pull-left[
+
+- .hi[Incomplete information]: all players *don’t* have full information about the game (.hi-purple[“external uncertainty”])
+
+- .hi-purple[Asymmetric information]: some players have more information than others
+  - Player 1 doesn’t know the other player 2’s “type,” but they do
+  - Player 2 may want to conceal their information, or may try to .hi-purple[signal] their type to Player 1
+
+- .hi-green[Examples]: insurance, used cars, education, ordeals
+]
+
+.pull-right[
+.center[
+![](../images/information.png)
+]
+]
+
+---
+
+# Stability of the Rules
+
+.pull-left[
+
+- Rules of the game may be fixed and immutable
+
+- Or players may be able to .hi-turquoise[manipulate the rules in their favor]
+  - .hi-purple[“Strategic moves”]: *pre-game* game of determining rules for future game
+
+- Making .hi[credible] .hi-purple[threats] or .hi-purple[promises] with .hi-purple[commitment]
+
+- .hi-green[Examples]: constitutions, agenda-setting, strategic voting, entry deterrence
+]
+
+.pull-right[
+.center[
+![](../images/changetherules.jpeg)
+]
+]
+
+---
+
+# Sum of the Game
+
+.pull-left[
+
+- A .hi-purple[zero/constant sum game]: player(s) gain only at the expense of other player(s)
+
+- .hi-green[Examples]: sports, board games, division of a surplus
+]
+
+.pull-left[
+.center[
+![](../images/penaltykick.jpg)
+]
+]
+
+---
+
+# Sum of the Game
+
+.pull-left[
+
+- A .hi-purple[positive sum game]: all players can potential benefit from interaction
+  - .hi-green[Example]: trade, bargaining
+
+- A .hi-purple[negative sum game]: all players can potentially be harmed from interaction
+  - .hi-green[Example]: war, conflict, rent-seeking
+]
+
+.pull-left[
+.center[
+![](../images/contract1.jpg)
+]
+]
+
+---
+
+class: inverse, center, middle
+
+# About This Course
+
+---
+
+# Learning Goals
+
+By the end of this course, you will: 
+
+1. Recognize different types of strategic interactions across different domains (e.g. economics, business, political science, biology, etc.)
+2. Recognize common types of games, e.g. prisoners' dilemma, stag hunt, battle of the sexes, chicken, hawk-dove
+3. Solve for equilibria of games in normal form, extended form, in pure & mixed strategies, with perfect and imperfect information
+4. Understand the role of information, sequencing, credible commitments, repetition, etc.
+5. Become familiar with some of the economics (and other) literatures that use game theoretic tools
+6. Use game theory tools to explore a topic in writing
+
+---
+
+# Assignments
+
+```{r}
+tribble(
+  ~Frequency,  ~Assignment, ~Weight,
+  "n", "Homeworks", "25% (using average HW grade)",
+  "1", "Paper", "25%",
+  "1", "Midterm Exam", "25%",
+  "3", "Final Exam", "25%"
+) %>% knitr::kable(., "html")
+```
+
+---
+
+# Your “Textbooks”
+
+.pull-left[
+.center[
+![:scale 70%](../images/dixitskeath.jpg)
+]
+]
+
+.pull-left[
+.center[
+![:scale 70%](../images/dixitnalebuff.jpg)
+]
+]
+
+---
+
+# Course Website
+
+.center[
+![:scale 75%](../images/game_website_f21.png)
+
+[gameF21.classes.ryansafner.com](https://gameF21.classes.ryansafner.com)
+]
+
+---
+
+# Logistics
+
+- Office hours: M/W 10:00-11:00 AM & by appt
+
+- `r fa("slack", fill ="#5E81AC")` Slack channel
+
+- 
+
+---
+
+# Tips for Success, Or: How to College
+
+.pull-left[
+- Take notes. On paper. Really.
+
+- Read the readings.
+
+- Ask questions, come to office hours. Don’t struggle in silence, you are not alone!
+
+- You are learning how to learn
+
+- See the [resources page](http://gameF21.classes.ryansafner.com/resources) for more
+]
+
+.pull-right[
+.center[
+![](../images/learning.png)
+]
+]
+
+---
+
+# Roadmap for the Semester
+
+.center[
+![:scale 100%](../img/game_flowchart_blankbg.png)
 ]
