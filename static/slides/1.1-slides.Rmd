@@ -54,10 +54,9 @@ class: inverse
 
 # Outline
 
-### [The Tools of Microeconomics](#)
-### [Incentives](#)
-### [Equilibrium](#)
-### [Real Talk: The Math](#)
+### [Game Theory](#)
+### [Defining a Game](#)
+### [Types of Games](#)
 ### [About This Course](#)
 
 ---
@@ -88,10 +87,56 @@ Edinburgh, 2019
 - Research interests
   - modeling innovation & economic growth
   - political economy & economic history of intellectual property
+]
+]
 
-- Expecting a son in March 👶 (expect cameos!)
+---
+
+# About Me
+
+.left-column[
+.center[
+![](../images/myface2021.png)
+
+.smallest[
+My face without a mask, 2021
 ]
 ]
+]
+
+.right-column[
+.smallest[
+
+- Ph.D (Economics) — George Mason University, 2015
+
+- B.A. (Economics) — University of Connecticut, 2011
+
+- Specializations:
+  - Law and Economics
+  - Austrian Economics
+
+- Research interests
+  - modeling innovation & economic growth
+  - political economy & economic history of intellectual property
+
+]
+]
+
+---
+
+# The Reason I am Busy AF Behind the Scenes
+
+
+.center[
+![:scale 100%](../images/milescollage.png)
+]
+
+And why I wear a mask.
+---
+
+class: inverse, center, middle
+
+# Game Theory
 
 ---
 
@@ -134,7 +179,7 @@ Edinburgh, 2019
 
 .pull-right[
 .center[
-![](../images/familyannoy.jpg)
+![:scale 60%](../images/familyannoy.jpg)
 
 ![](../images/dresscode1.JPG)
 ]
@@ -170,11 +215,17 @@ Edinburgh, 2019
 
 ---
 
+class: inverse, center, middle
+
+# Defining a Game
+
+---
+
 # What A Game Is...in Math
 
 .pull-left[
-
-- A game is defined as $\Gamma = (s_1,s_2, \cdots, s_n;u_1, u_2, \cdots, u_n)$:
+- A game is fully described by
+$$\Gamma = (s_1,s_2, \cdots, s_n;u_1, u_2, \cdots, u_n):$$
 
 1. Players $i \in \{1,2,\cdots, N\}: N \geq 2$
 2. Strategies $s_i \in \{S_i\}$
@@ -183,15 +234,11 @@ Edinburgh, 2019
   - $u_i: S_i \times S \cdots S_{\neg i} \rightarrow \mathbb{R}$
 ]
 
+--
+
 .pull-right[
-
-]
-
----
-
-# Example: 2-person Game
-
-.pull-left[
+.bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
+.hi-green[Example]: A 2-person game
 
 1. Players
   - 1 and 2
@@ -200,18 +247,33 @@ Edinburgh, 2019
 3. Payoffs
   - $u_1 \in \{s_1, s_2\}$
   - $u_2 \in \{s_1, s_2\}$
+
+]
 ]
 
 ---
+
 # Now That I've Frightened You
 
 .pull-left[
 
-- 
+- Game theory can be highly abstract and mathematical
+
+- Our approach in this class will use *some*, but not *primarily* math
+
+- You'll be fine if you can:
+  - Do some simple algebra
+  - Find an average or expected value
+  - Maybe take a derivative
+  - Even if not, you can catch up
+
+- We will focus on **applications** and examples of strategic interaction 
 ]
 
 .pull-right[
-
+.center[
+![:scale 100%](../images/mathphobia.jpg)
+]
 ]
 
 ---
@@ -220,8 +282,35 @@ Edinburgh, 2019
 
 .pull-left[
 
-- A game has three components
+- A .hi[game] is a strategic interaction between rational agents that has 3 elements:
+  1. .hi-purple[Players] interacting rationally
+  2. .hi-purple[Conditional strategies] that each player can choose from
+  3. .hi-purple[Payoffs] to each player that are *jointly-determined* from combination of all players’ strategies
 
+]
+
+.pull-right[
+.center[
+![:scale 100%](../images/gametheory.jpg)
+]
+]
+
+---
+
+# How We Will Define a Game
+
+.pull-left[
+
+- Arguably, a 4th element, .hi-purple[Rules] about:
+  - Timing of players' moves
+  - Actions available to each player at each move
+  - Information each player has at each move
+]
+
+.pull-right[
+.center[
+![:scale 100%](../images/gametheory.jpg)
+]
 ]
 
 ---
@@ -237,24 +326,10 @@ Edinburgh, 2019
 
 .pull-right[
 .center[
-![](../images/)
+![:scale 80%](../images/roulette.jpg)
+
+![:scale 80%](../images/solitaire.png)
 ]
-]
-
----
-
-# Game Theory is *Not* Limited to Economics!
-
-.pull-left[
-
-- Political science
-- International relations
-- Business strategy
-- Negotiation
-- Law
-- Evolutionary biology
-- Sports
-
 ]
 
 ---
@@ -291,26 +366,46 @@ Oskar Morgenstern
 
 ---
 
-Information:
-- `r fa("toggle-off", fill = "gray")` Perfect
-- `r fa("toggle-on", fill = "green")` Incomplete
-- `r fa("toggle-off")` Asymmetric
+# Game Theory Nobel Prizes
 
-Timing:
-- `r fa("toggle-off", fill = "gray")` Simultaneous
-- `r fa("toggle-on", fill = "green")` Sequential
-
-Repetition:
-- `r fa("toggle-off", fill = "gray")` One-shot
-- `r fa("toggle-on", fill = "green")` Finitely repeated
-- `r fa("toggle-off")` Infinitely repeated
+.center[
+![](../images/gametheorynobels.png)
+]
 
 ---
 
-| Head 1 | Head 2 |
-|--------|--------|
-| Cell 1 | Cell 2 |
-| Cell 3 | Cell 4 |
+# Game Theory is *Not* Limited to Economics!
+
+.pull-left[
+
+- Political science
+- International relations
+- Business strategy
+- Negotiation
+- Law
+- Evolutionary biology
+- Sports
+
+]
+
+.pull-right[
+.center[
+![](../images/hawkdove.png)
+]
+]
+
+---
+
+# An Example Game
+
+.bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
+.hi-green[Example]: Take out a piece of paper. You will be matched randomly with one other person in class. Neither of you will ever find out who the other person was. Write down either the letter X or Y.
+
+- If one of you writes X and the other writes Y, the person with X gets 8 bonus points added to their midterm exam, the person with Y gets 0 bonus points
+- If you both write X, you each get 1 bonus point
+- If you both write Y, you each get 4 bonus points
+
+]
 
 ---
 
@@ -362,6 +457,80 @@ Repetition:
 
 ---
 
+# Some Data From My ECON 306 Class
+
+```{r}
+pd<-tibble(individual = c("JT", "MS", "KK", "MS", "JS", "AG", "VA", "KS", "SB", "BM", "WA", "MA", "GC", "GY", "AR", "JW", "RB", "SW", "NR", "LC", "GS", "CW", "RO", "MG", "SJ", "AT", "ET", "PS", "SD", "MK", "SD", "PC", "MM", "JC", "SM", "JH", "MC", "HD","ML", "MK", "SA", "SS", "LK", "NB", "MM", "RR", "AP", "TS", "CU", "IC", "EZ", "PH", "HM", "TB", "JM", "RY", "SZ", "LC"),
+           chose = c("X", "X", "X", "X", "Y", "X", "X", "X", "X", "X", "X", "Y", "Y", "Y", "Y", "X", "Y", "X", "X", "X", "X", "X", "X", "Y", "X", "X", "X", "Y", "X", "X", "X", "X", "Y", "Y", "X", "NA", "NA", "Y", "Y", "NA", "Y", "X", "Y", "X", "X", "X", "X", "X", "Y", "X", "X", "Y", "NA", "Y", "X", "X", "Y", "X"),
+           earned = c(1,1,1,1,0,8,1,1,1,1,8,0,4,4,0,8,0,8,1,1,1,1,8,0,1,1,8,0,1,1,1, 8,0,0,8,NA,NA,4,4,NA,0,8,0,8,1,1,1,1,0,8,8,0,NA,0,8,8,0,1)) %>% filter(chose != "NA")
+
+choice<-pd %>%
+  count(chose) %>%
+  mutate(frac = paste0(round(100*n/sum(n),2),"%"),
+         chose = ordered(chose, levels = c("Y", "X")),
+         chose_label = paste0(chose,"\n",frac)) %>%
+  #arrange(desc(n)) %>%
+  ggplot(data = .)+
+  aes(x = "",
+      y = n)+
+  geom_col(aes(fill = chose))+
+  geom_text(aes(label = chose_label),
+            color = "white",
+            size = 5,
+            family = "Fira Sans Condensed",
+            fontface = "bold",
+            position = position_stack(vjust=0.5)
+            #vjust = 1.1
+  )+
+  #scale_fill_manual(values = c("X"="X", "Y"="Y"))+
+  guides(color = F,
+         fill = F)+
+  theme_void(base_family = "Fira Sans Condensed",
+             base_size = 14)+
+  coord_flip()+
+  scale_fill_viridis_d()+
+  labs(title = "Choices Made")+
+  theme(plot.title = element_text(face = "bold", size = rel(1.5)))
+
+points<-pd %>%
+  count(earned) %>%
+  mutate(frac = paste0(round(100*n/sum(n),2),"%"),
+         earned = ordered(earned, levels = c("0", "1", "4", "8")),
+         earned_label = paste0(earned,"\n",frac)) %>%
+  arrange(desc(n)) %>%
+  ggplot(data = .)+
+  aes(x = earned,
+      y = n)+
+  geom_col(aes(fill = earned))+
+  geom_text(aes(label = frac),
+            color = "white",
+            size = 5,
+            family = "Fira Sans Condensed",
+            fontface = "bold",
+            hjust = 1.1)+
+  guides(color = F,
+         fill = F)+
+  theme_classic(base_family = "Fira Sans Condensed",
+                base_size = 14)+
+  coord_flip()+
+  scale_fill_viridis_d()+
+  scale_y_continuous(limits=c(0,25),
+                     expand = c(0,0))+
+  labs(title = "Points Earned")+
+  theme(plot.title = element_text(face = "bold", size = rel(1.5)),
+        axis.title.y = element_blank(),
+        axis.title.x = element_blank(),
+        axis.line.x = element_blank(),
+        axis.ticks.x = element_blank(),
+        axis.text.x = element_blank(),
+        axis.text.y = element_text(face = "bold"))
+
+library(patchwork)
+choice / points
+```
+
+---
+
 # Solution Concepts
 
 .pull-left[
@@ -373,24 +542,29 @@ Repetition:
 ]
 
 .pull-right[
-
+.center[
+![](../images/equilibriumbalance.png)
+]
 ]
 
 ---
 
-# Solution Concepts
+# The Solution to Our Game
 
 .pull-left[
 
-- Recall from economics that an equilibrium:
+- Both players have a .hi-purple[dominant strategy] to play X
+
+- A famous type of game, called a .hi-purple[Prisoners’ Dilemma]
+  - Why can’t they both just play Y?
+
+- Much, much more to say about it all this semester
 ]
 
----
-
-# Nash Equilibrium
-
-.pull-left[
-
+.pull-right[
+.center[
+![](../images/gradegamenormaleq.png)
+]
 ]
 
 ---
@@ -544,7 +718,7 @@ class: inverse, center, middle
 # Information
 
 .pull-left[
-
+.smaller[
 - .hi[Incomplete information]: all players *don’t* have full information about the game (.hi-purple[“external uncertainty”])
 
 - .hi-purple[Asymmetric information]: some players have more information than others
@@ -553,7 +727,7 @@ class: inverse, center, middle
 
 - .hi-green[Examples]: insurance, used cars, education, ordeals
 ]
-
+]
 .pull-right[
 .center[
 ![](../images/information.png)
@@ -578,7 +752,7 @@ class: inverse, center, middle
 
 .pull-right[
 .center[
-![](../images/changetherules.jpeg)
+![:scale 100%](../images/changetherules.jpeg)
 ]
 ]
 
@@ -612,7 +786,7 @@ class: inverse, center, middle
   - .hi-green[Example]: war, conflict, rent-seeking
 ]
 
-.pull-left[
+.pull-right[
 .center[
 ![](../images/contract1.jpg)
 ]
@@ -681,34 +855,25 @@ tribble(
 
 # Logistics
 
+.pull-left[
+.smallest[
+
 - Office hours: M/W 10:00-11:00 AM & by appt
+  - Office: 110 Rosenstock
 
 - `r fa("slack", fill ="#5E81AC")` Slack channel
+  - `#c-316-game`
 
-- 
+- Recorded videos in Blackboard Panopto
 
----
-
-# Tips for Success, Or: How to College
-
-.pull-left[
-- Take notes. On paper. Really.
-
-- Read the readings.
-
-- Ask questions, come to office hours. Don’t struggle in silence, you are not alone!
-
-- You are learning how to learn
-
-- See the [resources page](http://gameF21.classes.ryansafner.com/resources) for more
+- See the [resources page](http://gameF21.classes.ryansafner.com/resources) for tips for success and more helpful resources
 ]
-
+]
 .pull-right[
 .center[
 ![](../images/learning.png)
 ]
 ]
-
 ---
 
 # Roadmap for the Semester

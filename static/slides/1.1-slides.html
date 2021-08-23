@@ -32,10 +32,9 @@ class: inverse
 
 # Outline
 
-### [The Tools of Microeconomics](#)
-### [Incentives](#)
-### [Equilibrium](#)
-### [Real Talk: The Math](#)
+### [Game Theory](#)
+### [Defining a Game](#)
+### [Types of Games](#)
 ### [About This Course](#)
 
 ---
@@ -66,10 +65,56 @@ Edinburgh, 2019
 - Research interests
   - modeling innovation &amp; economic growth
   - political economy &amp; economic history of intellectual property
+]
+]
 
-- Expecting a son in March 👶 (expect cameos!)
+---
+
+# About Me
+
+.left-column[
+.center[
+![](../images/myface2021.png)
+
+.smallest[
+My face without a mask, 2021
 ]
 ]
+]
+
+.right-column[
+.smallest[
+
+- Ph.D (Economics) — George Mason University, 2015
+
+- B.A. (Economics) — University of Connecticut, 2011
+
+- Specializations:
+  - Law and Economics
+  - Austrian Economics
+
+- Research interests
+  - modeling innovation &amp; economic growth
+  - political economy &amp; economic history of intellectual property
+
+]
+]
+
+---
+
+# The Reason I am Busy AF Behind the Scenes
+
+
+.center[
+![:scale 100%](../images/milescollage.png)
+]
+
+And why I wear a mask.
+---
+
+class: inverse, center, middle
+
+# Game Theory
 
 ---
 
@@ -112,7 +157,7 @@ Edinburgh, 2019
 
 .pull-right[
 .center[
-![](../images/familyannoy.jpg)
+![:scale 60%](../images/familyannoy.jpg)
 
 ![](../images/dresscode1.JPG)
 ]
@@ -148,11 +193,17 @@ Edinburgh, 2019
 
 ---
 
+class: inverse, center, middle
+
+# Defining a Game
+
+---
+
 # What A Game Is...in Math
 
 .pull-left[
-
-- A game is defined as `\(\Gamma = (s_1,s_2, \cdots, s_n;u_1, u_2, \cdots, u_n)\)`:
+- A game is fully described by
+`$$\Gamma = (s_1,s_2, \cdots, s_n;u_1, u_2, \cdots, u_n):$$`
 
 1. Players `\(i \in \{1,2,\cdots, N\}: N \geq 2\)`
 2. Strategies `\(s_i \in \{S_i\}\)`
@@ -161,15 +212,11 @@ Edinburgh, 2019
   - `\(u_i: S_i \times S \cdots S_{\neg i} \rightarrow \mathbb{R}\)`
 ]
 
+--
+
 .pull-right[
-
-]
-
----
-
-# Example: 2-person Game
-
-.pull-left[
+.bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
+.hi-green[Example]: A 2-person game
 
 1. Players
   - 1 and 2
@@ -178,18 +225,33 @@ Edinburgh, 2019
 3. Payoffs
   - `\(u_1 \in \{s_1, s_2\}\)`
   - `\(u_2 \in \{s_1, s_2\}\)`
+
+]
 ]
 
 ---
+
 # Now That I've Frightened You
 
 .pull-left[
 
-- 
+- Game theory can be highly abstract and mathematical
+
+- Our approach in this class will use *some*, but not *primarily* math
+
+- You'll be fine if you can:
+  - Do some simple algebra
+  - Find an average or expected value
+  - Maybe take a derivative
+  - Even if not, you can catch up
+
+- We will focus on **applications** and examples of strategic interaction 
 ]
 
 .pull-right[
-
+.center[
+![:scale 100%](../images/mathphobia.jpg)
+]
 ]
 
 ---
@@ -198,8 +260,35 @@ Edinburgh, 2019
 
 .pull-left[
 
-- A game has three components
+- A .hi[game] is a strategic interaction between rational agents that has 3 elements:
+  1. .hi-purple[Players] interacting rationally
+  2. .hi-purple[Conditional strategies] that each player can choose from
+  3. .hi-purple[Payoffs] to each player that are *jointly-determined* from combination of all players’ strategies
 
+]
+
+.pull-right[
+.center[
+![:scale 100%](../images/gametheory.jpg)
+]
+]
+
+---
+
+# How We Will Define a Game
+
+.pull-left[
+
+- Arguably, a 4th element, .hi-purple[Rules] about:
+  - Timing of players' moves
+  - Actions available to each player at each move
+  - Information each player has at each move
+]
+
+.pull-right[
+.center[
+![:scale 100%](../images/gametheory.jpg)
+]
 ]
 
 ---
@@ -215,24 +304,10 @@ Edinburgh, 2019
 
 .pull-right[
 .center[
-![](../images/)
+![:scale 80%](../images/roulette.jpg)
+
+![:scale 80%](../images/solitaire.png)
 ]
-]
-
----
-
-# Game Theory is *Not* Limited to Economics!
-
-.pull-left[
-
-- Political science
-- International relations
-- Business strategy
-- Negotiation
-- Law
-- Evolutionary biology
-- Sports
-
 ]
 
 ---
@@ -269,26 +344,46 @@ Oskar Morgenstern
 
 ---
 
-Information:
-- <svg aria-hidden="true" role="img" viewBox="0 0 576 512" style="height:1em;width:1.12em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:gray;overflow:visible;position:relative;"><path d="M384 64H192C85.961 64 0 149.961 0 256s85.961 192 192 192h192c106.039 0 192-85.961 192-192S490.039 64 384 64zM64 256c0-70.741 57.249-128 128-128 70.741 0 128 57.249 128 128 0 70.741-57.249 128-128 128-70.741 0-128-57.249-128-128zm320 128h-48.905c65.217-72.858 65.236-183.12 0-256H384c70.741 0 128 57.249 128 128 0 70.74-57.249 128-128 128z"/></svg> Perfect
-- <svg aria-hidden="true" role="img" viewBox="0 0 576 512" style="height:1em;width:1.12em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:green;overflow:visible;position:relative;"><path d="M384 64H192C86 64 0 150 0 256s86 192 192 192h192c106 0 192-86 192-192S490 64 384 64zm0 320c-70.8 0-128-57.3-128-128 0-70.8 57.3-128 128-128 70.8 0 128 57.3 128 128 0 70.8-57.3 128-128 128z"/></svg> Incomplete
-- <svg aria-hidden="true" role="img" viewBox="0 0 576 512" style="height:1em;width:1.12em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M384 64H192C85.961 64 0 149.961 0 256s85.961 192 192 192h192c106.039 0 192-85.961 192-192S490.039 64 384 64zM64 256c0-70.741 57.249-128 128-128 70.741 0 128 57.249 128 128 0 70.741-57.249 128-128 128-70.741 0-128-57.249-128-128zm320 128h-48.905c65.217-72.858 65.236-183.12 0-256H384c70.741 0 128 57.249 128 128 0 70.74-57.249 128-128 128z"/></svg> Asymmetric
+# Game Theory Nobel Prizes
 
-Timing:
-- <svg aria-hidden="true" role="img" viewBox="0 0 576 512" style="height:1em;width:1.12em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:gray;overflow:visible;position:relative;"><path d="M384 64H192C85.961 64 0 149.961 0 256s85.961 192 192 192h192c106.039 0 192-85.961 192-192S490.039 64 384 64zM64 256c0-70.741 57.249-128 128-128 70.741 0 128 57.249 128 128 0 70.741-57.249 128-128 128-70.741 0-128-57.249-128-128zm320 128h-48.905c65.217-72.858 65.236-183.12 0-256H384c70.741 0 128 57.249 128 128 0 70.74-57.249 128-128 128z"/></svg> Simultaneous
-- <svg aria-hidden="true" role="img" viewBox="0 0 576 512" style="height:1em;width:1.12em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:green;overflow:visible;position:relative;"><path d="M384 64H192C86 64 0 150 0 256s86 192 192 192h192c106 0 192-86 192-192S490 64 384 64zm0 320c-70.8 0-128-57.3-128-128 0-70.8 57.3-128 128-128 70.8 0 128 57.3 128 128 0 70.8-57.3 128-128 128z"/></svg> Sequential
-
-Repetition:
-- <svg aria-hidden="true" role="img" viewBox="0 0 576 512" style="height:1em;width:1.12em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:gray;overflow:visible;position:relative;"><path d="M384 64H192C85.961 64 0 149.961 0 256s85.961 192 192 192h192c106.039 0 192-85.961 192-192S490.039 64 384 64zM64 256c0-70.741 57.249-128 128-128 70.741 0 128 57.249 128 128 0 70.741-57.249 128-128 128-70.741 0-128-57.249-128-128zm320 128h-48.905c65.217-72.858 65.236-183.12 0-256H384c70.741 0 128 57.249 128 128 0 70.74-57.249 128-128 128z"/></svg> One-shot
-- <svg aria-hidden="true" role="img" viewBox="0 0 576 512" style="height:1em;width:1.12em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:green;overflow:visible;position:relative;"><path d="M384 64H192C86 64 0 150 0 256s86 192 192 192h192c106 0 192-86 192-192S490 64 384 64zm0 320c-70.8 0-128-57.3-128-128 0-70.8 57.3-128 128-128 70.8 0 128 57.3 128 128 0 70.8-57.3 128-128 128z"/></svg> Finitely repeated
-- <svg aria-hidden="true" role="img" viewBox="0 0 576 512" style="height:1em;width:1.12em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M384 64H192C85.961 64 0 149.961 0 256s85.961 192 192 192h192c106.039 0 192-85.961 192-192S490.039 64 384 64zM64 256c0-70.741 57.249-128 128-128 70.741 0 128 57.249 128 128 0 70.741-57.249 128-128 128-70.741 0-128-57.249-128-128zm320 128h-48.905c65.217-72.858 65.236-183.12 0-256H384c70.741 0 128 57.249 128 128 0 70.74-57.249 128-128 128z"/></svg> Infinitely repeated
+.center[
+![](../images/gametheorynobels.png)
+]
 
 ---
 
-| Head 1 | Head 2 |
-|--------|--------|
-| Cell 1 | Cell 2 |
-| Cell 3 | Cell 4 |
+# Game Theory is *Not* Limited to Economics!
+
+.pull-left[
+
+- Political science
+- International relations
+- Business strategy
+- Negotiation
+- Law
+- Evolutionary biology
+- Sports
+
+]
+
+.pull-right[
+.center[
+![](../images/hawkdove.png)
+]
+]
+
+---
+
+# An Example Game
+
+.bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
+.hi-green[Example]: Take out a piece of paper. You will be matched randomly with one other person in class. Neither of you will ever find out who the other person was. Write down either the letter X or Y.
+
+- If one of you writes X and the other writes Y, the person with X gets 8 bonus points added to their midterm exam, the person with Y gets 0 bonus points
+- If you both write X, you each get 1 bonus point
+- If you both write Y, you each get 4 bonus points
+
+]
 
 ---
 
@@ -340,6 +435,12 @@ Repetition:
 
 ---
 
+# Some Data From My ECON 306 Class
+
+&lt;img src="1.1-slides_files/figure-html/unnamed-chunk-1-1.png" width="504" style="display: block; margin: auto;" /&gt;
+
+---
+
 # Solution Concepts
 
 .pull-left[
@@ -351,24 +452,29 @@ Repetition:
 ]
 
 .pull-right[
-
+.center[
+![](../images/equilibriumbalance.png)
+]
 ]
 
 ---
 
-# Solution Concepts
+# The Solution to Our Game
 
 .pull-left[
 
-- Recall from economics that an equilibrium:
+- Both players have a .hi-purple[dominant strategy] to play X
+
+- A famous type of game, called a .hi-purple[Prisoners’ Dilemma]
+  - Why can’t they both just play Y?
+
+- Much, much more to say about it all this semester
 ]
 
----
-
-# Nash Equilibrium
-
-.pull-left[
-
+.pull-right[
+.center[
+![](../images/gradegamenormaleq.png)
+]
 ]
 
 ---
@@ -522,7 +628,7 @@ class: inverse, center, middle
 # Information
 
 .pull-left[
-
+.smaller[
 - .hi[Incomplete information]: all players *don’t* have full information about the game (.hi-purple[“external uncertainty”])
 
 - .hi-purple[Asymmetric information]: some players have more information than others
@@ -531,7 +637,7 @@ class: inverse, center, middle
 
 - .hi-green[Examples]: insurance, used cars, education, ordeals
 ]
-
+]
 .pull-right[
 .center[
 ![](../images/information.png)
@@ -556,7 +662,7 @@ class: inverse, center, middle
 
 .pull-right[
 .center[
-![](../images/changetherules.jpeg)
+![:scale 100%](../images/changetherules.jpeg)
 ]
 ]
 
@@ -590,7 +696,7 @@ class: inverse, center, middle
   - .hi-green[Example]: war, conflict, rent-seeking
 ]
 
-.pull-left[
+.pull-right[
 .center[
 ![](../images/contract1.jpg)
 ]
@@ -681,34 +787,25 @@ By the end of this course, you will:
 
 # Logistics
 
+.pull-left[
+.smallest[
+
 - Office hours: M/W 10:00-11:00 AM &amp; by appt
+  - Office: 110 Rosenstock
 
 - <svg aria-hidden="true" role="img" viewBox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#5E81AC;overflow:visible;position:relative;"><path d="M94.12 315.1c0 25.9-21.16 47.06-47.06 47.06S0 341 0 315.1c0-25.9 21.16-47.06 47.06-47.06h47.06v47.06zm23.72 0c0-25.9 21.16-47.06 47.06-47.06s47.06 21.16 47.06 47.06v117.84c0 25.9-21.16 47.06-47.06 47.06s-47.06-21.16-47.06-47.06V315.1zm47.06-188.98c-25.9 0-47.06-21.16-47.06-47.06S139 32 164.9 32s47.06 21.16 47.06 47.06v47.06H164.9zm0 23.72c25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06H47.06C21.16 243.96 0 222.8 0 196.9s21.16-47.06 47.06-47.06H164.9zm188.98 47.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06h-47.06V196.9zm-23.72 0c0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06V79.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06V196.9zM283.1 385.88c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06v-47.06h47.06zm0-23.72c-25.9 0-47.06-21.16-47.06-47.06 0-25.9 21.16-47.06 47.06-47.06h117.84c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06H283.1z"/></svg> Slack channel
+  - `#c-316-game`
 
-- 
+- Recorded videos in Blackboard Panopto
 
----
-
-# Tips for Success, Or: How to College
-
-.pull-left[
-- Take notes. On paper. Really.
-
-- Read the readings.
-
-- Ask questions, come to office hours. Don’t struggle in silence, you are not alone!
-
-- You are learning how to learn
-
-- See the [resources page](http://gameF21.classes.ryansafner.com/resources) for more
+- See the [resources page](http://gameF21.classes.ryansafner.com/resources) for tips for success and more helpful resources
 ]
-
+]
 .pull-right[
 .center[
 ![](../images/learning.png)
 ]
 ]
-
 ---
 
 # Roadmap for the Semester
