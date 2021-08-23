@@ -819,9 +819,9 @@ By the end of this course, you will:
 tribble(
   ~Frequency,  ~Assignment, ~Weight,
   "n", "Homeworks", "25% (using average HW grade)",
-  "1", "Paper", "25%",
+  "1", "Term Paper", "25%",
   "1", "Midterm Exam", "25%",
-  "3", "Final Exam", "25%"
+  "1", "Final Exam", "25%"
 ) %>% knitr::kable(., "html")
 ```
 
