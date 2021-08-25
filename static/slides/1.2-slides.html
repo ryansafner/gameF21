@@ -568,10 +568,10 @@ c&amp;=(4,3)\\
 
 - Take a **prisoners' dilemma** and consider the payoffs to .blue[Player 2]
 
-- `\(u_2(\color{red}{C}, \color{blue}{D}) \succ u_1(\color{red}{C}, \color{blue}{C})\)`
-    - `\(\color{blue}{0} &gt; \color{red}{-6}\)`
-- `\(u_2(\color{red}{D}, \color{blue}{D}) \succ u_1(\color{red}{D}, \color{blue}{C})\)`
-  - `\(\color{blue}{-12} &gt; \color{red}{-24}\)`
+- `\(u_2(\color{red}{C}, \color{blue}{D}) \succ u_2(\color{red}{C}, \color{blue}{C})\)`
+    - `\(\color{blue}{0} &gt; \color{blue}{-6}\)`
+- `\(u_2(\color{red}{D}, \color{blue}{D}) \succ u_2(\color{red}{D}, \color{blue}{C})\)`
+  - `\(\color{blue}{-12} &gt; \color{blue}{-24}\)`
 
 ]
 
@@ -686,7 +686,7 @@ This is the same game, so long as `\(a&gt;b&gt;c&gt;d\)`
 # Rationality, Uncertainty, and Risk
 
 .pull-left[
-
+.smaller[
 - Game theory does not permit us to consider true .hi-purple[uncertainty]
   - Must rule out *complete* surprises (Act of God, etc.)
   - What do people maximize in the presence of true uncertainty? [Good question](https://micros21.classes.ryansafner.com/content/3.3-content)
@@ -694,7 +694,7 @@ This is the same game, so long as `\(a&gt;b&gt;c&gt;d\)`
 - But we can talk about .hi[risk]: distribution of outcomes occurring with some known **probability**
 
 - In such cases, what do players **maximize** in the presence of risk?
-
+]
 ]
 
 .pull-right[
@@ -728,6 +728,7 @@ This is the same game, so long as `\(a&gt;b&gt;c&gt;d\)`
 # Rationality, Uncertainty, and Risk
 
 .pull-left[
+.smallest[
 - Refinement by Von Neuman &amp; Morgenstern: players instead maximize .hi[expected *utility*]
   - utility function over probabilistic outcomes
   - still some paradoxes, but fewer!
@@ -737,10 +738,10 @@ This is the same game, so long as `\(a&gt;b&gt;c&gt;d\)`
 - Allows for different .hi-turquoise[risk attitudes]:
     - risk neutral, risk-averse, risk-loving
 
-- makes utility functions **cardinal** (but still not measurable!)
+- makes utility functions .hi-purple[cardinal] (but still not measurable!)
   - called VNM utility functions
 ]
-
+]
 .pull-right[
 .center[
 ![](../images/choices.jpg)
@@ -795,7 +796,7 @@ Economics Nobel 1994
 
 - Nash's *Non-Cooperative Games* (1950) dissertation invents idea of "(Nash) Equilibrium"
   - Extends for all `\(n\)`-player non-cooperative games (zero sum, negative sum, positive sum)
-  - Nash Equilibrium exists for all games with finite number of players, strategies, and rounds
+  - Proves an equilibrium exists for all games with finite number of players, strategies, and rounds
 
 -  Nash's [27 page Dissertation on Non-Cooperative Games](https://rbsc.princeton.edu/sites/default/files/Non-Cooperative_Games_Nash.pdf)
 
@@ -833,7 +834,7 @@ Economics Nobel 1994
 
 .pull-left[
 
-- A **Pure Strategy Nash Equilibrium (PSNE)** of a game is a set of strategies (one for each player) such that no player has a profitable deviation from their strategy given the strategies played by all other players
+- A .hi[Pure Strategy Nash Equilibrium (PSNE)] of a game is a set of strategies (one for each player) such that no player has a profitable deviation from their strategy given the strategies played by all other players
 
 - Each player's strategy must be a best response to all other players' strategies
 
@@ -880,7 +881,7 @@ Economics Nobel 1994
 ]
 
 .pull-right[
-.smaller[
+.smallest[
 - Important about Nash equilibrium:
 
 1. N.E. `\(\neq\)` the “*best*” or *optimal* outcome
