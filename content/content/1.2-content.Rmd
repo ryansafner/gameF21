@@ -1,0 +1,104 @@
+---
+title: "1.2 — Essential Micro Concepts: Maximization, Equilibrium, & Efficiency — Class Content"
+draft: false
+linktitle: "1.2 — Micro Concepts"
+date: "2020-06-08"
+menu:
+  content:
+    parent: Course content
+    weight: 2
+type: docs
+output:
+  blogdown::html_page:
+    toc: true
+slides: "1.2-slides"
+---
+
+{{% alert note %}}
+*Wednesday, August 25, 2021*
+{{% /alert %}}
+
+## <i class="fas fa-info-circle fa-lg"></i> Overview
+
+Today we review essential concepts from microeconomics.
+
+
+## Results from the Bonus Points Game
+
+```{r, echo=F, warning=F, message=F, fig.align="center", fig.retina=3}
+library(tidyverse)
+pd<-tibble(individual = c("SJ", "RR", "AR", "KB", "SS", "CW", "IS", "GY", "JS", "VA", "SG", "AJ"),
+           chose = c("X", "X", "Y", "Y", "X", "X", "X", "Y", "X", "X", "X", "Y"),
+           earned = c(1,1,4,4,1,1,8,0,1,1,8,0))
+choice<-pd %>%
+  count(chose) %>%
+  mutate(frac = paste0(round(100*n/sum(n),2),"%"),
+         chose = ordered(chose, levels = c("Y", "X")),
+         chose_label = paste0(chose,"\n",frac)) %>%
+  #arrange(desc(n)) %>%
+  ggplot(data = .)+
+  aes(x = "",
+      y = n)+
+  geom_col(aes(fill = chose))+
+  geom_text(aes(label = chose_label),
+            color = "white",
+            size = 5,
+            family = "Fira Sans Condensed",
+            fontface = "bold",
+            position = position_stack(vjust=0.5)
+            #vjust = 1.1
+  )+
+  #scale_fill_manual(values = c("X"="X", "Y"="Y"))+
+  guides(color = F,
+         fill = F)+
+  theme_void(base_family = "Fira Sans Condensed",
+             base_size = 14)+
+  coord_flip()+
+  scale_fill_viridis_d()+
+  labs(title = "Choices Made")+
+  theme(plot.title = element_text(face = "bold", size = rel(1.5)))
+
+points<-pd %>%
+  count(earned) %>%
+  mutate(frac = paste0(round(100*n/sum(n),2),"%"),
+         earned = ordered(earned, levels = c("0", "1", "4", "8")),
+         earned_label = paste0(earned,"\n",frac)) %>%
+  arrange(desc(n)) %>%
+  ggplot(data = .)+
+  aes(x = earned,
+      y = n)+
+  geom_col(aes(fill = earned))+
+  geom_text(aes(label = frac),
+            color = "white",
+            size = 4,
+            family = "Fira Sans Condensed",
+            fontface = "bold",
+            hjust = 1.1)+
+  guides(color = F,
+         fill = F)+
+  theme_classic(base_family = "Fira Sans Condensed",
+                base_size = 14)+
+  coord_flip()+
+  scale_fill_viridis_d()+
+  scale_y_continuous(limits=c(0,25),
+                     expand = c(0,0))+
+  labs(title = "Points Earned")+
+  theme(plot.title = element_text(face = "bold", size = rel(1.5)),
+        axis.title.y = element_blank(),
+        axis.title.x = element_blank(),
+        axis.line.x = element_blank(),
+        axis.ticks.x = element_blank(),
+        axis.text.x = element_blank(),
+        axis.text.y = element_text(face = "bold"))
+
+library(patchwork)
+choice / points
+```
+
+## <i class="fas fa-chalkboard-teacher"></i> Slides
+
+Below, you can find the slides in two formats. Clicking the image will bring you to the html version of the slides in a new tab. Note while in going through the slides, you can type <kbd>h</kbd> to see a special list of viewing options, and type <kbd>o</kbd> for an outline view of all the slides.
+
+The lower button will allow you to download a PDF version of the slides. I suggest printing the slides beforehand and using them to take additional notes in class (*not everything* is in the slides)!
+
+`r blogdown::shortcode("slide-links")`

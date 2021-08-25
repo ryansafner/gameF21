@@ -1,0 +1,1090 @@
+---
+title: "1.2 — Essential Micro Concepts"
+subtitle: "ECON 316 • Game Theory • Fall 2021"
+author: 'Ryan Safner<br> Assistant Professor of Economics <br> <a href="mailto:safner@hood.edu"><i class="fa fa-paper-plane fa-fw"></i>safner@hood.edu</a> <br> <a href="https://github.com/ryansafner/gameF21"><i class="fa fa-github fa-fw"></i>ryansafner/gameF21</a><br> <a href="https://gameF21.classes.ryansafner.com"> <i class="fa fa-globe fa-fw"></i>gameF21.classes.ryansafner.com</a><br>'
+#date:
+output:
+  xaringan::moon_reader:
+    mathjax: "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML" # rescales math with css changes https://github.com/yihui/xaringan/issues/143
+    lib_dir: libs
+    #seal: false
+    css: [custom.css, "hygge"] #, metropolis, metropolis-fonts
+    nature:
+      beforeInit: ["macros.js", "https://platform.twitter.com/widgets.js"] # first is for rescaling images , second is for embedding tweets, https://github.com/yihui/xaringan/issues/100
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: "16:9"
+      slideNumberFormat: |
+        <div class="progress-bar-container">
+          <div class="progress-bar" style="width: calc(%current% / %total% * 100%);">
+          </div>
+        </div>
+    includes:
+      in_header: header.html # for font awesome, used in title  
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(echo=F,
+                      message=F,
+                      warning=F,
+                      fig.retina = 3,
+                      fig.align = "center")
+library("tidyverse")
+library("ggrepel")
+library("fontawesome")
+xaringanExtra::use_tile_view()
+xaringanExtra::use_tachyons()
+xaringanExtra::use_freezeframe()
+
+update_geom_defaults("label", list(family = "Fira Sans Condensed"))
+update_geom_defaults("text", list(family = "Fira Sans Condensed"))
+
+set.seed(256)
+
+theme_slides <- theme_light() + 
+  theme(
+    text = element_text(family = "Fira Sans", size = 24)
+  )
+
+```
+
+class: inverse
+
+# Outline
+
+### [Game Theory vs. Decision Theory](#3)
+### [Optimization & Preferences](#)
+### [Solution Concepts: Nash Equilibrium](#)
+
+---
+
+class: inverse, center, middle
+
+# Game Theory vs. Decision Theory
+
+---
+
+# The Two Major Models of Economics as a “Science”
+
+.pull-left[
+
+## Optimization
+
+- Agents have .hi[objectives] they value
+
+- Agents face .hi[constraints]
+
+- Make .hi[tradeoffs] to maximize objectives within constraints
+
+.center[
+![](../images/optimize.jpeg)
+]
+]
+
+--
+
+.pull-right[
+
+## Equilibrium
+
+- Agents .hi[compete] with others over **scarce** resources
+
+- Agents .hi[adjust] behaviors based on prices
+
+- .hi[Stable outcomes] when adjustments stop
+
+.center[
+![](../images/equilibriumbalance.png)
+]
+
+]
+
+---
+
+# Game Theory vs. Decision Theory Models I
+
+.pull-left[
+.center[
+![:scale 100%](../images/optimize.jpeg)
+]
+]
+
+.pull-right[
+
+- Traditional economic models are often called .hi[“Decision theory”]:
+
+- .hi-purple[Optimization models] **ignore all other agents** and just focus on how can **you** maximize **your** objective within **your** constraints
+  - Consumers max utility; firms max profit, etc.
+
+- **Outcome**: .hi-purple[optimum]: decision where *you* have no better alternatives
+
+]
+
+
+---
+
+# Game Theory vs. Decision Theory Models I
+
+.pull-left[
+
+.center[
+![](../images/crowdartistic.jpg)
+]
+]
+
+.pull-right[
+
+- Traditional economic models are often called .hi[“Decision theory”]:
+
+- .hi-purple[Equilibrium models] assume that there are **so many agents** that **no agent’s decision can affect the outcome**
+  - Firms are price-takers or the *only* buyer or seller
+  - **Ignores all other agents’ decisions**!
+
+- **Outcome**: .hi-purple[equilibrium]: where *nobody* has any better alternative
+
+]
+
+---
+
+# Game Theory vs. Decision Theory Models III
+
+.pull-left[
+.center[
+![:scale 90%](../images/chessknights.jpg)
+]
+]
+
+.pull-right[
+
+- .hi[Game theory models] directly confront .hi-purple[strategic interactions] between players
+  - How each player would optimally respond to a strategy chosen by other player(s)
+  - Lead to a stable outcome where everyone has considered and chosen mutual best responses
+
+- **Outcome**: .hi-purple[Nash equilibrium]: where *nobody* has a better strategy **given the strategies everyone else is playing**
+
+]
+
+
+---
+
+# Equilibrium in Games
+
+.pull-left[
+.center[
+![:scale 90%](../images/chessknights.jpg)
+]
+]
+
+.pull-right[
+
+- .hi-purple[Nash Equilibrium]: 
+  - no player wants to change their strategy **given all other players’ strategies**
+  - each player is playing a **best response** against other players’ strategies
+
+]
+
+---
+
+class: inverse, center, middle
+
+# Optimization & Preferences
+
+---
+
+# Individual Objectives and Preferences
+
+.pull-left[
+.center[
+![:scale 90%](../images/chessknights.jpg)
+]
+]
+
+.pull-right[
+
+- What is a player's .hi-turquoise[objective] in a game? 
+  - “To win”?
+  - Few games are purely zero-sum
+  
+- “De gustibus non est disputandum”
+
+- We need to know a player's .hi[preferences] over game outcomes
+
+]
+
+---
+
+# Modeling Individual Choice
+
+.pull-left[
+
+- The .hi[consumer's utility maximization problem]: 
+
+1. **Choose:** .hi-purple[ < a consumption bundle >]
+
+2. **In order to maximize:** .hi-green[< utility >]
+
+3. **Subject to:** .hi-red[< income and market prices >]
+
+]
+
+.pull-right[
+.center[
+![](../images/choices.jpg)
+]
+]
+
+---
+
+# Modeling Firm's Choice
+
+.pull-left[
+.smallest[
+- 1<sup>st</sup> Stage: .hi-purple[firm's profit maximization problem]: 
+
+1. **Choose:** .hi-blue[ < output >]
+
+2. **In order to maximize:** .hi-green[< profits >]
+
+- 2<sup>nd</sup> Stage: .hi-purple[firm's cost minimization problem]: 
+
+1. **Choose:** .hi-blue[ < inputs >]
+
+2. **In order to _minimize_:** .hi-green[< cost >]
+
+3. **Subject to:** .hi-red[< producing the optimal output >]
+]
+
+]
+
+.pull-right[
+
+.center[
+![](../images/management.jpg)
+]
+]
+
+---
+
+# Preferences I
+
+.pull-left[
+
+- Which game outcomes are **preferred** over others?
+
+.bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
+.green[**Example**:] Between any two outcomes $(a,b)$: 
+
+]
+
+]
+
+.pull-right[
+.center[
+![](../images/choices.jpg)
+]
+]
+
+---
+
+# Preferences II
+.pull-left[
+
+- We will allow **three possible answers**:
+
+]
+
+.pull-right[
+.center[
+![](../images/choices.jpg)
+]
+]
+
+---
+
+# Preferences II
+
+.pull-left[
+
+- We will allow **three possible answers**:
+
+.content-box-blue[
+
+1. .blue[`\\(a \succ b\\)`: (Strictly) prefer `\\(a\\)` over `\\(b\\)`]
+]
+
+]
+
+.pull-right[
+.center[
+![](../images/choices.jpg)
+]
+]
+
+---
+
+# Preferences II
+
+.pull-left[
+
+- We will allow **three possible answers**:
+
+.content-box-blue[
+
+1. .blue[`\\(a \succ b\\)`: (Strictly) prefer `\\(a\\)` over `\\(b\\)`]
+
+2. .blue[`\\(a \prec b\\)`: (Strictly) prefer `\\(b\\)` over `\\(a\\)`]
+
+]
+
+]
+
+.pull-right[
+.center[
+![](../images/choices.jpg)
+]
+]
+
+---
+
+# Preferences II
+
+.pull-left[
+
+- We will allow **three possible answers**:
+
+.content-box-blue[
+
+1. .blue[`\\(a \succ b\\)`: (Strictly) prefer `\\(a\\)` over `\\(b\\)`]
+
+2. .blue[`\\(a \prec b\\)`: (Strictly) prefer `\\(b\\)` over `\\(a\\)`]
+
+3. .blue[`\\(a \sim b\\)`: Indifferent between `\\(a\\)` and `\\(b\\)`]
+]
+]
+
+.pull-right[
+.center[
+![](../images/choices.jpg)
+]
+]
+
+---
+
+# Preferences II
+
+.pull-left[
+
+- We will allow **three possible answers**:
+
+.content-box-blue[
+
+1. .blue[`\\(a \succ b\\)`: (Strictly) prefer `\\(a\\)` over `\\(b\\)`]
+
+2. .blue[`\\(a \prec b\\)`: (Strictly) prefer `\\(b\\)` over `\\(a\\)`]
+
+3. .blue[`\\(a \sim b\\)`: Indifferent between `\\(a\\)` and `\\(b\\)`]
+]
+
+- .hi[*Preferences*] **are a list of all such comparisons between all bundles**
+
+See my ECON 306 [class on preferences](https://micros21.classes.ryansafner.com/content/1.3-content/#appendix-1-material-on-preferences) for more.
+]
+
+.pull-right[
+.center[
+![](../images/choices.jpg)
+]
+]
+
+---
+
+# So What About the Numbers?
+
+.pull-left[
+- Long ago (1890s), utility considered a real, measurable, .hi-purple[cardinal] scale<sup>.hi[†]</sup>
+
+- Utility thought to be lurking in people's brains
+  - Could be understood from first principles: calories, water, warmth, etc
+    
+- Obvious problems
+]
+
+.pull-right[
+.center[
+![:scale 100%](../images/madlaboratory.jpg)
+]
+]
+
+.footnote[<sup>.hi[†]</sup> "Neuroeconomics" & cognitive scientists are re-attempting a scientific approach to measure utility]
+
+---
+
+# Utility Functions?
+
+.pull-left[
+
+- More plausibly .hi-turquoise[infer people's preferences from their actions]!
+  - “Actions speak louder than words”
+
+- .hi-purple[Principle of Revealed Preference]: if a person chooses $x$ over $y$, and both are affordable, then they must prefer $x \succeq y$
+	
+- Flawless? Of course not. But extremely useful approximation!
+  - People tend not to leave money on the table
+]
+
+.pull-right[
+
+.center[
+![](../images/choices.jpg)
+]
+]
+
+---
+
+# Utility Functions!
+
+.pull-left[
+
+- A .hi[utility function] $u(\cdot)$<sup>.hi[†]</sup> *represents* preference relations $(\succ , \prec , \sim)$
+
+- Assign utility numbers to bundles, such that, for any bundles $a$ and $b$:
+$$a \succ b \iff u(a)>u(b)$$
+]
+
+.pull-right[
+
+.center[
+![](../images/choices.jpg)
+]
+]
+
+.footnote[<sup>.hi[†]</sup> The `\\(\cdot\\)` is a placeholder for whatever goods we are considering (e.g. `\\(x\\)`, `\\(y\\)`, burritos, lattes, dollars, etc)]
+
+---
+
+# Utility Functions, Pural I
+
+.pull-left[
+.bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
+.hi-green[Example]: Imagine three alternative bundles of $(x, y)$:
+$$\begin{aligned}
+a&=(1,2)\\
+b&=(2,2)\\
+c&=(4,3)\\
+\end{aligned}$$
+]
+]
+
+--
+
+.pull-right[
+- Let $u(\cdot)$ assign each bundle a utility level:
+
+| $u(\cdot)$ |
+|------------|
+| $u(a)=1$   | 
+| $u(b)=2$   |
+| $u(c)=3$   |
+
+]
+
+--
+
+- .hi-turquoise[Does this mean that bundle `\\(c\\)` is 3 times the utility of `\\(a\\)`?]
+
+---
+
+# Utility Functions, Pural II
+
+.pull-left[
+.bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
+.hi-green[Example]: Imagine three alternative bundles of $(x, y)$:
+$$\begin{aligned}
+a&=(1,2)\\
+b&=(2,2)\\
+c&=(4,3)\\
+\end{aligned}$$
+]
+]
+
+
+.pull-left[
+- Now consider $u(\cdot)$ and a *2*<sup>*nd*</sup> function $v(\cdot)$:
+
+| $u(\cdot)$ | $v(\cdot)$ |
+|------------|------------|
+| $u(a)=1$   | $v(a)=3$   |
+| $u(b)=2$   | $v(b)=5$   |
+| $u(c)=3$   | $v(c)=7$   |
+
+]
+
+---
+
+# Utility Functions, Pural III
+
+.pull-left[
+- Utility numbers have an .hi-purple[ordinal] meaning only, **not cardinal**
+
+- Both are valid utility functions:
+    - $u(c)>u(b)>u(a)$ ✅
+    - $v(c)>v(b)>v(a)$ ✅
+    - because $c \succ b \succ a$
+
+- .hi-purple[Only the .ul[ranking] of utility numbers matters!]
+
+]
+
+.pull-right[
+
+.center[
+![](../images/choices.jpg)
+]
+]
+
+---
+
+# Utility Functions and Payoffs Over Game Outcomes
+
+.pull-left[
+
+- We want to apply utility functions to the outcomes in games, often summarized as .hi[“payoff functions”]
+
+- Using the **ordinal** interpretation of utility functions, we can rank player preferences over game outcomes
+]
+
+.pull-right[
+.center[
+![](../images/chessknights.jpg)
+]
+]
+
+---
+
+# Utility Functions and Payoffs Over Game Outcomes
+
+.pull-left[
+
+- Take a **prisoners' dilemma** and consider the payoffs to .red[Player 1]
+
+- $u_1(\color{red}{D}, \color{blue}{C}) \succ u_1(\color{red}{C}, \color{blue}{C})$
+  - $\color{red}{0} > \color{red}{-6}$
+- $u_1(\color{red}{D}, \color{blue}{D}) \succ u_1(\color{red}{C}, \color{blue}{D})$
+  - $\color{red}{-12} > \color{red}{-24}$
+
+]
+
+.pull-right[
+.center[
+![](../images/pdpayoffs2.png)
+]
+]
+
+---
+
+# Utility Functions and Payoffs Over Game Outcomes
+
+.pull-left[
+
+- Take a **prisoners' dilemma** and consider the payoffs to .blue[Player 2]
+
+- $u_2(\color{red}{C}, \color{blue}{D}) \succ u_1(\color{red}{C}, \color{blue}{C})$
+    - $\color{blue}{0} > \color{red}{-6}$
+- $u_2(\color{red}{D}, \color{blue}{D}) \succ u_1(\color{red}{D}, \color{blue}{C})$
+  - $\color{blue}{-12} > \color{red}{-24}$
+
+]
+
+.pull-right[
+.center[
+![](../images/pdpayoffs2.png)
+]
+]
+
+---
+
+# Utility Functions and Payoffs Over Game Outcomes
+
+.pull-left[
+
+- We will keep the process simple for now by simply assigning numbers to consequences
+- In fact, we can assign almost *any* numbers to the payoffs as long as we keep the *order* of the payoffs the same
+  - i.e. so long as $u(a) > u(b)$ for all $a \succ b$
+
+]
+
+.pull-right[
+.center[
+![](../images/pdpayoffs2.png)
+]
+]
+
+---
+
+# Utility Functions and Payoffs Over Game Outcomes
+
+.pull-left[
+
+- We will keep the process simple for now by simply assigning numbers to consequences
+- In fact, we can assign almost *any* numbers to the payoffs as long as we keep the *order* of the payoffs the same
+  - i.e. so long as $u(a) > u(b)$ for all $a \succ b$
+
+]
+
+.pull-right[
+.center[
+![](../images/pdpayoffs1.png)
+
+This is the same game
+]
+]
+
+---
+
+# Utility Functions and Payoffs Over Game Outcomes
+
+.pull-left[
+
+- We will keep the process simple for now by simply assigning numbers to consequences
+- In fact, we can assign almost *any* numbers to the payoffs as long as we keep the *order* of the payoffs the same
+  - i.e. so long as $u(a) > u(b)$ for all $a \succ b$
+
+]
+
+.pull-right[
+.center[
+![](../images/pdpayoffs3.png)
+
+This is the same game
+]
+]
+
+---
+
+# Utility Functions and Payoffs Over Game Outcomes
+
+.pull-left[
+
+- We will keep the process simple for now by simply assigning numbers to consequences
+- In fact, we can assign almost *any* numbers to the payoffs as long as we keep the *order* of the payoffs the same
+  - i.e. so long as $u(a) > u(b)$ for all $a \succ b$
+
+]
+
+.pull-right[
+.center[
+![](../images/pdpayoffs4.png)
+
+This is the same game, so long as $a>b>c>d$
+]
+]
+
+---
+
+# Rationality, Uncertainty, and Risk
+
+.pull-left[
+
+- We commonly assume, for a game:
+
+- Players understand the rules of the game
+  - Common knowledge assumption
+
+- Players behave .hi[rationally]: try to maximize payoff
+  - represented usually as (ordinal) utility
+  - make no mistakes in choosing their strategies
+]
+
+.pull-right[
+.center[
+![](../images/mind.png)
+]
+]
+
+---
+
+# Rationality, Uncertainty, and Risk
+
+.pull-left[
+
+- Game theory does not permit us to consider true .hi-purple[uncertainty]
+  - Must rule out *complete* surprises (Act of God, etc.)
+  - What do people maximize in the presence of true uncertainty? [Good question](https://micros21.classes.ryansafner.com/content/3.3-content)
+
+- But we can talk about .hi[risk]: distribution of outcomes occurring with some known **probability**
+
+- In such cases, what do players **maximize** in the presence of risk?
+
+]
+
+.pull-right[
+.center[
+![](../images/nature.jpg)
+]
+]
+---
+
+# Rationality, Uncertainty, and Risk
+
+.pull-left[
+
+- One hypothesis: players choose strategy that maximizes .hi-purple[expected value] of payoffs
+  - probability-weighted average
+  - leads to a lot of paradoxes!
+
+$$E[p] = \sum_{i=1}^n \pi_i p_i$$
+
+- $\pi$ is the probability associated with payoff $p_i$
+
+]
+
+.pull-right[
+.center[
+![:scale 100%](../images/randomimage.jpg)
+]
+]
+---
+
+# Rationality, Uncertainty, and Risk
+
+.pull-left[
+- Refinement by Von Neuman & Morgenstern: players instead maximize .hi[expected *utility*]
+  - utility function over probabilistic outcomes
+  - still some paradoxes, but fewer!
+
+$$p_a \succ p_b \iff E[u(p_a)] > E[u(p_b)]$$
+
+- Allows for different .hi-turquoise[risk attitudes]:
+    - risk neutral, risk-averse, risk-loving
+
+- makes utility functions **cardinal** (but still not measurable!)
+  - called VNM utility functions
+]
+
+.pull-right[
+.center[
+![](../images/choices.jpg)
+]
+]
+---
+
+class: inverse, center, middle
+
+# Solution Concepts: Nash Equilibrium
+
+---
+
+# Advancing Game Theory
+
+.left-column[
+
+.center[
+![](../images/vonneumannmorgenstern.jpg)
+]
+]
+
+.right-column[
+
+- Von Neumann & Morgenstern (vNM)'s *Theory of Games and Economic Behavior* (1944) establishes "Game theory"
+
+- Solve for outcomes only of 2-player zero-sum games
+  
+- Minimax method (we'll see below)
+
+]
+
+---
+
+# Advancing Game Theory
+
+.left-column[
+.center[
+![:scale 80%](../images/johnnash.jpg)
+
+.smallest[
+John Forbes Nash
+
+1928—2015
+
+Economics Nobel 1994
+]
+]
+]
+
+.right-column[
+
+- Nash's *Non-Cooperative Games* (1950) dissertation invents idea of "(Nash) Equilibrium"
+  - Extends for all $n$-player non-cooperative games (zero sum, negative sum, positive sum)
+  - Nash Equilibrium exists for all games with finite number of players, strategies, and rounds
+
+-  Nash's [27 page Dissertation on Non-Cooperative Games](https://rbsc.princeton.edu/sites/default/files/Non-Cooperative_Games_Nash.pdf)
+
+]
+
+---
+
+# Advancing Game Theory
+
+.left-column[
+.center[
+![:scale 80%](../images/johnnash.jpg)
+
+.smallest[
+John Forbes Nash
+
+1928—2015
+
+Economics Nobel 1994
+]
+]
+]
+
+.right-column[
+
+.center[
+![:scale 50%](../images/nashrecommendation.png)
+]
+
+]
+
+---
+
+# A Beautiful Movie, Lousy Economics
+
+.pull-left[
+
+- A **Pure Strategy Nash Equilibrium (PSNE)** of a game is a set of strategies (one for each player) such that no player has a profitable deviation from their strategy given the strategies played by all other players
+
+- Each player's strategy must be a best response to all other players' strategies
+
+]
+
+.pull-right[
+.center[
+![](../images/equilibriumbalance.png)
+]
+]
+---
+
+# A Beautiful Movie, Lousy Economics
+
+.center[
+<iframe width="980" height="550" src="https://www.youtube.com/embed/CemLiSI5ox8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+]
+
+---
+
+# Solution Concepts: Nash Equilibrium
+
+.pull-left[
+.center[
+![:scale 100%](../images/equilibriumbalance.png)
+]
+]
+
+.pull-right[
+
+- Recall, .hi[Nash Equilibrium]: no players want to change their strategy given what everyone else is playing
+  - All players are playing a best response to each other
+
+]
+
+---
+
+# Solution Concepts: Nash Equilibrium
+
+.pull-left[
+.center[
+![:scale 100%](../images/equilibriumbalance.png)
+]
+]
+
+.pull-right[
+.smaller[
+- Important about Nash equilibrium:
+
+1. N.E. $\neq$ the “*best*” or *optimal* outcome
+  - Recall the Prisoners' Dilemma!
+
+2. Game may have *multiple* N.E.
+
+3. Game may have *no* N.E. (in “pure” strategies)
+
+4. All players are not necessarily playing the same strategy
+
+5. Each player makes the same choice each time the game is played (possibility of mixed strategies)
+]
+]
+
+---
+
+# Pareto Efficiency
+
+.pull-left[
+.smallest[
+- Suppose we start from some initial allocation (.blue[A])
+
+]
+]
+
+.pull-right[
+```{r}
+pareto_points<-tribble(
+  ~x, ~y, ~letter, ~fill,
+  4, 5, "A", "Endowment",
+  2, 5, "B", "No",
+  2, 7, "C", "No",
+  4, 9, "D", "Yes",
+  6, 8, "E", "Yes",
+  8, 7, "F", "Yes",
+  9, 5, "G", "Yes",
+  7, 3, "H", "No",
+  4, 3, "I", "No"
+)
+
+ggplot(data = tibble(x=1:10),aes(x=x))+
+  geom_label(data = subset(pareto_points, letter=="A"), aes(x=x, y=y, label = letter, fill = fill), color = "white")+
+  labs(x = "Player 1’s Payoff",
+       y = "Player 2’s Payoff")+
+  scale_fill_manual("Improvement?",
+                    values = c("Endowment" = "blue", "Yes" = "green", "No" = "red"))+
+  scale_x_continuous(breaks=seq(0,10,1),
+                     limits = c(0,10),
+                     expand=c(0,0))+
+  scale_y_continuous(breaks=seq(0,10,1),
+                     limits = c(0,10),
+                     expand=c(0,0))+
+  ggthemes::theme_pander(base_family = "Fira Sans Condensed", base_size = 16)
+
+```
+
+]
+
+---
+
+# Pareto Efficiency
+
+.pull-left[
+.smallest[
+- Suppose we start from some initial allocation (.blue[A])
+
+- .hi[Pareto Improvement]: at least one party is better off, and no party is worse off
+  - .green[D, E, F, G] are improvements
+  - .red[B, C, H, I] are not
+
+]
+]
+
+.pull-right[
+```{r}
+pareto<-ggplot(data = tibble(x=1:10),aes(x=x))+
+  geom_label(data = pareto_points, aes(x=x, y=y, label = letter, fill = fill), color = "white")+
+  labs(x = "Player 1’s Payoff",
+       y = "Player 2’s Payoff")+
+  scale_fill_manual("Improvement?",
+                    values = c("Endowment" = "blue", "Yes" = "green", "No" = "red"))+
+  scale_x_continuous(breaks=seq(0,10,1),
+                     limits = c(0,10),
+                     expand=c(0,0))+
+  scale_y_continuous(breaks=seq(0,10,1),
+                     limits = c(0,10),
+                     expand=c(0,0))+
+  ggthemes::theme_pander(base_family = "Fira Sans Condensed", base_size = 16)
+pareto
+```
+]
+
+---
+
+# Pareto Efficiency
+
+.pull-left[
+.smallest[
+- Suppose we start from some initial allocation (.blue[A])
+
+- .hi[Pareto Improvement]: at least one party is better off, and no party is worse off
+  - .green[D, E, F, G] are improvements
+  - .red[B, C, H, I] are not
+
+- .hi[Pareto optimal/efficient]: no possible Pareto improvements
+  - Set of Pareto efficient points often called the .hi-green[Pareto frontier]<sup>.magenta[†]</sup>
+  - Many possible efficient points!
+
+]
+
+.tiny[<sup>.magenta[†]</sup>I’m simplifying...for full details, see [class 1.8 appendix](https://microf20.classes.ryansafner.com/files/CT_Application_2_Exchange.pdf) about applying consumer theory!]
+
+]
+
+.pull-right[
+```{r}
+pareto+annotate("segment", x = 4, xend = 4, y = 5, yend = 10, color = "purple", size=2, alpha=1, arrow=arrow(length=unit(0.5,"cm"), ends="last", type="closed"))+
+  annotate("segment", x = 4, xend = 10, y = 5, yend = 5, color = "purple", size=2, alpha=1, arrow=arrow(length=unit(0.5,"cm"), ends="last", type="closed"))+
+  geom_rect(xmin=4,xmax=10,ymin=5,ymax=10,fill="green",alpha=0.025)+
+  geom_segment(x = 4, y = 9, xend=6, yend=8, color = "green", size = 2)+
+  geom_segment(x = 6, y = 8, xend=8, yend=7, color = "green", size = 2)+
+  geom_segment(x = 8, y = 7, xend=9, yend=5, color = "green", size = 2)
+```
+]
+
+
+---
+
+# Pareto Efficiency and Games
+
+.pull-left[
+
+- Take the **prisoners’ dilemma**
+
+- .hi-purple[Nash Equilibrium]: (.hi-red[Defect], .hi-blue[Defect])
+  - neither player has an incentive to change strategy, *given the other's strategy*
+
+- Why can’t they both **cooperate**?
+  - A clear .hi-purple[Pareto improvement]!
+]
+
+.pull-right[
+.center[
+![](../images/pd_ne.png)
+]
+]
+
+---
+
+# Pareto Efficiency and Games
+
+.pull-left[
+
+- Main feature of prisoners’ dilemma: the Nash equilibrium is Pareto inferior to another outcome (.hi-red[Cooperate], .hi-blue[Cooperate])!
+  - But that outcome is *not* a Nash equilibrium!
+  - Dominant strategies to **Defect**
+
+- How can we ever get rational cooperation?
+]
+
+.pull-right[
+.center[
+![](../images/pd_ne.png)
+]
+]
+
+---
+
+# Nash Equilibrium and Solution Concepts
+
+.pull-left[
+
+- This is **far** from the last word on solution concepts, or even Nash equilibrium!
+
+- But sufficient for now, until we return to simultaneous games
+
+- Next week, **sequential games**!
+]
+
+.pull-right[
+.center[
+![](../images/chessknights.jpg)
+]
+]
