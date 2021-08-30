@@ -11,7 +11,9 @@ lessons:
     slides: "1.2-slides"
 
   - title: "1.3 — Sequential Games I"
-  
+    content: "1.3-content"
+    slides: "1.3-slides"
+    
   - title: "1.4 — Sequential Games II"
 
   - title: '<i class="fas fa-laptop-code"></i> **Problem Set 1**'

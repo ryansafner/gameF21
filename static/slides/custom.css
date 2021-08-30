@@ -123,6 +123,16 @@ Wider pull left/right
   font-weight: 600;
   color: #D7250E !important;
 }
+
+.hi-brown {
+  font-weight: 600;
+  color: #BF9000 !important;
+}
+
+.brown {
+  color: #BF9000 !important;
+}
+
 /* Pink text */
 .pink {
   color: #e64173 !important;
