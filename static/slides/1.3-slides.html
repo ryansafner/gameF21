@@ -74,7 +74,7 @@ class: inverse
 
 .pull-right[
 .center[
-![](../images/)
+![](../images/firstmove.jpg)
 ]
 ]
 
@@ -111,7 +111,7 @@ class: inverse, center, middle
 
 1. .hi-red[Principal] (.red[Player 1]) moves first.
 
-2. hi-blue[Agent] (.blue[Player 2]) moves second (but only if .hi-red[Principal] has played .red[Invest]).
+2. .hi-blue[Agent] (.blue[Player 2]) moves second (but only if .hi-red[Principal] has played .red[Invest]).
 
 - The game ends.
 ]
@@ -130,7 +130,7 @@ class: inverse, center, middle
 - Designing a game tree:
 
 - .hi-purple[Decision nodes]: decision point for each player
-  - Solid nodes, I've labeled and color-coded by player
+  - Solid nodes, I've labeled and color-coded by player (.red[P.1], .blue[A.1])
 
 - .hi-purple[Terminal nodes]: outcome of game, with payoff for each player
   - Hollow nodes, no further choices
@@ -150,8 +150,8 @@ class: inverse, center, middle
 - Three possible outcomes:
 
 1. (.red[Don't]): .red[100], .blue[0]
-2. (.red[Send], .blue[Keep]): .red[0], .blue[200] 
-3. (.red[Send], .blue[Share]): .red[150], blue[50]
+2. (.red[Invest], .blue[Keep]): .red[0], .blue[200] 
+3. (.red[Invest], .blue[Share]): .red[150], .blue[50]
 
 ]
 
@@ -186,11 +186,11 @@ class: inverse, center, middle
 
 .pull-left[
 
-- .hi-red[Principal] has 2 strategies:
+- .hi-red[Principal] has 2 possible strategies:
   1. .red[Don't] at .red[P.1]
   2. .red[Invest] at .red[P.1]
 
-- .hi-blue[Agent] has 2 strategies:
+- .hi-blue[Agent] has 2 possible strategies:
   1. .blue[Keep] at .blue[A.1]
   2. .blue[Share] at .blue[A.1]
 
@@ -214,7 +214,7 @@ class: inverse, center, middle
 
 - To determine the outcome of the game, start with the *last-mover* (i.e. decision nodes just before terminal nodes) and work to the beginning
 
-- A process of considering .hi[“sequential rationality”]:
+- A process of considering .hi-purple[“sequential rationality”]:
 
 &gt; “If I play X, my opponent will respond with Y; given their response, do I really want to play X?”
 
@@ -332,11 +332,11 @@ class: inverse, center, middle
 
 - As we work backwards, we can .hi-turquoise[prune] the branches of the game tree
   - Highlight branches that players **will** choose
-  - Corss out branches that players will **not** choose
+  - Cross out branches that players will **not** choose
 
 - .hi-purple[Equilibrium path of play] is highlighted from the root to one terminal node
   - (.red[Don't])
-  - All other paths not taken
+  - All other paths are not taken
 
 ]
 
