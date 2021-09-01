@@ -766,7 +766,7 @@ class: inverse, center, middle
 # Adding Players
 
 .center[
-![:scale 75%](../images/3_player_game.png)
+![:scale 65%](../images/3_player_game.png)
 ]
 
 ---
@@ -774,7 +774,7 @@ class: inverse, center, middle
 # Adding Players
 
 .center[
-![:scale 75%](../images/3_player_game_2.png)
+![:scale 65%](../images/3_player_game_2.png)
 ]
 
 ---
@@ -782,7 +782,7 @@ class: inverse, center, middle
 # Adding Players
 
 .center[
-![:scale 75%](../images/3_player_game_3.png)
+![:scale 65%](../images/3_player_game_3.png)
 ]
 
 ---
@@ -790,19 +790,19 @@ class: inverse, center, middle
 # Adding Players
 
 .center[
-![:scale 75%](../images/3_player_game_rollback.png)
+![:scale 65%](../images/3_player_game_rollback.png)
 ]
 
 --
 
-.hi-purple[Equilibrium]: $\big\{$.pink[R], .blue[(D,U)], .purple[(B,B,A,A)]$\big\}$
+.hi-purple[Equilibrium]: $\big\{$.pink[R], .blue[(D,U)], .purple[(B,B,A,A)] $\big\}$
 
 ---
 
 # How About If We Change it to This
 
 .center[
-![:scale 75%](../images/game_hard.png)
+![:scale 45%](../images/game_hard.png)
 ]
 
 ---
@@ -810,10 +810,10 @@ class: inverse, center, middle
 # How About If We Change it to This
 
 .center[
-![:scale 75%](../images/game_hard_rollback.png)
+![:scale 45%](../images/game_hard_rollback.png)
 ]
 
-.hi-purple[Equilibrium]: $\big\{$.pink[(R,X)], .blue[(U,D)], .purple[(B,B,B)]$\big\}$
+.hi-purple[Equilibrium]: $\big\{$.pink[(R,X)], .blue[(U,D)], .purple[(B,B,B)] $\big\}$
 
 ---
 
