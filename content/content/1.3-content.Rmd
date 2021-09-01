@@ -15,7 +15,7 @@ slides: "1.3-slides"
 ---
 
 {{% alert note %}}
-*Wednesday August 30, 2021*
+*Monday August 30, 2021* & *Wednesday September 1, 2021*
 {{% /alert %}}
 
 ## <i class="fas fa-info-circle fa-lg"></i> Overview

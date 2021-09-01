@@ -793,6 +793,28 @@ class: inverse, center, middle
 ![:scale 75%](../images/3_player_game_rollback.png)
 ]
 
+--
+
+.hi-purple[Equilibrium]: $\big\{$.pink[R], .blue[(D,U)], .purple[(B,B,A,A)]$\big\}$
+
+---
+
+# How About If We Change it to This
+
+.center[
+![:scale 75%](../images/game_hard.png)
+]
+
+---
+
+# How About If We Change it to This
+
+.center[
+![:scale 75%](../images/game_hard_rollback.png)
+]
+
+.hi-purple[Equilibrium]: $\big\{$.pink[(R,X)], .blue[(U,D)], .purple[(B,B,B)]$\big\}$
+
 ---
 
 # Summary
@@ -808,9 +830,9 @@ class: inverse, center, middle
   - Start with last-mover, identify best response, prune all other branches
   - Work successively backwards to the root
   - Highlight equilibrium path of play
+  - Equilibrium = set of (complete!) strategies all players are playing
 
 ---
-
 
 class: inverse, center, middle
 
@@ -863,6 +885,14 @@ Garry Kasparov vs. IBM's Deep Blue
 # How Reasonable is Rollback Thinking?
 
 .center[
+<iframe width="980" height="550" src="https://www.youtube.com/embed/aonCsvi0LKc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+]
+
+---
+
+# How Reasonable is Rollback Thinking?
+
+.center[
 <iframe width="980" height="550" src="https://www.youtube.com/embed/rspFsbq62yA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 How Richard Hatch won the first Survivor]
@@ -881,4 +911,119 @@ How Richard Hatch won the first Survivor]
 .center[
 ![](../images/survivorgame.png)
 ]
+]
+
+---
+
+class: inverse, center, middle
+
+# Games on Moblab
+
+---
+
+# Split the Pie
+
+.center[
+![:scale 80%](../images/moblabdictator.png)
+]
+
+---
+
+# The Dictator Game
+
+.pull-left[
+.center[
+![](../images/dictatorgame.png)
+]
+]
+
+.pull-right[
+- Famously called .hi[“The Dictator Game”]
+  - .hi-red[Player 1] is given money (e.g. $100) and decides how much of that $(x)$ to give to .hi-blue[Player 2]
+
+- Used in experiments to measure altruism in societies
+
+- What’s the .hi[rollback equilibrium]?
+
+- What do we see in the real world?
+]
+---
+
+# Split the Pie, Modified
+
+.center[
+![](../images/moblabultimatumproposer.png)
+]
+
+---
+
+# Split the Pie, Modified
+
+.center[
+![](../images/moblabultimatumreponder.png)
+]
+
+---
+
+# Ultimatum Game
+
+.pull-left[
+.center[
+![:scale 80%](../images/ultimatumgame.png)
+]
+]
+
+.pull-right[
+
+- Equally famous game used in experiments, the .hi[Ultimatum game]
+  - After .hi-red[Player 1] decides how much $(x)$ to give to .hi-blue[Player 2], .hi-blue[Player 2] can .blue[Accept] or .blue[Reject] (where nobody gets anything)
+
+- What’s the .hi[rollback equilibrium]?
+
+- What do we see in the real world?
+]
+
+---
+
+# Pass the Pumpkin
+
+.center[
+![:scale 80%](../images/moblabcentipede.png)
+]
+
+---
+
+# Pass the Pumpkin
+
+.center[
+![:scale 80%](../images/moblabcentipede2.png)
+]
+
+---
+
+# Centipede Game
+
+.pull-left[
+
+.center[
+![](../images/centipedegametree.png)
+]
+]
+
+.pull-right[
+
+- Called the .hi[Centipede game]
+  - Players take turns deciding between **taking** money out of a pot vs. **passing**; after each **pass**, the money in the pot grows, until a set final turn
+
+- What's the .hi[rollback equilibrium]?
+
+- What do we see in the real world?
+]
+
+---
+
+# Centipede Game
+
+.center[
+![](../images/Centipedepaper.png)
 ]
