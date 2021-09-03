@@ -14,7 +14,8 @@ lessons:
     content: "1.3-content"
     slides: "1.3-slides"
     
-  - title: '<i class="fas fa-laptop-code"></i> **Problem Set 1**'
+  - title: '<i class="fas fa-laptop-code"></i> **Problem Set 1** due Wed Sep 8'
+    assignment: "01-problem-set"
 
   - title: "1.4 — Simultaneous Games & Normal Form"
   

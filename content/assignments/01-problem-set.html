@@ -1,0 +1,158 @@
+---
+title: "Problem Set 1"
+draft: false
+linktitle: "Problem Set 1"
+date: "2020-06-08"
+menu:
+  assignments:
+    parent: Problem Sets
+    weight: 2
+type: docs
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+
+<p>{{% alert note %}}
+Due by class on <em>Wednesday September 8</em>.
+{{% /alert %}}</p>
+<p style="text-align:center">
+<a target="_blank" href="/assignments/01-problem-set-pdf.pdf"><span class="btn btn-primary btn-lg"><i class="fas fa-file-pdf"></i> Download PDF</a></span>
+</p>
+<p>Please read the <a href="/assignments/problem-sets">instructions</a> for completing homeworks.</p>
+<div id="concepts" class="section level1">
+<h1>Concepts</h1>
+<div id="question-1" class="section level2">
+<h2>Question 1</h2>
+<p>Explain, in your own words, what a strategy means in (sequential) games.</p>
+</div>
+<div id="question-2" class="section level2">
+<h2>Question 2</h2>
+<p>Draw a simple game tree between two players (come up with any simple scenario, even an abstract one). Define, and indicate on the tree:</p>
+<ul>
+<li>The root node</li>
+<li>Decision nodes</li>
+<li>Terminal nodes</li>
+<li>Decisions available to each player</li>
+<li>Payoffs for each player</li>
+<li>Strategies available to each player</li>
+</ul>
+</div>
+</div>
+<div id="problems" class="section level1">
+<h1>Problems</h1>
+<div id="question-3" class="section level2">
+<h2>Question 3</h2>
+<p>In an alternate version of the <em>Century Mark</em> game we played in class, two players take turns choosing a number between 1—10 (inclusive) to add to the count (starting at 0). The first player to bring the count to 100 <em>loses</em> this game.</p>
+<p>Describe <em>Player 2</em>’s optimal strategy, and fully describe your reasoning. Does this game have a first-mover advantage or a second-mover advantage?</p>
+</div>
+<div id="question-4" class="section level2">
+<h2>Question 4</h2>
+<p>Suppose two players, <em>Hansel</em> and <em>Gretel</em>, play a sequential-move game. Hansel moves first, Gretel moves second, and each player moves only once.</p>
+<p><img src="../../images/hw_hansel_gretel.png" /></p>
+<div id="part-a" class="section level3">
+<h3>Part A</h3>
+<p>List all of Hansel’s possible strategies.</p>
+</div>
+<div id="part-b" class="section level3">
+<h3>Part B</h3>
+<p>List all of Gretel’s possible strategies.</p>
+</div>
+<div id="part-c" class="section level3">
+<h3>Part C</h3>
+<p>Using backward induction, find is the Rollback equilibrium. Prune the branches on the game tree as you are doing so. What strategy is each player playing in equilibrium?</p>
+</div>
+</div>
+<div id="question-5" class="section level2">
+<h2>Question 5</h2>
+<p>Suppose Airbus and Boeing are rival companies seeking to develop a new commercial jetliner. Suppose Boeing is ahead in the development process and Airbus is considering whether to enter the market. If Airbus stays out, it earns 0 profit, whereas Boeing enjoys a monopoly and earns a profit of <span>$</span>1 billion. If Airbus enters, Boeing must decide whether to accommodate Airbus peaceably or to wage a price war. In the event of peaceful competition, each firm would earn a profit of <span>$</span>300 million. If there is a price war, each will lose <span>$</span>100 million since they will push the price lower than the development costs.</p>
+<div id="part-a-1" class="section level3">
+<h3>Part A</h3>
+<p>Draw this game in extensive form.</p>
+</div>
+<div id="part-b-1" class="section level3">
+<h3>Part B</h3>
+<p>List all of Airbus’ possible strategies.</p>
+</div>
+<div id="part-c-1" class="section level3">
+<h3>Part C</h3>
+<p>List all of Boeing’s pure strategies.</p>
+</div>
+<div id="part-d" class="section level3">
+<h3>Part D</h3>
+<p>Using backward induction, find is the Rollback equilibrium. Prune the branches on the game tree as you are doing so. What strategy is each firm playing in equilibrium?</p>
+</div>
+</div>
+<div id="question-6" class="section level2">
+<h2>Question 6</h2>
+<p>The game tree below shows a game between an Inventor and a potential Copycat under existing patent law.</p>
+<p><img src="../../images/hw_innovate_game.png" /></p>
+<div id="part-a-2" class="section level3">
+<h3>Part A</h3>
+<p>List all of Inventor’s possible strategies.</p>
+</div>
+<div id="part-b-2" class="section level3">
+<h3>Part B</h3>
+<p>List all of Copycat’s possible strategies.</p>
+</div>
+<div id="part-c-2" class="section level3">
+<h3>Part C</h3>
+<p>Using backward induction, find is the Rollback equilibrium. Prune the branches on the game tree as you are doing so. What strategy is each player playing in equilibrium?</p>
+</div>
+<div id="part-d-1" class="section level3">
+<h3>Part D</h3>
+<p>Suppose patent litigation has become prohibitively expensive, lowering Inventor’s litigation payoff to <span class="math inline">\(0.5\)</span>. Solve for the new Rollback equilibrium (state it below), and draw a new tree, pruning the branches.</p>
+</div>
+</div>
+<div id="question-7" class="section level2">
+<h2>Question 7</h2>
+<p>Two distinct bills, <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, are being debated in Washington. Congress prefers proposal A, and the president prefers proposal <span class="math inline">\(B\)</span>, but both would prefer <em>something</em> gets passed, and both would suffer the most if <em>nothing</em> gets passed. The proposals are <em>not</em> mutually exclusive; <em>either</em>, <em>both</em>, <em>neither</em> proposal may become law. Thus, there are four possible outcomes, and the payoffs to the two parties are as follows (a larger number represents a higher payoff):</p>
+<table>
+<thead>
+<tr class="header">
+<th>Outcome</th>
+<th align="left">Congress</th>
+<th align="left">President</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A becomes law</td>
+<td align="left">4</td>
+<td align="left">1</td>
+</tr>
+<tr class="even">
+<td>B becomes law</td>
+<td align="left">1</td>
+<td align="left">4</td>
+</tr>
+<tr class="odd">
+<td>Both become law</td>
+<td align="left">3</td>
+<td align="left">3</td>
+</tr>
+<tr class="even">
+<td>Neither become law</td>
+<td align="left">2</td>
+<td align="left">2</td>
+</tr>
+</tbody>
+</table>
+<div id="part-a-3" class="section level3">
+<h3>Part A</h3>
+<p>Draw a game tree as follows: first Congress can pass a bill that can contain A, B, or both A &amp; B, or pass nothing at all. If no bill is passed, the game ends. If any bill is passed, the president decides to sign or veto the bill. Congress does not have enough votes to override a veto, so the game ends with the bill becoming a law if the president signs.</p>
+</div>
+<div id="part-b-3" class="section level3">
+<h3>Part B</h3>
+<p>Solve for the rollback equilibrium (state it below), and prune the branches on the tree above. What strategy is Congress playing, and is the president playing in equilibrium?</p>
+</div>
+<div id="part-c-3" class="section level3">
+<h3>Part C</h3>
+<p>Now suppose the rules of the game are changed in only one respect: the president is given the extra power of a <em>Line-Item Veto</em>. Thus, if Congress passes a bill containing both A and B, the president may choose not only to sign or veto the bill as a whole, but also to veto just one of the two proposals. Redraw the new tree and find the rollback equilibrium.</p>
+</div>
+<div id="part-d-2" class="section level3">
+<h3>Part D</h3>
+<p>Compare the results of the equilibrium <em>without</em> the Line Item Veto and <em>with</em> the Line Item Veto. Explain intuitively the logic behind the difference.</p>
+</div>
+</div>
+</div>

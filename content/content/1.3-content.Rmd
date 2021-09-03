@@ -19,7 +19,7 @@ slides: "1.3-slides"
 {{% /alert %}}
 
 {{% alert warning %}}
-Problem Set 1 (to be posted today) is due Wednesday September 8. 
+[Problem Set 1](/assignments/01-problem-set) is due Wednesday September 8. 
 {{% /alert %}}
 
 ## <i class="fas fa-info-circle fa-lg"></i> Overview
