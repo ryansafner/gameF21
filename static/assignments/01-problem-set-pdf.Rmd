@@ -4,16 +4,15 @@ author: "ECON 316 — Game Theory — Fall 2021"
 date: "Due by Class Wednesday September 8"
 output:
   pdf_document:
-    dev: cairo_pdf
     latex_engine: xelatex
 header-includes:
 - \usepackage{amsmath}
 - \usepackage{multirow, multicol, booktabs}
 
-mainfont: "Fira Sans Condensed"
-monofont: "Fira Code"
-mathfont: "Fira Sans"
-fontsize: 11pt
+#mainfont: "Fira Sans Condensed"
+#monofont: "Fira Code"
+#mathfont: "Fira Sans"
+#fontsize: 11pt
 ---
 
 # Concepts
