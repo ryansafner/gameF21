@@ -856,8 +856,8 @@ class: inverse, center, middle
 - What about ties?
 
 - For .hi-red[Row], .red[A] is .hi-purple[“weakly” dominated] by .red[B]
-  - If .hi-blue[Column] plays .blue[A], then playing .red[A] is strictly better than .red[B] for .hi-red[Row]
-  - If .hi-blue[Column] plays .blue[B], then playing .red[A] is at least as good `\((\succsim)\)` as .red[B] for .hi-red[Row]
+  - If .hi-blue[Column] plays .blue[A], then playing .red[B] is strictly better than .red[A] for .hi-red[Row]
+  - If .hi-blue[Column] plays .blue[B], then playing .red[B] is at least as good `\((\succsim)\)` as .red[A] for .hi-red[Row]
 
 ]
 
@@ -874,9 +874,9 @@ class: inverse, center, middle
 .pull-left[
 - What about ties?
 
-- Some for .hi-blue[Column]: .blue[A] is .hi-purple[“weakly” dominated] by .blie[B]
-  - If .hi-red[Row] plays .red[A], then playing .blue[A] is strictly better than .blue[B] for .hi-blue[Column]
-  - If .hi-red[Row] plays .red[B], then playing .blue[A] is at least as good `\((\succsim)\)` as .blue[B] for .hi-blue[Column]
+- Same for .hi-blue[Column]: .blue[A] is .hi-purple[“weakly” dominated] by .blie[B]
+  - If .hi-red[Row] plays .red[A], then playing .blue[B] is strictly better than .blue[A] for .hi-blue[Column]
+  - If .hi-red[Row] plays .red[B], then playing .blue[B] is at least as good `\((\succsim)\)` as .blue[A] for .hi-blue[Column]
 
 ]
 
@@ -932,7 +932,7 @@ class: inverse, center, middle
 - But (.red[A], .blue[B]) and (.red[B], .blue[A]) are **also** Nash equilibria!
   - Check for yourself
 
-- So only rule out **strictly** dominated strategies!
+- .hi-turquoise[So we can only rule out *strictly* dominated strategies!]
 ]
 
 .pull-right[
@@ -1142,6 +1142,7 @@ class: inverse, center, middle
 # Best Response Analysis Permits Ties
 
 .pull-left[
+.smallest[
 - For .hi-red[Row] in this game:
   - If .hi-blue[Column] plays .blue[A], .hi-red[Row]'s best response is .red[B]
   - If .hi-blue[Column] plays .blue[B], .red[A] and .red[B] are both best responses
@@ -1153,6 +1154,7 @@ class: inverse, center, middle
   2. (.red[A], .blue[B])
   3. (.red[B], .blue[B])
   
+]
 ]
 
 .pull-right[
