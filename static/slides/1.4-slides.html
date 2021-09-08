@@ -1,54 +1,32 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>1.4 — Simultaneous Games</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Ryan Safner  Assistant Professor of Economics   safner@hood.edu   ryansafner/gameF21   gameF21.classes.ryansafner.com " />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/remark-css/hygge.css" rel="stylesheet" />
+    <link href="libs/tile-view/tile-view.css" rel="stylesheet" />
+    <script src="libs/tile-view/tile-view.js"></script>
+    <link href="libs/tachyons/tachyons.min.css" rel="stylesheet" />
+    <script src="libs/freezeframe/freezeframe.min.js"></script>
+    <script src="libs/xaringanExtra-freezeframe/freezeframe-init.js"></script>
+    <script id="xaringanExtra-freezeframe-options" type="application/json">{"selector":"img[src$=\"gif\"]","trigger":"click","overlay":false,"responsive":true,"warnings":true}</script>
+    <script src="https://use.fontawesome.com/5235085b15.js"></script>
+    <link rel="stylesheet" href="custom.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# 1.4 — Simultaneous Games
+## ECON 316 • Game Theory • Fall 2021
+### Ryan Safner<br> Assistant Professor of Economics <br> <a href="mailto:safner@hood.edu"><i class="fa fa-paper-plane fa-fw"></i>safner@hood.edu</a> <br> <a href="https://github.com/ryansafner/gameF21"><i class="fa fa-github fa-fw"></i>ryansafner/gameF21</a><br> <a href="https://gameF21.classes.ryansafner.com"> <i class="fa fa-globe fa-fw"></i>gameF21.classes.ryansafner.com</a><br>
+
 ---
-title: "1.4 — Simultaneous Games"
-subtitle: "ECON 316 • Game Theory • Fall 2021"
-author: 'Ryan Safner<br> Assistant Professor of Economics <br> <a href="mailto:safner@hood.edu"><i class="fa fa-paper-plane fa-fw"></i>safner@hood.edu</a> <br> <a href="https://github.com/ryansafner/gameF21"><i class="fa fa-github fa-fw"></i>ryansafner/gameF21</a><br> <a href="https://gameF21.classes.ryansafner.com"> <i class="fa fa-globe fa-fw"></i>gameF21.classes.ryansafner.com</a><br>'
-#date:
-output:
-  xaringan::moon_reader:
-    mathjax: "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML" # rescales math with css changes https://github.com/yihui/xaringan/issues/143
-    lib_dir: libs
-    #seal: false
-    css: [custom.css, "hygge"] #, metropolis, metropolis-fonts
-    nature:
-      beforeInit: ["macros.js", "https://platform.twitter.com/widgets.js"] # first is for rescaling images , second is for embedding tweets, https://github.com/yihui/xaringan/issues/100
-      highlightStyle: github
-      highlightLines: true
-      countIncrementalSlides: false
-      ratio: "16:9"
-      slideNumberFormat: |
-        <div class="progress-bar-container">
-          <div class="progress-bar" style="width: calc(%current% / %total% * 100%);">
-          </div>
-        </div>
-    includes:
-      in_header: header.html # for font awesome, used in title  
----
 
-```{r setup, include=FALSE}
-options(htmltools.dir.version = FALSE)
-knitr::opts_chunk$set(echo=F,
-                      message=F,
-                      warning=F,
-                      fig.retina = 3,
-                      fig.align = "center")
-library("tidyverse")
-library("ggrepel")
-library("fontawesome")
-xaringanExtra::use_tile_view()
-xaringanExtra::use_tachyons()
-xaringanExtra::use_freezeframe()
 
-update_geom_defaults("label", list(family = "Fira Sans Condensed"))
-update_geom_defaults("text", list(family = "Fira Sans Condensed"))
 
-set.seed(256)
-
-theme_slides <- theme_light() + 
-  theme(
-    text = element_text(family = "Fira Sans", size = 24)
-  )
-
-```
 
 class: inverse
 
@@ -243,8 +221,8 @@ class: inverse, center, middle
 - Consider the .hi[prisoners' dilemma]
 
 - For .hi-red[Player 1]: .red[Cooperate] is .hi-purple[dominated] by .red[Defect]
-  - $u_1(\color{red}{D}, \color{blue}{C}) \succ u_1(\color{red}{C}, \color{blue}{C})$
-  - $u_1(\color{red}{D}, \color{blue}{D}) \succ u_1(\color{red}{C}, \color{blue}{D})$
+  - `\(u_1(\color{red}{D}, \color{blue}{C}) \succ u_1(\color{red}{C}, \color{blue}{C})\)`
+  - `\(u_1(\color{red}{D}, \color{blue}{D}) \succ u_1(\color{red}{C}, \color{blue}{D})\)`
 
 ]
 
@@ -262,8 +240,8 @@ class: inverse, center, middle
 - Consider the .hi[prisoners' dilemma]
 
 - For .hi-red[Player 1]: .red[Cooperate] is .hi-purple[dominated] by .red[Defect]
-  - $u_1(\color{red}{D}, \color{blue}{C}) \succ u_1(\color{red}{C}, \color{blue}{C})$
-  - $u_1(\color{red}{D}, \color{blue}{D}) \succ u_1(\color{red}{C}, \color{blue}{D})$
+  - `\(u_1(\color{red}{D}, \color{blue}{C}) \succ u_1(\color{red}{C}, \color{blue}{C})\)`
+  - `\(u_1(\color{red}{D}, \color{blue}{D}) \succ u_1(\color{red}{C}, \color{blue}{D})\)`
 
 - Knowing .hi-red[Player 1] will **never** play .red[Cooperate], we can delete that entire row from the game
 ]
@@ -282,8 +260,8 @@ class: inverse, center, middle
 - Consider the .hi[prisoners' dilemma]
 
 - For .hi-red[Player 1]: .red[Cooperate] .hi-purple[dominated] by .red[Defect]
-  - $u_1(\color{red}{D}, \color{blue}{C}) \succ u_1(\color{red}{C}, \color{blue}{C})$
-  - $u_1(\color{red}{D}, \color{blue}{D}) \succ u_1(\color{red}{C}, \color{blue}{D})$
+  - `\(u_1(\color{red}{D}, \color{blue}{C}) \succ u_1(\color{red}{C}, \color{blue}{C})\)`
+  - `\(u_1(\color{red}{D}, \color{blue}{D}) \succ u_1(\color{red}{C}, \color{blue}{D})\)`
 
 - Knowing .hi-red[Player 1] will **never** play .red[Cooperate], we can delete that entire row from the game
   - .hi-blue[Player 2]’s best response to .red[Defect] is to .blue[Defect]
@@ -380,8 +358,8 @@ class: inverse, center, middle
 - Alternatively, we could consider .hi-blue[Player 2]
 
 - For .hi-blue[Player 2]: .blue[Cooperate] is a .hi-purple[dominated] by .blue[Defect]
-  - $u_2(\color{red}{C}, \color{blue}{D}) \succ u_2(\color{red}{C}, \color{blue}{C})$
-  - $u_2(\color{red}{D}, \color{blue}{D}) \succ u_2(\color{red}{D}, \color{blue}{C})$
+  - `\(u_2(\color{red}{C}, \color{blue}{D}) \succ u_2(\color{red}{C}, \color{blue}{C})\)`
+  - `\(u_2(\color{red}{D}, \color{blue}{D}) \succ u_2(\color{red}{D}, \color{blue}{C})\)`
 
 ]
 
@@ -398,8 +376,8 @@ class: inverse, center, middle
 - Alternatively, we could consider .hi-blue[Player 2]
 
 - For .hi-blue[Player 2]: .blue[Cooperate] is a .hi-purple[dominated] by .blue[Defect]
-  - $u_2(\color{red}{C}, \color{blue}{D}) \succ u_2(\color{red}{C}, \color{blue}{C})$
-  - $u_2(\color{red}{D}, \color{blue}{D}) \succ u_2(\color{red}{D}, \color{blue}{C})$
+  - `\(u_2(\color{red}{C}, \color{blue}{D}) \succ u_2(\color{red}{C}, \color{blue}{C})\)`
+  - `\(u_2(\color{red}{D}, \color{blue}{D}) \succ u_2(\color{red}{D}, \color{blue}{C})\)`
 
 - Knowing .hi-blue[Player 2] will **never** play .blue[Cooperate], we can delete that entire column from the game
 
@@ -419,8 +397,8 @@ class: inverse, center, middle
 - Alternatively, we could consider .hi-blue[Player 2]
 
 - For .hi-blue[Player 2]: .blue[Cooperate] is a .hi-purple[dominated] by .blue[Defect]
-  - $u_2(\color{red}{C}, \color{blue}{D}) \succ u_2(\color{red}{C}, \color{blue}{C})$
-  - $u_2(\color{red}{D}, \color{blue}{D}) \succ u_2(\color{red}{D}, \color{blue}{C})$
+  - `\(u_2(\color{red}{C}, \color{blue}{D}) \succ u_2(\color{red}{C}, \color{blue}{C})\)`
+  - `\(u_2(\color{red}{D}, \color{blue}{D}) \succ u_2(\color{red}{D}, \color{blue}{C})\)`
 
 - Knowing .hi-blue[Player 2] will **never** play .blue[Cooperate], we can delete that entire column from the game
   - .hi-red[Player 1]’s best response to .blue[Defect] is to .red[Defect]
@@ -481,11 +459,11 @@ class: inverse, center, middle
 
 - .hi-red[Congress] determines fiscal policy
 
-- Can tax & spend to .red[Balance Budget]
+- Can tax &amp; spend to .red[Balance Budget]
 
-- Can tax & spend to run a .red[Budget Deficit]
+- Can tax &amp; spend to run a .red[Budget Deficit]
 
-- Constant political pressure to spend more & tax less
+- Constant political pressure to spend more &amp; tax less
   - May raise possibility of inflation
 ]
 
@@ -819,7 +797,7 @@ class: inverse, center, middle
 
 - For .hi-red[Row], .red[A] is .hi-purple[“weakly” dominated] by .red[B]
   - If .hi-blue[Column] plays .blue[A], then playing .red[A] is strictly better than .red[B] for .hi-red[Row]
-  - If .hi-blue[Column] plays .blue[B], then playing .red[A] is at least as good $(\succsim)$ as .red[B] for .hi-red[Row]
+  - If .hi-blue[Column] plays .blue[B], then playing .red[A] is at least as good `\((\succsim)\)` as .red[B] for .hi-red[Row]
 
 ]
 
@@ -838,7 +816,7 @@ class: inverse, center, middle
 
 - Some for .hi-blue[Column]: .blue[A] is .hi-purple[“weakly” dominated] by .blie[B]
   - If .hi-red[Row] plays .red[A], then playing .blue[A] is strictly better than .blue[B] for .hi-blue[Column]
-  - If .hi-red[Row] plays .red[B], then playing .blue[A] is at least as good $(\succsim)$ as .blue[B] for .hi-blue[Column]
+  - If .hi-red[Row] plays .red[B], then playing .blue[A] is at least as good `\((\succsim)\)` as .blue[B] for .hi-blue[Column]
 
 ]
 
@@ -1396,3 +1374,130 @@ Ranked from (most to least) effective and (most to least) tedious:
   - If a single strategy remains for each player, that's the Nash equilibrium
   - Ties cause you to rule out potential Nash equilibria!
 ]
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="macros.js"></script>
+<script src="https://platform.twitter.com/widgets.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9",
+"slideNumberFormat": "<div class=\"progress-bar-container\">\n  <div class=\"progress-bar\" style=\"width: calc(%current% / %total% * 100%);\">\n  </div>\n</div>\n"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
