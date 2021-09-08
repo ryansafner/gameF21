@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="" xml:lang="">
   <head>
-    <title>1.4 — Simultaneous Games</title>
+    <title>1.4 — Simultaneous Games &amp; Normal Form</title>
     <meta charset="utf-8" />
     <meta name="author" content="Ryan Safner  Assistant Professor of Economics   safner@hood.edu   ryansafner/gameF21   gameF21.classes.ryansafner.com " />
     <script src="libs/header-attrs/header-attrs.js"></script>
@@ -19,7 +19,7 @@
     <textarea id="source">
 class: center, middle, inverse, title-slide
 
-# 1.4 — Simultaneous Games
+# 1.4 — Simultaneous Games &amp; Normal Form
 ## ECON 316 • Game Theory • Fall 2021
 ### Ryan Safner<br> Assistant Professor of Economics <br> <a href="mailto:safner@hood.edu"><i class="fa fa-paper-plane fa-fw"></i>safner@hood.edu</a> <br> <a href="https://github.com/ryansafner/gameF21"><i class="fa fa-github fa-fw"></i>ryansafner/gameF21</a><br> <a href="https://gameF21.classes.ryansafner.com"> <i class="fa fa-globe fa-fw"></i>gameF21.classes.ryansafner.com</a><br>
 
@@ -33,9 +33,9 @@ class: inverse
 # Outline
 
 ### [Games in Normal Form](#3)
-### [Dominance-Solvability](#)
-### [Best-Response](#)
-### [Rationalizability](#)
+### [Dominance-Solvability](#10)
+### [Best-Response](#55)
+### [Depicting Three Player Games](#68)
 
 ---
 
@@ -48,18 +48,19 @@ class: inverse, center, middle
 # Simultaneous Games
 
 .pull-left[
+.smaller[
 - Players must make choices simultaneously, but under .hi-purple[strategic uncertainty]
   - Don't know which strategies other players are playing before you choose yours
 
 - *Possible* strategic choices and payoffs of each outcome to each player *are* known by all players
 
 - Must think not only about own best strategic choice, but also the best strategic choice of *other* player(s)
-
+]
 ]
 
 .pull-right[
 .center[
-![](../images/)
+![](../images/thinker2.jpg)
 ]
 ]
 
@@ -68,7 +69,7 @@ class: inverse, center, middle
 # Flat Tire Story
 
 .center[
-![:scale 70%](../images/flattire.jpeg)
+![:scale 60%](../images/flattire.jpeg)
 ]
 
 ---
@@ -93,6 +94,65 @@ class: inverse, center, middle
 .pull-right[
 .center[
 ![](../images/whichtiregame.png)
+]
+]
+
+---
+
+# Nash Equilibrium, Again
+
+.pull-left[  
+- Again, in a .hi-purple[Nash equilibrium], no player wants to change strategies given the strategies played by all other players
+  - Equivalently, each player is playing a best response to other players' strategies
+
+- Today we will learn **several methods** to search for Nash equilibria in simultaneous games
+]
+
+.pull-right[
+.center[
+![](../images/equilibriumbalance.png)
+]
+]
+
+---
+
+# Cell-by-Cell Inspection
+
+.pull-left[  
+- Consider again the .hi-purple[prisoners' dilemma]
+
+- Consider each outcome and ask, **does _any_ player want to change strategies, _given what the other player is doing_?**
+  1. (.red[C], .blue[C])
+  2. (.red[C], .blue[D])
+  3. (.red[D], .blue[C])
+  4. (.red[D], .blue[D])
+]
+
+.pull-right[
+.center[
+![](../images/pdpayoffs3.png)
+]
+]
+
+---
+
+# Cell-by-Cell Inspection
+
+.pull-left[  
+- Consider again the .hi-purple[prisoners' dilemma]
+
+- Consider each outcome and ask, **does _any_ player want to change strategies, _given what the other player is doing_?**
+  1. (.red[C], .blue[C]) ✅
+  2. (.red[C], .blue[D]) ✅
+  3. (.red[D], .blue[C]) ✅
+  4. (.red[D], .blue[D]) ❌
+
+- .hi-turquoise[If no player wants to switch strategies (given the others’), that outcome is a Nash equilibrium]: (.red[D], .blue[D])
+]
+
+.pull-right[
+.center[
+![](../images/pd_ne.png)
 ]
 ]
 
@@ -259,7 +319,7 @@ class: inverse, center, middle
 .pull-left[
 - Consider the .hi[prisoners' dilemma]
 
-- For .hi-red[Player 1]: .red[Cooperate] .hi-purple[dominated] by .red[Defect]
+- For .hi-red[Player 1]: .red[Cooperate] is .hi-purple[dominated] by .red[Defect]
   - `\(u_1(\color{red}{D}, \color{blue}{C}) \succ u_1(\color{red}{C}, \color{blue}{C})\)`
   - `\(u_1(\color{red}{D}, \color{blue}{D}) \succ u_1(\color{red}{C}, \color{blue}{D})\)`
 
@@ -357,7 +417,7 @@ class: inverse, center, middle
 .pull-left[
 - Alternatively, we could consider .hi-blue[Player 2]
 
-- For .hi-blue[Player 2]: .blue[Cooperate] is a .hi-purple[dominated] by .blue[Defect]
+- For .hi-blue[Player 2]: .blue[Cooperate] is .hi-purple[dominated] by .blue[Defect]
   - `\(u_2(\color{red}{C}, \color{blue}{D}) \succ u_2(\color{red}{C}, \color{blue}{C})\)`
   - `\(u_2(\color{red}{D}, \color{blue}{D}) \succ u_2(\color{red}{D}, \color{blue}{C})\)`
 
@@ -375,7 +435,7 @@ class: inverse, center, middle
 .pull-left[
 - Alternatively, we could consider .hi-blue[Player 2]
 
-- For .hi-blue[Player 2]: .blue[Cooperate] is a .hi-purple[dominated] by .blue[Defect]
+- For .hi-blue[Player 2]: .blue[Cooperate] is .hi-purple[dominated] by .blue[Defect]
   - `\(u_2(\color{red}{C}, \color{blue}{D}) \succ u_2(\color{red}{C}, \color{blue}{C})\)`
   - `\(u_2(\color{red}{D}, \color{blue}{D}) \succ u_2(\color{red}{D}, \color{blue}{C})\)`
 
@@ -396,7 +456,7 @@ class: inverse, center, middle
 .pull-left[
 - Alternatively, we could consider .hi-blue[Player 2]
 
-- For .hi-blue[Player 2]: .blue[Cooperate] is a .hi-purple[dominated] by .blue[Defect]
+- For .hi-blue[Player 2]: .blue[Cooperate] is .hi-purple[dominated] by .blue[Defect]
   - `\(u_2(\color{red}{C}, \color{blue}{D}) \succ u_2(\color{red}{C}, \color{blue}{C})\)`
   - `\(u_2(\color{red}{D}, \color{blue}{D}) \succ u_2(\color{red}{D}, \color{blue}{C})\)`
 
@@ -1079,6 +1139,29 @@ class: inverse, center, middle
 
 ---
 
+# Best Response Analysis Permits Ties
+
+.pull-left[
+- For .hi-red[Row] in this game:
+  - If .hi-blue[Column] plays .blue[A], .hi-red[Row]'s best response is .red[B]
+  - If .hi-blue[Column] plays .blue[B], .red[A] and .red[B] are both best responses
+
+- Symmetrically for .hi-blue[Column]
+
+- Finds all three Nash equilibria (in each, both players play a best response)
+  1. (.red[B], .blue[A])
+  2. (.red[A], .blue[B])
+  3. (.red[B], .blue[B])
+  
+]
+
+.pull-right[
+.center[
+![](../images/tie_game_br.png)
+]
+]
+
+---
 class: inverse, center, middle
 
 # Depicting Three Player Games
