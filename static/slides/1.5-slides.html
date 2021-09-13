@@ -1,0 +1,1419 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>1.5 — Coordination Games &amp; Multiple Equilibria</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Ryan Safner  Assistant Professor of Economics   safner@hood.edu   ryansafner/gameF21   gameF21.classes.ryansafner.com " />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/remark-css/hygge.css" rel="stylesheet" />
+    <link href="libs/tile-view/tile-view.css" rel="stylesheet" />
+    <script src="libs/tile-view/tile-view.js"></script>
+    <link href="libs/tachyons/tachyons.min.css" rel="stylesheet" />
+    <script src="libs/freezeframe/freezeframe.min.js"></script>
+    <script src="libs/xaringanExtra-freezeframe/freezeframe-init.js"></script>
+    <script id="xaringanExtra-freezeframe-options" type="application/json">{"selector":"img[src$=\"gif\"]","trigger":"click","overlay":false,"responsive":true,"warnings":true}</script>
+    <script src="https://use.fontawesome.com/5235085b15.js"></script>
+    <link rel="stylesheet" href="custom.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# 1.5 — Coordination Games &amp; Multiple Equilibria
+## ECON 316 • Game Theory • Fall 2021
+### Ryan Safner<br> Assistant Professor of Economics <br> <a href="mailto:safner@hood.edu"><i class="fa fa-paper-plane fa-fw"></i>safner@hood.edu</a> <br> <a href="https://github.com/ryansafner/gameF21"><i class="fa fa-github fa-fw"></i>ryansafner/gameF21</a><br> <a href="https://gameF21.classes.ryansafner.com"> <i class="fa fa-globe fa-fw"></i>gameF21.classes.ryansafner.com</a><br>
+
+---
+
+
+
+
+class: inverse
+
+# Outline
+
+### [Coordination Games](#3)
+### [Multiple Equilibria](#10)
+### [Rationalizability and the Role of Beliefs](#55)
+
+---
+
+class: inverse, center, middle
+
+# Coordination Games 
+
+---
+
+# Coordination Games
+
+.pull-left[
+
+- This semester, we are dealing with .hi[non-cooperative games] where each player acts independently
+
+- In .hi-purple[coordination games], players don't necessarily have conflicting interests
+  - Often .hi-turquoise[positive-sum games]
+  - Often have more than one, or zero, Pure Strategy Nash equilibria (PSNE)
+]
+
+.pull-right[
+.center[
+![:scale 75%](../images/teamglobe.png)
+]
+]
+
+---
+
+# Pure Coordination Game
+
+.pull-left[
+
+- .hi[Pure coordination game]: does not matter which strategy players choose, so long as they choose the same!
+
+]
+
+.pull-right[
+.center[
+![](../images/pure_coordination_game.png)
+]
+]
+
+---
+
+# Pure Coordination Game
+
+.pull-left[
+
+- .hi[Pure coordination game]: does not matter which strategy players choose, so long as they choose the same!
+
+- Two Pure Strategy Nash Equilibria:
+  1. (.red[Whitaker], .blue[Whitaker])
+  2. (.red[Starbucks], .blue[Starbucks])
+]
+
+.pull-right[
+.center[
+![](../images/pure_coordination_game_ne.png)
+]
+]
+
+---
+
+# Pure Coordination Game
+
+.pull-left[
+
+- The flat tire game from before is also a pure coordination game
+
+- Four PSNE:
+  1. (.red[Front L], .blue[Front L])
+  2. (.red[Front R], .blue[Front R])
+  4. (.red[Rear L], .blue[Rear L])
+  5. (.red[Rear R], .blue[Rear R])
+]
+
+.pull-right[
+.center[
+![](../images/whichtiregame.png)
+]
+]
+
+---
+
+# Coordination Games: Focal Points
+
+.left-column[
+.center[
+![:scale 80%](../images/thomasschelling.jpg)
+
+.smallest[
+Thomas Schelling
+
+1921—2016
+
+Economics Nobel 2005
+]
+]
+]
+
+.right-column[
+
+- Without pre-game communication, expectations must .hi-turquoise[converge] on a .hi[focal point]
+
+- A major idea in Thomas Schelling's work, we often call them .hi[“Schelling points”]
+]
+
+---
+
+# Coordination Games: Focal Points
+
+.left-column[
+.center[
+![:scale 80%](../images/thomasschelling.jpg)
+
+.smallest[
+Thomas Schelling
+
+1921—2016
+
+Economics Nobel 2005
+]
+]
+]
+
+.right-column[
+
+.smallest[
+
+&gt; “[I]t is instructive to begin with the...case in which two or more parties have identical interests and face the problem not of reconciling interests but only of coordinating their actions for their mutual benefit, when communication is impossible.”
+
+&gt; “When a man loses his wife in a department store without any prior understanding on where to meet if they get separated, the chances are good that they will find each other. It is likely that each will think of some obvious place to meet, so obvious that each will be sure that the other is sure that it is ‘obvious’ to both of them. One does not simply predict where the other will go, since the other will go where he predicts the first to go, which is wherever the first predicts the second to predict the first to go, and so ad infinitum.”
+
+]
+.source[Schelling, Thomas, 1960, *The Strategy of Conflict*]
+]
+
+---
+
+# Coordination Games: Focal Points
+
+.left-column[
+.center[
+![:scale 80%](../images/thomasschelling.jpg)
+
+.smallest[
+Thomas Schelling
+
+1921—2016
+
+Economics Nobel 2005
+]
+]
+]
+
+.right-column[
+
+.smallest[
+
+&gt; “What is necessary is to coordinate predictions, to read the same message in the common situation, to identify the one course of action that their expectations of each other can converge on. They must ‘mutually recognize’ some unique signal that coordinates their expectations of each other. We cannot be sure that they will meet, nor would all couples read the same signal; but the chances are certainly a great deal better than if they pursued a random course of search.” (p.54).
+
+]
+.source[Schelling, Thomas, 1960, *The Strategy of Conflict*]
+]
+
+---
+
+# Coordination Games: Focal Points
+
+.pull-left[
+
+.bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
+.hi-green[Example]
+
+- If we both pick the same square (without communicating), we each get $100
+
+]
+
+- Which one would (should?) you choose?
+
+]
+
+.pull-right[
+.center[
+![](../images/schellingpoint.png)
+]
+]
+
+---
+
+# Coordination Games: Focal Points
+
+.pull-left[
+
+.bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
+.hi-green[Example]
+
+- If we both pick the same square (without communicating), we each get $100
+
+]
+
+- Which one would (should?) you choose?
+
+- Culture and informal norms (“unwritten laws”) play an enormous role!
+]
+
+.pull-right[
+.center[
+![](../images/schellingpoint.png)
+]
+]
+
+---
+
+# Assurance Games
+
+.pull-left[
+
+- .hi[“Assurance” game]: a special case of coordination game where one equilibrium is universally preferred
+
+- Here, both prefer (.red[Whit], .blue[Whit]) over (.red[SB], .blue[SB])
+]
+
+.pull-right[
+.center[
+![](../images/assurance_game.png)
+]
+]
+
+---
+
+# Assurance Games
+
+.pull-left[
+
+- .hi[“Assurance” game]: a special case of coordination game where one equilibrium is universally preferred
+
+- Here, both prefer (.red[Whit], .blue[Whit]) over (.red[SB], .blue[SB])
+
+- Still two PSNE
+  1. (.red[Whit], .blue[Whit])
+  2. (.red[SB], .blue[SB])
+  
+- Players get their preferred outcome only if each has enough **assurance** the other is likely to pick it
+]
+
+.pull-right[
+.center[
+![](../images/assurance_game_ne.png)
+]
+]
+
+---
+
+# Assurance Games: A Famed Example
+
+.center[
+![:scale 70%](../images/qwerty.png)
+]
+
+--
+
+.center[
+![:scale 70%](../images/dvorak.png)
+]
+
+---
+
+# Assurance Games: Path Dependence &amp; Lock-In
+
+.pull-left[
+
+- Suppose all agree Dvorak is superior
+  - But not guaranteed to be the outcome!
+
+- .hi-purple[Path Dependence]: early choices may affect later ability to choose or switch
+
+- .hi-purple[Lock-in]: the switching cost of moving from one equilibrium to another becomes prohibitive
+
+]
+
+.pull-right[
+.center[
+![](../images/keyboard_game.png)
+]
+]
+
+.source[David, Paul A, 1985, "Clio and the Economics of QWERTY," *American Economic Review*, 75(2):332-337]
+
+---
+
+# Assurance Games: Path Dependence &amp; Lock-In
+
+.pull-right[
+.center[
+![](../images/qwertyjournal.png)
+]
+]
+
+--
+
+.pull-right[
+.center[
+![](../images/qwertyjournal2.png)
+]
+]
+
+---
+
+# Assurance Games: Path Dependence &amp; Lock-In
+
+.pull-left[
+
+- .hi-purple["First-degree" path dependency]:
+  - Sensitivity to initial conditions
+  - But no inefficiency
+
+- .hi-green[Examples]:
+  - language
+  - driving on left vs. right side of road
+
+]
+
+.pull-right[
+.center[
+![](../images/keyboard_game.png)
+]
+]
+
+.source[Liebowitz, Stan J and Stephen E Margolis, 1990, "The Fable of the Keys," *Journal of Law and Economics*, 33(1):1-25]
+
+---
+
+# Assurance Games: Path Dependence &amp; Lock-In
+
+.pull-left[
+
+- .hi-purple["Second-degree" path dependency]:
+  - Sensitivity to initial conditions
+  - Imperfect information at time of choice
+  - Outcomes are regrettable *ex post*
+
+- Not inefficient: no better decision could have been made *at the time*
+
+]
+
+.pull-right[
+.center[
+![](../images/keyboard_game.png)
+]
+]
+
+.source[Liebowitz, Stan J and Stephen E Margolis, 1990, "The Fable of the Keys," *Journal of Law and Economics*, 33(1):1-25]
+
+---
+
+# Assurance Games: Path Dependence &amp; Lock-In
+
+.pull-left[
+
+- .hi-purple["Third-degree" path dependency]: 
+  - Sensitivity to initial conditions
+  - Worse choice made
+  - Avoidable mistake at the time
+  
+- Inefficient lock-in
+
+]
+
+.pull-right[
+.center[
+![](../images/keyboard_game.png)
+]
+]
+
+.source[Liebowitz, Stan J and Stephen E Margolis, 1990, "The Fable of the Keys," *Journal of Law and Economics*, 33(1):1-25]
+
+---
+
+# Assurance Games: Path Dependence &amp; Lock-In
+
+.pull-left[
+.center[
+![](../images/tech_adoptions.png)
+]
+
+.source[Arthur, W. Brian, 1989, "Competing Technologies, Increasing Returns, and Lock-In by Historical Events," *Economic Journal* 99(394): 116-131]
+]
+
+.pull-right[
+
+- In the long-run, Technology B is superior
+
+- But in the short-run, Technology A has higher payoffs
+
+- Inefficient lock-in
+
+- But what about uncertainty?
+  - What set of institutions will choose best under uncertainty?
+
+]
+
+---
+
+# Assurance Games: Path Dependence &amp; Lock-In
+
+.pull-left[
+.center[
+![](../images/tech_adoptions.png)
+]
+
+.source[Arthur, W. Brian, 1989, "Competing Technologies, Increasing Returns, and Lock-In by Historical Events," *Economic Journal* 99(394): 116-131]
+]
+
+.pull-right[
+
+- Role for .hi-purple[entrepreneurial judgment] and .hi-purple["championing"] a standard
+  - Someone who "owns" a standard has strong incentive to see it adopted
+
+- Champions who forecast higher long-term payoffs can subsidize adoption in the short run
+]
+
+---
+
+# Assurance Games: Path Dependence &amp; Lock-In
+
+.pull-left[
+
+- September 3, 1967, [“H day”](https://en.wikipedia.org/wiki/Dagen_H) in Sweden
+  - Högertrafikomläggningen: “right-hand traffic diversion”
+
+- Sweden switched from driving on the left side of the road to the right
+  - Both of Sweden’s neighbors drove on the right, 5 million vehicles/year crossing borders
+]
+
+.pull-right[
+.center[
+![](../images/hday.jpg)
+
+![](../images/hday1.png)
+
+]
+]
+
+---
+
+# Assurance Games: Stag Hunt
+
+.pull-left[
+
+- Famous variant: the .hi[“Stag Hunt”]
+
+&gt; “If it was a matter of hunting a deer, everyone well realized that he must remain faithful to his post; but if a hare happened to pass within reach of one of them, we cannot doubt that he would have gone off in pursuit without scruple.”
+
+.source[rousseau, Jean Jacques, 1754, *Discourse of Inequality*]
+]
+
+.pull-right[
+.center[
+![](../images/fox-hunting.jpg)
+]
+]
+
+---
+
+# Assurance Games: Stag Hunt
+
+.pull-left[
+
+- Often invoked to discuss public goods, free rider problems
+
+- Two PSNE, and (.red[Stag], .blue[Stag]) `\(\succ\)` (.red[Hare], .blue[Hare])
+
+- Can't take down a Stag alone, need to rely on a group to work together
+  - But unlike prisoners' dilemma, no incentive to overtly “screw over” the group
+]
+
+.pull-right[
+.center[
+![](../images/stag_hunt.png)
+]
+]
+
+---
+
+# Prisoners' Dilemma vs. Assurance/Stag Hunt
+
+.center[
+![](../images/pd_stag_hunt.png)
+]
+
+--
+
+.pull-left[
+.smallest[
+- Dominant strategy to always **Defect**
+- Nash equilibrium: (.red[Defect], .blue[Defect])
+- (.red[Coop], .blue[Coop]) `\(\succ\)` (.red[Defect], .blue[Defect])
+- (.red[Coop], .blue[Coop]) **not** a Nash equilibrium
+]
+]
+
+.pull-right[
+.smallest[
+- No dominant or dominated strategies
+- 2 NE: (.red[Coop], .blue[Coop]) and (.red[Defect], .blue[Defect])
+- (.red[Coop], .blue[Coop]) `\(\succ\)` (.red[Defect], .blue[Defect])
+- Can get stuck in (.red[Defect], .blue[Defect]) but (.red[Coop], .blue[Coop]) is stable &amp; possible
+
+]
+]
+
+---
+
+# Battle of the Sexes
+
+.pull-left[
+
+- Each player prefers a different Nash equilibrium over another
+
+- But coordinating is better than not-coordinating, for both!
+
+]
+
+.pull-right[
+.center[
+![](../images/battle_of_sexes.png)
+]
+]
+
+---
+
+# Battle of the Sexes
+
+.pull-left[
+
+- Each player prefers a different Nash equilibrium over another
+
+- But coordinating is better than not-coordinating, for both!
+
+- Two PSNE:
+  1. (.red[Hockey], .blue[Hockey]) — .hi-red[Harry]'s preference
+  2. (.red[Ballet], .blue[Ballet]) — .hi-blue[Sally]'s preference
+]
+
+.pull-right[
+.center[
+![](../images/battle_of_sexes_ne.png)
+]
+]
+
+---
+
+# Chicken
+
+.pull-left[
+
+- Two strategies per player: act tough/cool vs. weak
+
+- Each prefers to act tough and have the other player act weak
+  - But if both act tough, the worst outcome for both
+
+- Often called an .hi-turquoise[“anti-coordination” game]
+]
+
+.pull-right[
+.center[
+![](../images/chicken_game_generic.png)
+]
+]
+
+---
+
+# Chicken
+
+.pull-left[
+
+- A common example in movies
+
+- Two cars aimed at each other, or racing furthest to edge of cliff
+]
+
+.pull-right[
+.center[
+![](../images/chicken_game_car.png)
+]
+]
+
+---
+
+# Chicken
+
+.pull-left[
+
+- A common example in movies
+
+- Two cars aimed at each other, or racing furthest to edge of cliff
+
+- Two PSNE:
+  1. (.red[Straight], .blue[Swerve]) — .hi-red[Row]'s preference
+  2. (.red[Swerve], .blue[Straight]) — .hi-blue[Column]'s preference
+
+- So long as both choose *different* strategies, avoids worst outcome
+]
+
+.pull-right[
+.center[
+![](../images/chicken_game_car.png)
+]
+]
+
+---
+
+# Chicken
+
+.center[
+&lt;iframe width="980" height="550" src="https://www.youtube.com/embed/u7hZ9jKrwvo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+]
+
+
+---
+
+# Chicken
+
+.center[
+&lt;iframe width="980" height="550" src="https://www.youtube.com/embed/Fn7d_a0pmio" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+]
+
+
+---
+
+# Chicken and Commitment
+
+.pull-left[
+
+- Each player may try to influence the game beforehand
+
+- Project and signal “toughness” (or that they are “crazy”) before the game
+
+- Find a commitment strategy so you have **no choice** but to play tough
+  - e.g. rip out the steering wheel!
+
+- Schelling: “If you're invited to play chicken and you decline, you've already played [and lost]”
+]
+
+.pull-right[
+.center[
+![](../images/chicken_game_generic.png)
+]
+]
+
+---
+
+# Chicken: Hawk Dove
+
+.pull-left[
+
+- One variant of chicken is also famous: .hi[Hawk-Dove game]
+  - (actually, chicken is just a special case of hawk dove!)
+
+- Evolutionary biology, political science, bargaining
+
+.center[
+![:scale 75%](../images/hawkdove.png)
+]
+]
+
+.pull-right[
+.center[
+![](../images/hawk_dove_ne.png)
+]
+]
+
+---
+
+# Game Types
+
+.center[
+![:scale 80%](../images/game_types.png)
+]
+
+---
+
+# Modeling Social Interactions
+
+- Can *all* players potentially benefit from the interaction?
+  - No: chicken
+
+- Do all players prefer one outcome over another?
+  - Yes: assurance game
+
+- Does the players prefer *different* outcomes?
+  - Yes: battle of the sexes
+
+- Is there a Pareto improvement from Nash equilibrium?
+  - Yes: assurance game
+  - Yes, but it's not a NE: prisoners' dilemma
+  
+---
+
+class: inverse, center, middle
+
+# Multiple Equilibria
+
+---
+
+# Multiple Equilibria: What to Do?
+
+.pull-left[
+
+- Nash equilibrium is the most well known .hi[solution concept] in game theory
+  - Method of predicting the outcome of a game
+
+- Suppose we have a coordination game with multiple equilibria
+
+- What can we say about behavior of players?
+]
+
+.pull-right[
+.center[
+![](../images/equilibriumbalance.png)
+]
+]
+
+---
+
+# Multiple Equilibria: What to Do?
+
+.pull-left[
+
+- One answer: nothing!
+  - Both equilibria are mutual best responses
+  - Coordination problem on which strategy to jointly select
+  - Two sides of the road to drive on, no one side better than the other
+]
+
+.pull-right[
+.center[
+![](../images/equilibriumbalance.png)
+]
+]
+
+---
+
+# Multiple Equilibria: What to Do?
+
+.pull-left[
+
+- Another answer: we must confront multiple equilibria in economics
+  - still want to predict *which* outcome will occur
+
+- We need to consider **multiple criteria** beyond best responses to select a plausible equilibrium
+  - Focalness/salience
+  - Fairness/envy-free-ness
+  - Efficiency/payoff dominance
+  - Risk dominance
+]
+
+.pull-right[
+.center[
+![](../images/equilibriumbalance.png)
+]
+]
+
+---
+
+# Multiple Equilibria: Efficiency
+
+.pull-left[
+
+- Which equilibrium is most .hi[(Pareto) efficient]?
+  - Must be no other equilibrium where at least one player earns a higher payoff and no player earns a lower payoff
+
+- Stag Hunt:
+  - Both (.red[Stag], .blue[Stag]) and (.red[Hare], .blue[Hare]) are Nash equilibria
+  - (.red[Stag], .blue[Stag]) is Pareto superior to (.red[Hare], .blue[Hare])
+]
+
+.pull-right[
+.center[
+![](../images/stag_hunt.png)
+]
+]
+
+---
+
+# Multiple Equilibria: Efficiency
+
+.pull-left[
+
+- Consider the “Pittsburgh Left” game
+
+.center[
+![](../images/pittsburghleft.jpeg)
+]
+]
+
+.pull-right[
+.center[
+![](../images/pitt_left_game.png)
+]
+]
+
+---
+
+# Multiple Equilibria: Efficiency
+
+.pull-left[
+
+- Consider the “Pittsburgh Left” game
+
+- Two PSNE: (.red[Left], .blue[Yield]) and (.red[Yield], .blue[Straight])
+  - Each driver prefers that the other yield
+
+- This is just a variant of **Chicken**
+
+- Both equilibria are Pareto efficient!
+]
+
+.pull-right[
+.center[
+![](../images/pitt_left_ne.png)
+]
+]
+
+---
+
+# Multiple Equilibria: Efficiency
+
+.pull-left[
+
+- We often face multiple Pareto efficient equilibria
+
+- Sometimes institutions are created to select and enforce a particular equilibrium
+
+.center[
+![](../images/leftyield.png)
+]
+]
+
+.pull-right[
+.center[
+![](../images/pitt_left_ne.png)
+]
+]
+
+---
+
+# Multiple Equilibria: Risk Dominance
+
+.pull-left[
+
+- Consider a Stag Hunt
+
+- (.red[Stag], .blue[Stag]) is .hi[efficient] and .hi[“payoff dominant”]
+  - Highest payoff for each player, no possible Pareto improvement
+
+- (.red[Hare], .blue[Hare]) is .hi[“risk dominant”]
+  - A less-risky equilibrium
+  - By playing **Hare**, each player guarantees themself 1 regardless of other player's strategy
+]
+
+.pull-right[
+.center[
+![](../images/stag_hunt.png)
+]
+]
+
+---
+
+class: inverse, center, middle
+
+# Rationalizability &amp; the Role of Beliefs
+
+---
+
+# The Role of Beliefs
+
+.pull-left[
+- Consider the following game
+
+]
+
+.pull-right[
+.center[
+![](../images/rationalize_game_1.png)
+]
+]
+
+---
+
+# The Role of Beliefs
+
+.pull-left[
+- Consider the following game
+
+- .hi-blue[Column] has a dominant strategy to always play .blue[Left]
+
+- Given this, .hi-red[Row] should play .red[Down]
+
+- Unique .hi-purple[Nash equilibrium]: (.red[Down], .blue[Left])
+]
+
+.pull-right[
+.center[
+![](../images/rationalize_game_ne.png)
+]
+]
+---
+
+# The Role of Beliefs
+
+.pull-left[
+- If you were playing as .hi-red[Row], would you risk playing .red[Down] if you believed there was the slightest chance that .hi-blue[Column] would play .blue[Right]?
+]
+
+.pull-right[
+.center[
+![](../images/rationalize_game_ne.png)
+]
+]
+
+---
+
+# Nash Equilibrium and Beliefs
+
+.pull-left[
+- .hi-purple[Nash equilibrium] requires players to have accurate beliefs about each others' actions
+  1. Each player should choose the strategy with the highest-payoff given their beliefs about the other player's (choice of) strategy
+  2. These beliefs should be **correct**, i.e. match what the other players **actually do**
+]
+
+.pull-right[
+.center[
+![](../images/equilibriumbalance.png)
+]
+]
+
+---
+
+# Nash Equilibrium and Beliefs
+
+.pull-left[
+- .hi[Rationalizable] game outcomes are a more general .hi-purple[solution concept] than Nash equilibrium
+  - Allows for variations in beliefs
+
+- Nash equilibria are a subset of rationalizable outcomes
+  - Where players' maximize their payoff and their beliefs happen to be correct
+]
+
+.pull-right[
+.center[
+![](../images/thinker2.jpg)
+]
+]
+
+---
+
+# Rationalizability
+
+.pull-left[
+
+- Consider the following game
+]
+
+.pull-right[
+.center[
+![](../images/rationalizable_game_2.png)
+]
+]
+
+---
+
+# Rationalizability
+
+.pull-left[
+
+- Consider the following game
+
+- Solved using best response analysis, we see a unique .hi-purple[Nash equilibrium]: (.red[Middle], .blue[Middle])
+]
+
+.pull-right[
+.center[
+![](../images/rationalizable_game_ne.png)
+]
+]
+
+---
+
+# Rationalizability
+
+.pull-left[
+
+- .hi-red[Row] plays .red[Middle] because she **believes** .hi-blue[Column] will rationally play .blue[Middle] (who plays that because he believes that .hi-red[Row] will play .red[Middle])...
+
+- But players can also .hi[rationalize] other possibilities
+]
+
+.pull-right[
+.center[
+![](../images/rationalizable_game_ne.png)
+]
+]
+
+---
+
+# Rationalizability
+
+.pull-left[
+
+- For example, .hi-red[Row] can rationalize playing .red[Left]
+  - If she thinks .hi-blue[Column] will play .blue[Right], then playing .red[Left] is her best response
+
+- .blue[Column] can rationalize playing .blue[Right]
+  - If he thinks .hi-red[Row] will play .red[Right], then playing .blue[Right] is his best response
+
+- Similarly, we can .hi[rationalize] many game outcomes under certain **beliefs** that players have
+]
+
+.pull-right[
+.center[
+![](../images/rationalizable_game_ne.png)
+]
+]
+
+---
+
+# Rationalizability
+
+.pull-left[
+.smallest[
+- In this particular game (i.e. not every game!), all 9 outcomes are rationalizable!
+  1. (.red[Left], .blue[Left]): .hi-red[Row] will play .red[Left] if she believes .hi-blue[Column] will play .blue[Right]; .hi-blue[Column] will play .blue[Left] if he believes .hi-red[Row] will play .red[Left]; 
+  2. (.red[Left], .blue[Middle]): .hi-red[Row] will play .red[Left] if she believes .hi-blue[Column] will play .blue[Right]; .hi-blue[Column] will play .blue[Middle] if he believes .hi-red[Row] will play .red[Middle];
+  3. (.red[Left], .blue[Right]): .hi-red[Row] will play .red[Left] if she believes .hi-blue[Column] will play .blue[Right]; .hi-blue[Column] will play .blue[Right] if he believes .hi-red[Row] will play .red[Right];
+]
+]
+.pull-right[
+.center[
+![](../images/rationalizable_game_ne.png)
+]
+]
+
+---
+
+# Rationalizability
+
+.pull-left[
+.smallest[
+- In this particular game (i.e. not every game!), all 9 outcomes are rationalizable!
+  4. (.red[Middle], .blue[Left]): .hi-red[Row] will play .red[Middle] if she believes .hi-blue[Column] will play .blue[Middle]; .hi-blue[Column] will play .blue[Left] if he believes .hi-red[Row] will play .red[Left]; 
+  5. (.red[Middle], .blue[Middle]): .hi-red[Row] will play .red[Middle] if she believes .hi-blue[Column] will play .blue[Middle]; .hi-blue[Column] will play .blue[Middle] if he believes .hi-red[Row] will play .red[Middle];
+  6. (.red[Middle], .blue[Right]): .hi-red[Row] will play .red[Middle] if she believes .hi-blue[Column] will play .blue[Middle]; .hi-blue[Column] will play .blue[Right] if he believes .hi-red[Row] will play .red[Right];
+]
+]
+.pull-right[
+.center[
+![](../images/rationalizable_game_ne.png)
+]
+]
+
+---
+
+# Rationalizability
+
+.pull-left[
+.smallest[
+- In this particular game (i.e. not every game!), all 9 outcomes are rationalizable!
+  7. (.red[Right], .blue[Left]): .hi-red[Row] will play .red[Right] if she believes .hi-blue[Column] will play .blue[Left]; .hi-blue[Column] will play .blue[Left] if he believes .hi-red[Row] will play .red[Left]; 
+  8. (.red[Right], .blue[Middle]): .hi-red[Row] will play .red[Right] if she believes .hi-blue[Column] will play .blue[Left]; .hi-blue[Column] will play .blue[Middle] if he believes .hi-red[Row] will play .red[Middle];
+  9. (.red[Right], .blue[Right]): .hi-red[Row] will play .red[Right] if she believes .hi-blue[Column] will play .blue[Left]; .hi-blue[Column] will play .blue[Right] if he believes .hi-red[Row] will play .red[Right];
+]
+]
+.pull-right[
+.center[
+![](../images/rationalizable_game_ne.png)
+]
+]
+
+---
+
+# Rationalizability and Best Reponses
+
+.pull-left[
+
+- What is key here is that players can rationalize playing a strategy if it is .hi-turquoise[a best response to at least one strategy]
+
+- Inversely, .hi-turquoise[if a strategy is *never* a best response, playing it is not rationalizable]
+
+- For this game, since each strategy is *sometimes* a best-response, for both players, all 9 outcomes are rationalizable
+]
+
+.pull-right[
+.center[
+![](../images/rationalizable_game_ne.png)
+]
+]
+
+---
+
+# Rationalizability and Best Responses
+
+.pull-left[
+
+- Rationalizability can *sometimes* find us the Nash equilibrium
+
+- Consider the game with some *different* payoffs
+]
+
+.pull-right[
+.center[
+![](../images/rationalizable_game_3.png)
+]
+]
+
+---
+
+# Rationalizability and Best Responses
+
+.pull-left[
+
+- Rationalizability can *sometimes* find us the Nash equilibrium
+
+- Consider the game with some *different* payoffs
+
+- First, find all best responses
+]
+
+.pull-right[
+.center[
+![](../images/rationalizable_game_3_br.png)
+]
+]
+
+---
+
+# Rationalizability and Best Responses
+
+.pull-left[
+
+- Rationalizability can *sometimes* find us the Nash equilibrium
+
+- Consider the game with some *different* payoffs
+
+- First, find all best responses, and next .hi-turquoise[delete all strategies that are never a best response]
+]
+
+.pull-right[
+.center[
+![](../images/rationalizable_game_3_br.png)
+]
+]
+
+---
+
+# Rationalizability and Best Responses
+
+.pull-left[
+
+- Rationalizability can *sometimes* find us the Nash equilibrium
+
+- Consider the game with some *different* payoffs
+
+- First, find all best responses, and next .hi-turquoise[delete all strategies that are never a best response]
+  - Note here there are no strictly dominated strategies!
+]
+
+.pull-right[
+.center[
+![](../images/rationalizable_game_3_br.png)
+]
+]
+
+---
+
+# Rationalizability and Best Responses
+
+.pull-left[
+
+- Rationalizability can *sometimes* find us the Nash equilibrium
+
+- Consider the game with some *different* payoffs
+
+- First, find all best responses, and next .hi-turquoise[delete all strategies that are never a best response]
+  - Note here there are no strictly dominated strategies!
+  - For .hi-red[Row], playing .red[Middle] is never a best response
+  - For .hi-blue[Column], playing .blue[Right] is never a best response
+]
+
+.pull-right[
+.center[
+![](../images/rationalizable_game_3_br.png)
+]
+]
+
+---
+
+# Rationalizability and Best Responses
+
+.pull-left[
+
+- Now we see .hi-blue[Column] will not play .blue[Left]
+]
+
+.pull-right[
+.center[
+![](../images/rationaliable_game_3_dom_1.png)
+]
+]
+
+---
+
+# Rationalizability and Best Responses
+
+.pull-left[
+
+- Now we see .hi-red[Row] will not play .red[Left]
+]
+
+.pull-right[
+.center[
+![](../images/rationalizable_game_3_dom_2.png)
+]
+]
+
+---
+
+# Rationalizability and Best Responses
+
+.pull-left[
+
+- This brings us to the outcome that is the .hi-purple[Nash equilibrium]: (.red[Right], .blue[Middle])
+]
+
+.pull-right[
+.center[
+![](../images/rationalizable_game_3_dom_3.png)
+]
+]
+
+---
+
+# Rationalizability and Best Responses
+
+.pull-left[
+
+- This brings us to the outcome that is the .hi-purple[Nash equilibrium]: (.red[Right], .blue[Middle])
+]
+
+.pull-right[
+.center[
+![](../images/rationalizable_game_3_ne.png)
+]
+]
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="macros.js"></script>
+<script src="https://platform.twitter.com/widgets.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9",
+"slideNumberFormat": "<div class=\"progress-bar-container\">\n  <div class=\"progress-bar\" style=\"width: calc(%current% / %total% * 100%);\">\n  </div>\n</div>\n"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
