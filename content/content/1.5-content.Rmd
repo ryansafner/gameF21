@@ -34,9 +34,9 @@ Today we begin looking at simultaneous games.
 ## Optional/Referenced Readings
 
 - <i class="fas fa-book"></i> Schelling, Thomas, 1960, [*The Strategy of Conflict*](/readings/Schelling-1960-Ch3.pdf) (Ch.3 excerpt)
-- <i class="fas fa-file-pdf"> David, Paul A, 1985, ["Clio and the Economics of QWERTY"](/readings/David-1985.pdf), *American Economic Review* 
-- <i class="fas fa-file-pdf"> Liebowitz, Stan J and Stephen E Margolis, 1990, ["The Fable of the Keys"](/readings/Leibowitz-Margolis-1990.pdf), *Journal of Law and Economics*
-- <i class="fas fa-file-pdf"> Arthur, W. Brian, 1989, ["Competing Technologies, Increasing Returns, and Lock-In by Historical Events"](/readings/Arthur-1989.pdf), *Economic Journal*
+- <i class="fas fa-file-pdf"></i> David, Paul A, 1985, ["Clio and the Economics of QWERTY"](/readings/David-1985.pdf), *American Economic Review* 
+- <i class="fas fa-file-pdf"></i> Liebowitz, Stan J and Stephen E Margolis, 1990, ["The Fable of the Keys"](/readings/Leibowitz-Margolis-1990.pdf), *Journal of Law and Economics*
+- <i class="fas fa-file-pdf"></i> Arthur, W. Brian, 1989, ["Competing Technologies, Increasing Returns, and Lock-In by Historical Events"](/readings/Arthur-1989.pdf), *Economic Journal*
 
 ## <i class="fas fa-chalkboard-teacher"></i> Slides
 
