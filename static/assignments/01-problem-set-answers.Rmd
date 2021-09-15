@@ -68,7 +68,7 @@ I have highlighted the rollback equilibrium on the tree: (Enter, Accommodate).
 
 3. In an alternate version of the *Century Mark* game we played in class, two players take turns choosing a number between 1—10 (inclusive) to add to the count (starting at 0). The first player to bring the count to 100 *loses* this game.
 
-> Describe *Player 2*'s optimal strategy, and fully describe your reasoning. Does this game have a first-mover advantage or a second-mover advantage?
+Describe *Player 2*'s optimal strategy, and fully describe your reasoning. Does this game have a first-mover advantage or a second-mover advantage?
 
 1. Player 2 needs to bring the total to 99 on their final turn. Then any number Player 1 chooses (1-10) brings the count to at least 100.
 2. To ensure the count gets to 99 in Player 2's last turn, they need to bring the count in their previous turn to 88. That way, regardless of what number Player 1 chooses to add to 88, Player 2 can choose a number (1-10) to add to the count (89-98) to bring it to 99.
@@ -82,7 +82,7 @@ I have highlighted the rollback equilibrium on the tree: (Enter, Accommodate).
 
 <img src="../images/hw_hansel_gretel.png" width="350">
 
-####Part A
+#### Part A
 
 #### List all of Hansel's possible strategies.
 
@@ -93,9 +93,11 @@ Note these are all *possible* strategies, they do not mean he will play all of t
 1. <span style=color:red;>(North, North, North)</span>
 2. <span style=color:red;>(North, South, North)</span>
 3. <span style=color:red;>(North, South, South)</span>
-4. <span style=color:red;>(South, North, North)</span>
-5. <span style=color:red;>(South, South, North)</span>
-6. <span style=color:red;>(South, South, South)</span>
+4. <span style=color:red;>(North, North, South)</span>
+5. <span style=color:red;>(South, North, North)</span>
+6. <span style=color:red;>(South, South, North)</span>
+7. <span style=color:red;>(South, North, South)</span>
+8. <span style=color:red;>(South, South, South)</span>
 
 ### Part B
 
