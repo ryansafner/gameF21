@@ -62,14 +62,15 @@ class: inverse
 # Discrete vs. Continuous Strategies
 
 .pull-left[
-
+.smaller[
 - We considered simultaneous games where strategies are .hi-purple[discrete]: a finite (usually small) number of strategies to choose from
 
 - We now consider .hi-purple[continuous] strategies:
   - Practically infinite number of "strategies" to choose from
-  - Example: firms don't just choose 1 out of 2 or 3 possible prices, but one from a large possible range
+  - Example: firms don't just choose 1 out of 2 or 3 possible prices, but one from a large possible **range**
     - Must switch from game trees and payoff matrices to algebraic equations
     - Still keep concepts of "best response" and Nash equilibria
+]
 ]
 
 .pull-right[
@@ -94,7 +95,7 @@ class: inverse, center, middle
 
 .bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
 .green[**Example**]: 
-$$q=20-p$$
+$$q=10-0.5p$$
 ]
 - Not graphable (wrong axes)!
 
@@ -111,7 +112,7 @@ $$q=20-p$$
 
 .bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
 .green[**Example**]: 
-$$p=20-q$$
+$$p=20-2q$$
 ]
 - Graphable (price on vertical axis)!
 
@@ -138,7 +139,7 @@ $$p=20-q$$
 .pull-right[
 
 ```{r, fig.retina=3}
-demand=function(x){20-x}
+demand=function(x){20-2*x}
 
 d<-ggplot(data.frame(x=c(0,10)), aes(x=x))+
   stat_function(fun=demand, geom="line", size=2, color = "blue")+
@@ -211,7 +212,7 @@ demand_firm<-function(x){5}
 
 ggplot(data.frame(x=c(0,10)), aes(x=x))+
   stat_function(fun=demand_firm, geom="line", size=2, color = "blue")+
-  geom_label(aes(x=9,y=demand_firm(9)), color = "blue", label="Demand = MR", size = 5)+
+  geom_label(aes(x=8,y=demand_firm(8)), color = "blue", label="Demand = MR = p", size = 5)+
     scale_x_continuous(breaks=seq(0,10,1),
                      limits=c(0,10),
                      expand=expand_scale(mult=c(0,0.1)))+
@@ -251,11 +252,13 @@ ggplot(data.frame(x=c(0,10)), aes(x=x))+
 ```
 ]
 
+.smallest[
 - Firms in a competitive market are .hi[“price-takers”] and must charge the market price
 
 - .blue[Demand for a firm's product] is **perfectly elastic** at the market price
-  - Marginal revenue = Firm's Demand = market price
-  
+  - .blue[Marginal revenue = Firm's Demand = market price]
+]
+
 ---
 
 # Perfectly Competitive Firms
@@ -270,7 +273,7 @@ ac_cc<-function(x){x^2-4*x+10+10/x}
 
 pc<-ggplot(data.frame(x=c(0,10)), aes(x=x))+
   stat_function(fun=demand_firm, geom="line", size=2, color = "blue")+
-  geom_label(aes(x=4.5,y=demand_firm(4.5)), color = "blue", label="Demand", size = 5)+
+  geom_label(aes(x=4.5,y=demand_firm(4.5)), color = "blue", label="Demand = MR", size = 5)+
     stat_function(fun=mc_cc, geom="line", size=2, color = "red")+
   geom_label(aes(x=3.5,y=mc_cc(3.5)), color = "red", label="MC(q)", size = 5)+
     stat_function(fun=ac_cc, geom="line", size=2, color = "orange")+
@@ -349,6 +352,8 @@ ggplot(data.frame(x=c(0,10)), aes(x=x))+
 
 - Chooses $q^\star$ to maximize profits where .purple[MR(q)]=.red[MC(q)]
 
+- Marks up price (above .red[MC]) to consumers' max WTP (.blue[Demand])
+
 - .green[Profit] = (.blue[p] — .orange[AC(q)])q
 
 - Earns positive profits from .hi[barriers to entry]
@@ -372,6 +377,7 @@ ggplot(data.frame(x=c(0,10)), aes(x=x))+
   geom_label(x=5,y=ac(5), label="AC(q)", color="orange")+
   geom_segment(x = 4, xend = 4, y = 0, yend=demand(4), size = 1 , linetype = "dotted")+
   geom_segment(x = 0, xend = 4, y = demand(4), yend=demand(4), size = 1 , linetype = "dotted")+
+  geom_segment(x = 0, xend = 4, y = ac(4), yend=ac(4), size = 1 , linetype = "dotted")+
     scale_x_continuous(breaks=seq(0,10,1),
                      limits=c(0,10),
                      expand=expand_scale(mult=c(0,0.1)))+
@@ -440,10 +446,10 @@ class: inverse, center, middle
 .smallest[
 - Unlike perfect competition or monopoly, no single “theory of oligopoly”
 
-- Depends heavily on assumptions made about interactions and choice variables (FYI):
-  - “Bertrand competition:” firms compete on **price**
-  - “Cournot competition:” firms **simultaneously** compete on **quantity**
-  - “Stackelberg competition:” firms **sequentially** compete on **quantity**
+- Depends heavily on assumptions made about interactions and choice variables:
+  - .hi[“Bertrand competition”]: firms compete on **price**
+  - .hi[“Cournot competition”]" firms **simultaneously** compete on **quantity**
+  - .hi[“Stackelberg competition”]: firms **sequentially** compete on **quantity**
 
 - One certainty: oligopoly is a .hi-purple[strategic interaction] between few firms
 
@@ -852,3 +858,9 @@ Source: [NPR Planet Money](https://www.npr.org/sections/money/2015/06/24/4171879
 <iframe width="980" height="550" src="https://www.youtube.com/embed/aT7TxMaZ4eM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ]
+
+---
+
+# More Generally, Game Theory in *The Wire*
+
+<iframe width="980" height="550" src="https://www.youtube.com/embed/ztc7o0NzFrE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
