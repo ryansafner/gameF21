@@ -31,6 +31,8 @@ lessons:
     header: True
 
   - title: "2.1 — Cartels"
+    content: "2.1-content"
+    slides: "2.1-slides"
 
   - title: "2.2 — Bertrand Competition"
 
