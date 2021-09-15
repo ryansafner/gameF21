@@ -123,59 +123,7 @@
         tile = tile.content.firstChild
 
         const tileContainer = tile.querySelector(
-          '.remark__tile-view__slide-container'
-        )
-        tileContainer.style.width = `${tileWidth}em`
-        tileContainer.style.height = `${tileHeight}em`
-
-        const thisSlideScaler = slide.querySelector('.remark-slide-scaler')
-        thisSlideScaler.style.top = '0px'
-        thisSlideScaler.style.left = '0px'
-        thisSlideScaler.style.transform = `scale(${scale})`
-        thisSlideScaler.parentElement.classList.add('remark-visible')
-
-        slide.addEventListener('click', () => {
-          tileVars.currentSlideIdx = slideIndex
-          toggleTileView()
-        })
-
-        tileContainer.appendChild(slide)
-        tiles.appendChild(tile)
-      })
-
-      document.body.appendChild(tileView)
-    }
-
-    const tileVars = {}
-
-    document.addEventListener('keydown', ev => {
-      if (ev.keyCode === launchKey) {
-        toggleTileView()
-      }
-    })
-
-    const addTileViewHelpText = () => {
-      const helpTable = document.querySelector(
-        '.remark-help-content table.light-keys'
-      )
-      if (!helpTable) {
-        console.error(
-          'Could not find remark help table, has remark been initialized?'
-        )
-        return
-      }
-      const newRow = document.createElement('tr')
-      newRow.innerHTML += '<td><span class="key">o</span></td>'
-      newRow.innerHTML += '<td>Tile View: Overview of Slides</td>'
-      helpTable.append(newRow)
-    }
-
-    createTileView({ minSize: 200 })
-    toggleElement(tileView)
-    addTileViewHelpText()
-  })
-})()
-/*
+          '.remark__tile-view__slide-cont/*
  *  Tile View for remark.js Slides
  *
  *  Garrick Aden-Buie
@@ -301,6 +249,58 @@
 
         const tileContainer = tile.querySelector(
           '.remark__tile-view__slide-container'
+        )
+        tileContainer.style.width = `${tileWidth}em`
+        tileContainer.style.height = `${tileHeight}em`
+
+        const thisSlideScaler = slide.querySelector('.remark-slide-scaler')
+        thisSlideScaler.style.top = '0px'
+        thisSlideScaler.style.left = '0px'
+        thisSlideScaler.style.transform = `scale(${scale})`
+        thisSlideScaler.parentElement.classList.add('remark-visible')
+
+        slide.addEventListener('click', () => {
+          tileVars.currentSlideIdx = slideIndex
+          toggleTileView()
+        })
+
+        tileContainer.appendChild(slide)
+        tiles.appendChild(tile)
+      })
+
+      document.body.appendChild(tileView)
+    }
+
+    const tileVars = {}
+
+    document.addEventListener('keydown', ev => {
+      if (ev.keyCode === launchKey) {
+        toggleTileView()
+      }
+    })
+
+    const addTileViewHelpText = () => {
+      const helpTable = document.querySelector(
+        '.remark-help-content table.light-keys'
+      )
+      if (!helpTable) {
+        console.error(
+          'Could not find remark help table, has remark been initialized?'
+        )
+        return
+      }
+      const newRow = document.createElement('tr')
+      newRow.innerHTML += '<td><span class="key">o</span></td>'
+      newRow.innerHTML += '<td>Tile View: Overview of Slides</td>'
+      helpTable.append(newRow)
+    }
+
+    createTileView({ minSize: 200 })
+    toggleElement(tileView)
+    addTileViewHelpText()
+  })
+})()
+ainer'
         )
         tileContainer.style.width = `${tileWidth}em`
         tileContainer.style.height = `${tileHeight}em`
