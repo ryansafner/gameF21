@@ -1091,9 +1091,11 @@ class: inverse, center, middle
 .smallest[
 - In this particular game (i.e. not every game!), all 9 outcomes are rationalizable!
 
-(1) (.red[Left], .blue[Left]): .hi-red[Row] will play .red[Left] if she believes .hi-blue[Column] will play .blue[Right]; .hi-blue[Column] will play .blue[Left] if he believes .hi-red[Row] will play .red[Left]; 
-(2) (.red[Left], .blue[Middle]): .hi-red[Row] will play .red[Left] if she believes .hi-blue[Column] will play .blue[Right]; .hi-blue[Column] will play .blue[Middle] if he believes .hi-red[Row] will play .red[Middle];
-(3) (.red[Left], .blue[Right]): .hi-red[Row] will play .red[Left] if she believes .hi-blue[Column] will play .blue[Right]; .hi-blue[Column] will play .blue[Right] if he believes .hi-red[Row] will play .red[Right];
+(1) (.red[Left], .blue[Left]): .hi-red[Row] will play .red[Left] if she believes .hi-blue[Column] will play .blue[Right]; .hi-blue[Column] will play .blue[Left] if he believes .hi-red[Row] will play .red[Left]
+
+(2) (.red[Left], .blue[Middle]): .hi-red[Row] will play .red[Left] if she believes .hi-blue[Column] will play .blue[Right]; .hi-blue[Column] will play .blue[Middle] if he believes .hi-red[Row] will play .red[Middle]
+
+(3) (.red[Left], .blue[Right]): .hi-red[Row] will play .red[Left] if she believes .hi-blue[Column] will play .blue[Right]; .hi-blue[Column] will play .blue[Right] if he believes .hi-red[Row] will play .red[Right]
 ]
 ]
 .pull-right[
@@ -1110,9 +1112,11 @@ class: inverse, center, middle
 .smallest[
 - In this particular game (i.e. not every game!), all 9 outcomes are rationalizable!
 
-(4) (.red[Middle], .blue[Left]): .hi-red[Row] will play .red[Middle] if she believes .hi-blue[Column] will play .blue[Middle]; .hi-blue[Column] will play .blue[Left] if he believes .hi-red[Row] will play .red[Left]; 
-(5) (.red[Middle], .blue[Middle]): .hi-red[Row] will play .red[Middle] if she believes .hi-blue[Column] will play .blue[Middle]; .hi-blue[Column] will play .blue[Middle] if he believes .hi-red[Row] will play .red[Middle];
-(6) (.red[Middle], .blue[Right]): .hi-red[Row] will play .red[Middle] if she believes .hi-blue[Column] will play .blue[Middle]; .hi-blue[Column] will play .blue[Right] if he believes .hi-red[Row] will play .red[Right];
+(4) (.red[Middle], .blue[Left]): .hi-red[Row] will play .red[Middle] if she believes .hi-blue[Column] will play .blue[Middle]; .hi-blue[Column] will play .blue[Left] if he believes .hi-red[Row] will play .red[Left]
+
+(5) (.red[Middle], .blue[Middle]): .hi-red[Row] will play .red[Middle] if she believes .hi-blue[Column] will play .blue[Middle]; .hi-blue[Column] will play .blue[Middle] if he believes .hi-red[Row] will play .red[Middle]
+
+(6) (.red[Middle], .blue[Right]): .hi-red[Row] will play .red[Middle] if she believes .hi-blue[Column] will play .blue[Middle]; .hi-blue[Column] will play .blue[Right] if he believes .hi-red[Row] will play .red[Right]
 ]
 ]
 .pull-right[
@@ -1129,9 +1133,12 @@ class: inverse, center, middle
 .smallest[
 - In this particular game (i.e. not every game!), all 9 outcomes are rationalizable!
 
-(7) (.red[Right], .blue[Left]): .hi-red[Row] will play .red[Right] if she believes .hi-blue[Column] will play .blue[Left]; .hi-blue[Column] will play .blue[Left] if he believes .hi-red[Row] will play .red[Left]; 
-(8) (.red[Right], .blue[Middle]): .hi-red[Row] will play .red[Right] if she believes .hi-blue[Column] will play .blue[Left]; .hi-blue[Column] will play .blue[Middle] if he believes .hi-red[Row] will play .red[Middle];
-(9) (.red[Right], .blue[Right]): .hi-red[Row] will play .red[Right] if she believes .hi-blue[Column] will play .blue[Left]; .hi-blue[Column] will play .blue[Right] if he believes .hi-red[Row] will play .red[Right];
+(7) (.red[Right], .blue[Left]): .hi-red[Row] will play .red[Right] if she believes .hi-blue[Column] will play .blue[Left]; .hi-blue[Column] will play .blue[Left] if he believes .hi-red[Row] will play .red[Left]
+
+(8) (.red[Right], .blue[Middle]): .hi-red[Row] will play .red[Right] if she believes .hi-blue[Column] will play .blue[Left]; .hi-blue[Column] will play .blue[Middle] if he believes .hi-red[Row] will play .red[Middle]
+
+(9) (.red[Right], .blue[Right]): .hi-red[Row] will play .red[Right] if she believes .hi-blue[Column] will play .blue[Left]; .hi-blue[Column] will play .blue[Right] if he believes .hi-red[Row] will play .red[Right]
+
 ]
 ]
 .pull-right[
