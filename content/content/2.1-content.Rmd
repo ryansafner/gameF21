@@ -19,7 +19,7 @@ slides: "2.1-slides"
 {{% /alert %}}
 
 {{% alert warning %}}
-[Problem Set 2](/assignments/02-problem-set) will be due **TBD**. 
+[Problem Set 2](/assignments/02-problem-set) will be due on Wednesday September 22. 
 {{% /alert %}}
 
 ## <i class="fas fa-info-circle fa-lg"></i> Overview

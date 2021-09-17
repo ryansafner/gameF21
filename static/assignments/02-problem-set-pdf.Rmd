@@ -1,0 +1,133 @@
+---
+title: "Problem Set 2"
+author: "ECON 316 — Game Theory — Fall 2021"
+date: "Due by Wednesday September 22"
+output:
+  pdf_document:
+    latex_engine: xelatex
+header-includes:
+- \usepackage{amsmath, multirow, multicol, booktabs, caption}
+
+#mainfont: "Fira Sans Condensed"
+#monofont: "Fira Code"
+#mathfont: "Fira Sans"
+#fontsize: 11pt
+---
+
+# Concepts
+
+1. Define Nash Equilibrium, and describe three separate methods that we can use to find a Nash equilibrium in simultaneous games.
+
+\vspace{3in}
+
+2. List the four types of coordination games and describe the major features of each—such as the general types of outcomes, preferences of the players over the outcomes, and the Nash equilibria. Drawing payoff matrices may help, but is not required.
+
+\clearpage
+
+3. Explain what "focal points" are, and their role in coordination games.
+
+\vspace{3in}
+
+4. Describe the concept of *rationalizability.* How is it different from Nash equilibrium?
+
+\clearpage
+
+# Problems
+
+5. A university is contemplating whether to build a new lab or a new theater on campus. The science faculty would rather see a new lab built, and the humanities faculty would prefer a new theater. However, the funding for the project (whichever it may turn out to be) is contingent on unanimous support from the faculty. If there is disagreement, neither project will go forward, leaving each group with no new building and their worst payoff. The meetings of the two separate faculty groups on which proposal to support occur simultaneously, with payoffs given in the following table:
+
+\begin{figure}
+  \centering
+  \includegraphics[width=3in]{../images/hw_sciences_humanities_game.png}
+\end{figure}
+
+a. Find any and all Nash equilibria of this game.
+b. Which type of coordination game is this situation most similar to? Explain your reasoning.
+
+
+\clearpage
+
+6. Suppose it's the early 2000's and two Hollywood studios — Sony Pictures and Paramount Pictures — are each holding separate board meetings to strategize on how to keep up with the latest video technology. Two new advanced DVD standards are emerging on the market, HD-DVD and Blu Ray. Both firms would like to adopt a standard such that all other firms are using the same standard.
+
+a. Suppose there is no clear standard emerging yet, and no firms have any strong preferences. What type of game is this? Draw the payoff matrix and find all Nash equilibria.
+b. Suppose both firms hear rumors that another top film studio, Warner Brothers, has already committed to distributing its movies on HD-DVDs. If Sony and Paramount again must simultaneously choose a standard, what type of game is thus? Draw the new payoff matrix and find all Nash equilibria.
+c. Suppose instead that Sony's parent company actually has a stake in the company that produces Blue Rays. Additionally, Paramount's board are informed that their marketing department has already told all of Paramount's buyers that they have adopted HD-DVD, and reversing would be too embarassing. What type of game is thus? Draw the new payoff matrix and find all Nash equilibria.
+
+\clearpage
+
+7. Management and labor for a major transportation company are renegotiating their collective bargaining agreement before the crucial holiday travel season. Both labor and management will benefit from reaching *any* agreement, and would both suffer if no deal is reached and the company goes out of business. Each party certaintly wants to gain the most concessions from the other. Each can bargain Hard and obtain maximal concessions from the other party, or bargain Soft and ask for minimal concessions. If both bargain Hard, it is impossible for them to reach a deal.
+
+a. Draw the payoff matrix for this game.
+b. Which type of coordination game is this situation most similar to? Explain your reasoning.
+c. Find any and all Nash equilibria of this game.
+
+\clearpage
+
+8. Find all Nash equilibria for the following games. First, check for dominant strategies. If there are none, solve using iterated elimination of dominant strategies. Describe your process (you can simply mark up the table, but describe what you are eliminating in what order, and why).
+
+\begin{figure}
+  \centering
+  \caption*{Part A}
+  \includegraphics[width=2.5in]{../images/hw_7a.png}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \caption*{Part B}
+  \includegraphics[width=2.5in]{../images/hw_7b.png}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \caption*{Part C}
+  \includegraphics[width=2.5in]{../images/hw_7c.png}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \caption*{Part D}
+  \includegraphics[width=2.5in]{../images/hw_7d.png}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \caption*{Part E}
+  \includegraphics[width=6in]{../images/hw_7e.png}
+\end{figure}
+
+\clearpage
+
+9. Solve the following games, for which there are no strictly dominated strategies. Describe your process (you can simply mark up the table).
+
+\begin{figure}
+  \centering
+  \caption*{Part A}
+  \includegraphics[width=2.5in]{../images/hw_8a.png}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \caption*{Part B}
+  \includegraphics[width=2.5in]{../images/hw_8b.png}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \caption*{Part C}
+  \includegraphics[width=6in]{../images/hw_8c.png}
+\end{figure}
+
+\clearpage
+
+10. Consider the following game:
+
+\begin{figure}
+  \centering
+  \includegraphics[width=3in]{../images/hw_10.png}
+\end{figure}
+
+a. Find all Nash equilibria.
+b. Which equilibrium/equilibria is/are *Pareto efficient*? Why?
+c. Which equilibrium/equilibria is/are *payoff dominant*? Why?
+d. Which equilibrium/equilibria is/are *risk dominant*? Why?
+e. Which outcome(s) is/are *rationalizable*, and under what beliefs by each player?

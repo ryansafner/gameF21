@@ -11,10 +11,10 @@ type: docs
 ---
 
 {{% alert note %}}
-Due by class on *Wednesday September 20*.
+Due on *Wednesday September 22*.
 {{% /alert %}}
 
-<p style="text-align:center"><a target="_blank" href="/assignments/01-problem-set-pdf.pdf"><span class="btn btn-primary btn-lg"><i class="fas fa-file-pdf"></i> Download PDF</a></span></p>
+<p style="text-align:center"><a target="_blank" href="/assignments/02-problem-set-pdf.pdf"><span class="btn btn-primary btn-lg"><i class="fas fa-file-pdf"></i> Download PDF</a></span></p>
 
 Please read the [instructions](/assignments/problem-sets) for completing homeworks.
 
@@ -70,7 +70,7 @@ Suppose instead that Sony's parent company actually has a stake in the company t
 
 ## Question 7
 
-Managament and labor for a major transportation company are renegotiating their collective bargaining agreement before the crucial holiday travel season. Both labor and management will benefit from reaching *any* agreement, and would both suffer if no deal is reached and the company goes out of business. Each party certaintly wants to gain the most concessions from the other. Each can bargain Hard and obtain maximal concessions from the other party, or bargain Soft and ask for minimal concessions. If both bargain Hard, it is impossible for them to reach a deal.
+Management and labor for a major transportation company are renegotiating their collective bargaining agreement before the crucial holiday travel season. Both labor and management will benefit from reaching *any* agreement, and would both suffer if no deal is reached and the company goes out of business. Each party certaintly wants to gain the most concessions from the other. Each can bargain Hard and obtain maximal concessions from the other party, or bargain Soft and ask for minimal concessions. If both bargain Hard, it is impossible for them to reach a deal.
 
 ### Part A
 
@@ -129,7 +129,7 @@ Solve the following games, for which there are no strictly dominated strategies.
 
 Consider the following game:
 
-<img src="../../images/hw_8c.png" width="350">
+<img src="../../images/hw_10.png" width="350">
 
 ## Part A
 
@@ -149,4 +149,4 @@ Which equilibrium/equilibria is/are *risk dominant*? Why?
 
 ## Part E
 
-Which outcomes are *rationalizable*, and under what beliefs by each player?
+Which outcome(s) is/are *rationalizable*, and under what beliefs by each player?
