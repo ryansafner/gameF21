@@ -26,6 +26,7 @@ lessons:
     slides: "1.5-slides"
 
   - title: '<i class="fas fa-laptop-code"></i> **Problem Set 2** due Wed Sep 22'
+    assignment: "02-problem-set"
 
   - title: '<span class="fake-header-table">II. Application: Economic Competition</span>'
     header: True
