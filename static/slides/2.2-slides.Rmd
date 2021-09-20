@@ -65,6 +65,81 @@ where $Q=q_{1}+q_{2}$ is measured in tons, and $P$ is $/ton. Assume only a const
 
 ---
 
+
+# Bertrand Competition: Moblab
+
+.center[
+![:scale 80%](../images/Bertrandmoblab.png)
+]
+
+---
+
+# Bertrand Competition: Moblab
+
+.pull-left[
+- Each of you are selling identical Economics 101 course notes
+
+- You will be randomly put into a market with 1 other player
+
+- Each term, both of you simultaneously choose your price
+
+- Seller(s) choosing the lowest price get **all** the customers
+
+]
+
+.pull-right[
+.center[
+![](../images/Bertrandmoblab.png)
+]
+
+]
+
+---
+
+# Bertrand Competition: Moblab
+
+.pull-left[
+
+- The lowest price $p_L$ determines the market demand
+$$q=3600-200p_L$$
+
+- Both firms have $2 cost per unit sold
+
+- $p=10$ maximizes total market profits
+
+]
+
+.pull-right[
+.center[
+![](../images/Bertrandmoblab.png)
+]
+
+]
+
+---
+
+# Bertrand Competition: Moblab
+
+.pull-left[
+$$q=3600-200p_L$$
+
+.hi-green[Example:]
+- Suppose Firm 1 sets $p=9$ and Firm 2 sets $p=10$
+
+- Firm 2 sells 0, makes $0 profit
+
+- Firm 1 sells $q=3,600-200(9)=1,800$ and earns $1,800(9-2)=12,600$ profit
+
+]
+
+.pull-right[
+.center[
+![](../images/Bertrandmoblab.png)
+]
+
+]
+
+---
 # Models of Oligopoly
 
 .pull-left[
@@ -537,80 +612,5 @@ Combine both curves on the same graph
     - Where both reaction curves intersect
 
 - No longer an incentive to undercut or change price 
-
-]
-
----
-
-# Bertrand Competition: Moblab
-
-.center[
-![:scale 80%](../images/Bertrandmoblab.png)
-]
-
----
-
-# Bertrand Competition: Moblab
-
-.pull-left[
-- Each of you selling identical Economics course notes
-
-- You will be put into a market with one other player
-
-- Each term, both of you simultaneously choose your price
-
-- Firm(s) choosing the lowest price get **all** the customers
-
-]
-
-.pull-right[
-.center[
-![](../images/Bertrandmoblab.png)
-]
-
-]
-
----
-# Bertrand Competition: Moblab
-
-.pull-left[
-
-- The lowest price $p_L$ determines the market demand
-$$q=3600-200p_L$$
-
-
-- Both firms have $2 cost per unit sold
-
-- $p=10$ maximizes total market profits
-
-]
-
-.pull-right[
-.center[
-![](../images/Bertrandmoblab.png)
-]
-
-]
-
----
-
-# Bertrand Competition: Moblab
-
-.pull-left[
-$$q=3600-200p_L$$
-
-.hi-green[Example:]
-- Suppose Firm 1 sets $p=9$ and Firm 2 sets $p=10$
-
-- Firm 2 sells 0, makes $0
-
-- Firm 1 sells $q=3,600-200(9)=1,800$ and earns $1,800(9-2)=12,600$ profit
-
-]
-
-.pull-right[
-.center[
-![](../images/Bertrandmoblab.png)
-]
 
 ]
