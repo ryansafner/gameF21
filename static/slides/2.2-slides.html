@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>2.2 — Bertrand Competition</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Ryan Safner  Assistant Professor of Economics   safner@hood.edu   ryansafner/gameF21   gameF21.classes.ryansafner.com " />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/remark-css/hygge.css" rel="stylesheet" />
+    <link href="libs/tile-view/tile-view.css" rel="stylesheet" />
+    <script src="libs/tile-view/tile-view.js"></script>
+    <link href="libs/tachyons/tachyons.min.css" rel="stylesheet" />
+    <script src="libs/freezeframe/freezeframe.min.js"></script>
+    <script src="libs/xaringanExtra-freezeframe/freezeframe-init.js"></script>
+    <script id="xaringanExtra-freezeframe-options" type="application/json">{"selector":"img[src$=\"gif\"]","trigger":"click","overlay":false,"responsive":true,"warnings":true}</script>
+    <script src="https://use.fontawesome.com/5235085b15.js"></script>
+    <link rel="stylesheet" href="custom.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# 2.2 — Bertrand Competition
+## ECON 316 • Game Theory • Fall 2021
+### Ryan Safner<br> Assistant Professor of Economics <br> <a href="mailto:safner@hood.edu"><i class="fa fa-paper-plane fa-fw"></i>safner@hood.edu</a> <br> <a href="https://github.com/ryansafner/gameF21"><i class="fa fa-github fa-fw"></i>ryansafner/gameF21</a><br> <a href="https://gameF21.classes.ryansafner.com"> <i class="fa fa-globe fa-fw"></i>gameF21.classes.ryansafner.com</a><br>
+
+---
+
+
+
+
+# A More Rigorous Oligopoly/Cartel Problem
+
+.smallest[
+.bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
+.hi-green[Example]: Suppose Squeaky Clean (Firm 1) and Biobase (Firm 2) are the only two producers of chlorine for swimming pools. The inverse market demand for chlorine is
+`$$P=32-2Q$$`
+where `\(Q=q_{1}+q_{2}\)` is measured in tons, and `\(P\)` is $/ton. Assume only a constant marginal cost of $16 for both firms
+]
+
+1. If the two firms collude and agree to act as a monopolist and evenly split the market, how much will each firm produce, what will be the market price, and how much profit will each firm earn?
+
+2. Under this agreement, does either firm have an incentive to cheat (i.e. by producing an additional ton of chlorine)? What would happen to each firm's profits if either, or both, cheated?
+]
+
+---
+
+# Models of Oligopoly
+
+.pull-left[
+Three canonical models of Oligopoly
+
+1. .hi[Bertrand competition]
+  - Firms **simultaneously** compete on **price**
+2. .hi[Cournot competition]
+  - Firms **simultaneously** compete on **quantity**
+3. .hi[Stackelberg competition]
+  - Firms **sequentially** compete on **quantity**
+
+]
+
+.pull-right[
+.center[
+![:scale 100%](../images/chessknights.jpg)
+]
+]
+
+---
+
+# Bertrand Competition
+
+.left-column[
+.center[
+![:scale 80%](../images/Bertrand.jpg)
+
+.smaller[
+Joseph Bertrand
+
+1822-1890
+]
+]
+]
+.right-column[
+- .hi["Bertrand competition"]: two (or more) firms compete on **price** to sell the **same good**
+
+- Firms set their prices **simultaneously**
+
+- Consumers are indifferent between the brands and .hi-purple[always buy from the seller with the lowest price]
+
+]
+
+---
+
+# Bertrand Competition: Example
+
+.pull-left[
+
+- Suppose two firms, .hi-red[Walmart] and .hi-blue[Target] stock and sell identical HDTVs
+
+- Costs each firm $200 to stock an HDTV
+
+- Let `\(Q\)` be the *total* quantity purchased by consumers from the entire market (i.e. both firms)
+  - `\(Q=\color{red}{q_w}+\color{blue}{q_t}\)`
+
+- Denote .hi-red[Walmart]'s price as .hi-red[`\\(p_w\\)`] and .hi-blue[Target]'s price as .hi-blue[`\\(p_t\\)`]
+]
+
+.pull-right[
+.center[
+![](../images/hdtvs.jpg)
+]
+]
+
+---
+
+# Bertrand Competition: Example
+
+.pull-left[
+- Demand for HDTV's at .hi-red[Walmart]:
+
+]
+
+---
+
+# Bertrand Competition: Example
+
+.pull-left[
+- Demand for HDTV's at .hi-red[Walmart]:
+  - `\(Q\)` if .red[`\\(p_w\\)`] `\(&lt;\)` .blue[`\\(p_t\\)`]
+]
+
+---
+
+# Bertrand Competition: Example
+
+.pull-left[
+- Demand for HDTV's at .hi-red[Walmart]:
+  - `\(Q\)` if .red[`\\(p_w\\)`] `\(&lt;\)` .blue[`\\(p_t\\)`]
+  - `\(\frac{Q}{2}\)` if .red[`\\(p_w\\)`] `\(=\)` .blue[`\\(p_t\\)`]
+]
+
+---
+
+# Bertrand Competition: Example
+
+.pull-left[
+- Demand for HDTV's at .hi-red[Walmart]:
+  - `\(Q\)` if .red[`\\(p_w\\)`] `\(&lt;\)` .blue[`\\(p_t\\)`]
+  - `\(\frac{Q}{2}\)` if .red[`\\(p_w\\)`] `\(=\)` .blue[`\\(p_t\\)`]
+  - `\(0\)` if .red[`\\(p_w\\)`] `\(&gt;\)` .blue[`\\(p_t\\)`]
+]
+
+--
+
+.pull-right[
+&lt;img src="2.2-slides_files/figure-html/unnamed-chunk-1-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+---
+
+# Bertrand Competition: Example
+
+.pull-left[
+- Demand for HDTV's at .hi-red[Walmart]:
+  - `\(Q\)` if .red[`\\(p_w\\)`] `\(&lt;\)` .blue[`\\(p_t\\)`]
+  - `\(\frac{Q}{2}\)` if .red[`\\(p_w\\)`] `\(=\)` .blue[`\\(p_t\\)`]
+  - `\(0\)` if .red[`\\(p_w\\)`] `\(&gt;\)` .blue[`\\(p_t\\)`]
+]
+
+.pull-left[
+- Demand for HDTV's at .hi-blue[Target]:
+  - `\(0\)` if .red[`\\(p_w\\)`] `\(&lt;\)` .blue[`\\(p_t\\)`]
+  - `\(\frac{Q}{2}\)` if .red[`\\(p_w\\)`] `\(=\)` .blue[`\\(p_t\\)`]
+  - `\(Q\)` if .red[`\\(p_w\\)`] `\(&gt;\)` .blue[`\\(p_t\\)`]
+]
+
+---
+
+# Bertrand Competition: Example
+
+.pull-left[
+
+- The only way to sell TVs is to match or beat your competitor's price 
+
+]
+
+.pull-right[
+.center[
+![](../images/hdtvs.jpg)
+]
+]
+
+---
+
+# Bertrand Competition: Example
+
+.pull-left[
+
+- The only way to sell TVs is to match or beat your competitor's price
+
+- Suppose you are .hi-red[Walmart]
+
+For a known .hi-blue[`\\(p_t\\)`], setting your price 
+
+`$$\color{red}{p_w}=\color{blue}{p_t}-\epsilon$$`
+
+for any arbitrary `\(\epsilon &gt; 0\)` captures you the entire market `\(Q\)`
+
+- Same for .hi-blue[Target] for `\(\color{red}{p_w}\)`
+
+]
+
+.pull-right[
+.center[
+![](../images/hdtvs.jpg)
+]
+]
+
+---
+
+# Bertrand Competition: Example
+
+.pull-left[
+
+- Won't charge `\(p&lt;MC\)`, earn losses
+
+- Firms continue undercutting one another until .hi-red[`\\(p_w\\)`] `\(=\)` .hi-blue[`\\(p_t\\)`] `\(=MC\)`
+
+- .hi-purple[Nash Equilibrium]: `$$\big( \color{red}{p_w = MC}, \color{blue}{p_t=MC} \big)$$`
+  - Firms earn no profits! 
+
+]
+
+.pull-right[
+.center[
+![](../images/hdtvs.jpg)
+]
+]
+
+---
+
+# Bertrand Paradox
+
+.pull-left[
+
+- .hi[Bertrand Paradox]: competitive outcome can be achieved with just 2 firms!
+  - `\(p=MC\)`, `\(\pi=0\)`
+
+]
+
+.pull-right[
+.center[
+![](../images/hdtvs.jpg)
+]
+]
+
+---
+
+# Walmart's Reaction Curve
+
+.pull-left[
+&lt;img src="2.2-slides_files/figure-html/unnamed-chunk-2-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right[
+
+We can graph .hi-red[Walmart]'s .hi-purple[reaction curve] to .hi-blue[Target]'s price
+
+]
+
+---
+
+# Walmart's Reaction Curve
+
+.pull-left[
+&lt;img src="2.2-slides_files/figure-html/unnamed-chunk-3-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right[
+
+We can graph .hi-red[Walmart]'s .hi-purple[reaction curve] to .hi-blue[Target]'s price
+
+- e.g. if .hi-blue[Target] sets a price of .hi-blue[$500], .hi-red[Walmart]'s best response is .hi-red[`\\($500-\epsilon\\)`]
+
+]
+
+---
+
+# Walmart's Reaction Curve
+
+.pull-left[
+&lt;img src="2.2-slides_files/figure-html/unnamed-chunk-4-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right[
+
+We can graph .hi-red[Walmart]'s .hi-purple[reaction curve] to .hi-blue[Target]'s price
+
+- e.g. if .hi-blue[Target] sets a price of .hi-blue[$500], .hi-red[Walmart]'s best response is .hi-red[`\\($500-\epsilon\\)`]
+- e.g. if .hi-blue[Target] sets a price of .hi-blue[$300], .hi-red[Walmart]'s best response is .hi-red[`\\($300-\epsilon\\)`]
+
+]
+
+---
+
+# Walmart's Reaction Curve
+
+.pull-left[
+&lt;img src="2.2-slides_files/figure-html/unnamed-chunk-5-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right[
+
+We can graph .hi-red[Walmart]'s .hi-purple[reaction curve] to .hi-blue[Target]'s price
+
+- e.g. if .hi-blue[Target] sets a price of .hi-blue[$500], .hi-red[Walmart]'s best response is .hi-red[`\\($500-\epsilon\\)`]
+- e.g. if .hi-blue[Target] sets a price of .hi-blue[$300], .hi-red[Walmart]'s best response is .hi-red[`\\($300-\epsilon\\)`]
+- e.g. if .hi-blue[Target] sets a price of .hi-blue[$200], (MC) .hi-red[Walmart]'s best response is .hi-red[`\\($200\\)`] (MC)
+
+]
+
+---
+
+# Target's Reaction Curve
+
+.pull-left[
+&lt;img src="2.2-slides_files/figure-html/unnamed-chunk-6-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right[
+
+We can graph .hi-blue[Target]'s .hi-purple[reaction curve] to .hi-red[Walmart]'s price
+
+]
+---
+
+# Target's Reaction Curve
+
+.pull-left[
+&lt;img src="2.2-slides_files/figure-html/unnamed-chunk-7-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right[
+
+We can graph .hi-blue[Target]'s .hi-purple[reaction curve] to .hi-red[Walmart]'s price
+
+- e.g. if .hi-red[Walmart] sets a price of .hi-red[$500], .hi-blue[Target]'s best response is .hi-blue[`\\($500-\epsilon\\)`]
+
+]
+
+---
+
+# Target's Reaction Curve
+
+.pull-left[
+&lt;img src="2.2-slides_files/figure-html/unnamed-chunk-8-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right[
+
+We can graph .hi-blue[Target]'s .hi-purple[reaction curve] to .hi-red[Walmart]'s price
+
+- e.g. if .hi-red[Walmart] sets a price of .hi-red[$500], .hi-blue[Target]'s best response is .hi-blue[`\\($500-\epsilon\\)`]
+- e.g. if .hi-red[Walmart] sets a price of .hi-red[$300], .hi-blue[Target]'s best response is .hi-blue[`\\($300-\epsilon\\)`]
+
+]
+
+---
+
+# Target's Reaction Curve
+
+.pull-left[
+&lt;img src="2.2-slides_files/figure-html/unnamed-chunk-9-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right[
+
+We can graph .hi-blue[Target]'s .hi-purple[reaction curve] to .hi-red[Walmart]'s price
+
+- e.g. if .hi-red[Walmart] sets a price of .hi-red[$500], .hi-blue[Target]'s best response is .hi-blue[`\\($500-\epsilon\\)`]
+- e.g. if .hi-red[Walmart] sets a price of .hi-red[$300], .hi-blue[Target]'s best response is .hi-blue[`\\($300-\epsilon\\)`]
+- e.g. if .hi-red[Walmart] sets a price of .hi-red[$200] (MC),  .hi-blue[Target]'s best response is .hi-blue[`\\($200\\)`] (MC)
+
+]
+
+---
+
+# Nash Equilibrium with Reaction Curves
+
+.pull-left[
+&lt;img src="2.2-slides_files/figure-html/unnamed-chunk-10-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right[
+
+Combine both curves on the same graph
+
+- .hi-purple[Nash Equilibrium]: `$$\big( \color{red}{p_w = MC}, \color{blue}{p_t=MC} \big)$$`
+    - Where both reaction curves intersect
+
+- No longer an incentive to undercut or change price 
+
+]
+
+---
+
+# Bertrand Competition: Moblab
+
+.center[
+![:scale 80%](../images/Bertrandmoblab.png)
+]
+
+---
+
+# Bertrand Competition: Moblab
+
+.pull-left[
+- Each of you selling identical Economics course notes
+
+- You will be put into a market with one other player
+
+- Each term, both of you simultaneously choose your price
+
+- Firm(s) choosing the lowest price get **all** the customers
+
+]
+
+.pull-right[
+.center[
+![](../images/Bertrandmoblab.png)
+]
+
+]
+
+---
+# Bertrand Competition: Moblab
+
+.pull-left[
+
+- The lowest price `\(p_L\)` determines the market demand
+`$$q=3600-200p_L$$`
+
+
+- Both firms have $2 cost per unit sold
+
+- `\(p=10\)` maximizes total market profits
+
+]
+
+.pull-right[
+.center[
+![](../images/Bertrandmoblab.png)
+]
+
+]
+
+---
+
+# Bertrand Competition: Moblab
+
+.pull-left[
+`$$q=3600-200p_L$$`
+
+.hi-green[Example:]
+- Suppose Firm 1 sets `\(p=9\)` and Firm 2 sets `\(p=10\)`
+
+- Firm 2 sells 0, makes $0
+
+- Firm 1 sells `\(q=3,600-200(9)=1,800\)` and earns `\(1,800(9-2)=12,600\)` profit
+
+]
+
+.pull-right[
+.center[
+![](../images/Bertrandmoblab.png)
+]
+
+]
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="macros.js"></script>
+<script src="https://platform.twitter.com/widgets.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9",
+"slideNumberFormat": "<div class=\"progress-bar-container\">\n  <div class=\"progress-bar\" style=\"width: calc(%current% / %total% * 100%);\">\n  </div>\n</div>\n"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
