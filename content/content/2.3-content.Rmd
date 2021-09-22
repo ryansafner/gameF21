@@ -38,7 +38,7 @@ The lower button will allow you to download a PDF version of the slides. I sugge
 
 `r blogdown::shortcode("slide-links")`
 
-# Visualizations of Cournot Competition
+## Visualizations of Cournot Competition
 
 - See some visualizations I made:
   1. [Cournot: Symmetric Market Changes](https://ryansafner.shinyapps.io/Cournot_market_changes/)
