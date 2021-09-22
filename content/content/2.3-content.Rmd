@@ -1,0 +1,54 @@
+---
+title: "2.3 — Cournot Competition — Class Content"
+draft: false
+linktitle: "2.3 — Cournot Competition"
+date: "2020-06-08"
+menu:
+  content:
+    parent: Course content
+    weight: 2
+type: docs
+output:
+  blogdown::html_page:
+    toc: true
+slides: "2.3-slides"
+---
+
+{{% alert note %}}
+*Wednesday September 22, 2021*. Note we will not have class today, there is a video (on Blackboard covering this content.)
+{{% /alert %}}
+
+{{% alert warning %}}
+[Problem Set 2](/assignments/02-problem-set) is due on Wednesday September 22. 
+{{% /alert %}}
+
+## <i class="fas fa-info-circle fa-lg"></i> Overview
+
+Today we look at our second major model of oligopoly: Cournot competition, where firms compete on quantity simultaneously.
+
+## <i class="fas fa-book-reader fa-lg"></i> Readings
+
+While the textbook does briefly describe the economics of oligopoly in passing, they do not get into the details, nor do they look at the canonical models that we will study. As such, for today I can only recommend my slides to assist you. 
+
+## <i class="fas fa-chalkboard-teacher"></i> Slides
+
+Below, you can find the slides in two formats. Clicking the image will bring you to the html version of the slides in a new tab. Note while in going through the slides, you can type <kbd>h</kbd> to see a special list of viewing options, and type <kbd>o</kbd> for an outline view of all the slides.
+
+The lower button will allow you to download a PDF version of the slides. I suggest printing the slides beforehand and using them to take additional notes in class (*not everything* is in the slides)!
+
+`r blogdown::shortcode("slide-links")`
+
+# Visualizations of Cournot Competition
+
+- See some visualizations I made:
+  1. [Cournot: Symmetric Market Changes](https://ryansafner.shinyapps.io/Cournot_market_changes/)
+  2. [Cournot: Asymmetric Costs](https://ryansafner.shinyapps.io/cournot_asymmetric_costs/)
+  3. [Cournot: With n Firms](https://ryansafner.shinyapps.io/Cournot_n_firms/)
+
+Major implications from Cournot:
+
+1. As $\uparrow$ number of firms: $\downarrow q$, $\downarrow p$, $\downarrow \pi$, $\uparrow CS$, $\downarrow DWL$ (closer to perfect competition)
+
+2. If a firm has lower costs than others, earns greater profit. Firms will want to (equivalently):
+  - lower their own costs
+  - raise rivals' costs
