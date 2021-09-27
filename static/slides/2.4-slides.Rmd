@@ -1,0 +1,495 @@
+---
+title: "2.4 — Stackelberg Competition"
+subtitle: "ECON 316 • Game Theory • Fall 2021"
+author: 'Ryan Safner<br> Assistant Professor of Economics <br> <a href="mailto:safner@hood.edu"><i class="fa fa-paper-plane fa-fw"></i>safner@hood.edu</a> <br> <a href="https://github.com/ryansafner/gameF21"><i class="fa fa-github fa-fw"></i>ryansafner/gameF21</a><br> <a href="https://gameF21.classes.ryansafner.com"> <i class="fa fa-globe fa-fw"></i>gameF21.classes.ryansafner.com</a><br>'
+#date:
+output:
+  xaringan::moon_reader:
+    mathjax: "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML" # rescales math with css changes https://github.com/yihui/xaringan/issues/143
+    lib_dir: libs
+    #seal: false
+    css: [custom.css, "hygge"] #, metropolis, metropolis-fonts
+    nature:
+      beforeInit: ["macros.js", "https://platform.twitter.com/widgets.js"] # first is for rescaling images , second is for embedding tweets, https://github.com/yihui/xaringan/issues/100
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: "16:9"
+      slideNumberFormat: |
+        <div class="progress-bar-container">
+          <div class="progress-bar" style="width: calc(%current% / %total% * 100%);">
+          </div>
+        </div>
+    includes:
+      in_header: header.html # for font awesome, used in title  
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(echo=F,
+                      message=F,
+                      warning=F,
+                      fig.retina = 3,
+                      fig.align = "center")
+library("tidyverse")
+library("ggrepel")
+library("fontawesome")
+xaringanExtra::use_tile_view()
+xaringanExtra::use_tachyons()
+xaringanExtra::use_freezeframe()
+
+update_geom_defaults("label", list(family = "Fira Sans Condensed"))
+update_geom_defaults("text", list(family = "Fira Sans Condensed"))
+
+set.seed(256)
+
+theme_slides <- theme_light() + 
+  theme(
+    text = element_text(family = "Fira Sans", size = 24)
+  )
+```
+
+
+# Models of Oligopoly
+
+.pull-left[
+Three canonical models of Oligopoly
+
+1. .hi[Bertrand competition]
+  - Firms **simultaneously** compete on **price**
+2. .hi[Cournot competition]
+  - Firms **simultaneously** compete on **quantity**
+3. .hi[Stackelberg competition]
+  - Firms **sequentially** compete on **quantity**
+
+]
+
+.pull-right[
+.center[
+![:scale 100%](../images/chessknights.jpg)
+]
+]
+
+---
+```{r}
+Saudi=function(x){30-0.5*x}
+
+saudi<-ggplot(tibble(x=c(0,10)), aes(x=x))+
+  stat_function(fun=Saudi, geom="line", size=2, color="red")+
+    annotate(geom = "label", x = 45, y = Saudi(45) , label = "Saudi Arabia",color = "red", size = 4) +
+  scale_x_continuous(breaks = seq(0,60,5),
+                     limits = c(0,60),
+                     expand=c(0,0))+
+  scale_y_continuous(breaks = seq(0,60,5),
+                     limits = c(0,60),
+                     expand=c(0,0))+
+  theme_classic(base_family = "Fira Sans Condensed", base_size=20)+
+  labs(x = expression(paste("Iran's Output, ", q[I]), sep=" "),
+       y = expression(paste("Saudi Arabia's Output, ", q[SA]), sep=" "))
+Iran=function(x){60-2*x}
+
+```
+
+# Stackelberg Competition
+
+.left-column[
+.center[
+![:scale 70%](../images/stackelberg.jpeg)
+
+.smaller[
+Henrich von Stackelberg
+
+1905-1946
+]
+]
+]
+.right-column[
+- .hi["Stackelberg competition"]: Cournot-style competition, two (or more) firms compete on **quantity** to sell the **same good**
+
+- Again, firms' joint output determines the market price faced by all firms
+
+- But firms set their quantities **sequentially**
+  - .hi-purple[Leader] produces first
+  - .hi-purple[Follower] produces second
+
+]
+
+---
+
+# Stackelberg Competition: Example
+
+.content-box-green[
+.hi-green[Example]: Return to .hi-red[Saudi Arabia `\\((sa)\\)`] and .hi-blue[Iran `\\((i)\\)`], again with the market (inverse) demand curve:
+$$\begin{align*}
+P&=200-3Q\\
+Q&=\color{red}{q_{sa}}+\color{blue}{q_i}\\
+\end{align*}$$
+
+]
+
+--
+
+- We solved for Saudi Arabia and Iran's .hi-purple[reaction functions] in **Cournot competition** last class:
+$$\begin{align*}
+\color{red}{q_{sa}^*}&\color{red}{=30-0.5}\color{blue}{q_i}\\
+\color{blue}{q_i^*}&\color{blue}{=30-0.5}\color{red}{q_{sa}}\\
+\end{align*}$$
+
+
+---
+
+# Stackelberg Competition: Example
+
+$$\begin{align*}
+\color{red}{q_{sa}^*}&\color{red}{=30-0.5}\color{blue}{q_i}\\
+\color{blue}{q_i^*}&\color{blue}{=30-0.5}\color{red}{q_{sa}}\\
+\end{align*}$$
+
+- Suppose .hi-red[Saudi Arabia] is the .hi-purple[Stackelberg leader] and produces $q_{sa}$ **first**
+
+--
+- Saudi Arabia knows exactly how Iran will respond to its output
+
+$$\color{blue}{q_i^*}\color{blue}{=30-0.5}\color{red}{q_{sa}}$$
+
+--
+
+- .hi-red[Saudi Arabia], as leader, essentially faces **entire market demand**
+  - But **can't** act like a pure monopolist!
+  - knows that .hi-blue[follower] will still produce afterwards, which pushes down market price for both firms!
+
+---
+
+# Stackelberg Competition: Example
+
+- Substitute .hi-blue[follower]'s reaction function into (inverse) market demand function faced by .hi-red[leader]
+
+--
+
+$$\begin{align*}
+P&=200-3q_{sa}-3(30-0.5q_{sa})\\
+P&=110-1.5q_{sa}\\
+\end{align*}$$
+
+--
+
+- Now find $MR(q)$ for .hi-red[Saudi Arabia] from this by doubling the slope: 
+
+--
+
+$$MR_{Leader}=110-3q_{sa}$$
+
+---
+
+# Stackelberg Competition: Example
+
+- Now .hi-red[Saudi Arabia] can find its optimal quantity:
+
+$$\begin{align*}
+MR_{Leader}&=MC\\
+110-3q_{sa}&=20\\
+30&=q_{sa}^*\\
+\end{align*}$$
+
+--
+
+- .hi-blue[Iran] will optimally respond by producing:
+
+$$\begin{align*}
+q_i^*&=30-0.5q_{sa}\\
+q_i^*&=30-0.5(30)\\
+q_i^*&=15\\
+\end{align*}$$
+
+---
+
+# Stackelberg Equilibrium, Graphically
+
+.pull-left[
+```{r}
+saudi+
+  stat_function(fun=Iran, geom="line", size=2, color="blue")+
+    annotate(geom = "label", x = 10, y = Iran(10) , label = "Iran",color = "blue", size = 4) +
+  geom_segment(x=20,xend=20,y=0,yend=20, size=1, linetype="dotted", color="blue")+
+  geom_segment(x=0,xend=20,y=20,yend=20, size=1, linetype="dotted", color="red")+
+  geom_point(x=20,y=20,size=5,color="purple")+
+  annotate(geom = "label", x = 32, y = 24 , label = "Cournot-Nash Equilibrium",color = "purple", size = 5)+
+    geom_point(x=15,y=15,size=5,color="orange")+
+  annotate(geom = "label", x = 10, y = 11 , label = "Collusion",color = "orange", size = 5)+
+    geom_segment(x=15,xend=15,y=0,yend=15, size=1, linetype="dotted", color="orange")+
+  geom_segment(x=0,xend=15,y=15,yend=15, size=1, linetype="dotted", color="orange")+
+
+    geom_point(x=15,y=30,size=5,color="darkgreen")+
+  annotate(geom = "label", x = 25, y = 35 , label = "Stackelberg (S.A. Leads)",color = "darkgreen", size = 5)+
+    geom_segment(x=15,xend=15,y=0,yend=30, size=1, linetype="dotted", color="darkgreen")+
+  geom_segment(x=0,xend=15,y=30,yend=30, size=1, linetype="dotted", color="darkgreen")
+
+```
+]
+
+.pull-right[
+
+- **Stackelberg Nash Equilibrium**: $$\big( \color{red}{q^*_{sa}=30}, \color{blue}{q^*_{i}=15} \big)$$
+
+]
+
+---
+
+# Stackelberg Competition: Example
+
+- With $\color{red}{q^*_{sa}=30}$ and $\color{blue}{q^*_i=15}$, this sets a market-clearing price of:
+
+$$\begin{align*}
+P&=200-3(45)\\
+P&=65\\
+\end{align*}$$
+
+--
+
+.pull-left[
+- .hi-red[Saudi Arabia's] profit would be:
+
+$$\begin{align*}
+\pi_{sa}&=30(65-20)\\
+\pi_{sa}&=\$1,350\\
+\end{align*}$$
+
+]
+
+--
+
+.pull-right[
+- .hi-blue[Iran's] profit would be:
+
+$$\begin{align*}
+\pi_{i}&=15(65-20)\\
+\pi_{i}&=\$675\\
+\end{align*}$$
+
+]
+
+---
+
+# Stackelberg Equilibrium, The Market
+
+```{r}
+Demand_market<-function(x){200-3*x}
+MR_market<-function(x){200-6*x}
+MC_market<-function(x){20}
+CS_3<-tribble(
+  ~x, ~y,
+  0, 200,
+  0, 65,
+  45, 65
+)
+
+DWL_3<-tribble(
+  ~x, ~y,
+  45, 20,
+  45, 65,
+  60, 20
+)
+
+stack<-ggplot(tibble(x=c(0,10)), aes(x=x))+
+  geom_polygon(data=CS_3, aes(x=x,y=y), fill="blue",alpha=0.5)+ #cs
+  geom_rect(xmin=0, xmax=45, ymin=20, ymax=65, fill="green", alpha=0.5)+ # pi
+  geom_polygon(data=DWL_3, aes(x=x,y=y), fill="black",alpha=0.5)+ #dwl
+  stat_function(fun=Demand_market, geom="line", size=2, color="blue")+
+    stat_function(fun=MR_market, geom="line", size=2, color="purple")+
+  annotate(geom = "label", x = 50, y = Demand_market(50) , label = "Market Demand",color = "blue", size = 4) +
+    annotate(geom = "label", x = 25, y = MR_market(25) , label = "MR(q)",color = "purple", size = 4) +
+  
+      stat_function(fun=MC_market, geom="line", size=2, color="red")+
+  annotate(geom = "label", x = 70, y = MC_market(70) , label = "MC(q)=AC(q)",color = "red", size = 4) +
+
+  geom_point(x=40,y=80,size=5,color="purple")+
+  annotate(geom = "label", x = 50, y = 95 , label = "Cournot-Nash Equilibrium",color = "purple", size = 4)+
+  
+    geom_point(x=30,y=110,size=5,color="purple")+
+  annotate(geom = "label", x = 30, y = 125 , label = "Collusion",color = "purple", size = 4)+
+
+    geom_segment(x=30,xend=30,y=0,yend=110,linetype="dotted", size =1)+
+  geom_segment(x=0,xend=30,y=110,yend=110,linetype="dotted", size =1)+
+
+  geom_segment(x=40,xend=40,y=0,yend=80,linetype="dotted", size =1)+
+  geom_segment(x=0,xend=40,y=80,yend=80,linetype="dotted", size =1)+
+  
+  
+  geom_point(x=45,y=65,size=5,color="purple")+
+  annotate(geom = "label", x = 55, y = 70 , label = "Stackelberg",color = "purple", size = 4)+
+
+  geom_segment(x=45,xend=45,y=0,yend=65,linetype="dotted", size =1)+
+  geom_segment(x=0,xend=45,y=65,yend=65,linetype="dotted", size =1)+
+  
+  scale_x_continuous(breaks = seq(0,80,10),
+                     limits = c(0,80),
+                     expand=c(0,0))+
+  scale_y_continuous(breaks = seq(0,200,20),
+                     labels = scales::dollar,
+                     limits = c(0,200),
+                     expand=c(0,0))+
+  theme_classic(base_family = "Fira Sans Condensed", base_size=20)+
+  labs(x = "Industry Output, Q",
+       y = "Market Price, p",
+       title = "Oil Industry")
+stack
+```
+
+---
+
+# Cournot vs. Stackelberg Competition
+
+.center[
+![:scale 80%](../images/cournot-stackelberg-compare.png)
+
+]
+- **Leader** Saudi Arabia $\uparrow$ its output and $\uparrow$ profits
+
+- **Follower** Iran forced to $\downarrow$ its output and accept $\downarrow$ profits
+
+---
+
+# Stackelberg and First-Mover Advantage
+
+.pull-left[
+```{r}
+saudi+
+  stat_function(fun=Iran, geom="line", size=2, color="blue")+
+    annotate(geom = "label", x = 10, y = Iran(10) , label = "Iran",color = "blue", size = 4) +
+  geom_segment(x=20,xend=20,y=0,yend=20, size=1, linetype="dotted", color="blue")+
+  geom_segment(x=0,xend=20,y=20,yend=20, size=1, linetype="dotted", color="red")+
+  geom_point(x=20,y=20,size=5,color="purple")+
+  annotate(geom = "label", x = 32, y = 24 , label = "Cournot-Nash Equilibrium",color = "purple", size = 5)+
+    geom_point(x=15,y=15,size=5,color="orange")+
+  annotate(geom = "label", x = 10, y = 11 , label = "Collusion",color = "orange", size = 5)+
+    geom_segment(x=15,xend=15,y=0,yend=15, size=1, linetype="dotted", color="orange")+
+  geom_segment(x=0,xend=15,y=15,yend=15, size=1, linetype="dotted", color="orange")+
+
+    geom_point(x=15,y=30,size=5,color="green")+
+  annotate(geom = "label", x = 25, y = 35 , label = "Stackelberg (S.A. Leads)",color = "darkgreen", size = 5)+
+    geom_segment(x=15,xend=15,y=0,yend=30, size=1, linetype="dotted", color="darkgreen")+
+  geom_segment(x=0,xend=15,y=30,yend=30, size=1, linetype="dotted", color="darkgreen")+
+
+
+    geom_point(x=30,y=15,size=5,color="green")+
+  annotate(geom = "label", x = 40, y = 20 , label = "Stackelberg (Iran Leads)",color = "darkgreen", size = 5)+
+    geom_segment(x=30,xend=30,y=0,yend=15, size=1, linetype="dotted", color="darkgreen")+
+  geom_segment(x=0,xend=30,y=15,yend=15, size=1, linetype="dotted", color="darkgreen")
+
+```
+
+]
+
+.pull-right[
+- Stackelberg **leader** clearly has a .hi-purple[first-mover advantage] over the **follower**
+  - **Leader**: $q^*=30$, $\pi=1,350$
+  - **Follower**: $q^*=15$, $\pi=675$
+
+- If firms compete **simultaneously** (.hi[Cournot]): $q^*=20$, $\pi=1,200$ each
+
+- Leading $\succ$ simultaneous $\succ$ Following
+]
+
+---
+
+# Stackelberg and First-Mover Advantage
+
+.pull-left[
+```{r}
+saudi+
+  stat_function(fun=Iran, geom="line", size=2, color="blue")+
+    annotate(geom = "label", x = 10, y = Iran(10) , label = "Iran",color = "blue", size = 4) +
+  geom_segment(x=20,xend=20,y=0,yend=20, size=1, linetype="dotted", color="blue")+
+  geom_segment(x=0,xend=20,y=20,yend=20, size=1, linetype="dotted", color="red")+
+  geom_point(x=20,y=20,size=5,color="purple")+
+  annotate(geom = "label", x = 32, y = 24 , label = "Cournot-Nash Equilibrium",color = "purple", size = 5)+
+    geom_point(x=15,y=15,size=5,color="orange")+
+  annotate(geom = "label", x = 10, y = 11 , label = "Collusion",color = "orange", size = 5)+
+    geom_segment(x=15,xend=15,y=0,yend=15, size=1, linetype="dotted", color="orange")+
+  geom_segment(x=0,xend=15,y=15,yend=15, size=1, linetype="dotted", color="orange")+
+
+    geom_point(x=15,y=30,size=5,color="green")+
+  annotate(geom = "label", x = 25, y = 35 , label = "Stackelberg (S.A. Leads)",color = "darkgreen", size = 5)+
+    geom_segment(x=15,xend=15,y=0,yend=30, size=1, linetype="dotted", color="darkgreen")+
+  geom_segment(x=0,xend=15,y=30,yend=30, size=1, linetype="dotted", color="darkgreen")+
+
+
+    geom_point(x=30,y=15,size=5,color="green")+
+  annotate(geom = "label", x = 40, y = 20 , label = "Stackelberg (Iran Leads)",color = "darkgreen", size = 5)+
+    geom_segment(x=30,xend=30,y=0,yend=15, size=1, linetype="dotted", color="darkgreen")+
+  geom_segment(x=0,xend=30,y=15,yend=15, size=1, linetype="dotted", color="darkgreen")
+
+```
+
+]
+
+.pull-right[
+- Stackelberg Nash equilibrium requires .hi-purple[perfect information] for **both** leader and follower
+  - Follower must be able to **observe** leader's output to choose its own
+  - Leader must **believe** follower will see leader's output and react optimally
+
+- .hi-purple[Imperfect information] reduces the game to (simultaneous) .hi[Cournot competition]
+]
+
+---
+
+# Stackelberg and First-Mover Advantage
+
+.pull-left[
+```{r}
+stack
+```
+]
+
+.pull-right[
+- Again, leader *cannot* act like a monopolist 
+  - A strategic game! Market output (that pushes down market price) is $Q=q_{sa}+q_{i}$
+    
+- Leader's choice of 30 is optimal **only if** follower responds with 15
+]
+
+
+---
+
+# Comparing All Oligopoly Models
+
+.center[
+![](../images/oligopoly-comparison.png)
+]
+
+- Output: $Q_m < Q_c < Q_s < Q_b$
+- Market price: $P_b < P_s < P_c < P_m$
+- Profit: $\pi_b=0 < \pi_s < \pi_c < \pi_m$
+
+Where subscript $m$ is monopoly (collusion), $c$ is Cournot, $s$ is Stackelberg, $b$ is Bertrand
+
+---
+
+# Stackelberg Competition: Moblab
+
+.center[
+![:scale 80%](../images/stackelbergmoblab.png)
+
+]
+
+---
+
+# Stackelberg Competition: Moblab
+
+.pull-left[
+.center[
+![](../images/stackelbergmoblab.png)
+]
+]
+
+.pull-right[
+
+- Each of you is one Airline competing against another in a duopoly
+    - Each pays same per-flight cost
+    - Market price determined by *total* number of flights in market
+    
+- **LeadAir** first chooses its number of flights, publicly announced
+
+- **FollowAir** then chooses its number of flights
+
+]

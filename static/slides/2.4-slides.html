@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>2.4 — Stackelberg Competition</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Ryan Safner  Assistant Professor of Economics   safner@hood.edu   ryansafner/gameF21   gameF21.classes.ryansafner.com " />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/remark-css/hygge.css" rel="stylesheet" />
+    <link href="libs/tile-view/tile-view.css" rel="stylesheet" />
+    <script src="libs/tile-view/tile-view.js"></script>
+    <link href="libs/tachyons/tachyons.min.css" rel="stylesheet" />
+    <script src="libs/freezeframe/freezeframe.min.js"></script>
+    <script src="libs/xaringanExtra-freezeframe/freezeframe-init.js"></script>
+    <script id="xaringanExtra-freezeframe-options" type="application/json">{"selector":"img[src$=\"gif\"]","trigger":"click","overlay":false,"responsive":true,"warnings":true}</script>
+    <script src="https://use.fontawesome.com/5235085b15.js"></script>
+    <link rel="stylesheet" href="custom.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# 2.4 — Stackelberg Competition
+## ECON 316 • Game Theory • Fall 2021
+### Ryan Safner<br> Assistant Professor of Economics <br> <a href="mailto:safner@hood.edu"><i class="fa fa-paper-plane fa-fw"></i>safner@hood.edu</a> <br> <a href="https://github.com/ryansafner/gameF21"><i class="fa fa-github fa-fw"></i>ryansafner/gameF21</a><br> <a href="https://gameF21.classes.ryansafner.com"> <i class="fa fa-globe fa-fw"></i>gameF21.classes.ryansafner.com</a><br>
+
+---
+
+
+
+
+
+# Models of Oligopoly
+
+.pull-left[
+Three canonical models of Oligopoly
+
+1. .hi[Bertrand competition]
+  - Firms **simultaneously** compete on **price**
+2. .hi[Cournot competition]
+  - Firms **simultaneously** compete on **quantity**
+3. .hi[Stackelberg competition]
+  - Firms **sequentially** compete on **quantity**
+
+]
+
+.pull-right[
+.center[
+![:scale 100%](../images/chessknights.jpg)
+]
+]
+
+---
+
+
+# Stackelberg Competition
+
+.left-column[
+.center[
+![:scale 70%](../images/stackelberg.jpeg)
+
+.smaller[
+Henrich von Stackelberg
+
+1905-1946
+]
+]
+]
+.right-column[
+- .hi["Stackelberg competition"]: Cournot-style competition, two (or more) firms compete on **quantity** to sell the **same good**
+
+- Again, firms' joint output determines the market price faced by all firms
+
+- But firms set their quantities **sequentially**
+  - .hi-purple[Leader] produces first
+  - .hi-purple[Follower] produces second
+
+]
+
+---
+
+# Stackelberg Competition: Example
+
+.content-box-green[
+.hi-green[Example]: Return to .hi-red[Saudi Arabia `\\((sa)\\)`] and .hi-blue[Iran `\\((i)\\)`], again with the market (inverse) demand curve:
+`$$\begin{align*}
+P&amp;=200-3Q\\
+Q&amp;=\color{red}{q_{sa}}+\color{blue}{q_i}\\
+\end{align*}$$`
+
+]
+
+--
+
+- We solved for Saudi Arabia and Iran's .hi-purple[reaction functions] in **Cournot competition** last class:
+`$$\begin{align*}
+\color{red}{q_{sa}^*}&amp;\color{red}{=30-0.5}\color{blue}{q_i}\\
+\color{blue}{q_i^*}&amp;\color{blue}{=30-0.5}\color{red}{q_{sa}}\\
+\end{align*}$$`
+
+
+---
+
+# Stackelberg Competition: Example
+
+`$$\begin{align*}
+\color{red}{q_{sa}^*}&amp;\color{red}{=30-0.5}\color{blue}{q_i}\\
+\color{blue}{q_i^*}&amp;\color{blue}{=30-0.5}\color{red}{q_{sa}}\\
+\end{align*}$$`
+
+- Suppose .hi-red[Saudi Arabia] is the .hi-purple[Stackelberg leader] and produces `\(q_{sa}\)` **first**
+
+--
+- Saudi Arabia knows exactly how Iran will respond to its output
+
+`$$\color{blue}{q_i^*}\color{blue}{=30-0.5}\color{red}{q_{sa}}$$`
+
+--
+
+- .hi-red[Saudi Arabia], as leader, essentially faces **entire market demand**
+  - But **can't** act like a pure monopolist!
+  - knows that .hi-blue[follower] will still produce afterwards, which pushes down market price for both firms!
+
+---
+
+# Stackelberg Competition: Example
+
+- Substitute .hi-blue[follower]'s reaction function into (inverse) market demand function faced by .hi-red[leader]
+
+--
+
+`$$\begin{align*}
+P&amp;=200-3q_{sa}-3(30-0.5q_{sa})\\
+P&amp;=110-1.5q_{sa}\\
+\end{align*}$$`
+
+--
+
+- Now find `\(MR(q)\)` for .hi-red[Saudi Arabia] from this by doubling the slope: 
+
+--
+
+`$$MR_{Leader}=110-3q_{sa}$$`
+
+---
+
+# Stackelberg Competition: Example
+
+- Now .hi-red[Saudi Arabia] can find its optimal quantity:
+
+`$$\begin{align*}
+MR_{Leader}&amp;=MC\\
+110-3q_{sa}&amp;=20\\
+30&amp;=q_{sa}^*\\
+\end{align*}$$`
+
+--
+
+- .hi-blue[Iran] will optimally respond by producing:
+
+`$$\begin{align*}
+q_i^*&amp;=30-0.5q_{sa}\\
+q_i^*&amp;=30-0.5(30)\\
+q_i^*&amp;=15\\
+\end{align*}$$`
+
+---
+
+# Stackelberg Equilibrium, Graphically
+
+.pull-left[
+&lt;img src="2.4-slides_files/figure-html/unnamed-chunk-2-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right[
+
+- **Stackelberg Nash Equilibrium**: `$$\big( \color{red}{q^*_{sa}=30}, \color{blue}{q^*_{i}=15} \big)$$`
+
+]
+
+---
+
+# Stackelberg Competition: Example
+
+- With `\(\color{red}{q^*_{sa}=30}\)` and `\(\color{blue}{q^*_i=15}\)`, this sets a market-clearing price of:
+
+`$$\begin{align*}
+P&amp;=200-3(45)\\
+P&amp;=65\\
+\end{align*}$$`
+
+--
+
+.pull-left[
+- .hi-red[Saudi Arabia's] profit would be:
+
+`$$\begin{align*}
+\pi_{sa}&amp;=30(65-20)\\
+\pi_{sa}&amp;=\$1,350\\
+\end{align*}$$`
+
+]
+
+--
+
+.pull-right[
+- .hi-blue[Iran's] profit would be:
+
+`$$\begin{align*}
+\pi_{i}&amp;=15(65-20)\\
+\pi_{i}&amp;=\$675\\
+\end{align*}$$`
+
+]
+
+---
+
+# Stackelberg Equilibrium, The Market
+
+&lt;img src="2.4-slides_files/figure-html/unnamed-chunk-3-1.png" width="504" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Cournot vs. Stackelberg Competition
+
+.center[
+![:scale 80%](../images/cournot-stackelberg-compare.png)
+
+]
+- **Leader** Saudi Arabia `\(\uparrow\)` its output and `\(\uparrow\)` profits
+
+- **Follower** Iran forced to `\(\downarrow\)` its output and accept `\(\downarrow\)` profits
+
+---
+
+# Stackelberg and First-Mover Advantage
+
+.pull-left[
+&lt;img src="2.4-slides_files/figure-html/unnamed-chunk-4-1.png" width="504" style="display: block; margin: auto;" /&gt;
+
+]
+
+.pull-right[
+- Stackelberg **leader** clearly has a .hi-purple[first-mover advantage] over the **follower**
+  - **Leader**: `\(q^*=30\)`, `\(\pi=1,350\)`
+  - **Follower**: `\(q^*=15\)`, `\(\pi=675\)`
+
+- If firms compete **simultaneously** (.hi[Cournot]): `\(q^*=20\)`, `\(\pi=1,200\)` each
+
+- Leading `\(\succ\)` simultaneous `\(\succ\)` Following
+]
+
+---
+
+# Stackelberg and First-Mover Advantage
+
+.pull-left[
+&lt;img src="2.4-slides_files/figure-html/unnamed-chunk-5-1.png" width="504" style="display: block; margin: auto;" /&gt;
+
+]
+
+.pull-right[
+- Stackelberg Nash equilibrium requires .hi-purple[perfect information] for **both** leader and follower
+  - Follower must be able to **observe** leader's output to choose its own
+  - Leader must **believe** follower will see leader's output and react optimally
+
+- .hi-purple[Imperfect information] reduces the game to (simultaneous) .hi[Cournot competition]
+]
+
+---
+
+# Stackelberg and First-Mover Advantage
+
+.pull-left[
+&lt;img src="2.4-slides_files/figure-html/unnamed-chunk-6-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right[
+- Again, leader *cannot* act like a monopolist 
+  - A strategic game! Market output (that pushes down market price) is `\(Q=q_{sa}+q_{i}\)`
+    
+- Leader's choice of 30 is optimal **only if** follower responds with 15
+]
+
+
+---
+
+# Comparing All Oligopoly Models
+
+.center[
+![](../images/oligopoly-comparison.png)
+]
+
+- Output: `\(Q_m &lt; Q_c &lt; Q_s &lt; Q_b\)`
+- Market price: `\(P_b &lt; P_s &lt; P_c &lt; P_m\)`
+- Profit: `\(\pi_b=0 &lt; \pi_s &lt; \pi_c &lt; \pi_m\)`
+
+Where subscript `\(m\)` is monopoly (collusion), `\(c\)` is Cournot, `\(s\)` is Stackelberg, `\(b\)` is Bertrand
+
+---
+
+# Stackelberg Competition: Moblab
+
+.center[
+![:scale 80%](../images/stackelbergmoblab.png)
+
+]
+
+---
+
+# Stackelberg Competition: Moblab
+
+.pull-left[
+.center[
+![](../images/stackelbergmoblab.png)
+]
+]
+
+.pull-right[
+
+- Each of you is one Airline competing against another in a duopoly
+    - Each pays same per-flight cost
+    - Market price determined by *total* number of flights in market
+    
+- **LeadAir** first chooses its number of flights, publicly announced
+
+- **FollowAir** then chooses its number of flights
+
+]
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="macros.js"></script>
+<script src="https://platform.twitter.com/widgets.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9",
+"slideNumberFormat": "<div class=\"progress-bar-container\">\n  <div class=\"progress-bar\" style=\"width: calc(%current% / %total% * 100%);\">\n  </div>\n</div>\n"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
