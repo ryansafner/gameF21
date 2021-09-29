@@ -14,7 +14,7 @@ type: docs
 Due on *Wednesday October 6*.
 {{% /alert %}}
 
-<p style="text-align:center"><a target="_blank" href="/assignments/02-problem-set-pdf.pdf"><span class="btn btn-primary btn-lg"><i class="fas fa-file-pdf"></i> Download PDF</a></span></p>
+<p style="text-align:center"><a target="_blank" href="/assignments/03-problem-set-pdf.pdf"><span class="btn btn-primary btn-lg"><i class="fas fa-file-pdf"></i> Download PDF</a></span></p>
 
 Please read the [instructions](/assignments/problem-sets) for completing homeworks.
 
