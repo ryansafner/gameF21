@@ -49,6 +49,18 @@ theme_slides <- theme_light() +
   )
 ```
 
+class: inverse
+
+# Outline
+
+### [Contestable Markets](#3)
+### [Scenario I: Identical Costs](#8)
+### [Scenario II: Entrant has Higher Costs](#12)
+### [Scenario III: Fixed Costs](#15)
+### [Scenario IV: Sunk Costs](#18)
+### [Implications for Markets and Policy](#24)
+
+---
 
 class: inverse, center, middle
 
@@ -125,7 +137,7 @@ class: inverse, center, middle
 
 ---
 
-# Contestable Markets I
+# An Entry Game
 
 .pull-left[
 
@@ -135,7 +147,7 @@ class: inverse, center, middle
 
 2. .hi-blue[**Entrant**] decides to **stay out** or **enter** the market, setting its price $\color{blue}{p_E}$
 
-- Price competition between 2 firms with similar products $\implies$ .hi-purple[consumers buy only from firm with lower price]
+- Bertrand (price) competition between 2 firms with similar products $\implies$ .hi-purple[consumers buy only from firm with lower price]
 
 ]
 
@@ -147,6 +159,12 @@ class: inverse, center, middle
 ![:scale 75%](../images/entry.jpg)
 ]
 ]
+
+---
+
+class: inverse, center, middle
+
+# Scenario I: Identical Costs
 
 ---
 
@@ -206,13 +224,14 @@ MC(q)&=c\\ \end{align*}$$
 # Contestable Markets II
 
 .pull-left[
-
+.smaller[
 - .hi-purple[Nash Equilibrium]: $\big(\color{red}{p_I}=c$, .blue[Stay Out] $\big)$
 
 - .hi-purple[A market with a single firm, but the **competitive outcome**!]
   - $p^*=MC$, $\color{green}{\pi=0}$
   - competitive $q^*$
   - max .hi-blue[Consumer Surplus], no DWL
+]
 ]
 
 .pull-right[
@@ -292,13 +311,19 @@ ggplot(data.frame(x=c(0,q_choke)), aes(x=x))+
 
 ---
 
+class: inverse, center, middle
+
+# Scenario II: Entrant has Higher Costs
+
+---
+
 # Contestable Markets II
 
 .pull-left[
 
-- .hi-green[Case II]: What if the .hi-blue[Entrant] has *higher costs* than the .hi-red[Incumbent]: $\color{blue}{c_E}>\color{red}{c_I}$?
-  - Or alternatively, there are **sunk costs** (.red[Incumbent] has already incurred)
-
+.smaller[
+- What if the .hi-blue[Entrant] has *higher costs* than the .hi-red[Incumbent]: $\color{blue}{c_E}>\color{red}{c_I}$?
+]
 ]
 
 .pull-right[
@@ -310,13 +335,15 @@ ggplot(data.frame(x=c(0,q_choke)), aes(x=x))+
 
 .pull-left[
 
-- .hi-green[Case II]: What if the .hi-blue[Entrant] has *higher costs* than the .hi-red[Incumbent]: $\color{blue}{c_E}>\color{red}{c_I}$?
-  - Or alternatively, there are **sunk costs** (.red[Incumbent] has already incurred)
+.smaller[
+- What if the .hi-blue[Entrant] has *higher costs* than the .hi-red[Incumbent]: $\color{blue}{c_E}>\color{red}{c_I}$?
 
-- .hi-purple[Nash equilibrium]: $\big(\color{red}{p_I}=\color{blue}{p_E-\epsilon}$, .blue[Stay Out] $\big)$
+- .hi-purple[Nash equilibrium]: 
+$\big(\color{red}{p_I}=\color{blue}{p_E-\epsilon}$, .blue[Stay Out] $\big)$
 
 - One firm again, with some inefficiency
   - But not as bad as monopoly!
+]
 ]
 
 .pull-right[
@@ -424,11 +451,17 @@ ggplot(data.frame(x=c(0,q_choke)), aes(x=x))+
 
 ---
 
+class: inverse, center, middle
+
+# Scenario III: Fixed Costs
+
+---
+
 # Contestable Markets III
 
 .pull-left[
 
-- .hi-green[Case III]: What if there are **fixed costs**, $f$?
+- What if there are **fixed costs**, $f$?
 
 $$\begin{align*}
 C(q)&=cq+f \\
@@ -517,6 +550,7 @@ ggplot(data.frame(x=c(0,q_choke)), aes(x=x))+
 
 .pull-left[
 
+.smaller[
 - .hi-purple[Nash equilibrium]: $\big(\color{red}{p_I}=AC$, .blue[Stay Out] $\big)$
 
 - Again, only a single firm with some inefficiency
@@ -524,7 +558,7 @@ ggplot(data.frame(x=c(0,q_choke)), aes(x=x))+
   - .red[Incumbent] earns no profits!
 
 ]
-
+]
 .pull-right[
 
 ```{r, fig.retina=3} 
@@ -617,6 +651,71 @@ ggplot(data.frame(x=c(0,q_choke)), aes(x=x))+
 
 ---
 
+class: inverse, center, middle
+
+# Scenario IV: Sunk Costs
+
+---
+
+# What About *Sunk* Costs? I
+
+.pull-left[
+- Fixed costs $\implies$ do not vary with output
+
+- If firm exits, could sell these assets (e.g. machines, real estate) to recover costs
+  - Thus, .hi-purple[“hit-and-run” competition] remains potentially profitable
+  - Maintains .hi-purple[credible threat] against incumbent acting as a monopolist
+
+]
+
+.pull-right[
+.center[
+![](../images/sunkcost.jpg)
+]
+]
+
+---
+
+# What About *Sunk* Costs? I
+
+.pull-left[
+
+- But what if assets are *not* sellable and costs *not* recoverable - i.e. .hi[sunk costs]?
+
+- e.g. research and development, spending to build brand equity, advertising, worker-training for industry-specific skills, etc 
+
+]
+
+.pull-right[
+.center[
+![](../images/sunkcost.jpg)
+]
+]
+
+---
+
+# What About *Sunk* Costs? II
+
+.pull-left[
+- These are bygones to the .hi-red[Incumbent], who has already committed to producing
+
+- But are *new* costs and risk to .hi-blue[Entrant], lowering expected profits
+
+- In effect, sunk costs raise $\color{blue}{c_E}>\color{red}{c_I}$, and return us back to our Scenario II
+
+- .hi[Nash equilibrium]: .hi-red[Incumbent] deters entry with $\color{red}{p_I}=\color{blue}{p_E}-\epsilon$
+  - Inefficient, $p>AC$, but again not monopoly
+
+]
+
+.pull-right[
+.center[
+![](../images/sunkcost.jpg)
+]
+]
+
+---
+
 # Contestable Markets: Recap
 
 .pull-left[
@@ -627,7 +726,7 @@ ggplot(data.frame(x=c(0,q_choke)), aes(x=x))+
   
 - Economies of scale need not be inconsistent with competitive markets (as is assumed) if they are contestable
 
-- Generalizes "prefect competition" model in more realistic way, also game-theoretic
+- Generalizes “perfect competition” model in more realistic way, also game-theoretic
 ]
 
 .pull-right[
@@ -661,6 +760,13 @@ William Baumol
 .source[Baumol, William, J, 1982, "Contestable Markets: An Uprising in the Theory of Industry Structure," *American Economic Review,* 72(1): 1-15]
 
 ---
+
+class: inverse, center, middle
+
+# Implications for Markets and Policy
+
+---
+
 # Implications for Competition
 
 .pull-left[
@@ -728,13 +834,14 @@ William Baumol
 ]
 
 .pull-right[
-
+.smaller[
 - Firms engaging in egregious monopolistic behavior $(\downarrow q$, $\uparrow p>MC$, $\pi>0$) largely persist because of .hi-purple[barriers to entry]
   - Attempts to make market **uncontestable**
 
 - Business activities or political dealings with the goal to raise $\color{blue}{c_E}>\color{red}{c_I}$
   - Lower your own costs, or raise your rivals'!
-
+  - (Recall Cournot competition with different costs)
+]
 ]
 
 ---
