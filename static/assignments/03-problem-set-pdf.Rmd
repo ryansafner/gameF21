@@ -1,0 +1,61 @@
+---
+title: "Problem Set 3"
+author: "ECON 316 — Game Theory — Fall 2021"
+date: "Due by Wednesday October 6"
+output:
+  pdf_document:
+    latex_engine: xelatex
+header-includes:
+- \usepackage{amsmath, multirow, multicol, booktabs, caption}
+
+#mainfont: "Fira Sans Condensed"
+#monofont: "Fira Code"
+#mathfont: "Fira Sans"
+#fontsize: 11pt
+---
+
+# Concepts
+
+1. Explain what cartels are, the problems that they face, and some methods by which these problems might be overcome.
+
+\vspace{3in}
+
+2. Describe the major differences between Bertrand competition, Cournot competition, and Stackelberg competition. How do firms compete, and what are the results in terms of market price, industry output, and profits for firms?
+
+\clearpage
+
+3. Describe the conditions required to make a market *contestable*. Describe and compare the Nash equilibrium of a contestable market with a pure monopoly, and with perfect competition.
+
+\clearpage 
+
+4. Suppose Comcast $(C)$ and Verizon $(V)$ have a constant $MC=AC=\$20$ per customer connected to their internet network. The market (inverse) demand curve for basic internet service is given by:
+$$\begin{aligned}
+P&=80-2Q\\
+Q&=q_C+q_V\\
+\end{aligned}$$
+
+a. Find the Cournot-Nash equilibrium output, price, and profit for each firm.
+b. Find the output, price, and profit for each firm if the two were to collude.
+c. Suppose now Comcast is a Stackelberg leader. Find each firm's output, price, and profit.
+d. Find the output, price, and profit for each firm they were to compete on *price* instead of *quantity.*
+
+\clearpage
+
+5. This question will show what happens as we relax some of the assumptions of Cournot competition. Crude oil is transported across the globe in enormous tanker ships called Very Large Crude Carriers (VLCCs). By 2001, more than 92\% of all new VLCCs were built in South Korea and Japan. Assume that the price of new VLCCs (in millions of dollars) is determined by the inverse demand function between the duopoly of Korea and Japan: 
+
+$$\begin{aligned}p&=180-Q\\
+Q&=q_{Korea}+q_{Japan}\\
+\end{aligned}$$
+
+Assume the marginal cost of building each ship is $30 (million) in both Korea and Japan.
+
+
+a. Find each country's best response function, the Nash equilibrium quantity produced by each country, the market price, and the profit for each country.
+b. Labor costs in Korean shipyards are actually lower than in Japan. Assume now the marginal cost per ship in Japan is \$40 (million) and only \$20 (million) in Korea. Find the new best response functions, the Nash equilibrium quantity produced by each country, the market price, and the profit for each country.
+c. Suppose China decides to enter the VLCC construction market. The duopoly now becomes a triopoly, so that the market inverse demand function is:
+$$\begin{aligned}
+p&=180-Q\\
+Q&=q_{Korea}+q_{Japan}+q_{China}\\
+\end{aligned}$$
+Assume for simplicity that all countries face the same marginal cost of $30 (million) per ship. Find the new best response functions, the Nash equilibrium quantity produced by each country, the market price, and the profit for each country. Hint: proceed as before, such that you get three reaction functions with three unknowns.
+d. Compare the quantity, price, and profits between parts A, B, and C

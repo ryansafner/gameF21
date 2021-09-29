@@ -48,8 +48,11 @@ lessons:
     slides: "2.4-slides"
     
   - title: "2.5 — Contestable Markets"
+    content: "2.5-content"
+    slides: "2.5-slides"
 
   - title: '<i class="fas fa-laptop-code"></i> **Problem Set 3** due Wed Oct 6'
+    assignment: "03-problem-set"
 
   - title: '<span class="fake-header-table">III. Extending Simultaneous Games</span>'
     header: True
