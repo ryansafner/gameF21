@@ -230,7 +230,7 @@ There are thus *two* Nash equilibria: (<span style=color:red;>Up</span>, <span s
 
 <img src="../images/hw_7e_elim2.png" width="700">
 
-Given this, <span style=color:blue;>Player 2</span> will play <span style=color:blue;>Right</span>. This leaves us with the Nash equilibrium: (<span style=color:red;>Down</span>, <span style=color:blue;>Down</span>, <span style=color:purple;>Down</span>)
+Given this, <span style=color:blue;>Player 2</span> will play <span style=color:blue;>Right</span>. This leaves us with the Nash equilibrium: (<span style=color:red;>Down</span>, <span style=color:blue;>Right</span>, <span style=color:purple;>Right</span>)
 
 <img src="../images/hw_7e_ne.png" width="700">
 
@@ -252,7 +252,11 @@ Nash Equilibrium:  (<span style=color:red;>North</span>, <span style=color:blue;
 
 I have underlined each player's best response to the other player(s)'s strategies. Any outcome where all players are playing a best response is a Nash equilibrium.
 
-Nash Equilibrium:  (<span style=color:red;>East</span>, <span style=color:blue;>Left</span>)
+Nash Equilibria:
+
+1. (<span style=color:red;>North</span>, <span style=color:blue;>Right</span>)
+2. (<span style=color:red;>South</span>, <span style=color:blue;>Middle</span>)
+3. (<span style=color:red;>East</span>, <span style=color:blue;>Left</span>)
 
 ### Part C
 
