@@ -38,6 +38,19 @@ The lower button will allow you to download a PDF version of the slides. I sugge
 
 `r blogdown::shortcode("slide-links")`
 
+## Cournot Practice Problems
+
+The slides contain a practice problem of Cournot competition. I have added the answer key:
+
+- [<i class="far fa-life-ring"></i> Answer Key](/assignments/oligopoly_practice_answers.html)
+
+## <i class="fas fa-laptop-code"></i> Assignments
+
+### Problem Set 2 Due Wed Sep 22
+
+[Problem set 2](/assignment/02-problem-set) is by the end of the day Wednesday, September 22.
+
+
 ## Visualizations of Cournot Competition
 
 - See some visualizations I made:

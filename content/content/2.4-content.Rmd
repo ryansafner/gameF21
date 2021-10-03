@@ -19,7 +19,7 @@ slides: "2.4-slides"
 {{% /alert %}}
 
 {{% alert warning %}}
-[Problem Set 2](/assignments/02-problem-set) is due on Wednesday September 22. 
+[Problem Set 3](/assignments/03-problem-set) is due on Wednesday October 6. 
 {{% /alert %}}
 
 ## <i class="fas fa-info-circle fa-lg"></i> Overview
@@ -37,3 +37,15 @@ Below, you can find the slides in two formats. Clicking the image will bring you
 The lower button will allow you to download a PDF version of the slides. I suggest printing the slides beforehand and using them to take additional notes in class (*not everything* is in the slides)!
 
 `r blogdown::shortcode("slide-links")`
+
+## Cournot Practice Problems
+
+The slides contain a practice problem of Cournot competition. I have added the answer key:
+
+- [<i class="far fa-life-ring"></i> Answer Key](/assignments/oligopoly_practice_answers.html)
+
+## <i class="fas fa-laptop-code"></i> Assignments
+
+### Problem Set 3 Due Wed Oct 6
+
+[Problem set 3](/assignment/03-problem-set) is by the end of the day Wednesday, October 6.

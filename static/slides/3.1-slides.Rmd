@@ -1,0 +1,1064 @@
+---
+title: "3.1 — Mixed Strategies"
+subtitle: "ECON 316 • Game Theory • Fall 2021"
+author: 'Ryan Safner<br> Assistant Professor of Economics <br> <a href="mailto:safner@hood.edu"><i class="fa fa-paper-plane fa-fw"></i>safner@hood.edu</a> <br> <a href="https://github.com/ryansafner/gameF21"><i class="fa fa-github fa-fw"></i>ryansafner/gameF21</a><br> <a href="https://gameF21.classes.ryansafner.com"> <i class="fa fa-globe fa-fw"></i>gameF21.classes.ryansafner.com</a><br>'
+#date:
+output:
+  xaringan::moon_reader:
+    mathjax: "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML" # rescales math with css changes https://github.com/yihui/xaringan/issues/143
+    lib_dir: libs
+    #seal: false
+    css: [custom.css, "hygge"] #, metropolis, metropolis-fonts
+    nature:
+      beforeInit: ["macros.js", "https://platform.twitter.com/widgets.js"] # first is for rescaling images , second is for embedding tweets, https://github.com/yihui/xaringan/issues/100
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: "16:9"
+      slideNumberFormat: |
+        <div class="progress-bar-container">
+          <div class="progress-bar" style="width: calc(%current% / %total% * 100%);">
+          </div>
+        </div>
+    includes:
+      in_header: header.html # for font awesome, used in title  
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(echo=F,
+                      message=F,
+                      warning=F,
+                      fig.retina = 3,
+                      fig.align = "center")
+library("tidyverse")
+library("ggrepel")
+library("fontawesome")
+xaringanExtra::use_tile_view()
+xaringanExtra::use_tachyons()
+xaringanExtra::use_freezeframe()
+
+update_geom_defaults("label", list(family = "Fira Sans Condensed"))
+update_geom_defaults("text", list(family = "Fira Sans Condensed"))
+
+set.seed(256)
+
+theme_slides <- theme_light() + 
+  theme(
+    text = element_text(family = "Fira Sans", size = 24)
+  )
+```
+
+class: inverse
+
+# Outline
+
+### [Contestable Markets](#3)
+### [Scenario I: Identical Costs](#8)
+### [Scenario II: Entrant has Higher Costs](#12)
+### [Scenario III: Fixed Costs](#15)
+### [Scenario IV: Sunk Costs](#18)
+### [Implications for Markets and Policy](#24)
+
+---
+
+class: inverse, center, middle
+
+# Contestable Markets
+
+---
+
+# When Pure Strategies Won't Work
+
+.center[
+<iframe width="980" height="550" src="https://www.youtube.com/embed/U_eZmEiyTo0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+]
+
+---
+
+# When Pure Strategies Won't Work
+
+.left-column[
+.center[
+![:scale 80%](../images/oskarmorgenstern.jpg)
+
+.smaller[
+Oskar Morgenstern
+
+1902—1977
+]]
+]
+
+.right-column[
+.smaller[
+> “Sherlock Holmes, pursued by his opponent, Moriarty, leaves London for Dover. The train stops at a station on the way, and he alights there rather than travelling on to Dover. He has seen Moriarty at the railway station, recognizes that he is very clever and expects that Moriarty will take a faster special train in order to catch him in Dover. Holmes’s anticipation turns out to be correct. But what if Moriarty had been still more clever, had estimated Holmes’s mental abilities better and had foreseen his actions accordingly? Then, obviously, he would have travelled to the intermediate station [Canterbury]. Holmes again would have had to calculate that, and he himself would have decided to go on to Dover. Whereupon, Moriarty would again have ‘reacted’ differently,” (p.173-4).
+
+]
+
+
+.source[Morgenstern, Oskar, 1935, “Perfect Foresight and Economic Equilibrium,”]
+]
+
+---
+
+# When Pure Strategies Won't Work
+
+.pull-left[
+.center[
+![](../images/holmesmoriarty.jpg)
+]
+]
+
+.pull-right[
+
+> “‘All that I have to say has already crossed your mind,’ said he.
+> ‘Then possibly my answer has crossed yours,’ I replied.
+> ‘You stand fast?’
+> ‘Absolutely.’”
+
+— Arthur Conan Doyle, 1893, *The Final Problem*
+]
+
+---
+
+# When Pure Strategies Won't Work
+
+.center[
+<iframe width="980" height="550" src="https://www.youtube.com/embed/-U0KlXwNsCk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+]
+
+---
+
+# When Pure Strategies Won't Work
+
+.center[
+![](../images/holmesmoriartygame.png)
+]
+
+---
+
+class: inverse, center, middle
+
+# Mathematical Preliminaries
+
+---
+
+# Mathematical Preliminaries
+
+.pull-left[
+- In order to understand expected events and mixed strategies, we’ll need to talk using probabilities
+
+- See Handout on Blackboard for a refresher
+]
+
+.pull-right[
+
+]
+
+---
+
+# Expected Value
+
+- .hi[Expected value] of a random variable $X$, written $E(X)$ (and sometimes $\mu)$, is the long-run average value of $X$ "expected" after many repetitions
+
+$$E(X)=\sum^k_{i=1} p_i x_i$$
+
+--
+
+- $E(X)=p_1x_1+p_2x_2+ \cdots +p_kx_k$
+
+- A **probability-weighted average** of $X$, with each $x_i$ weighted by its associated probability $p_i$
+
+- Also called the .hi["mean"] or .hi["expectation"] of $X$, always denoted either $E(X)$ or $\mu_X$
+
+---
+
+# Expected Value: Example I
+
+.bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
+.green[**Example**]: Suppose you lend your friend $100 at 10% interest. If the loan is repaid, you receive $110. You estimate that your friend is 99% likely to repay, but there is a default risk of 1% where you get nothing. What is the expected value of repayment?
+
+]
+
+---
+
+# Risk Avoidance
+
+.pull-left[
+
+- Recall when we discussed the idea of .hi-purple[risk dominance] in selecting among multiple Nash equilibria
+
+- If you were playing as .hi-red[Row], would you risk playing .red[Down] if you believed there was the slightest chance that .hi-blue[Column] would play .blue[Right]?
+
+]
+
+.pull-right[
+.center[
+![](../images/rationalize_game_ne.png)
+]
+]
+
+---
+
+# Risk Avoidance
+
+.pull-left[
+
+- Suppose you (.red[Row]) suspect that .blue[Column] will play .blue[Left] with probability 0.50
+
+- In that case, your expected payoff of playing .red[Up]:
+
+$$\begin{align*}
+E[\color{red}{Up}] &= (0.50)\color{red}{9}+(0.50)\color{red}{8}\\
+&= 8.5\\
+\end{align*}$$
+
+- Your expected payoff of playing .red[Down]:
+
+$$\begin{align*}
+E[\color{red}{Down}] &= (0.50)\color{red}{10}+(0.50)\color{red}{-1000}\\
+&= -495\\
+\end{align*}$$
+
+- So definitely, you would want to maximize your **expected** payoff and play .red[Up]
+]
+
+.pull-right[
+.center[
+![](../images/rationalize_game_ne.png)
+]
+]
+
+---
+
+.pull-left[
+
+- What probability $p$ would .blue[Column] have to play .blue[Left] to make you **indifferent** between playing .red[Up] and .red[Down]?
+
+$$\begin{align*}
+E[\color{red}{Up}] &= E[\color{red}{Down}]\\
+(p)\color{red}{9}+(1-p)\color{red}{8} & = (p)\color{red}{10}+(1-p)\color{red}{-1000}\\
+9p+8-8p&= 10p-1000+1000p\\
+p+8 &= 1010p - 1000\\
+1008+p &= 1010p\\
+1008 &= 1009p\\
+p &= 0.9990\\
+\end{align*}$$
+
+- Your expected payoff of playing .red[Down]:
+
+$$\begin{align*}
+E[\color{red}{Down}] &= (0.50)\color{red}{10}+(0.50)\color{red}{-1000}\\
+&= -495\\
+\end{align*}$$
+
+- So definitely, you would want to maximize your **expected** payoff and play .red[Up]
+]
+
+.pull-right[
+.center[
+![](../images/rationalize_game_ne.png)
+]
+]
+
+---
+
+# Mixed Strategies
+
+.pull-left[
+
+- .hi[Pure strategy]: is a complete strategy profile that a player will play
+  - Recall, .hi[strategy] is a list of choices player will take at every possible decision node
+  
+- .hi[Mixed strategy] is a probability distribution over a strategy profile
+  - Plays a variety of pure strategies according to probabilities
+]
+
+.pull-right[
+
+]
+
+---
+
+# Mixed Strategies
+
+.pull-left[
+
+- The logic of mixed strategies is best understood in the context of repeated zero-sum games
+
+- If you play one strategy repeatedly (i.e. a .hi[pure strategy]), your opponent can exploit your (predictable) strategy with their best response
+
+- You want to “keep your opponent guessing”
+]
+
+---
+
+# Mixed Strategy Nash Equilibrium
+
+.pull-left[
+
+- We have already seen Nash equilibrium in pure strategies (PSNE)
+
+- Nash (1950) proved that any $n$-player game with a finite number of pure strategies has at least one equilibrium
+  - A game may have no PSNE, but there will always be a unique .hi[mixed strategy Nash equilibrium (MSNE)]
+  - Games may have *both* pure and a mixed NE
+]
+
+---
+
+# Mixed Strategy Nash Equilibrium
+
+.pull-left[
+
+- Finding this is relatively straightforward with two players and two strategies
+
+1. Let $p$ be the probability of one player playing one of their available strategies
+  - Let $(1-p)$ be the probability of that player playing their other available strategy
+2. Let $q$ be the probability of the other player playing one of their available strategies
+  - Let $(1-q)$ be the probability of that player playing their other available strategy
+
+- There exists some $(p,q)$ mix that is a Nash equilibrium in mixed strategies
+]
+
+---
+
+class: inverse, center, middle
+
+# MSNE in Constant Sum Games
+
+---
+
+# MSNE in Constant Sum Games
+
+.pull-left[
+- Consider the following game between a .hi-red[Kicker] and a .hi-blue[Goalie] during a penalty kick
+]
+
+.pull-right[
+.center[
+![](../images/penaltykick.jpg)
+]
+]
+
+---
+
+# MSNE in Constant Sum Games
+
+.pull-left[
+- Consider the following game between a .hi-red[Kicker] and a .hi-blue[Goalie] during a penalty kick
+
+- A constant sum game
+  - If both choose same direction, .hi-blue[Goalie] blocks goal
+  - If both choose different directions, .hi-red[Kicker] gets goal
+]
+
+.pull-right[
+.center[
+![](../images/penalty_kick_game_simple.png)
+]
+]
+
+---
+
+# MSNE in Constant Sum Games
+
+.pull-left[
+- Palacios-Huerta (2003) calculated average success rates in English, Spanish, & Italian leagues (1995-2000)
+
+- If both .hi-red[Kicker] and .hi-blue[Goalie] choose same direction, .hi-red[Kicker]'s payoff is higher if he chooses his natural side (often .red[Right])
+]
+
+.pull-right[
+.center[
+![](../images/penalty_kick_game_palacios.png)
+]
+]
+
+---
+
+# MSNE in Constant Sum Games
+
+.pull-left[
+- This game has no Nash equilibrium in pure strategies (PSNE)
+  - From any outcome, at least one player would prefer to switch strategies
+  - No outcome has *all* players playing a best response
+
+]
+
+.pull-right[
+.center[
+![](../images/penalty_kick_game_palacios_br.png)
+]
+]
+
+---
+
+# MSNE in Constant Sum Games
+
+.pull-left[
+- What if .hi-red[Kicker] were to .hi-purple[randomize] strategies
+  - Say 50% of the time, .red[Kick Left], 50% of the time, .red[Kick Right]
+
+- Let $p$ be probability that .hi-red[Kicker] plays .red[Kick Left]
+  - $p = 0.50$
+]
+
+.pull-right[
+.center[
+![](../images/penalty_kick_game_palacios.png)
+]
+]
+
+---
+
+# MSNE in Constant Sum Games
+
+.pull-left[
+- Then .hi-blue[Goalie] wants to maximize his .hi-purple[expected] payoff, given .hi-red[Kicker] plays .red[Kick Left] with $p=0.50$
+
+]
+
+.pull-right[
+.center[
+![](../images/penalty_kick_game_palacios.png)
+]
+]
+
+---
+
+# MSNE in Constant Sum Games
+
+.pull-left[
+- Then .hi-blue[Goalie] wants to maximize his .hi-purple[expected] payoff, given .hi-red[Kicker] plays .red[Kick Left] with $p=0.50$
+
+- If .hi-blue[Goalie] plays .blue[Dive Left]:
+$$\begin{align*}\mathbb{E}[\color{blue}{\text{Dive Left}}] &= (p)\color{blue}{42}+(1-p)\color{blue}{7}\\
+&= (0.50)\color{blue}{42}+(1-0.50)\color{blue}{7}\\
+\end{align*}$$
+  - He can .hi-purple[expect] to earn .blue[24.5]
+]
+
+.pull-right[
+.center[
+![](../images/penalty_kick_game_palacios.png)
+]
+]
+
+---
+
+# MSNE in Constant Sum Games
+
+.pull-left[
+- Then .hi-blue[Goalie] wants to maximize his .hi-purple[expected] payoff, given .hi-red[Kicker] plays .red[Kick Left] with $p=0.50$
+
+- If .hi-blue[Goalie] plays .blue[Dive Right]:
+$$\begin{align*}\mathbb{E}[\color{blue}{\text{Dive Right}}] &= (p)\color{blue}{5}+(1-p)\color{blue}{30}\\
+&= (0.50)\color{blue}{5}+(1-0.50)\color{blue}{30}\\
+\end{align*}$$
+  - He can .hi-purple[expect] to earn .blue[17.5]
+]
+
+.pull-right[
+.center[
+![](../images/penalty_kick_game_palacios.png)
+]
+]
+
+---
+
+# MSNE in Constant Sum Games
+
+.pull-left[
+- Then .hi-blue[Goalie] wants to maximize his .hi-purple[expected] payoff, given .hi-red[Kicker] plays .red[Kick Left] with $p=0.50$
+
+- .hi-blue[Goalie] will play .blue[Dive Left] to maximize his expected payoff (.blue[24.5] $\succ$ .blue[17.5])
+
+]
+
+.pull-right[
+.center[
+![](../images/penalty_kick_game_palacios.png)
+]
+]
+
+---
+
+# MSNE in Constant Sum Games
+
+.pull-left[
+- Now consider .hi-red[Kicker]'s .hi-purple[expected] payoff under this mixed strategy
+
+- Since .hi-blue[Goalie] will .blue[Dive Left] to maximize his expected payoff, .hi-red[Kicker] can expect to earn:
+
+$$\begin{align*}
+&p(\color{red}{58})+(1-p)\color{red}{93}\\
+&0.50(\color{red}{58})+(1-0.50)\color{red}{93}\\
+&\color{red}{75.5}
+\\
+\end{align*}$$
+
+- .hi-blue[Goalie] playing .blue[Dive Left] holds .hi-red[Kicker]'s expected payoff down to 75.5
+]
+
+.pull-right[
+.center[
+![](../images/penalty_kick_game_palacios.png)
+]
+]
+
+---
+
+# The Minimax Theorem
+
+.pull-left[
+
+- In constant sum games, note that even in *mixed* strategies, one player increases their own (expected) payoff by pulling down the other player's (expected) payoff!
+
+- In this game, even expected payoffs always sum to 100
+  - .hi-red[Kicker]'s $\mathbb{E[\pi]}=75.5$
+  - .hi-red[Goalie]'s $\mathbb{E[\pi]}=24.5$
+]
+
+.pull-right[
+.center[
+![](../images/chessknights.jpg)
+]
+]
+---
+
+# The Minimax Theorem
+
+.pull-left[
+
+- von Neumann & Morgenstern’s .hi[minimax theorem] (simplified): in a 2-person, constant sum game, each player maximizes their own expected payoff by minimizing their opponent's expected payoff
+
+- The name .hi[“minimax”] is a popular strategy in games, trying to minimize the risk of your maximum possible loss
+]
+
+---
+
+# Penalty Kicks: 50:50?
+
+.pull-left[
+
+- .hi-red[Kicker]'s “randomizing” 50:50 (.red[Kick Left], .red[Kick Right]) was not random enough!
+
+- .hi-blue[Goalie] recognizing this pattern can exploit it and hold down .hi-red[Kicker]'s expected payoff
+
+- .hi-red[Kicker] can do better by picking a better $p$ (and similarly, so can .hi-blue[Goalie])
+  - Hint: if .hi-blue[Goalie] knew .hi-red[Kicker]'s $p$ before .hi-blue[Goalie] chose, would he have a clearly better choice of .blue[Dive Left] vs. .blue[Dive Right]?
+] 
+
+.pull-right[
+.center[
+![](../images/penaltykick.jpg)
+]
+]
+
+---
+
+# The Opponent Indifference Principle
+
+.pull-left[
+
+- Want to find the optimal probability mix that leaves your opponent(s) _indifferent_ between their strategies to respond
+
+- In constant sum games (i.e. sports, board games, etc)
+  - Making your opponent indifferent $\implies$ minimizing your opponent's ability to recognize & exploit patterns in your actions
+
+- This principle is the same in non-constant sum games too!
+
+- Implies game is played repeatedly
+
+- Not always intuitive, but a simple principle to remember
+]
+
+---
+
+# Kicker's Optimal Choice of $p$
+
+.pull-left[
+
+- We want to find .hi-red[Kicker]'s optimal mixed strategy that leaves .hi-blue[Goalie] indifferent between his (pure) strategies
+
+- Suppose .hi-red[Kicker] plays .red[Kick Left] with probability .red[p]
+]
+
+.pull-right[
+.center[
+![](../images/penalty_kick_game_palacios.png)
+]
+]
+
+---
+
+# Kicker's Optimal Choice of $p$
+
+.pull-left[
+
+- We want to find .hi-red[Kicker]'s optimal mixed strategy that leaves .hi-blue[Goalie] indifferent between his (pure) strategies
+
+- Suppose .hi-red[Kicker] plays .red[Kick Left] with probability .red[p]
+
+- .hi-blue[Goalie]'s expected payoff of playing .blue[Dive Left]: .blue[42]p+.blue[7](1-p)
+]
+
+.pull-right[
+.center[
+![](../images/penalty_kick_game_palacios.png)
+]
+]
+
+---
+
+# Kicker's Optimal Choice of $p$
+
+.pull-left[
+
+- We want to find .hi-red[Kicker]'s optimal mixed strategy that leaves .hi-blue[Goalie] indifferent between his (pure) strategies
+
+- Suppose .hi-red[Kicker] plays .red[Kick Left] with probability .red[p]
+
+- .hi-blue[Goalie]'s expected payoff of playing .blue[Dive Left]: .blue[42]p+.blue[7](1-p)
+
+- .hi-blue[Goalie]'s expected payoff of playing .blue[Dive Right]: .blue[5]p+.blue[30](1-p)
+
+]
+
+.pull-right[
+.center[
+![](../images/penalty_kicks_game_p.png)
+]
+]
+
+---
+
+# Kicker's Optimal Choice of $p$
+
+.pull-left[
+
+- We want to find .hi-red[Kicker]'s optimal mixed strategy that leaves .hi-blue[Goalie] indifferent between his (pure) strategies
+
+- Suppose .hi-red[Kicker] plays .red[Kick Left] with probability .red[p]
+
+- .hi-blue[Goalie]'s expected payoff of playing .blue[Dive Left]: .blue[42]p+.blue[7](1-p)
+
+- .hi-blue[Goalie]'s expected payoff of playing .blue[Dive Right]: .blue[5]p+.blue[30](1-p)
+
+- What value of .red[p] would make .hi-blue[Goalie] indifferent between .blue[Dive Left] and .blue[Dive Right]?
+  - i.e. $\mathbb{E}[\color{blue}{Left}] = \mathbb{E}[\color{blue}{Right}]$
+]
+
+.pull-right[
+.center[
+![](../images/penalty_kicks_game_p.png)
+]
+]
+
+---
+
+# Kicker's Optimal Choice of $p$, Graphically
+
+```{r, fig.width = 14}
+library(ggtext) # for colorizing axis titles
+
+g_left <- function(p){42*p+7*(1-p)}
+g_right <- function(p){5*p+30*(1-p)}
+
+ggplot(data = tibble(x = c(0,1)))+
+  aes(x = x)+
+  stat_function(fun = g_left, geom = "line", size = 1, color = "green")+
+  stat_function(fun = g_right, geom = "line", size = 1, color = "purple")+
+  geom_label(x = 0.8, y = g_left(0.8), label = "Dive Left", color = "green")+
+  geom_label(x = 0.8, y = g_right(0.8), label = "Dive Right", color = "purple")+
+  geom_segment(x = 0, xend = 0.383, y = 20.41, yend = 20.41, linetype = "dotted", size = 1)+
+  geom_segment(x = 0.383, xend = 0.383, y = 0, yend = 20.41, linetype = "dotted", size = 1)+
+  geom_point(x = 0.383, y = 20.41, size = 2)+
+  geom_label(x = 0.383, y = 25, label = expression(paste(p^{"*"}==0.383)))+
+  scale_x_continuous(breaks = seq(0,1,0.1),
+                     limits = c(0,1.05),
+                     expand = c(0,0))+
+  scale_y_continuous(breaks = seq(0,50,5),
+                     limits = c(0,55),
+                     expand = c(0,0))+
+  labs(x = "<span style='color:#D7250E;'>Kicker</span>'s Choice of p",
+       y = "<span style='color:#0047AB;'>Goalie</span>'s Expected Payoff")+
+  theme_light(base_family = "Fira Sans Condensed", base_size = 16)+
+  theme(axis.title.x = element_markdown(),
+        axis.title.y = element_markdown())
+```
+
+---
+
+# Kicker's Optimal Choice of p: Algebraically
+
+
+- Find value of .red[p] that equates .hi-blue[Goalie]'s expected payoff of .blue[Dive Left] and .blue[Dive Right]:
+$$\begin{align*}
+\mathbb{E}[\color{blue}{Left}] &= \mathbb{E}[\color{blue}{Right}] \\
+\mathbb{E}[\color{blue}{42}p+\color{blue}{7}(1-p)] &= \mathbb{E}[\color{blue}{5}p+\color{blue}{30}(1-p)] \\
+
+\end{align*}$$
+--
+
+- $p^\star = 0.383$
+
+--
+
+- .hi-red[Kicker] plays .red[Kick Left] with $p=0.383$ and .red[Kick Right] with $1-p = 0.617$
+--
+  - .hi-blue[Goalie]'s expected payoff of .blue[Dive Left]: $\color{blue}{42}(0.383)+\color{blue}{7}(0.617) \approx \color{blue}{20.41}$
+--
+  - .hi-blue[Goalie]'s expected payoff of .blue[Dive Right]: $\color{blue}{5}(0.383)+\color{blue}{30}(0.617) \approx \color{blue}{20.41}$
+
+---
+
+# Goalie's Optimal Choice of q
+
+.pull-left[
+- We want to find .hi-blue[Goalie]'s optimal mixed strategy that leaves .hi-red[Kicker] indifferent between his (pure) strategies
+
+- Suppose .hi-blue[Goalie] plays .blue[Dive Left] with probability .blue[q]
+
+]
+
+.pull-right[
+.center[
+![](../images/penalty_kicks_game_p.png)
+]
+]
+
+---
+
+# Goalie's Optimal Choice of q
+
+.pull-left[
+- We want to find .hi-blue[Goalie]'s optimal mixed strategy that leaves .hi-red[Kicker] indifferent between his (pure) strategies
+
+- Suppose .hi-blue[Goalie] plays .blue[Dive Left] with probability .blue[q]
+
+- .hi-red[Kicker]'s expected payoff of playing .red[Dive Left]: .red[58]q+.red[95](1-q)
+
+]
+
+.pull-right[
+.center[
+![](../images/penalty_kicks_game_p.png)
+]
+]
+
+---
+
+# Goalie's Optimal Choice of q
+
+.pull-left[
+- We want to find .hi-blue[Goalie]'s optimal mixed strategy that leaves .hi-red[Kicker] indifferent between his (pure) strategies
+
+- Suppose .hi-blue[Goalie] plays .blue[Dive Left] with probability .blue[q]
+
+- .hi-red[Kicker]'s expected payoff of playing .red[Dive Left]: .red[58]q+.red[95](1-q)
+
+- .hi-red[Kicker]'s expected payoff of playing .blue[Dive Right]: .red[93]q+.red[70](1-q)
+
+]
+
+.pull-right[
+.center[
+![](../images/penalty_kicks_game_q.png)
+]
+]
+
+---
+
+# Goalie's Optimal Choice of q
+
+.pull-left[
+- We want to find .hi-blue[Goalie]'s optimal mixed strategy that leaves .hi-red[Kicker] indifferent between his (pure) strategies
+
+- Suppose .hi-blue[Goalie] plays .blue[Dive Left] with probability .blue[q]
+
+- .hi-red[Kicker]'s expected payoff of playing .red[Dive Left]: .red[58]q+.red[95](1-q)
+
+- .hi-red[Kicker]'s expected payoff of playing .blue[Dive Right]: .red[93]q+.red[70](1-q)
+
+- What value of .red[p] would make .hi-red[Kicker] indifferent between .red[Kick Left] and .red[Kick Right]?
+  - i.e. $\mathbb{E}[\color{red}{Left}] = \mathbb{E}[\color{red}{Right}]$
+
+]
+
+.pull-right[
+.center[
+![](../images/penalty_kicks_game_q.png)
+]
+]
+
+---
+
+# Kicker's Optimal Choice of $p$, Graphically
+
+```{r, fig.width = 14}
+k_left <- function(q){58*q+95*(1-q)}
+k_right <- function(q){93*q+70*(1-q)}
+
+ggplot(data = tibble(x = c(0,1)))+
+  aes(x = x)+
+  stat_function(fun = k_left, geom = "line", size = 1, color = "green")+
+  stat_function(fun = k_right, geom = "line", size = 1, color = "purple")+
+  geom_label(x = 0.8, y = k_left(0.8), label = "Dive Left", color = "green")+
+  geom_label(x = 0.8, y = k_right(0.8), label = "Dive Right", color = "purple")+
+  geom_segment(x = 0, xend = 0.417, y = 79.57, yend = 79.57, linetype = "dotted", size = 1)+
+  geom_segment(x = 0.417, xend = 0.417, y = 0, yend = 79.57, linetype = "dotted", size = 1)+
+  geom_point(x = 0.417, y = 79.57, size = 2)+
+  geom_label(x = 0.383, y = 25, label = expression(paste(q^{"*"}==0.417)))+
+  scale_x_continuous(breaks = seq(0,1,0.1),
+                     limits = c(0,1.05),
+                     expand = c(0,0))+
+  scale_y_continuous(breaks = seq(0,100,10),
+                     limits = c(0,105),
+                     expand = c(0,0))+
+  labs(x = "<span style='color:#0047AB;'>Goalie</span>'s Choice of q",
+       y = "<span style='color:#D7250E;'>Kicker</span>'s Expected Payoff")+
+  theme_light(base_family = "Fira Sans Condensed", base_size = 16)+
+  theme(axis.title.x = element_markdown(),
+        axis.title.y = element_markdown())
+```
+
+---
+
+# Goalie's Optimal Choice of q: Algebraically
+
+- Find value of .blue[q] that equates .hi-red[Kicker]'s expected payoff of .red[Kick Left] and .red[Kick Right]:
+$$\begin{align*}
+\mathbb{E}[\color{red}{Left}] &= \mathbb{E}[\color{red}{Right}] \\
+\mathbb{E}[\color{red}{58}q+\color{red}{95}(1-q)] &= \mathbb{E}[\color{red}{93}q+\color{red}{70}(1-q)] \\
+\end{align*}$$
+--
+
+- $q^\star = 0.417$
+
+--
+
+- .hi-blue[Goalie] plays .blue[Dive Left] with $q=0.417$ and .blue[Dive Right] with $1-q = 0.583$
+--
+  - .hi-red[Kicker]'s expected payoff of .red[Kick Left]: $\color{red}{58}(0.417)+\color{red}{95}(0.583) \approx \color{red}{79.57}$
+--
+  - .hi-red[Kicker]'s expected payoff of .red[Kick Right]: $\color{red}{93}(0.417)+\color{red}{70}(0.583) \approx \color{red}{79.57}$
+
+---
+
+# Mixed Strategy Nash Equilibrium
+
+.pull-left[
+
+- .hi-blue[Goalie] is indifferent between .blue[Dive Left] and .blue[Dive Right] when .hi-red[Kicker] plays .red[Kick Left] with .red[p]=0.383
+
+- .hi-red[Kicker] is indifferent between .red[Kick Left] and .red[Kick Right] when .hi-blue[Goalie] plays .blue[Dive Left] with .blue[q]=0.417
+
+]
+
+.pull-right[
+.center[
+![](../images/penalty_kicks_game_msne.png)
+]
+]
+
+---
+
+# Mixed Strategy Nash Equilibrium
+
+.pull-left[
+
+- .hi-blue[Goalie] is indifferent between .blue[Dive Left] and .blue[Dive Right] when .hi-red[Kicker] plays .red[Kick Left] with .red[p]=0.383
+
+- .hi-red[Kicker] is indifferent between .red[Kick Left] and .red[Kick Right] when .hi-blue[Goalie] plays .blue[Dive Left] with .blue[q]=0.417
+
+- .hi-purple[Mixed Strategy Nash Equilibrium (MSNE)]: (.red[p], .blue[q]) = (.red[0.383], .blue[0.417])
+]
+
+.pull-right[
+.center[
+![](../images/penalty_kicks_game_msne.png)
+]
+]
+
+---
+
+# Mixed Strategy Nash Equilibrium
+
+.pull-left[
+
+- .hi-blue[Goalie] is indifferent between .blue[Dive Left] and .blue[Dive Right] when .hi-red[Kicker] plays .red[Kick Left] with .red[p]=0.383
+
+- .hi-red[Kicker] is indifferent between .red[Kick Left] and .red[Kick Right] when .hi-blue[Goalie] plays .blue[Dive Left] with .blue[q]=0.417
+
+- .hi-purple[Mixed Strategy Nash Equilibrium (MSNE)]: (.red[p], .blue[q]) = (.red[0.383], .blue[0.417])
+  - .hi-red[Kicker]'s expected payoff: .red[79.57] 
+  - .hi-blue[Goalie]'s expected payoff: .red[20.41]
+  - Note they sum to 1 (despite my rounding error)
+
+]
+
+.pull-right[
+.center[
+![](../images/penalty_kicks_game_msne.png)
+]
+]
+
+---
+
+# p and q as Best Responses
+
+.pull-left[
+
+- .red[p] = pr(.red[Kicker kicks Left])
+- .blue[q] = pr(.blue[Goalie dives Left])
+
+- .hi-blue[Goalie].blue['s Best Response] $=\begin{cases} Right & \text{if }p<0.383\\ Indifferent & \text{if }p=0.383\\ Left & \text{if }p>0.383\\ \end{cases}$ 
+
+]
+
+.pull-right[
+.center[
+![](../images/penalty_kicks_game_msne.png)
+]
+]
+
+---
+
+# p and q as Best Responses
+
+.pull-left[
+
+- .red[p] = pr(.red[Kicker kicks Left])
+- .blue[q] = pr(.blue[Goalie dives Left])
+
+- .hi-blue[Goalie].blue['s Best Response] $=\begin{cases} Right & \text{if }p<0.383\\ Indifferent & \text{if }p=0.383\\ Left & \text{if }p>0.383\\ \end{cases}$ 
+
+- .hi-red[Kicker].red['s Best Response] $=\begin{cases} Left & \text{if }q<0.417\\ Indifferent & \text{if }q=0.4173\\ Right & \text{if }q>0.417\\ \end{cases}$
+]
+
+.pull-right[
+.center[
+![](../images/penalty_kicks_game_msne.png)
+]
+]
+
+---
+
+# p and q as Best Responses
+
+.pull-left[
+
+- .red[p] = pr(.red[Kicker kicks Left])
+- .blue[q] = pr(.blue[Goalie dives Left])
+
+- .hi-blue[Goalie].blue['s Best Response] $=\begin{cases} Right & \text{if }p<0.383\\ Indifferent & \text{if }p=0.383\\ Left & \text{if }p>0.383\\ \end{cases}$ 
+
+- .hi-red[Kicker].red['s Best Response] $=\begin{cases} Left & \text{if }q<0.417\\ Indifferent & \text{if }q=0.4173\\ Right & \text{if }q>0.417\\ \end{cases}$
+
+- Like any Nash equilibrium, players are playing mutual best responses to each other (probabilistically)
+]
+
+.pull-right[
+.center[
+![](../images/penalty_kicks_game_msne.png)
+]
+]
+
+---
+
+# Goalie's Best Reponse (q) to p
+
+.pull-left[
+
+.hi-blue[Goalie].blue['s Best Response] $=\begin{cases} Right & \text{if }p<0.383\\ Indifferent & \text{if }p=0.383\\ Left & \text{if }p>0.383\\ \end{cases}$ 
+
+]
+
+.pull-right[
+```{r}
+ggplot(data = tibble(x = c(0,1)))+
+  aes(x = x)+
+  geom_segment(x = 0, xend = 0.383, y = 0, yend = 0, color = "blue", size = 2)+
+  geom_segment(x = 0.383, xend = 0.383, y = 0, yend = 1, color = "blue", size = 1)+
+  geom_segment(x = 0.383, xend = 1, y = 1, yend = 1, color = "blue", size = 1)+
+  scale_x_continuous(breaks = c(0.383,1.000),
+                     limits = c(0,1.05),
+                     expand = c(0,0))+
+  scale_y_continuous(breaks = c(0.000,1.000),
+                     labels = c("0.000","1.000"),
+                     limits = c(0,1.05),
+                     expand = c(0,0))+
+  labs(x = "<span style='color:#D7250E;'>Prob(Kicker Kicks Left), p</span>",
+       y = "<span style='color:#0047AB;'>Prob(Goalie Dives Left), q</span>")+
+  theme_classic(base_family = "Fira Sans Condensed", base_size = 16)+
+  theme(axis.title.x = element_markdown(),
+        axis.title.y = element_markdown())
+```
+]
+
+---
+
+# Kicker's Best Reponse (p) to q
+
+.pull-left[
+
+- .hi-red[Kicker].red['s Best Response] $=\begin{cases} Left & \text{if }q<0.417\\ Indifferent & \text{if }q=0.4173\\ Right & \text{if }q>0.417\\ \end{cases}$
+
+]
+
+.pull-right[
+```{r}
+ggplot(data = tibble(x = c(0,1)))+
+  aes(x = x)+
+  geom_segment(x = 0, xend = 0, y = 1, yend = 0.417, color = "red", size = 3)+
+  geom_segment(x = 0, xend = 1, y = 0.417, yend = 0.417, color = "red", size = 1)+
+  geom_segment(x = 1, xend = 1, y = 0.417, yend = 0, color = "red", size = 1)+
+  scale_x_continuous(breaks = c(1.000),
+                     labels = c("1.000"),
+                     limits = c(0,1.05),
+                     expand = c(0,0))+
+  scale_y_continuous(breaks = c(0.000,0.417,1.000),
+                     limits = c(0,1.05),
+                     expand = c(0,0))+
+  labs(x = "<span style='color:#D7250E;'>Prob(Kicker Kicks Left), p</span>",
+       y = "<span style='color:#0047AB;'>Prob(Goalie Dives Left), q</span>")+
+  theme_classic(base_family = "Fira Sans Condensed", base_size = 16)+
+  theme(axis.title.x = element_markdown(),
+        axis.title.y = element_markdown())
+```
+]
+
+---
+
+# Mixed Strategy Nash Equilibrium
+
+.pull-left[
+
+- Like any Nash equilibrium, where best response functions intersect
+
+]
+.pull-right[
+```{r}
+ggplot(data = tibble(x = c(0,1)))+
+  aes(x = x)+
+  geom_segment(x = 0, xend = 0.383, y = 0, yend = 0, color = "blue", size = 2)+
+  geom_segment(x = 0.383, xend = 0.383, y = 0, yend = 1, color = "blue", size = 1)+
+  geom_segment(x = 0.383, xend = 1, y = 1, yend = 1, color = "blue", size = 1)+
+  geom_segment(x = 0, xend = 0, y = 1, yend = 0.417, color = "red", size = 3)+
+  geom_segment(x = 0, xend = 1, y = 0.417, yend = 0.417, color = "red", size = 1)+
+  geom_segment(x = 1, xend = 1, y = 0.417, yend = 0, color = "red", size = 1)+
+  geom_label(x = 0.383, y = 0.417, label = "MSNE", color = "purple")+
+  scale_x_continuous(breaks = c(0.383,1),
+                     limits = c(0,1.05),
+                     expand = c(0,0))+
+  scale_y_continuous(breaks = c(0.000,0.417,1.000),
+                     limits = c(0,1.05),
+                     expand = c(0,0))+
+  labs(x = "<span style='color:#D7250E;'>Prob(Kicker Kicks Left), p</span>",
+       y = "<span style='color:#0047AB;'>Prob(Goalie Dives Left), q</span>")+
+  theme_classic(base_family = "Fira Sans Condensed", base_size = 16)+
+  theme(axis.title.x = element_markdown(),
+        axis.title.y = element_markdown())
+```
+]
