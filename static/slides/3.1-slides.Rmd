@@ -144,7 +144,7 @@ $$E(X)=\sum^k_{i=1} p_i x_i$$
 
 - $E(X)=p_1x_1+p_2x_2+ \cdots +p_kx_k$
 
-- A **probability-weighted average** of $X$, with each $x_i$ weighted by its associated probability $p_i$
+- A **probability-weighted average** of $X$, with each possible $X$ value, $x_i$, weighted by its associated probability $p_i$
 
 - Also called the .hi["mean"] or .hi["expectation"] of $X$, always denoted either $E(X)$ or $\mu_X$
 
@@ -166,7 +166,7 @@ $$E(X)=\sum^k_{i=1} p_i x_i$$
 - .hi[Pure strategy]: is a complete strategy profile that a player will play
   - Recall, .hi[strategy] is a list of choices player will take at every possible decision node
   
-- .hi[Mixed strategy] is a probability distribution over a strategy profile
+- .hi[Mixed strategy] is a **probability distribution** over a strategy profile
   - Plays a variety of pure strategies according to probabilities
 ]
 
@@ -182,7 +182,7 @@ $$E(X)=\sum^k_{i=1} p_i x_i$$
 
 .pull-left[
 
-- The logic of mixed strategies is best understood in the context of repeated zero-sum games
+- The logic of mixed strategies is best understood in the context of repeated constant-sum games
 
 - If you play one strategy repeatedly (i.e. a .hi[pure strategy]), your opponent can exploit your (predictable) strategy with their best response
 
@@ -222,12 +222,12 @@ $$E(X)=\sum^k_{i=1} p_i x_i$$
 .smallest[
 - Finding this is relatively straightforward with two players and two strategies
 
-1. Let $p$ be the probability of one player playing one of their available strategies
-  - Let $(1-p)$ be the probability of that player playing their other available strategy
-2. Let $q$ be the probability of the other player playing one of their available strategies
-  - Let $(1-q)$ be the probability of that player playing their other available strategy
+1. Let *p* be the probability of one player playing one of their available strategies
+  - Let *(1-p)* be the probability of that player playing their other available strategy
+2. Let *q* be the probability of the other player playing one of their available strategies
+  - Let *(1-q)* be the probability of that player playing their other available strategy
 
-- There exists some $(p,q)$ mix that is a Nash equilibrium in mixed strategies
+- .hi-turquoise[There exists some *(p,q)* mix that is a Nash equilibrium in mixed strategies]
 ]
 ]
 .pull-right[
@@ -264,7 +264,7 @@ class: inverse, center, middle
 .pull-left[
 - Consider the following game between a .hi-red[Kicker] and a .hi-blue[Goalie] during a penalty kick
 
-- A constant sum game
+- A constant sum game (in this case, zero-sum)
   - If both choose same direction, .hi-blue[Goalie] blocks goal
   - If both choose different directions, .hi-red[Kicker] gets goal
 ]
@@ -284,7 +284,6 @@ class: inverse, center, middle
 
 - If both .hi-red[Kicker] and .hi-blue[Goalie] choose same direction, .hi-red[Kicker]'s payoff is higher if he chooses his natural side (often .red[Right])
 
-.source[Palacios-Huerta, Ignacio, 2003, “Professionals Play Minimax,” *Review of Economic Studies* 70(2): 395–415]
 ]
 
 .pull-right[
@@ -292,6 +291,8 @@ class: inverse, center, middle
 ![](../images/penalty_kick_game_palacios.png)
 ]
 ]
+
+.source[Palacios-Huerta, Ignacio, 2003, “Professionals Play Minimax,” *Review of Economic Studies* 70(2): 395–415]
 
 ---
 
