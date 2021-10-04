@@ -57,23 +57,23 @@ lessons:
   - title: '<span class="fake-header-table">III. Extending Simultaneous Games</span>'
     header: True
 
-  - title: "3.1 — Mixed Strategies I"
-
-  - title: "3.2 — Mixed Strategies II"
-  
-  - title: "3.3 — Finitely-Repeated Games"
+  - title: "3.1 — Mixed Strategies"
+    content: "3.1-content"
+    slides: "3.2-slides"
     
-  - title: "3.4 — Infinitely-Repeated Games"
+  - title: "3.2 — Finitely-Repeated Games"
+    
+  - title: "3.3 — Infinitely-Repeated Games"
   
   - title: '<i class="fas fa-laptop-code"></i> **Problem Set 4**'
 
   - title: '<i class="fas fa-star"></i> **Midterm Exam**'
 
-  - title: "3.5 — The Evolution of Cooperation"
+  - title: "3.4 — The Evolution of Cooperation"
   
-  - title: "3.6 — Evolutionarily Stable Strategies"
+  - title: "3.5 — Evolutionarily Stable Strategies"
   
-  - title: "3.7 — Hawk-Dove Games"
+  - title: "3.6 — Hawk-Dove Games"
 
   - title: '<i class="fas fa-laptop-code"></i> **Problem Set 5**'
 

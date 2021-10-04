@@ -32,18 +32,15 @@ class: inverse
 
 # Outline
 
-### [Contestable Markets](#3)
-### [Scenario I: Identical Costs](#8)
-### [Scenario II: Entrant has Higher Costs](#12)
-### [Scenario III: Fixed Costs](#15)
-### [Scenario IV: Sunk Costs](#18)
-### [Implications for Markets and Policy](#24)
+### [When Pure Strategies Won't Work](#3)
+### [MSNE in Constant Sum Games](#16)
+### [Coordination Games: PSNE and MSNE](#67)
 
 ---
 
 class: inverse, center, middle
 
-# Contestable Markets
+# When Pure Strategies Won't Work
 
 ---
 
@@ -69,7 +66,7 @@ Oskar Morgenstern
 ]
 
 .right-column[
-.smaller[
+.smallest[
 &gt; “Sherlock Holmes, pursued by his opponent, Moriarty, leaves London for Dover. The train stops at a station on the way, and he alights there rather than travelling on to Dover. He has seen Moriarty at the railway station, recognizes that he is very clever and expects that Moriarty will take a faster special train in order to catch him in Dover. Holmes’s anticipation turns out to be correct. But what if Moriarty had been still more clever, had estimated Holmes’s mental abilities better and had foreseen his actions accordingly? Then, obviously, he would have travelled to the intermediate station [Canterbury]. Holmes again would have had to calculate that, and he himself would have decided to go on to Dover. Whereupon, Moriarty would again have ‘reacted’ differently,” (p.173-4).
 
 ]
@@ -111,27 +108,7 @@ Oskar Morgenstern
 # When Pure Strategies Won't Work
 
 .center[
-![](../images/holmesmoriartygame.png)
-]
-
----
-
-class: inverse, center, middle
-
-# Mathematical Preliminaries
-
----
-
-# Mathematical Preliminaries
-
-.pull-left[
-- In order to understand expected events and mixed strategies, we’ll need to talk using probabilities
-
-- See Handout on Blackboard for a refresher
-]
-
-.pull-right[
-
+![:scale 50%](../images/holmesmoriartygame.png)
 ]
 
 ---
@@ -161,87 +138,6 @@ class: inverse, center, middle
 
 ---
 
-# Risk Avoidance
-
-.pull-left[
-
-- Recall when we discussed the idea of .hi-purple[risk dominance] in selecting among multiple Nash equilibria
-
-- If you were playing as .hi-red[Row], would you risk playing .red[Down] if you believed there was the slightest chance that .hi-blue[Column] would play .blue[Right]?
-
-]
-
-.pull-right[
-.center[
-![](../images/rationalize_game_ne.png)
-]
-]
-
----
-
-# Risk Avoidance
-
-.pull-left[
-
-- Suppose you (.red[Row]) suspect that .blue[Column] will play .blue[Left] with probability 0.50
-
-- In that case, your expected payoff of playing .red[Up]:
-
-`$$\begin{align*}
-E[\color{red}{Up}] &amp;= (0.50)\color{red}{9}+(0.50)\color{red}{8}\\
-&amp;= 8.5\\
-\end{align*}$$`
-
-- Your expected payoff of playing .red[Down]:
-
-`$$\begin{align*}
-E[\color{red}{Down}] &amp;= (0.50)\color{red}{10}+(0.50)\color{red}{-1000}\\
-&amp;= -495\\
-\end{align*}$$`
-
-- So definitely, you would want to maximize your **expected** payoff and play .red[Up]
-]
-
-.pull-right[
-.center[
-![](../images/rationalize_game_ne.png)
-]
-]
-
----
-
-.pull-left[
-
-- What probability `\(p\)` would .blue[Column] have to play .blue[Left] to make you **indifferent** between playing .red[Up] and .red[Down]?
-
-`$$\begin{align*}
-E[\color{red}{Up}] &amp;= E[\color{red}{Down}]\\
-(p)\color{red}{9}+(1-p)\color{red}{8} &amp; = (p)\color{red}{10}+(1-p)\color{red}{-1000}\\
-9p+8-8p&amp;= 10p-1000+1000p\\
-p+8 &amp;= 1010p - 1000\\
-1008+p &amp;= 1010p\\
-1008 &amp;= 1009p\\
-p &amp;= 0.9990\\
-\end{align*}$$`
-
-- Your expected payoff of playing .red[Down]:
-
-`$$\begin{align*}
-E[\color{red}{Down}] &amp;= (0.50)\color{red}{10}+(0.50)\color{red}{-1000}\\
-&amp;= -495\\
-\end{align*}$$`
-
-- So definitely, you would want to maximize your **expected** payoff and play .red[Up]
-]
-
-.pull-right[
-.center[
-![](../images/rationalize_game_ne.png)
-]
-]
-
----
-
 # Mixed Strategies
 
 .pull-left[
@@ -254,7 +150,9 @@ E[\color{red}{Down}] &amp;= (0.50)\color{red}{10}+(0.50)\color{red}{-1000}\\
 ]
 
 .pull-right[
-
+.center[
+![](../images/coin-flip.png)
+]
 ]
 
 ---
@@ -270,6 +168,12 @@ E[\color{red}{Down}] &amp;= (0.50)\color{red}{10}+(0.50)\color{red}{-1000}\\
 - You want to “keep your opponent guessing”
 ]
 
+.pull-right[
+.center[
+![](../images/coin-flip.png)
+]
+]
+
 ---
 
 # Mixed Strategy Nash Equilibrium
@@ -283,12 +187,18 @@ E[\color{red}{Down}] &amp;= (0.50)\color{red}{10}+(0.50)\color{red}{-1000}\\
   - Games may have *both* pure and a mixed NE
 ]
 
+.pull-right[
+.center[
+![](../images/coin-flip.png)
+]
+]
+
 ---
 
 # Mixed Strategy Nash Equilibrium
 
 .pull-left[
-
+.smallest[
 - Finding this is relatively straightforward with two players and two strategies
 
 1. Let `\(p\)` be the probability of one player playing one of their available strategies
@@ -298,6 +208,13 @@ E[\color{red}{Down}] &amp;= (0.50)\color{red}{10}+(0.50)\color{red}{-1000}\\
 
 - There exists some `\((p,q)\)` mix that is a Nash equilibrium in mixed strategies
 ]
+]
+.pull-right[
+.center[
+![](../images/coin-flip.png)
+]
+]
+
 
 ---
 
@@ -345,6 +262,8 @@ class: inverse, center, middle
 - Palacios-Huerta (2003) calculated average success rates in English, Spanish, &amp; Italian leagues (1995-2000)
 
 - If both .hi-red[Kicker] and .hi-blue[Goalie] choose same direction, .hi-red[Kicker]'s payoff is higher if he chooses his natural side (often .red[Right])
+
+.source[Palacios-Huerta, Ignacio, 2003, “Professionals Play Minimax,” *Review of Economic Studies* 70(2): 395–415]
 ]
 
 .pull-right[
@@ -366,7 +285,7 @@ class: inverse, center, middle
 
 .pull-right[
 .center[
-![](../images/penalty_kick_game_palacios_br.png)
+![](../images/penalty_kicks_game_palacios_br.png)
 ]
 ]
 
@@ -411,8 +330,8 @@ class: inverse, center, middle
 - Then .hi-blue[Goalie] wants to maximize his .hi-purple[expected] payoff, given .hi-red[Kicker] plays .red[Kick Left] with `\(p=0.50\)`
 
 - If .hi-blue[Goalie] plays .blue[Dive Left]:
-`$$\begin{align*}\mathbb{E}[\color{blue}{\text{Dive Left}}] &amp;= (p)\color{blue}{42}+(1-p)\color{blue}{7}\\
-&amp;= (0.50)\color{blue}{42}+(1-0.50)\color{blue}{7}\\
+`$$\begin{align*}\mathbb{E}[\color{blue}{\text{Dive Left}}] &amp;= \color{blue}{42}(p)+\color{blue}{7}(1-p)\\
+&amp;= \color{blue}{42}(0.50)+\color{blue}{7}(1-0.50)\\
 \end{align*}$$`
   - He can .hi-purple[expect] to earn .blue[24.5]
 ]
@@ -431,8 +350,8 @@ class: inverse, center, middle
 - Then .hi-blue[Goalie] wants to maximize his .hi-purple[expected] payoff, given .hi-red[Kicker] plays .red[Kick Left] with `\(p=0.50\)`
 
 - If .hi-blue[Goalie] plays .blue[Dive Right]:
-`$$\begin{align*}\mathbb{E}[\color{blue}{\text{Dive Right}}] &amp;= (p)\color{blue}{5}+(1-p)\color{blue}{30}\\
-&amp;= (0.50)\color{blue}{5}+(1-0.50)\color{blue}{30}\\
+`$$\begin{align*}\mathbb{E}[\color{blue}{\text{Dive Right}}] &amp;= \color{blue}{5}(p)+\color{blue}{30}(1-p)\\
+&amp;= \color{blue}{5}(0.50)+\color{blue}{30}(1-0.50)\\
 \end{align*}$$`
   - He can .hi-purple[expect] to earn .blue[17.5]
 ]
@@ -470,8 +389,8 @@ class: inverse, center, middle
 - Since .hi-blue[Goalie] will .blue[Dive Left] to maximize his expected payoff, .hi-red[Kicker] can expect to earn:
 
 `$$\begin{align*}
-&amp;p(\color{red}{58})+(1-p)\color{red}{93}\\
-&amp;0.50(\color{red}{58})+(1-0.50)\color{red}{93}\\
+&amp;\color{red}{58}(p)+\color{red}{93}(1-p)\\
+&amp;\color{red}{58}(0.50)+\color{red}{93}(1-0.50)\\
 &amp;\color{red}{75.5}
 \\
 \end{align*}$$`
@@ -508,6 +427,12 @@ class: inverse, center, middle
 # The Minimax Theorem
 
 .pull-left[
+.center[
+![:scale 70%](../images/vonneumannmorgenstern.jpg)
+]
+]
+
+.pull-right[
 
 - von Neumann &amp; Morgenstern’s .hi[minimax theorem] (simplified): in a 2-person, constant sum game, each player maximizes their own expected payoff by minimizing their opponent's expected payoff
 
@@ -540,7 +465,8 @@ class: inverse, center, middle
 
 .pull-left[
 
-- Want to find the optimal probability mix that leaves your opponent(s) _indifferent_ between their strategies to respond
+.smallest[
+- Want to find the optimal probability mix that .hi-purple[leaves your opponent(s) _indifferent_ between their strategies to respond]
 
 - In constant sum games (i.e. sports, board games, etc)
   - Making your opponent indifferent `\(\implies\)` minimizing your opponent's ability to recognize &amp; exploit patterns in your actions
@@ -549,12 +475,18 @@ class: inverse, center, middle
 
 - Implies game is played repeatedly
 
-- Not always intuitive, but a simple principle to remember
+- Not always intuitive, but a simple principle
+]
+]
+.pull-right[
+.center[
+![](../images/choices.jpg)
+]
 ]
 
 ---
 
-# Kicker's Optimal Choice of `\(p\)`
+# Kicker's Optimal Choice of p
 
 .pull-left[
 
@@ -571,9 +503,10 @@ class: inverse, center, middle
 
 ---
 
-# Kicker's Optimal Choice of `\(p\)`
+# Kicker's Optimal Choice of p
 
 .pull-left[
+.smallest[
 
 - We want to find .hi-red[Kicker]'s optimal mixed strategy that leaves .hi-blue[Goalie] indifferent between his (pure) strategies
 
@@ -581,7 +514,7 @@ class: inverse, center, middle
 
 - .hi-blue[Goalie]'s expected payoff of playing .blue[Dive Left]: .blue[42]p+.blue[7](1-p)
 ]
-
+]
 .pull-right[
 .center[
 ![](../images/penalty_kick_game_palacios.png)
@@ -590,10 +523,10 @@ class: inverse, center, middle
 
 ---
 
-# Kicker's Optimal Choice of `\(p\)`
+# Kicker's Optimal Choice of p
 
 .pull-left[
-
+.smallest[
 - We want to find .hi-red[Kicker]'s optimal mixed strategy that leaves .hi-blue[Goalie] indifferent between his (pure) strategies
 
 - Suppose .hi-red[Kicker] plays .red[Kick Left] with probability .red[p]
@@ -601,7 +534,7 @@ class: inverse, center, middle
 - .hi-blue[Goalie]'s expected payoff of playing .blue[Dive Left]: .blue[42]p+.blue[7](1-p)
 
 - .hi-blue[Goalie]'s expected payoff of playing .blue[Dive Right]: .blue[5]p+.blue[30](1-p)
-
+]
 ]
 
 .pull-right[
@@ -612,10 +545,10 @@ class: inverse, center, middle
 
 ---
 
-# Kicker's Optimal Choice of `\(p\)`
+# Kicker's Optimal Choice of p
 
 .pull-left[
-
+.smallest[
 - We want to find .hi-red[Kicker]'s optimal mixed strategy that leaves .hi-blue[Goalie] indifferent between his (pure) strategies
 
 - Suppose .hi-red[Kicker] plays .red[Kick Left] with probability .red[p]
@@ -627,7 +560,7 @@ class: inverse, center, middle
 - What value of .red[p] would make .hi-blue[Goalie] indifferent between .blue[Dive Left] and .blue[Dive Right]?
   - i.e. `\(\mathbb{E}[\color{blue}{Left}] = \mathbb{E}[\color{blue}{Right}]\)`
 ]
-
+]
 .pull-right[
 .center[
 ![](../images/penalty_kicks_game_p.png)
@@ -636,7 +569,7 @@ class: inverse, center, middle
 
 ---
 
-# Kicker's Optimal Choice of `\(p\)`, Graphically
+# Kicker's Optimal Choice of p, Graphically
 
 &lt;img src="3.1-slides_files/figure-html/unnamed-chunk-1-1.png" width="1008" style="display: block; margin: auto;" /&gt;
 
@@ -646,10 +579,10 @@ class: inverse, center, middle
 
 
 - Find value of .red[p] that equates .hi-blue[Goalie]'s expected payoff of .blue[Dive Left] and .blue[Dive Right]:
+
 `$$\begin{align*}
 \mathbb{E}[\color{blue}{Left}] &amp;= \mathbb{E}[\color{blue}{Right}] \\
 \mathbb{E}[\color{blue}{42}p+\color{blue}{7}(1-p)] &amp;= \mathbb{E}[\color{blue}{5}p+\color{blue}{30}(1-p)] \\
-
 \end{align*}$$`
 --
 
@@ -658,9 +591,13 @@ class: inverse, center, middle
 --
 
 - .hi-red[Kicker] plays .red[Kick Left] with `\(p=0.383\)` and .red[Kick Right] with `\(1-p = 0.617\)`
+
 --
+
   - .hi-blue[Goalie]'s expected payoff of .blue[Dive Left]: `\(\color{blue}{42}(0.383)+\color{blue}{7}(0.617) \approx \color{blue}{20.41}\)`
+
 --
+
   - .hi-blue[Goalie]'s expected payoff of .blue[Dive Right]: `\(\color{blue}{5}(0.383)+\color{blue}{30}(0.617) \approx \color{blue}{20.41}\)`
 
 ---
@@ -668,10 +605,11 @@ class: inverse, center, middle
 # Goalie's Optimal Choice of q
 
 .pull-left[
+.smallest[
 - We want to find .hi-blue[Goalie]'s optimal mixed strategy that leaves .hi-red[Kicker] indifferent between his (pure) strategies
 
 - Suppose .hi-blue[Goalie] plays .blue[Dive Left] with probability .blue[q]
-
+]
 ]
 
 .pull-right[
@@ -685,12 +623,13 @@ class: inverse, center, middle
 # Goalie's Optimal Choice of q
 
 .pull-left[
+.smallest[
 - We want to find .hi-blue[Goalie]'s optimal mixed strategy that leaves .hi-red[Kicker] indifferent between his (pure) strategies
 
 - Suppose .hi-blue[Goalie] plays .blue[Dive Left] with probability .blue[q]
 
 - .hi-red[Kicker]'s expected payoff of playing .red[Dive Left]: .red[58]q+.red[95](1-q)
-
+]
 ]
 
 .pull-right[
@@ -704,6 +643,7 @@ class: inverse, center, middle
 # Goalie's Optimal Choice of q
 
 .pull-left[
+.smallest[
 - We want to find .hi-blue[Goalie]'s optimal mixed strategy that leaves .hi-red[Kicker] indifferent between his (pure) strategies
 
 - Suppose .hi-blue[Goalie] plays .blue[Dive Left] with probability .blue[q]
@@ -712,6 +652,7 @@ class: inverse, center, middle
 
 - .hi-red[Kicker]'s expected payoff of playing .blue[Dive Right]: .red[93]q+.red[70](1-q)
 
+]
 ]
 
 .pull-right[
@@ -725,6 +666,7 @@ class: inverse, center, middle
 # Goalie's Optimal Choice of q
 
 .pull-left[
+.smallest[
 - We want to find .hi-blue[Goalie]'s optimal mixed strategy that leaves .hi-red[Kicker] indifferent between his (pure) strategies
 
 - Suppose .hi-blue[Goalie] plays .blue[Dive Left] with probability .blue[q]
@@ -737,6 +679,7 @@ class: inverse, center, middle
   - i.e. `\(\mathbb{E}[\color{red}{Left}] = \mathbb{E}[\color{red}{Right}]\)`
 
 ]
+]
 
 .pull-right[
 .center[
@@ -746,7 +689,7 @@ class: inverse, center, middle
 
 ---
 
-# Kicker's Optimal Choice of `\(p\)`, Graphically
+# Goalies's Optimal Choice of q, Graphically
 
 &lt;img src="3.1-slides_files/figure-html/unnamed-chunk-2-1.png" width="1008" style="display: block; margin: auto;" /&gt;
 
@@ -755,10 +698,12 @@ class: inverse, center, middle
 # Goalie's Optimal Choice of q: Algebraically
 
 - Find value of .blue[q] that equates .hi-red[Kicker]'s expected payoff of .red[Kick Left] and .red[Kick Right]:
+
 `$$\begin{align*}
 \mathbb{E}[\color{red}{Left}] &amp;= \mathbb{E}[\color{red}{Right}] \\
 \mathbb{E}[\color{red}{58}q+\color{red}{95}(1-q)] &amp;= \mathbb{E}[\color{red}{93}q+\color{red}{70}(1-q)] \\
 \end{align*}$$`
+
 --
 
 - `\(q^\star = 0.417\)`
@@ -766,9 +711,13 @@ class: inverse, center, middle
 --
 
 - .hi-blue[Goalie] plays .blue[Dive Left] with `\(q=0.417\)` and .blue[Dive Right] with `\(1-q = 0.583\)`
+
 --
+
   - .hi-red[Kicker]'s expected payoff of .red[Kick Left]: `\(\color{red}{58}(0.417)+\color{red}{95}(0.583) \approx \color{red}{79.57}\)`
+  
 --
+
   - .hi-red[Kicker]'s expected payoff of .red[Kick Right]: `\(\color{red}{93}(0.417)+\color{red}{70}(0.583) \approx \color{red}{79.57}\)`
 
 ---
@@ -820,8 +769,8 @@ class: inverse, center, middle
 
 - .hi-purple[Mixed Strategy Nash Equilibrium (MSNE)]: (.red[p], .blue[q]) = (.red[0.383], .blue[0.417])
   - .hi-red[Kicker]'s expected payoff: .red[79.57] 
-  - .hi-blue[Goalie]'s expected payoff: .red[20.41]
-  - Note they sum to 1 (despite my rounding error)
+  - .hi-blue[Goalie]'s expected payoff: .blue[20.41]
+  - Note they sum to 1!
 
 ]
 
@@ -837,11 +786,53 @@ class: inverse, center, middle
 
 .pull-left[
 
+.smallest[
+- .red[p] = pr(.red[Kicker kicks Left])
+- .blue[q] = pr(.blue[Goalie dives Left])
+
+]
+]
+
+.pull-right[
+.center[
+![](../images/penalty_kicks_game_msne.png)
+]
+]
+
+---
+
+# p and q as Best Responses
+
+.pull-left[
+
+.smallest[
+- .red[p] = pr(.red[Kicker kicks Left])
+- .blue[q] = pr(.blue[Goalie dives Left])
+
+- .hi-blue[Goalie].blue['s Best Response] `\(=\begin{cases} Right &amp; \text{if }p&lt;0.383\\ Indifferent &amp; \text{if }p=0.383\\ Left &amp; \text{if }p&gt;0.383\\ \end{cases}\)` 
+]
+]
+
+.pull-right[
+.center[
+![](../images/penalty_kicks_game_msne.png)
+]
+]
+
+---
+
+# p and q as Best Responses
+
+.pull-left[
+
+.smallest[
 - .red[p] = pr(.red[Kicker kicks Left])
 - .blue[q] = pr(.blue[Goalie dives Left])
 
 - .hi-blue[Goalie].blue['s Best Response] `\(=\begin{cases} Right &amp; \text{if }p&lt;0.383\\ Indifferent &amp; \text{if }p=0.383\\ Left &amp; \text{if }p&gt;0.383\\ \end{cases}\)` 
 
+- .hi-red[Kicker].red['s Best Response] `\(=\begin{cases} Left &amp; \text{if }q&lt;0.417\\ Indifferent &amp; \text{if }q=0.417\\ Right &amp; \text{if }q&gt;0.417\\ \end{cases}\)`
+]
 ]
 
 .pull-right[
@@ -855,27 +846,7 @@ class: inverse, center, middle
 # p and q as Best Responses
 
 .pull-left[
-
-- .red[p] = pr(.red[Kicker kicks Left])
-- .blue[q] = pr(.blue[Goalie dives Left])
-
-- .hi-blue[Goalie].blue['s Best Response] `\(=\begin{cases} Right &amp; \text{if }p&lt;0.383\\ Indifferent &amp; \text{if }p=0.383\\ Left &amp; \text{if }p&gt;0.383\\ \end{cases}\)` 
-
-- .hi-red[Kicker].red['s Best Response] `\(=\begin{cases} Left &amp; \text{if }q&lt;0.417\\ Indifferent &amp; \text{if }q=0.4173\\ Right &amp; \text{if }q&gt;0.417\\ \end{cases}\)`
-]
-
-.pull-right[
-.center[
-![](../images/penalty_kicks_game_msne.png)
-]
-]
-
----
-
-# p and q as Best Responses
-
-.pull-left[
-
+.smallest[
 - .red[p] = pr(.red[Kicker kicks Left])
 - .blue[q] = pr(.blue[Goalie dives Left])
 
@@ -885,7 +856,7 @@ class: inverse, center, middle
 
 - Like any Nash equilibrium, players are playing mutual best responses to each other (probabilistically)
 ]
-
+]
 .pull-right[
 .center[
 ![](../images/penalty_kicks_game_msne.png)
@@ -931,6 +902,459 @@ class: inverse, center, middle
 ]
 .pull-right[
 &lt;img src="3.1-slides_files/figure-html/unnamed-chunk-5-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+---
+
+# Rock-Paper-Scissors I
+
+.pull-left[
+
+- A two player game with *three* strategies available to each
+
+- Graphically more difficult, but same principle to find .hi[MSNE]
+  - find probabilities that make opponent indifferent between their responses
+
+- Game is symmetric, so only need to find one player's optimal mixed strategy
+
+]
+
+.pull-right[
+.center[
+![](../images/rock_paper_scissors_game.png)
+]
+]
+
+---
+
+# Rock-Paper-Scissors II
+
+.pull-left[
+
+- Define for .hi-blue[Column]:
+  - `\(r =\)` pr(.blue[Rock])
+  - `\(p =\)` pr(.blue[Paper])
+  - `\(1-r-p\)` = pr(.blue[Scissors])
+]
+
+.pull-right[
+.center[
+![](../images/rock_paper_scissors_game.png)
+]
+]
+
+---
+
+# Rock-Paper-Scissors II
+
+.pull-left[
+
+- Define for .hi-blue[Column]:
+  - `\(r =\)` pr(.blue[Rock])
+  - `\(p =\)` pr(.blue[Paper])
+  - `\(1-r-p\)` = pr(.blue[Scissors])
+
+- .hi-blue[Column] must choose `\(r, p\)` that make .hi-red[Row] indifferent between their strategies
+]
+
+.pull-right[
+.center[
+![](../images/rock_paper_scissors_game.png)
+]
+]
+
+---
+
+# Rock-Paper-Scissors II
+
+.pull-left[
+
+- List the expected payoffs to .hi-red[Row] from .hi-blue[Column]'s mix of `\(r,p\)`
+
+- .hi-red[Row]'s expected payoff must equal for all three strategies
+  - So let's take any two and set them equal:
+  
+`$$\begin{align*}
+2r+p-1 &amp;= p-r
+\end{align*}$$`
+]
+
+.pull-right[
+.center[
+![](../images/rock_paper_scissors_game_mix.png)
+]
+]
+
+---
+
+# Rock-Paper-Scissors II
+
+.pull-left[
+
+- List the expected payoffs to .hi-red[Row] from .hi-blue[Column]'s mix of `\(r,p\)`
+
+- .hi-red[Row]'s expected payoff must equal for all three strategies
+  - So let's take any two and set them equal:
+  
+`$$\begin{align*}
+2r+p-1 &amp;= p-r
+\end{align*}$$`
+
+- `\(r = \frac{1}{3}\)`
+- `\(p = \frac{1}{3}\)`
+- `\((1-r-p) = \frac{1}{3}\)`
+]
+
+.pull-right[
+.center[
+![](../images/rock_paper_scissors_game_mix.png)
+]
+]
+
+---
+
+# Rock-Paper-Scissors II
+
+.pull-left[
+
+- .hi-purple[MSNE]: each player plays all three strategies with equal probability `\(\left(\frac{1}{3}\right)\)`
+]
+
+.pull-right[
+.center[
+![](../images/rock_paper_scissors_game_mix.png)
+]
+]
+
+---
+
+class: inverse, center, middle
+
+# Coordination Games: PSNE and MSNE
+
+---
+
+# MSNE in Coordination Games
+
+.pull-left[
+
+- The necessity of MSNE is easy to see for constant-sum games with no PSNE
+
+- But MSNE also exist for non-constant sum games, and for games with one or more PSNE
+]
+
+.pull-right[
+.center[
+![](../images/coin-flip.png)
+]
+]
+
+---
+
+# Assurance Game: MSNE
+
+.pull-left[
+
+- We know an .hi-purple[assurance game] has two PSNE
+
+- Let's solve for MSNE
+]
+
+.pull-right[
+.center[
+![](../images/assurance_game.png)
+]
+]
+
+---
+
+# Assurance Game: MSNE
+
+.pull-left[
+
+- Let `\(p=\)`pr(.hi-red[Harry] goes to .red[Whitaker])
+
+- Let `\(q=\)`pr(.hi-blue[Sally] goes to .blue[Whitaker])
+
+]
+
+.pull-right[
+.center[
+![](../images/assurance_game.png)
+]
+]
+
+---
+
+# Assurance Game: MSNE
+
+.pull-left[
+
+- Let `\(p=\)`pr(.hi-red[Harry] goes to .red[Whitaker])
+
+- Let `\(q=\)`pr(.hi-blue[Sally] goes to .blue[Whitaker])
+
+]
+
+.pull-right[
+.center[
+![](../images/assurance_game_ms.png)
+]
+]
+
+---
+
+# Assurance Game: MSNE
+
+.pull-left[
+
+- Let `\(p=\)`pr(.hi-red[Harry] goes to .red[Whitaker])
+
+- Let `\(q=\)`pr(.hi-blue[Sally] goes to .blue[Whitaker])
+
+- `\(p^\star = \frac{1}{3}\)`
+- `\(q^\star = \frac{1}{3}\)`
+
+- .hi-purple[MSNE]: (.red[p], .blue[q]) = `\((\color{red}{\frac{1}{3}}, \color{blue}{\frac{1}{3}})\)`
+]
+
+.pull-right[
+.center[
+![](../images/assurance_game_ms.png)
+]
+]
+
+---
+
+# Assurance Game: MSNE
+
+.pull-left[
+
+- Calculate expected payoffs to .hi-red[Harry] and .hi-blue[Sally] with (.red[p], .blue[q]) MSNE
+
+]
+
+.pull-right[
+.center[
+![](../images/assurance_game_ms.png)
+]
+]
+
+---
+
+# Assurance Game: MSNE
+
+.pull-left[
+
+- Calculate expected payoffs to .hi-red[Harry] and .hi-blue[Sally] with (.red[p], .blue[q]) MSNE
+  - .hi-red[Harry]: `\(\color{red}{\frac{2}{3}}\)`
+  - .hi-blue[Sally]: `\(\color{blue}{\frac{2}{3}}\)`
+
+]
+
+.pull-right[
+.center[
+![](../images/assurance_game_ms.png)
+]
+]
+
+---
+
+# Assurance Game: MSNE
+
+.pull-left[
+
+- Calculate expected payoffs to .hi-red[Harry] and .hi-blue[Sally] with (.red[p], .blue[q]) MSNE
+  - .hi-red[Harry]: `\(\color{red}{\frac{2}{3}}\)`
+  - .hi-blue[Sally]: `\(\color{blue}{\frac{2}{3}}\)`
+
+- Problem: MSNE is even worse than either PSNE in this game!
+  - Significant probability of going to different places
+  - Also very fragile, anything `\(&gt;,&lt;\frac{2}{3}\)` reverts to PSNE
+]
+
+.pull-right[
+.center[
+![](../images/assurance_game_ms.png)
+]
+]
+
+---
+
+# Assurance Game: MSNE
+
+.pull-left[
+
+- .hi-blue[Sally's BR] `\(=\begin{cases} Starbucks &amp; \text{if }p&lt;\frac{1}{3}\\ Indifferent &amp; \text{if }p=\frac{1}{3}\\ Whitaker &amp; \text{if }p&gt;\frac{1}{3}\\ \end{cases}\)`
+
+- .hi-red[Harry's BR] `\(=\begin{cases} Starbucks &amp; \text{if }q&lt;\frac{1}{3}\\ Indifferent &amp; \text{if }q=\frac{1}{3}\\ Whitaker &amp; \text{if }q&gt;\frac{1}{3}\\ \end{cases}\)`
+]
+
+.pull-right[
+&lt;img src="3.1-slides_files/figure-html/unnamed-chunk-6-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+---
+
+# Assurance Game: MSNE
+
+.pull-left[
+
+- All intersections of best response functions are Nash equilibria
+
+- Interior solution: MSNE
+
+- Corner solutions: PSNE
+  - PSNE are special cases of MSNE where `\(p \in \{0,1\}\)` and `\(q \in \{0,1\}\)`
+]
+
+.pull-right[
+&lt;img src="3.1-slides_files/figure-html/unnamed-chunk-7-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+---
+
+# Chicken/Hawk-Dove Game: MSNE
+
+.pull-left[
+
+- Hawk-Dove/Chicken game: 2 PSNE
+
+- Let's solve for MSNE
+]
+
+.pull-right[
+.center[
+![](../images/hawk_dove_for_msne.png)
+]
+]
+
+---
+
+# Chicken/Hawk-Dove Game: MSNE
+
+.pull-left[
+
+- Let `\(p=\)`pr(.hi-red[Row] plays .red[Hawk])
+
+- Let `\(q=\)`pr(.hi-blue[Column] plays .red[Hawk])
+
+]
+
+.pull-right[
+.center[
+![](../images/hawk_dove_for_msne.png)
+]
+]
+
+---
+
+# Chicken/Hawk-Dove Game: MSNE
+
+.pull-left[
+
+- Let `\(p=\)`pr(.hi-red[Row] plays .red[Hawk])
+
+- Let `\(q=\)`pr(.hi-blue[Column] plays .red[Hawk])
+
+]
+
+.pull-right[
+.center[
+![](../images/hawk_dove_ms.png)
+]
+]
+
+---
+
+# Chicken/Hawk-Dove Game: MSNE
+
+.pull-left[
+
+- Let `\(p=\)`pr(.hi-red[Row] plays .red[Hawk])
+
+- Let `\(q=\)`pr(.hi-blue[Column] plays .red[Hawk])
+
+- `\(p^\star = 0.5\)`
+- `\(q^\star = 0.5\)`
+
+- .hi-purple[MSNE]: (.red[p], .blue[q]) = `\((\color{red}{0.5}, \color{blue}{0.5})\)`
+]
+
+.pull-right[
+.center[
+![](../images/hawk_dove_ms.png)
+]
+]
+
+---
+
+# Chicken/Hawk-Dove Game: MSNE
+
+.pull-left[
+
+- Calculate expected payoffs to .hi-red[Row] and .hi-blue[Column] with (.red[p], .blue[q]) MSNE
+
+]
+
+.pull-right[
+.center[
+![](../images/hawk_dove_ms.png)
+]
+]
+
+---
+
+# Chicken/Hawk-Dove Game: MSNE
+
+.pull-left[
+
+- Calculate expected payoffs to .hi-red[Row] and .hi-blue[Column] with (.red[p], .blue[q]) MSNE
+  - .hi-red[Row]: .red[0.5]
+  - .hi-blue[Column]: .blue[0.5]
+
+]
+
+.pull-right[
+.center[
+![](../images/hawk_dove_ms.png)
+]
+]
+
+---
+
+# Chicken/Hawk-Dove Game: MSNE
+
+.pull-left[
+
+- Calculate expected payoffs to .hi-red[Row] and .hi-blue[Column] with (.red[p], .blue[q]) MSNE
+  - .hi-red[Row]: .red[0.5]
+  - .hi-blue[Column]: .blue[0.5]
+
+- Expected payoff in MSNE is:
+  - better than PSNE when you're a **dove** against a **hawk**
+  - worse than PSNE when you're a **hawk** against a **dove**
+]
+
+.pull-right[
+.center[
+![](../images/hawk_dove_ms.png)
+]
+]
+
+---
+
+# Chicken/Hawk-Dove Game: MSNE
+
+.pull-left[
+
+- .hi-blue[Column's BR] `\(=\begin{cases} Hawk &amp; \text{if }p&lt;0.5\\ Indifferent &amp; \text{if }p=0.5\\ Dove &amp; \text{if }p&gt;0.5\\ \end{cases}\)`
+
+- .hi-red[Row's BR] `\(=\begin{cases} Hawk &amp; \text{if }q&lt;0.5\\ Indifferent &amp; \text{if }q=0.5\\ Dove &amp; \text{if }q&gt;0.5\\ \end{cases}\)`
+]
+
+.pull-right[
+&lt;img src="3.1-slides_files/figure-html/unnamed-chunk-8-1.png" width="504" style="display: block; margin: auto;" /&gt;
 ]
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
