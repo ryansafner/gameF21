@@ -1305,7 +1305,7 @@ class: inverse, center, middle
 
 - Problem: MSNE is even worse than either PSNE in this game!
   - Significant probability of going to different places
-  - Also very fragile, anything $>,<\frac{2}{3}$ reverts to PSNE
+  - Also very fragile, anything $>,<\frac{1}{3}$ reverts to PSNE
 ]
 
 .pull-right[
