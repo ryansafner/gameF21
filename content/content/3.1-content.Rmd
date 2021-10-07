@@ -15,11 +15,14 @@ slides: "3.1-slides"
 ---
 
 {{% alert note %}}
-*Monday October 4, 2021*.
+*Monday October 4* and *Wednesday October 6, 2021*.
 {{% /alert %}}
 
 {{% alert warning %}}
 [Problem Set 3](/assignments/03-problem-set) is due on Wednesday October 6. 
+
+[Problem Set 4](/assignments/04-problem-set) is due on Wednesday October 13. 
+
 {{% /alert %}}
 
 ## <i class="fas fa-info-circle fa-lg"></i> Overview

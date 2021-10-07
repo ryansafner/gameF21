@@ -61,13 +61,14 @@ lessons:
     content: "3.1-content"
     slides: "3.1-slides"
     
+  - title: '<i class="fas fa-laptop-code"></i> **Problem Set 4** due Wed Oct 13'
+    assignment: "04-problem-set"
+
+  - title: '<i class="fas fa-star"></i> **Midterm Exam**'
+
   - title: "3.2 — Finitely-Repeated Games"
     
   - title: "3.3 — Infinitely-Repeated Games"
-  
-  - title: '<i class="fas fa-laptop-code"></i> **Problem Set 4**'
-
-  - title: '<i class="fas fa-star"></i> **Midterm Exam**'
 
   - title: "3.4 — The Evolution of Cooperation"
   
