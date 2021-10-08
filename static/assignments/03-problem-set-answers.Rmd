@@ -1,0 +1,811 @@
+---
+title: "Problem Set 3"
+author: "Solutions"
+date: "ECON 316 — Game Theory — Fall 2021"
+output:
+  html_document:
+    df_print: paged
+    toc: true 
+    toc_depth: 3
+    toc_float: true
+    code_folding: show
+    highlight: tango
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = F,
+                      message =F,
+                      warning =F,
+                      fig.retina = 3,
+                      fig.width = 8,
+                      fig.asp = 0.618)
+library("tidyverse")
+#library("mosaic")
+#library("ggrepel")
+ggplot2::theme_set(theme_light(base_family = "Fira Sans Condensed", base_size = 16))
+update_geom_defaults("text", list(family = "Fira Sans Condensed"))
+update_geom_defaults("label", list(family = "Fira Sans Condensed"))
+```
+
+**Note**: Answers may be longer than I would deem sufficient on an exam. Some might vary slightly based on points of interest, examples, or personal experience. These suggested answers are designed to give you both the answer and a short explanation of why it is the answer.
+
+# Concepts
+
+## Question 1
+
+#### Explain what cartels are, the problems that they face, and some methods by which these problems might be overcome.   
+
+Cartels are arrangements where sellers collude to restrict output and raise prices to act like a collective monopolist, and split the monopoly profits. It is easiest to see the difficulty of cartels by framing them as a prisoners' dilemma between two firms.
+
+The Nash equilibrium is for both firms to lower price, since that is a dominant strategy for each firm. If both firms raise their price (cooperate with other firm), they can increase their profits by forming a cartel. However, this is not a Nash equilibrium, since each firm has an incentive to lower their prices and cheat the cartel if the other firm maintains a high price.
+
+Cartels must find ways to enforce the agreement between members to keep prices high and outputs low. Cartel members must be able to monitor each other's behavior and detect and punish cheating or chiseling the agreement. Cartels also have to worry about competition from entrants (who are not cartel members), and detection from the government.
+
+Cartels can persist only by solving these problems in one of two ways:
+- Cartels can craft a clever coordination mechanism to secretly coordinate prices or divide up territory that all members actively pay attention to. Price-matching policies are one potential example, allowing a member to retaliate against other members that try to lower prices.
+- Cartels can try to capture or co-opt government regulatory bodies meant to regulate them: regulators can then be influenced to fix an above-market price or divide up exclusive territory and enforce it amongst all regulated firms.
+
+## Question 2
+
+#### Describe the major differences between Bertrand competition, Cournot competition, and Stackelberg competition. How do firms compete, and what are the results in terms of market price, industry output, and profits for firms? 
+
+- Bertrand competition:
+    - Firms compete *simultaneously* on *price*
+    - Nash equilibrium: firms set $p=MC$ and earn no profits (competitive market outcome)
+- Cournot competition:
+    - Firms compete *simultaneously* on *quantity*, market price is determined by joint output
+    - Nash equilibrium: firms produce same amount, earn equal (positive) profits at a high market price
+- Stackelberg competition:
+    - Firms compete *sequentially* on *quantity*, market price is determined by joint output
+    - Nash equilibrium: 
+        - *leader* produces more than Cournot-level output, earns more than Cournot-level profits
+        - *follower* produces less than Cournot-level output, earns less than Cournot-level profits
+        - Increased output pushes market price below Cournot level
+
+Comparing by each metric:
+
+- Industry output: $q_B>q_S>q_C$
+- Firm profits: $\pi_{SL}>\pi_{C}>\pi_{SF}>\pi_{B}=0$
+- Market price: $p_C>p_S>p_B=MC$
+- where subscripts $B$=Bertrand, $C$=Cournot, $S$=Stackelberg, $L$=Leader, $F$=Follower
+
+## Question 3
+
+#### Describe the conditions required to make a market *contestable*. Describe and compare the Nash equilibrium of a contestable market with a pure monopoly, and with perfect competition.    
+
+In the contestable market model, an incumbent firm sets a price $p_i$ and an entrant decides to enter at $p_e$ or stay out, and consumers buy from the firm with the lower market price.
+
+A market is contestable if it has:
+- Free entry and exit
+- Firms with similar technologies (cost structures)
+- No sunk costs
+
+The Nash equilibrium in a contestable market (with no fixed costs) attains competitive market outcomes ($p=MC$, $\pi=0$, maximum $q$, maximum consumer surplus, no deadweight loss) with a single firm.
+
+With fixed costs (and therefore, economies of scale), contestable markets can attain outcomes closer to competitive markets than a monopoly, even with a single firm. In the Nash equilibirium, the incumbent successfully deters entry by setting $p=AC$ and earning no profits. This generates less than the efficient competitive outcome (higher $p$, lower $q$, less consumer surplus, some deadweight loss), but much better than the monopoly outcome.
+
+If there are sunk costs, or the incumbant firm has lower costs than the entrant, the Nash equilibrium is where the incumbent sets $p_i=MC_e-\epsilon$ (prices just below the entrant's costs), we get worse outcomes (higher $p$, lower $q$, less consumer surplus, more deadweight loss), but still better than the pure monopoly outcome.
+
+# Problems
+
+## Question 4
+
+Suppose Comcast $(C)$ and Verizon $(V)$ have a constant $MC=AC=\$20$ per customer connected to their internet network. The market (inverse) demand curve for basic internet service is given by:
+$$\begin{align*}
+P&=80-2Q\\
+Q&=q_C+q_V\\
+\end{align*}$$
+
+### Part A
+
+#### Find the Cournot-Nash equilibrium output, price, and profit for each firm.
+
+Solving for Comcast, recalling that MR is twice the slope of the inverse demand curve:
+$$MR_{C}=80-4q_{C}-2q_{V}$$
+
+Comcast maximizes profit at $q^*$ where $MR_C=MC_1$:
+
+$$\begin{aligned}
+MR_{C}&=MC && \text{Profit-max condition} \\
+80-4q_{C}-2q_{V}&=20 && \text{Plugging in}\\
+60-4q_{C}-2q_{V}&=0 && \text{Subtracting 20 from both sides}\\
+60-2q_{V}&=4q_{C} && \text{Adding }4q_{C} \text{ to both sides}\\
+15-0.5q_{V}&=q_{C}^* && \text{Dividing both sides by 4}\\
+\end{aligned}$$
+ 
+Since Verizon is identical, its $q^*$ is:
+$$q_{V}^*=15-0.5q_{C}$$
+
+Find Nash equilibrium algebraically by plugging in one country's reaction curve into the other's:
+
+$$\begin{aligned}
+q_{C}&=15-0.5q_{V} && \text{Comcast's reaction function}\\
+q_{C}&=15-0.5(15-0.5q_{V}) && \text{Plugging in Verizon's reaction function}\\
+q_{C}&=15-7.5+0.25q_{C} && \text{Distributing the }-0.5\\
+q_{C}&=7.5+0.25q_{C} && \text{Subtracting}\\
+0.75q_{C}&=7.5 && \text{Subtracting }0.25q_{C} \text{ to both sides}\\
+q_{C}&=10 && \text{Dividing by 0.75}\\
+\end{aligned}$$
+
+Symmetrically, $q_{V}=10$
+
+This sets a market price of:
+
+$$\begin{aligned}
+p&=80-2Q && \text{Market inverse demand function}\\
+p&=80-2(10+10) && \text{Plugging in firms' output}\\
+p&=40 && \text{Simplifying}\\
+\end{aligned}$$
+
+Each firm then earns a profit of:
+
+$$\begin{aligned}
+\pi_{C}&=q_{C}(p-c) && \text{Comcast's profit function}\\
+\pi_{C}&=10(40-20) && \text{Plugging in}\\
+\pi_{C}&=200 && \text{Simplifying}\\
+\end{aligned}$$
+
+Verizon symmetrically earns $\pi_{Z}=200$.
+
+### Part B
+
+#### Find the output, price, and profit for each firm if the two were to collude.
+
+The two firms acting as a cartel act as a single monopolist facing the entire market demand ($p=80-2Q$), who maximizes profit by setting:
+
+$$\begin{aligned}
+MR_{monopoly}&=MC && \text{Profit-max condition} \\
+80-4Q&=20 && \text{Plugging in}\\
+60-4Q&=0 && \text{Subtracting 20 from both sides}\\
+60&=4Q && \text{Adding }4Q \text{ to both sides}\\
+15&=Q^* && \text{Dividing both sides by 4}\\
+\end{aligned}$$
+
+The total industry output is 15, meaning each firm produces 7.5 units. This sets a market price of
+
+$$\begin{aligned}
+p&=80-2Q && \text{Market inverse demand function}\\
+p&=80-2(15) && \text{Plugging in countries' output}\\
+p&=50 && \text{Simplifying}\\
+\end{aligned}$$
+
+The cartel then earns a profit of:
+
+$$\begin{aligned}
+\pi_{1}&=Q(p-c) && \text{Firm 1's profit function}\\
+\pi_{1}&=15(50-20) && \text{Plugging in}\\
+\pi_{1}&=450 && \text{Simplifying}\\
+\end{aligned}$$
+
+Since the two firms split the cartel profits, each firm earns a profit of \$225.
+
+### Part C
+
+#### Suppose now Comcast is a Stackelberg leader. Find each firm's output, price, and profit.
+
+Substitute the Verizon (follower)'s reaction function into market (inverse) demand function
+
+$$\begin{aligned}
+P&=80-2q_{C}-2q_V && \text{The inverse market demand function}\\
+P&=80-2q_{C}-2(15-0.5q_{C}) && \text{Plugging in Firm 2's reaction function for} q_V\\
+P&=80-2q_{C}-30+1q_{C} && \text{Multiplying by }-2\\
+P&=50-q_{C} && \text{Simplifying the right}\\
+\end{aligned}$$
+
+Find $MR_C$ for Comcast from market demand:
+
+$$MR_{C}=104-2q_{C}$$
+
+$$\begin{aligned}
+MR_C&=MC && \text{Profit-max condition}\\
+50-2q_{C}&=20 && \text{Plugging in}\\
+50&=20+2q_{C} && \text{Adding }2q_{C} \text{ to both sides}\\
+30&=2q_{C} && \text{Subtracting 20 from both sides}\\
+15&=q_{C}^* && \text{Dividing both sides by 2} \\
+\end{aligned}$$
+
+Verizon will respond to Comcast producing 15 according to Verizon's reaction function:
+$$\begin{aligned}
+q_V^*&=15-0.5q_{C}\\
+q_V^*&=15-0.5(15)\\
+q_V^*&=15-7.5\\
+q_V^*&=7.5\\
+\end{aligned}$$
+
+With $q^*_{C}=15$ and $q^*_V=7.5$, this sets a market price of:
+
+$$\begin{aligned}
+P&=80-2Q\\
+P&=80-2(15+7.5)\\
+P&=35\\
+\end{aligned}$$
+
+Profit for Comcast (leader) is:
+
+$$\begin{aligned}
+\pi_{C}&=q_{1}(P-c)\\
+\pi_{C}&=15(35-20)\\
+\pi_{C}&=\$225\\
+\end{aligned}$$
+
+Profit for Verizon (follower) is:
+
+$$\begin{aligned}
+\pi_{C}&=q_{2}(P-c)\\
+\pi_{C}&=7.5(35-20)\\
+\pi_{C}&=\$112.50\\
+\end{aligned}$$
+
+The leader (Comcast) earns higher than Cournot profits (part a), and the follower (Verizon) earns less than Cournot profits.
+
+### Part D
+
+#### Find the output, price, and profit for each firm they were to compete on *price* instead of *quantity.*
+
+Under Bertrand competition, the Nash equilibrium is the competitive market outcome, where firms set:
+
+$$\begin{aligned}
+p&=MC && \text{Competitive market condition}\\
+80-2Q&=20 && \text{Plugging in}\\
+60-2Q&=0 && \text{Subtracting 20 from both sides}\\
+60&=2Q && \text{Adding }2Q \text{ to both sides}\\
+30&=Q && \text{Dividing both sides by 2}\\
+\end{aligned}$$
+
+The total industry output is 30, so each firm is producing 15 units. Since $p=MC$, the market price is \$20, and each firm earns $\pi=0$.
+
+```{r}
+# Set Cournot parameters
+a<-80
+b<-2
+c<-20
+
+Firm1react=function(x){(a-c)/(2*b)-0.5*x} # assumes identical costs 
+Firm2reactplot=function(x){2*((a-c)/(2*b))-2*x} # assumes identical costs
+q1_cournot<-(a-c)/(3*b)# assumes identical costs
+q2_cournot<-(a-c)/(3*b)# assumes identical costs
+
+intercept<-2*(a-c)/(2*b)
+
+q1_cartel<-(a-c)/(4*b)
+q2_cartel<-(a-c)/(4*b)
+
+Leader<-15
+Follower<-7.5
+
+line_colors <- c("Firm 1" = "red", "Firm 2" = "blue")
+
+ggplot(data.frame(x=c(0,60)), aes(x=x))+
+  stat_function(fun=Firm1react, geom="line", size=1, aes(color="Firm 1"))+
+  stat_function(fun=Firm2reactplot, geom="line", size=1, aes(color="Firm 2"))+
+  
+  # Nash equilibrium 
+  geom_point(aes(x=q2_cournot,y=q1_cournot), color="purple", size=2)+
+  geom_text(aes(x=q2_cournot,y=q1_cournot,label="Cournot-Nash Equilibrium"),hjust=-0.1, vjust=-0.1, color="purple")+
+  geom_segment(aes(x=q2_cournot,y=0),xend=q2_cournot,yend=q1_cournot,linetype=3)+
+  geom_segment(aes(x=0,y=q1_cournot),xend=q2_cournot,yend=q1_cournot, linetype=3)+
+  
+  #Collusion
+  geom_point(aes(x=q2_cartel,y=q1_cartel), color="purple")+
+  geom_text(aes(x=q2_cartel,y=q1_cartel,label="Collusion"),hjust=-0.1, vjust=-0.1, color="purple")+
+  geom_segment(aes(x=q2_cartel,y=0),xend=q2_cartel,yend=q1_cartel,linetype=3)+
+  geom_segment(aes(x=0,y=q1_cartel),xend=q2_cartel,yend=q1_cartel, linetype=3)+
+  geom_segment(aes(x=0,y=15),xend=15,yend=0,linetype=3)+
+
+  # Stackelberg
+  geom_point(aes(x=Follower,y=Leader), color="purple")+
+  geom_text(aes(x=Follower,y=Leader,label="Stackelberg (Firm 1 leads)"),hjust=-0.1, vjust=-0.1, color="purple")+
+  geom_segment(aes(x=Follower,y=0),xend=Follower,yend=Leader,linetype=3)+
+  geom_segment(aes(x=0,y=Leader),xend=Follower,yend=Leader, linetype=3)+
+
+  scale_x_continuous(breaks=seq(0,intercept,5), limits=c(0,intercept), expand=c(0,0))+
+  scale_y_continuous(breaks=seq(0,intercept,5), limits=c(0,intercept), expand=c(0,0))+
+  annotate(geom = "label", x = (0.7*intercept), y = Firm1react(0.7*intercept), label = "Firm 1",
+           color = "red", size = 4.5) +
+  annotate(geom = "label", x = (0.2*intercept), y = Firm2reactplot(0.2*intercept), label = "Firm 2",
+           color = "blue", size = 4.5) +
+  scale_colour_manual("Reaction Curves", values = line_colors)+
+  labs(x = expression(paste("Firm 2's Output, " ,q[2])),
+       y = expression(paste("Firm 1's Output, " ,q[1])),
+       title = "Firms' Reaction Functions")+
+  theme(legend.position = "",
+        plot.title = element_text(size = rel(1.25)))
+```
+
+This is not part of the question, but below I've plotted all of the outcomes of parts a-d on the graph of the industry, so we can compare output and price (and implicitly, consumer surplus, profits, and deadweight losses if you shade in the relevant rectangles and triangles) across the different oligopoly models. 
+
+```{r}
+a<-80
+b<-2
+c<-20
+
+q_stack<-22.5
+p_stack<-35
+q_bertrand<-(a-c)/b
+q_cournot<-2*((a-c)/(3*b))
+p_cournot<-(a+2*c)/(3)
+q_cartel<-(a-c)/(2*b)
+p_cartel<-(a+c)/2
+
+    Demand=function(x){a-b*x}
+    MR=function(x){a-2*b*x}
+    MC=function(x){c}
+
+   # CS_cournot<-data.frame(x=c(0,0,q_cournot),
+    #               y=c(p_cournot,a,p_cournot))
+    #DWL_cournot<-data.frame(x=c(q_cournot,q_cournot,q_bertrand),
+     #              y=c(c,p_cournot,c))
+    
+    #CS_calc<-(q_star*(a-p_star))/2
+    
+    line_colors <- c("Demand" = "blue", "MR" = "purple", "MC" = "red")
+    surplus_colors <-c("Consumer" = "blue", "Profit" = "green", "DWL" = "black")
+    
+    #plot graph 
+    library("ggthemes")
+    ggplot(data.frame(x=c(1,100),y=c(0,100)), aes(x=x,y=y))+
+      stat_function(fun=MC, geom="line", size=1, aes(color="MC"))+
+      stat_function(fun=Demand, geom="line", size=1, aes(color="Demand"))+
+      stat_function(fun=MR, geom="line", size=1, aes(color="MR"))+
+      
+      # curve labels
+      annotate(geom = "label", x = 10, y = Demand(10), label = "Demand",
+           color = "blue", size = 4) +
+      annotate(geom = "label", x = 10, y = MR(10), label = "MR",
+           color = "purple", size = 4) +
+      annotate(geom = "label", x = 45, y = c, label = "MC",
+           color = "red", size = 4) +
+      #geom_polygon(data=CS_cournot, aes(x=x,y=y, fill="Consumer"), alpha=0.5)+ # Consumer Surplus (Cournot)
+      #geom_polygon(data=DWL_cournot, aes(x=x,y=y, fill="DWL"), alpha=0.5)+ # DWL (Cournot)
+      #geom_rect(aes(xmin=0,xmax=q_cournot,ymin=c,ymax=p_cournot,fill="Profit"),alpha=0.25) + # Profits
+      # Cournot Eq
+      geom_point(aes(x=q_cournot,y=p_cournot), color="black")+ 
+      geom_text(aes(x=q_cournot,y=p_cournot,label="Cournot"),hjust=-0.1, vjust=-0.1, color="black")+
+      geom_segment(aes(x=q_cournot,y=0),xend=q_cournot,yend=p_cournot,linetype=3)+
+      geom_segment(aes(x=0,y=p_cournot),xend=q_cournot,yend=p_cournot, linetype=3)+
+      # Cartel Eq
+      geom_point(aes(x=q_cartel,y=p_cartel), color="black")+ 
+      geom_text(aes(x=q_cartel,y=p_cartel,label="Collusion"),hjust=-0.1, vjust=-0.1, color="black")+
+      geom_segment(aes(x=q_cartel,y=0),xend=q_cartel,yend=p_cartel,linetype=3)+
+      geom_segment(aes(x=0,y=p_cartel),xend=q_cartel,yend=p_cartel, linetype=3)+
+      # Bertrand Eq
+      geom_point(aes(x=q_bertrand,y=c), color="black")+ 
+      geom_text(aes(x=q_bertrand,y=c,label="Bertrand"),hjust=-0.1, vjust=-0.1, color="black")+
+      geom_segment(aes(x=q_bertrand,y=0),xend=q_bertrand,yend=c,linetype=3)+
+      geom_segment(aes(x=0,y=c),xend=q_bertrand,yend=c, linetype=3)+
+      # Stackelberg Eq
+        geom_point(aes(x=q_stack,y=p_stack), color="black")+ 
+      geom_text(aes(x=q_stack,y=p_stack,label="Stackelberg"),hjust=-0.1, vjust=-0.1, color="black")+
+      geom_segment(aes(x=q_stack,y=0),xend=q_stack,yend=p_stack,linetype=3)+
+      geom_segment(aes(x=0,y=p_stack),xend=q_stack,yend=p_stack, linetype=3)+
+      scale_x_continuous(breaks=seq(0,50,5),limits=c(0,50),expand = c(0,0))+
+      scale_y_continuous(breaks=seq(0,100,10),limits=c(0,100),expand = c(0,0))+
+      scale_colour_manual("Profits", values = line_colors)+
+      scale_fill_manual("Welfare", values = surplus_colors, guide = guide_legend(override.aes = list(alpha = 0.5)))+
+      labs(x = "Industry output (Q)",
+           y = "Market Price (p)",
+           title = "Industry Equilibria",
+           subtitle = "Compared Across Oligopoly Models")+
+      theme(legend.position = "",
+            plot.title = element_text(size = rel(1.25)))
+
+```
+
+## Question 5
+
+This question will show what happens as we relax some of the assumptions of Cournot competition. Crude oil is transported across the globe in enormous tanker ships called Very Large Crude Carriers (VLCCs). By 2001, more than 92% of all new VLCCs were built in South Korea and Japan. Assume that the price of new VLCCs (in millions of dollars) is determined by the inverse demand function between the duopoly of Korea and Japan: 
+
+$$\begin{align*}p&=180-Q\\
+Q&=q_{Korea}+q_{Japan}\\
+\end{align*}$$
+
+Assume the marginal cost of building each ship is <span>&#36;</span>30 (million) in both Korea and Japan.
+
+### Part A
+
+#### Find each country's best response function, the Nash equilibrium quantity produced by each country, the market price, and the profit for each country.
+
+$$\begin{align*}
+p&=180-Q\\
+Q&=q_{Korea}+q_{Japan}\\
+\end{align*}$$
+
+Solving for Korea, recalling that MR is twice the slope of the inverse demand curve:
+$$MR_{Korea}=180-2q_{Korea}-q_{Japan}$$
+
+Korea maximizes profit at $q^*$ where $MR=MC$:
+
+$$\begin{align*}
+MR_{Korea}&=MC && \text{Profit-max condition} \\
+180-2q_{Korea}-q_{Japan}&=30 && \text{Plugging in}\\
+150-2q_{Korea}-q_{Japan}&=0 && \text{Subtracting 30 from both sides}\\
+150-q_{Japan}&=2q_{Korea} && \text{Adding }2q_{Korea} \text{ to both sides}\\
+75-0.5q_{Japan}&=q_{Korea}^* && \text{Dividing both sides by 2}\\
+\end{align*}$$
+- Since Japan is identical, its $q^*$ is:
+$$q_{Japan}^*=75-0.5q_{Korea}$$
+
+Find Nash equilibrium algebraically by plugging in one country's reaction curve into the other's
+
+$$\begin{align*}
+q_{Korea}&=75-0.5q_{Japan} && \text{Korea's reaction function}\\
+q_{Korea}&=75-0.5(50-0.5q_{Korea}) && \text{Plugging in Japan's reaction function}\\
+q_{Korea}&=75-37.5+0.25q_{Korea} && \text{Distributing the }-0.5\\
+q_{Korea}&=37.5+0.25q_{Korea} && \text{Subtracting}\\
+0.75q_{Korea}&=50 && \text{Subtracting }0.25q_{Korea} \text{ from both sides}\\
+q_{Korea}&=50 && \text{Dividing by 0.75}\\
+\end{align*}$$
+
+Symmetrically, $q_{Japan}=50$
+
+This sets a market price of 
+
+$$\begin{align*}
+p&=180-Q && \text{Market inverse demand function}\\
+p&=180-(50+50) && \text{Plugging in countries' output}\\
+p&=80 && \text{Simplifying}\\
+\end{align*}$$
+
+Each country then earns a profit of 
+
+$$\begin{align*}
+\pi_{Korea}&=q_{Korea}(p-c) && \text{Korea's profit function}\\
+\pi_{Korea}&=50(80-30) && \text{Plugging in}\\
+\pi_{Korea}&=2,500 && \text{Simplifying}\\
+\end{align*}$$
+
+Japan symmetrically earns $\pi_{Japan}=2,500$.
+
+\vspace{0.5cm}
+
+```{r}
+# Set Cournot parameters
+a<-180
+b<-1
+c<-30
+
+Firm1react=function(x){(a-c)/(2*b)-0.5*x} # assumes identical costs 
+Firm2reactplot=function(x){2*((a-c)/(2*b))-2*x} # assumes identical costs
+q1_cournot<-(a-c)/(3*b)# assumes identical costs
+q2_cournot<-(a-c)/(3*b)# assumes identical costs
+
+intercept<-2*(a-c)/(2*b)
+
+# Reaction Functions
+#Korea=function(x){75-0.5*x}
+#Japan=function(x){150-2*x} # for graphing only, take inverses of coefficients of other reaction curve
+
+# Equilibria 
+NE<-50
+
+line_colors <- c("Korea" = "red", "Japan" = "blue")
+
+library("ggplot2")
+ggplot(data.frame(x=c(0,60)), aes(x=x))+
+  stat_function(fun=Firm1react, geom="line", size=1, aes(color="Korea"))+
+  stat_function(fun=Firm2reactplot, geom="line", size=1, aes(color="Japan"))+
+  
+  # Nash equilibrium 
+  geom_point(aes(x=q2_cournot,y=q1_cournot), color="purple", size=2)+
+  geom_text(aes(x=q2_cournot,y=q1_cournot,label="Cournot-Nash Equilibrium"),hjust=-0.1, vjust=-0.1, color="purple")+
+  geom_segment(aes(x=q2_cournot,y=0),xend=q2_cournot,yend=q1_cournot,linetype=3)+
+  geom_segment(aes(x=0,y=q1_cournot),xend=q2_cournot,yend=q1_cournot, linetype=3)+
+  
+  # Collusion
+  #geom_point(aes(x=Collusion,y=Collusion), color="purple")+
+  #geom_text(aes(x=Collusion,y=Collusion,label="Collusion"),hjust=-0.1, vjust=-0.1, color="purple")+
+  #geom_segment(aes(x=Collusion,y=0),xend=Collusion,yend=Collusion,linetype=3)+
+  #geom_segment(aes(x=0,y=Collusion),xend=Collusion,yend=Collusion, linetype=3)+
+
+  # Stackelberg
+  #geom_point(aes(x=Follower,y=Leader), color="purple")+
+  #geom_text(aes(x=Follower,y=Leader,label="Stackelberg (SA leads)"),hjust=-0.1, vjust=-0.1, color="purple")+
+  #geom_segment(aes(x=Follower,y=0),xend=Follower,yend=Leader,linetype=3)+
+  #geom_segment(aes(x=0,y=Leader),xend=Follower,yend=Leader, linetype=3)+
+
+  scale_x_continuous(breaks=seq(0,intercept,10), limits=c(0,intercept), expand=c(0,0))+
+  scale_y_continuous(breaks=seq(0,intercept,10), limits=c(0,intercept), expand=c(0,0))+
+  theme_light()+
+  annotate(geom = "label", x = (0.7*intercept), y = Firm1react(0.7*intercept), label = "Korea",
+           color = "red", size = 4.5) +
+  annotate(geom = "label", x = (0.2*intercept), y = Firm2reactplot(0.2*intercept), label = "Japan",
+           color = "blue", size = 4.5) +
+  scale_colour_manual("Reaction Curves", values = line_colors)+
+  labs(x = expression(paste("Japan's Output, " ,q[Japan])),
+       y = expression(paste("Korea's Output, " ,q[Korea])),
+       title = "Countries' Reaction Functions")+
+  theme(legend.position = "",
+        plot.title = element_text(size = rel(1.25)))
+```
+
+### Part B
+
+#### Labor costs in Korean shipyards are actually lower than in Japan. Assume now the marginal cost per ship in Japan is <span>&#36;</span>40 (million) and only <span>&#36;</span>20 (million) in Korea. Find the new best response functions, the Nash equilibrium quantity produced by each country, the market price, and the profit for each country.
+
+The analysis proceeds almost identically as before, except each firm now has their own marginal cost. 
+
+Solving for Korea first, we have the same marginal revenue as before, and Korea's marginal cost is now \$20. Korea maximizes profit at $q^*$ where:
+
+$$\begin{align*}
+MR_{Korea}&=MC_{Korea} && \text{Profit-max condition} \\
+180-2q_{Korea}-q_{Japan}&=20 && \text{Plugging in}\\
+160-2q_{Korea}-q_{Japan}&=0 && \text{Subtracting 20 from both sides}\\
+160-q_{Japan}&=2q_{Korea} && \text{Adding }2q_{Korea} \text{ to both sides}\\
+80-0.5q_{Japan}&=q_{Korea}^* && \text{Dividing both sides by 2}\\
+\end{align*}$$
+
+Since the firms are no longer identical, we now need to find Japan's reaction function. Japan similarly maximizes profit at $q^*$ where:
+
+$$\begin{align*}
+MR_{Japan}&=MC_{Japan} && \text{Profit-max condition} \\
+180-q_{Korea}-2q_{Japan}&=40 && \text{Plugging in}\\
+140-q_{Korea}-2q_{Japan}&=0 && \text{Subtracting 40 from both sides}\\
+140-q_{Korea}&=2q_{Japan} && \text{Adding }2q_{Japan} \text{ to both sides}\\
+70-0.5q_{Korea}&=q_{Japan}^* && \text{Dividing both sides by 2}\\
+\end{align*}$$
+
+Find Nash equilibrium algebraically by plugging in one country's reaction curve into the other's. Here, I plug Japan's reaction function into Korea's: 
+
+$$\begin{align*}
+q_{Korea}^*&=80-0.5q_{Japan} && \text{Korea's reaction function}\\
+q_{Korea}^*&=80-0.5(70-0.5q_{Korea}) && \text{Plugging in Japan's reaction function}\\
+q_{Korea}^*&=80-35+0.25q_{Korea} && \text{Distributing the }-0.5\\
+q_{Korea}^*&=45+0.25q_{Korea} && \text{Subtracting}\\
+0.75q_{Korea}^*&=45 && \text{Subtracting }0.25q_{Korea} \text{ to both sides}\\
+q_{Korea}^*&=60 && \text{Dividing by 0.75}\\
+\end{align*}$$
+
+Now we must find Japan's output by seeing how they respond to Korea producing 60:
+
+$$\begin{align*}
+q_{Japan}^*&=70-0.5q_{Japan} && \text{Japan's reaction function}\\
+q_{Japan}^*&=70-0.5(60) && \text{Plugging in Korea's output}\\
+q_{Japan}^*&=70-30 && \text{Multiplying}\\
+q_{Japan}^*&=40 && \text{Subtracting}\\
+\end{align*}$$
+
+This sets a market price of 
+
+$$\begin{align*}
+p&=180-Q && \text{Market inverse demand function}\\
+p&=180-(60+40) && \text{Plugging in countries' output}\\
+p&=80 && \text{Simplifying}\\
+\end{align*}$$
+
+Since each country has a different marginal cost (and output), we need to calculate the profit for each country separately. Start with Korea:
+
+$$\begin{align*}
+\pi_{Korea}&=q_{Korea}(p-c_{Korea}) && \text{Korea's profit function}\\
+\pi_{Korea}&=60(80-20) && \text{Plugging in}\\
+\pi_{Korea}&=3,600 && \text{Simplifying}\\
+\end{align*}$$
+
+Next, Japan:
+
+$$\begin{align*}
+\pi_{Japan}&=q_{Korea}(p-c_{Korea}) && \text{Japan's profit function}\\
+\pi_{Japan}&=40(80-40) && \text{Plugging in}\\
+\pi_{Japan}&=1,600 && \text{Simplifying}\\
+\end{align*}$$
+
+```{r}
+# Set Cournot parameters
+a<-180
+b<-1
+c_1<-20
+c_2<-40
+
+intercept<-2*(a-c)/(2*b)
+
+Firm1react=function(x){(a-c_1)/(2*b)-0.5*x}
+Firm2react=function(x){(a-c_2)/(2*b)-0.5*x}
+Firm2reactplot=function(x){2*((a-c_2)/(2*b))-2*x}
+    
+q1_cournot<-(a-2*c_1+c_2)/(3*b)
+q2_cournot<-(a-2*c_2+c_1)/(3*b)
+
+line_colors <- c("Korea" = "red", "Japan" = "blue")
+
+library("ggplot2")
+ggplot(data.frame(x=c(0,60)), aes(x=x))+
+  stat_function(fun=Firm1react, geom="line", size=1, aes(color="Korea"))+
+  stat_function(fun=Firm2reactplot, geom="line", size=1, aes(color="Japan"))+
+  
+  # Nash equilibrium 
+  geom_point(aes(x=q2_cournot,y=q1_cournot), color="purple", size=2)+
+  geom_text(aes(x=q2_cournot,y=q1_cournot,label="Cournot-Nash Equilibrium"),hjust=-0.1, vjust=-0.1, color="purple")+
+  geom_segment(aes(x=q2_cournot,y=0),xend=q2_cournot,yend=q1_cournot,linetype=3)+
+  geom_segment(aes(x=0,y=q1_cournot),xend=q2_cournot,yend=q1_cournot, linetype=3)+
+  
+  # Collusion
+  #geom_point(aes(x=Collusion,y=Collusion), color="purple")+
+  #geom_text(aes(x=Collusion,y=Collusion,label="Collusion"),hjust=-0.1, vjust=-0.1, color="purple")+
+  #geom_segment(aes(x=Collusion,y=0),xend=Collusion,yend=Collusion,linetype=3)+
+  #geom_segment(aes(x=0,y=Collusion),xend=Collusion,yend=Collusion, linetype=3)+
+
+  # Stackelberg
+  #geom_point(aes(x=Follower,y=Leader), color="purple")+
+  #geom_text(aes(x=Follower,y=Leader,label="Stackelberg (SA leads)"),hjust=-0.1, vjust=-0.1, color="purple")+
+  #geom_segment(aes(x=Follower,y=0),xend=Follower,yend=Leader,linetype=3)+
+  #geom_segment(aes(x=0,y=Leader),xend=Follower,yend=Leader, linetype=3)+
+
+  scale_x_continuous(breaks=seq(0,intercept,10), limits=c(0,intercept), expand=c(0,0))+
+  scale_y_continuous(breaks=seq(0,intercept,10), limits=c(0,intercept), expand=c(0,0))+
+  theme_light()+
+  annotate(geom = "label", x = (0.7*intercept), y = Firm1react(0.7*intercept), label = "Korea",
+           color = "red", size = 4.5) +
+  annotate(geom = "label", x = (0.2*intercept), y = Firm2reactplot(0.2*intercept), label = "Japan",
+           color = "blue", size = 4.5) +
+  scale_colour_manual("Reaction Curves", values = line_colors)+
+  labs(x = expression(paste("Japan's Output, " ,q[Japan])),
+       y = expression(paste("Korea's Output, " ,q[Korea])),
+       title = "Countries' Reaction Functions")+
+  theme(legend.position = "",
+        plot.title = element_text(size = rel(1.25)))
+```
+
+### Part C
+
+#### Suppose China decides to enter the VLCC construction market. The duopoly now becomes a triopoly, so that the market inverse demand function is:
+
+$$\begin{align*}
+p&=180-Q\\
+Q&=q_{Korea}+q_{Japan}+q_{China}\\
+\end{align*}$$
+
+#### Assume for simplicity that all countries face the same marginal cost of <span>&#36;</span>30 (million) per ship. Find the new best response functions, the Nash equilibrium quantity produced by each country, the market price, and the profit for each country. Hint: proceed as before, such that you get three reaction functions with three unknowns.
+
+Again, the analysis proceeds almost the same, except now we modify the market inverse demand function to create a marginal revenue function for each firm:
+
+$$\begin{align*}
+p&=180-Q && \text{The market inverse demand function}\\
+p&=180-q_{Korea}-q_{Japan}-q_{China} && \text{Plugging in }Q=q_{Korea}-q_{Japan}-q_{China}\\
+\end{align*}$$
+
+Since all firms have the same cost again, we can look just at one firm to derive the reaction function for each firm symmetrically. We'll use Korea, which sets: 
+
+$$\begin{align*}
+MR_{Korea}&=MC_{Korea} && \text{Profit-max condition} \\
+180-2q_{Korea}-q_{Japan}-q_{China}&=20 && \text{Plugging in}\\
+160-2q_{Korea}-q_{Japan}-q_{China}&=0 && \text{Subtracting 20 from both sides}\\
+160-q_{Japan}-q_{China}&=2q_{Korea} && \text{Adding }2q_{Korea} \text{ to both sides}\\
+80-0.5q_{Japan}-0.5q_{China}&=q_{Korea}^* && \text{Dividing both sides by 2}\\
+\end{align*}$$
+
+Symmetrically, each firm's optimal response is a function the other two countries' outputs: 
+
+$$\begin{align}
+q_{Korea}^*&=80-0.5q_{Japan}-0.5q_{China}\\
+q_{Japan}^*&=80-0.5q_{Korea}-0.5q_{China}\\
+q_{China}^*&=80-0.5q_{Korea}-0.5q_{Japan}\\
+\end{align}$$
+
+Now the trick is to recognize we have three equations with three unknowns, so we need to use substitution or elimination methods from algebra. 
+
+First, let's eliminate $q_{Korea}^*$ by subtracting equation (2) from equation (1):
+
+$$\begin{align*}
+q_{Korea}-q_{Japan}&=(80-0.5q_{Japan}-0.5q_{China})-(80-0.5q_{Korea}-0.5q_{China}) && \text{Subtracting (2) from (1)}\\
+q_{Korea}-q_{Japan}&=-0.5q_{Japan}+0.5q_{Korea} && \text{Eliminating like terms}\\
+q_{Korea}&=0.5q_{Japan}+0.5q_{Korea} && \text{Adding }0.5q_{Japan} \text{ to both sides}\\
+0.5q_{Korea}&=0.5q_{Japan} && \text{Subtracting }0.5q_{Korea} \text{ from both sides}\\
+q_{Korea}&=q_{Japan} && \text{Dividing both sides by 0.5}\\
+\end{align*}$$
+
+Next, let's eliminate $q_{Korea}$ by subtracting equation (3) from equation (2):
+
+$$\begin{align*}
+q_{Japan}-q_{China}&=(80-0.5q_{Korea}-0.5q_{China})-(80-0.5q_{Korea}-0.5q_{Japan}) && \text{Subtracting (2) from (1)}\\
+q_{Japan}-q_{China}&=-0.5q_{China}+0.5q_{Japan} && \text{Eliminating like terms}\\
+q_{Japan}&=0.5q_{China}+0.5q_{Japan} && \text{Adding }0.5q_{China} \text{ to both sides}\\
+0.5q_{Japan}&=0.5q_{China} && \text{Subtracting }0.5q_{Japan} \text{ from both sides}\\
+q_{Japan}&=q_{China} && \text{Dividing both sides by 0.5}\\
+\end{align*}$$
+
+Now knowing $q_{Korea}=q_{Japan}=q_{China}$, we can plug this into any reaction function. We'll plug it into Korea's:
+
+$$\begin{align*}
+q_{Korea}&=75-0.5q_{Japan}-0.5q_{China} && \text{Korea's reaction function}\\
+q_{Korea}&=75-0.5(q_{Korea})-0.5(q_{Korea}) && \text{Plugging in } q_{Korea} \text{ for } q_{Japan} \text{ and } q_{China}\\
+q_{Korea}&=75-q_{Korea} && \text{Combining like terms} \\
+2q_{Korea}&=75 && \text{Adding } q_{Korea} \text{ to both sides}\\
+q_{Korea}&=37.5 && \text{Dividing both sides by 2}\\
+\end{align*}$$
+
+Since we know $q_{Korea}=q_{Japan}=q_{China}$, each firm is producing 37.5 ships.
+
+This sets a market price of 
+
+$$\begin{align*}
+p&=180-Q && \text{Market inverse demand function}\\
+p&=180-(37.5+37.5+37.5) && \text{Plugging in countries' output}\\
+p&=67.50 && \text{Simplifying}\\
+\end{align*}$$
+
+Each country then the same profit, since they produce the same output, face the same price, and have the same cost. We'll use Korea's perspective: 
+
+$$\begin{align*}
+\pi_{Korea}&=q_{Korea}(p-c) && \text{Korea's profit function}\\
+\pi_{Korea}&=37.5(67.5-30) && \text{Plugging in}\\
+\pi_{Korea}&=1,406.25 && \text{Simplifying}\\
+\end{align*}$$
+
+Japan and China symmetrically earn \$1,406.25.
+
+### Part D
+
+#### Compare the quantity, price, and profits between parts A, B, and C
+
+Adding more firms to the industry increases competition and boosts industry output, lowering market price (and profits) on all firms. The more firms in Cournot competition, the closer we get to a competitive outcome. We can see this plainly in the graph of industry equilibria below: 
+
+```{r}
+
+Demand=function(x){a-b*x}
+MR=function(x){a-2*b*x}
+MC=function(x){c}
+    
+q_duopoly<-100
+q_triopoly<-112.5
+p_duopoly<-80
+p_triopoly<-67.5
+
+q_monopoly<-75
+p_monopoly<-105
+
+#CS_cournot<-data.frame(x=c(0,0,q_cournot),
+#                   y=c(p_cournot,a,p_cournot))
+#DWL_cournot<-data.frame(x=c(q_cournot,q_cournot,q_bertrand),
+#                   y=c(c,p_cournot,c))
+    
+#CS_calc<-(q_star*(a-p_star))/2
+    
+line_colors <- c("Demand" = "blue", "MR" = "purple", "MC" = "red")
+surplus_colors <-c("Consumer" = "blue", "Profit" = "green", "DWL" = "black")
+    
+#plot graph 
+ggplot(data.frame(x=c(1,200),y=c(0,200)), aes(x=x,y=y))+
+  stat_function(fun=MC, geom="line", size=1, aes(color="MC"))+
+  stat_function(fun=Demand, geom="line", size=1, aes(color="Demand"))+
+  stat_function(fun=MR, geom="line", size=1, aes(color="MR"))+
+  
+  # Labels
+  annotate(geom = "label", x = 40, y = Demand(40), label = "Demand",
+           color = "blue", size = 4.5) +
+  annotate(geom = "label", x = 40, y = MR(40), label = "MR",
+           color = "purple", size = 4.5) +
+  annotate(geom = "label", x = 40, y = c, label = "MC",
+           color = "red", size = 4.5) +
+
+  # Duopoly
+  geom_point(aes(x=q_duopoly,y=p_duopoly), color="black")+ 
+  geom_text(aes(x=q_duopoly,y=p_duopoly,label="Duopoly (n=2)"),hjust=-0.1, vjust=-0.1, color="black")+
+  geom_segment(aes(x=q_duopoly,y=0),xend=q_duopoly,yend=p_duopoly,linetype=3)+
+  geom_segment(aes(x=0,y=p_duopoly),xend=q_duopoly,yend=p_duopoly, linetype=3)+
+  
+  # Triopoly
+  geom_point(aes(x=q_triopoly,y=p_triopoly), color="black")+ 
+  geom_text(aes(x=q_triopoly,y=p_triopoly,label="Triopoly (n=3)"),hjust=-0.1, vjust=-0.1, color="black")+
+  geom_segment(aes(x=q_triopoly,y=0),xend=q_triopoly,yend=p_triopoly,linetype=3)+
+  geom_segment(aes(x=0,y=p_triopoly),xend=q_triopoly,yend=p_triopoly, linetype=3)+
+  
+  # Monopoly 
+  geom_point(aes(x=q_monopoly,y=p_monopoly), color="black")+
+  geom_text(aes(x=q_monopoly,y=p_monopoly,label="Monopoly (n=1)"),hjust=-0.1, vjust=-0.1, color="black")+
+  geom_segment(aes(x=q_monopoly,y=0),xend=q_monopoly,yend=p_monopoly,linetype=3)+
+  geom_segment(aes(x=0,y=p_monopoly),xend=q_monopoly,yend=p_monopoly, linetype=3)+
+  
+  # PC 
+  geom_point(aes(x=150,y=c), color="black")+
+  geom_text(aes(x=150,y=c,label="Perfect Competition"),hjust=-0.1, vjust=-0.1, color="black")+
+  geom_segment(aes(x=150,y=0),xend=150,yend=c,linetype=3)+
+  
+  scale_x_continuous(breaks=seq(0,200,20),limits=c(0,200),expand = c(0,0))+
+  scale_y_continuous(breaks=seq(0,200,20),limits=c(0,200),expand = c(0,0))+
+  scale_colour_manual("Profits", values = line_colors)+
+  labs(x = "Industry output (Q)",
+       y = "Market Price (p)",
+       title = "Cournot Competition with n Firms",
+           subtitle = expression(paste("As ", n %->% infinity,", Cournot competition approaches perfect competition")))+
+      theme(legend.position = "",
+        plot.title = element_text(size = rel(1.25)))
+```
