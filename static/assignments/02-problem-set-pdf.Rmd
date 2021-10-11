@@ -1,7 +1,7 @@
 ---
-title: "Problem Set 4"
+title: "Problem Set 2"
 author: "ECON 316 — Game Theory — Fall 2021"
-date: "Due by Wednesday October 13"
+date: "Due by Wednesday September 22"
 output:
   pdf_document:
     latex_engine: xelatex
@@ -16,65 +16,118 @@ header-includes:
 
 # Concepts
 
-1. Consider the simple hand game of "odds and evens," where two players simultaneously hold out one or two of their fingers, and add up the sum. Suppose Player 1 has chosen Odds, and Player 2 has chosen Evens, such that the sum is odd, Player 1 wins; if the sum is even, Player 2 wins. Let a win be a payoff of 1, and a loss be a payoff of $-1$. The payoff table is below:
+1. Define Nash Equilibrium, and describe three separate methods that we can use to find a Nash equilibrium in simultaneous games.
 
-\begin{figure}
-  \centering
-  \includegraphics[width=3in]{../images/hw_4_odds_evens.png}
-\end{figure}
+\vspace{3in}
 
-a. Are there any pure strategy Nash equilibria (PSNE)?
-
-b. Let \textcolor{red}{$p$} be the probability \textcolor{red}{odds} plays \textcolor{red}{One}. Write out \textcolor{blue}{Evens'} expected payoffs of playing \textcolor{blue}{One} and playing \textcolor{blue}{Two} given this. 
-
-c. Solve for the value of $p$ that makes \textcolor{blue}{Evens} indifferent between \textcolor{blue}{One} and \textcolor{blue}{Two}.
-
-d. Let \textcolor{blue}{$q$} be the probability \textcolor{blue}{Evens} plays \textcolor{blue}{One} restaurant. Write out  \textcolor{red}{Odds'} expected payoffs of playing \textcolor{red}{One} and playing \textcolor{red}{Two} given this. 
-
-e. Solve for the value of $q$ that makes \textcolor{red}{Odds} indifferent between \textcolor{red}{One} and \textcolor{red}{Two}.
-
-f. What is the mixed strategy Nash equilibrium (MSNE) of this game? 
-
-g. What is each player's expected payoff in the MSNE? 
+2. List the four types of coordination games and describe the major features of each—such as the general types of outcomes, preferences of the players over the outcomes, and the Nash equilibria. Drawing payoff matrices may help, but is not required.
 
 \clearpage
 
+3. Explain what "focal points" are, and their role in coordination games.
 
-2. You and your friend are deciding on a place to go for dinner, but are too busy to call or text one another. Each of you can go to the Chinese Restaurant or the Italian Restaurant -- suppose you prefer Chinese and your friend prefers Italian.
+\vspace{3in}
 
-\begin{figure}
-  \centering
-  \includegraphics[width=3in]{../images/hw_4_restaurants.png}
-\end{figure}
-
-a. Find all pure strategy Nash equilibria (PSNE).
-
-b. Let \textcolor{red}{$p$} be the probability \textcolor{red}{You} go to the \textcolor{red}{Chinese} restaurant. Write out your \textcolor{blue}{Friend's} expected payoffs of going to the \textcolor{blue}{Chinese} restaurant and going to the \textcolor{blue}{Italian} restaurant given this. 
-
-c. Solve for the value of $p$ that makes your \textcolor{blue}{friend} indifferent between \textcolor{blue}{Chinese} and \textcolor{blue}{Italian}.
-
-d. Let \textcolor{blue}{$q$} be the probability your \textcolor{blue}{friend} goes to the \textcolor{blue}{Chinese} restaurant. Write out  \textcolor{red}{Your} expected payoffs of going to the \textcolor{red}{Chinese} restaurant and going to the \textcolor{red}{Italian} restaurant given this. 
-
-e. Solve for the value of $q$ that makes \textcolor{red}{you} indifferent between \textcolor{red}{Chinese} and \textcolor{red}{Italian}.
-
-f. What is the mixed strategy Nash equilibrium (MSNE) of this game? 
-
-g. What is each player's expected payoff in the MSNE? 
-
-h. Write out and draw each player's best response function. Put $p$ on the horizontal axis and $q$ on the vertical axis. Label all equilibria appropriately. Label all equilibria on your graph. Hint: which expected payoff of your \textcolor{blue}{friend}'s strategies increases as $p$ increases(decreases)? Which expected payoff of \textcolor{red}{your} strategies increases as $q$ increases(decreases)?
-
-i. Given your answers to the above questions, calculate the probability that both of you go to the Chinese restaurant and the probability that both of you go to the Italian restaurant. Hint: assume each person's choice is independent.
+4. Describe the concept of *rationalizability.* How is it different from Nash equilibrium?
 
 \clearpage
 
-3. The chief of police is attempting to crack down on drunk driving, and is deciding whether to set up a sobriety checkpoint. Setting up a checkpoint always catches drunk driving, but costs the city resources. A partygoer can choose to drink Beer or Soda before driving home. Suppose the payoffs are as follows: 
+# Problems
+
+5. A university is contemplating whether to build a new lab or a new theater on campus. The science faculty would rather see a new lab built, and the humanities faculty would prefer a new theater. However, the funding for the project (whichever it may turn out to be) is contingent on unanimous support from the faculty. If there is disagreement, neither project will go forward, leaving each group with no new building and their worst payoff. The meetings of the two separate faculty groups on which proposal to support occur simultaneously, with payoffs given in the following table:
 
 \begin{figure}
   \centering
-  \includegraphics[width=3in]{../images/hw_4_party.png}
+  \includegraphics[width=3in]{../images/hw_sciences_humanities_game.png}
 \end{figure}
 
+a. Find any and all Nash equilibria of this game.
+b. Which type of coordination game is this situation most similar to? Explain your reasoning.
 
-a. Find the mixed strategy Nash equilibrium. 
 
-b. What is each party's expected value under the MSNE? 
+\clearpage
+
+6. Suppose it's the early 2000's and two Hollywood studios — Sony Pictures and Paramount Pictures — are each holding separate board meetings to strategize on how to keep up with the latest video technology. Two new advanced DVD standards are emerging on the market, HD-DVD and Blu Ray. Both firms would like to adopt a standard such that all other firms are using the same standard.
+
+a. Suppose there is no clear standard emerging yet, and no firms have any strong preferences. What type of game is this? Draw the payoff matrix and find all Nash equilibria.
+b. Suppose both firms hear rumors that another top film studio, Warner Brothers, has already committed to distributing its movies on HD-DVDs. If Sony and Paramount again must simultaneously choose a standard, what type of game is thus? Draw the new payoff matrix and find all Nash equilibria.
+c. Suppose instead that Sony's parent company actually has a stake in the company that produces Blue Rays. Additionally, Paramount's board are informed that their marketing department has already told all of Paramount's buyers that they have adopted HD-DVD, and reversing would be too embarassing. What type of game is thus? Draw the new payoff matrix and find all Nash equilibria.
+
+\clearpage
+
+7. Management and labor for a major transportation company are renegotiating their collective bargaining agreement before the crucial holiday travel season. Both labor and management will benefit from reaching *any* agreement, and would both suffer if no deal is reached and the company goes out of business. Each party certaintly wants to gain the most concessions from the other. Each can bargain Hard and obtain maximal concessions from the other party, or bargain Soft and ask for minimal concessions. If both bargain Hard, it is impossible for them to reach a deal.
+
+a. Draw the payoff matrix for this game.
+b. Which type of coordination game is this situation most similar to? Explain your reasoning.
+c. Find any and all Nash equilibria of this game.
+
+\clearpage
+
+8. Find all Nash equilibria for the following games. First, check for dominant strategies. If there are none, solve using iterated elimination of dominant strategies. Describe your process (you can simply mark up the table, but describe what you are eliminating in what order, and why).
+
+\begin{figure}
+  \centering
+  \caption*{Part A}
+  \includegraphics[width=2.5in]{../images/hw_7a.png}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \caption*{Part B}
+  \includegraphics[width=2.5in]{../images/hw_7b.png}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \caption*{Part C}
+  \includegraphics[width=2.5in]{../images/hw_7c.png}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \caption*{Part D}
+  \includegraphics[width=2.5in]{../images/hw_7d.png}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \caption*{Part E}
+  \includegraphics[width=6in]{../images/hw_7e.png}
+\end{figure}
+
+\clearpage
+
+9. Solve the following games, for which there are no strictly dominated strategies. Describe your process (you can simply mark up the table).
+
+\begin{figure}
+  \centering
+  \caption*{Part A}
+  \includegraphics[width=2.5in]{../images/hw_8a.png}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \caption*{Part B}
+  \includegraphics[width=2.5in]{../images/hw_8b.png}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \caption*{Part C}
+  \includegraphics[width=6in]{../images/hw_8c.png}
+\end{figure}
+
+\clearpage
+
+10. Consider the following game:
+
+\begin{figure}
+  \centering
+  \includegraphics[width=3in]{../images/hw_10.png}
+\end{figure}
+
+a. Find all Nash equilibria.
+b. Which equilibrium/equilibria is/are *Pareto efficient*? Why?
+c. Which equilibrium/equilibria is/are *payoff dominant*? Why?
+d. Which equilibrium/equilibria is/are *risk dominant*? Why?
+e. Which outcome(s) is/are *rationalizable*, and under what beliefs by each player?
