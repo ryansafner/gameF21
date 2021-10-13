@@ -64,7 +64,8 @@ lessons:
   - title: '<i class="fas fa-laptop-code"></i> **Problem Set 4** due Wed Oct 13'
     assignment: "04-problem-set"
 
-  - title: '<i class="fas fa-star"></i> **Midterm Exam**'
+  - title: '<i class="fas fa-star"></i> **Midterm Exam** Mon Oct 18'
+    assignment: "01-exam"
 
   - title: "3.2 — Finitely-Repeated Games"
     
