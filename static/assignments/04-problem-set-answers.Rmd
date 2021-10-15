@@ -325,7 +325,7 @@ E[\color{red}{Chinese}]& \lessgtr E[\color{red}{Italian}]\\
 
 Thus, if $q>\frac{1}{3}$, <span style=color:red;>You</span> are better off going <span style=color:red;>Chinese</span>.
 
-We can then construct <span style=color:red;>Your Best Response</span>$=\begin{cases} Italian & \text{if }q<\frac{2}{3}\\ Indifferent & \text{if }q=\frac{2}{3}\\ Chinese & \text{if }q>\frac{2}{3}\\ \end{cases}$
+We can then construct <span style=color:red;>Your Best Response</span>$=\begin{cases} Italian & \text{if }q<\frac{1}{3}\\ Indifferent & \text{if }q=\frac{1}{3}\\ Chinese & \text{if }q>\frac{1}{3}\\ \end{cases}$
 
 This should make sense, since this is a coordination game--both of you want to end up at the same place. For each player, if there is a low probability the other player is going to Chinese, then you should go to Italian; if there is a high probability the other player is going to Chinese, you should go to Chinese. 
 
@@ -371,6 +371,10 @@ ggplot(data = tibble(x = c(0,1)))+
   coord_cartesian(clip = "off")
 ```
 
+Recall from Part A the two PSNE are:
+
+1. (<span style=color:red;>Chinese</span>, <span style=color:blue;>Chinese</span>)
+2. (<span style=color:red;>Italian</span>, <span style=color:blue;>Italian</span>)
 
 ## Part I
 
