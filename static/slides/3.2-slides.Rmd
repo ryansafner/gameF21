@@ -584,8 +584,8 @@ $$p(\theta+\theta^2+\theta^3+\cdots)= \left(\frac{p}{1-\theta}\right)$$
 
 .smallest[
 - Recall, a .hi[strategy] is a complete plan of action that describes how you will react under all possible circumstances (i.e. moves by other players)
-    - i.e. "if other player plays $x$, I'll play $a$, if they play $y$, I'll play $b$, if, ..., etc"
-    - think about it as a(n infinitely-branching) game tree, .hi-turquoise[“what will I do at each node where it is my turn?”]
+  - i.e. "if other player plays $x$, I'll play $a$, if they play $y$, I'll play $b$, if, ..., etc"
+  - think about it as a(n infinitely-branching) game tree, .hi-turquoise[“what will I do at each node where it is my turn?”]
     
 - For an infinitely-repeated game, .hi-turquoise[an infinite number of possible strategies exist!]
 
