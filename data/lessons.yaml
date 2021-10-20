@@ -67,7 +67,9 @@ lessons:
   - title: '<i class="fas fa-star"></i> **Midterm Exam** Mon Oct 18'
     assignment: "01-exam"
 
-  - title: "3.2 — Finitely-Repeated Games"
+  - title: "3.2 — Repeated Games"
+    content: "3.2-content"
+    slides: "3.2-slides"
     
   - title: "3.3 — Infinitely-Repeated Games"
 
