@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>3.3 — The Evolution of Coooperation</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Ryan Safner  Assistant Professor of Economics   safner@hood.edu   ryansafner/gameF21   gameF21.classes.ryansafner.com " />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/remark-css/hygge.css" rel="stylesheet" />
+    <link href="libs/tile-view/tile-view.css" rel="stylesheet" />
+    <script src="libs/tile-view/tile-view.js"></script>
+    <link href="libs/tachyons/tachyons.min.css" rel="stylesheet" />
+    <script src="libs/freezeframe/freezeframe.min.js"></script>
+    <script src="libs/xaringanExtra-freezeframe/freezeframe-init.js"></script>
+    <script id="xaringanExtra-freezeframe-options" type="application/json">{"selector":"img[src$=\"gif\"]","trigger":"click","overlay":false,"responsive":true,"warnings":true}</script>
+    <script src="https://use.fontawesome.com/5235085b15.js"></script>
+    <link rel="stylesheet" href="custom.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# 3.3 — The Evolution of Coooperation
+## ECON 316 • Game Theory • Fall 2021
+### Ryan Safner<br> Assistant Professor of Economics <br> <a href="mailto:safner@hood.edu"><i class="fa fa-paper-plane fa-fw"></i>safner@hood.edu</a> <br> <a href="https://github.com/ryansafner/gameF21"><i class="fa fa-github fa-fw"></i>ryansafner/gameF21</a><br> <a href="https://gameF21.classes.ryansafner.com"> <i class="fa fa-globe fa-fw"></i>gameF21.classes.ryansafner.com</a><br>
+
+---
+
+
+
+
+class: inverse
+
+# Outline
+
+### [The Evolution of Cooperation](#3)
+### [The Folk Theorem](#16)
+### [Interpreting Repeated Games](#67)
+### [Application I: Reputation](#67)
+### [Application II: Law Merchant &amp; Medieval Trade Fairs](#67)
+
+---
+
+class: inverse, center, middle
+
+# The Evolution of Cooperation
+
+---
+
+# *The Evolution of Cooperation*
+
+.left-column[
+.center[
+![:scale 80%](../images/axelrod2.jpg)
+
+.smallest[
+Robert Axelrod
+
+1943—
+]
+]
+]
+
+.right-column[
+.smallest[
+- Research in explaining the **evolution of cooperation**
+- Use prisoners' dilemma to describe human societies and evolutionary biology of animal behaviors
+- Hosted a series of famous tournaments for experts to submit a strategy to play in an infinitely&lt;sup&gt;.magenta[1]&lt;/sup&gt; repeated prisoners' dilemma 
+
+]
+
+.quitesmall[
+&gt; “The contestants ranged from a 10-year-old computer hobbyist to professors of computer science, economics, psychology, mathematics, sociology, political science, and evolutionary biology.”
+
+]
+
+.smallest[
+- *The Evolution of Cooperation* (1984)
+- Among the most cited works in all of political science 
+]
+
+.source[&lt;sup&gt;.magenta[1]&lt;/sup&gt; Each round had a 0.00346 probability of ending the game, ensuring on average 200 rounds of play
+
+Axelrod, Robert, 1984, *The Evolutioon of Cooperation]
+
+]
+
+---
+
+# *The Evolution of Cooperation*
+
+.left-column[
+.center[
+![:scale 80%](../images/axelrod2.jpg)
+
+.smallest[
+Robert Axelrod
+
+1943—
+]
+]
+]
+
+.right-column[
+.smallest[
+- Axelrod's discussion of successful strategies based on four properties:
+  1. **Niceness**: cooperate, never be the first to defect
+  2. **Be Provocable**: don't be suckered by being too nice, return defection with defection
+  3. **Don't be envious**: focus on maximizing your own score, rather than ensuring your score is higher than your "partner's"
+  4. **Don't be too clever**: clarity is essential for others to cooperate with you
+
+- The winning strategy was, famously, **TIT FOR TAT**, submitted by Anatol Rapoport
+
+]
+.source[Axelrod, Robert, 1984, *The Evolutioon of Cooperation]
+]
+
+---
+
+class: inverse, center, middle
+
+# The Folk Theorem
+
+---
+
+# The Folk Theorem
+
+.pull-left[
+- Consider the **average payoff** to each player each round, depending on the strategies chosen
+    - e.g. if both Cooperate forever, average payoff is (3,3) — both earn 3 every round
+
+]
+
+.pull-right[
+&lt;img src="3.3-slides_files/figure-html/unnamed-chunk-1-1.png" width="504" style="display: block; margin: auto;" /&gt;
+
+]
+
+---
+
+# The Folk Theorem
+
+.pull-left[
+- Consider the **average payoff** to each player each round, depending on the strategies chosen
+    - e.g. if both Cooperate forever, average payoff is (3,3) — both earn 3 every round
+- Consider the .red[set of feasible average payoff]
+    - e.g. no way to produce average payoff of (6,6)
+    - average payoff of (2.5, 2.5) is possible (players alternate between C and D each round)
+
+]
+
+.pull-right[
+&lt;img src="3.3-slides_files/figure-html/unnamed-chunk-2-1.png" width="504" style="display: block; margin: auto;" /&gt;
+
+]
+
+---
+
+# The Folk Theorem
+
+.pull-left[
+
+- .hi[Folk theorem]: any .hi-purple[individually rational] and feasible average payoff can be sustained with sufficiently high `\(\delta\)` (or `\(\theta)\)`
+
+- An average payoff is .hi-purple[individually rational] if it is at least as good as the one-shot Nash equilibrium (Defect, Defect), i.e. (2,2) outcome
+
+]
+
+.pull-right[
+&lt;img src="3.3-slides_files/figure-html/unnamed-chunk-3-1.png" width="504" style="display: block; margin: auto;" /&gt;
+
+]
+
+---
+
+# Folk Theorem: Simply Put
+
+.pull-left[
+.smallest[
+- .hi[Folk theorem (simplified)]: Many strategies can sustain long-run cooperation if:
+    - Each player can observe history
+    - The value of future interactions must be sufficiently important to players
+        - sufficiently high discount rate `\(\delta\)`
+        - sufficiently high probability of game continuing `\(\theta\)`
+- If this is true, *many* strategies can sustain long-run cooperation
+    - Any in the teal set in the diagram before
+    - *Grim trigger* is simply the bare minimum/worst case scenario (and, importantly, easiest to model!)
+]
+]
+
+.pull-right[
+.center[
+![](../images/backstab.jpg)
+]
+]
+
+---
+
+# Assessing the Folk Theorem
+
+.pull-left[
+.smallest[
+- **The Good**: cooperation is possible, rational, and efficient!
+  - Any improvement above (D,D) is a Pareto improvement for all players
+    
+- **The Bad**: lack of predictive power
+  - Anything goes! Almost *any* outcome can be a sustainable equilibrium
+  - This is why game theorists use the grim trigger strategy results as the *bare minimum* sufficient strategy for cooperation
+    
+- As temptation payoff increases relative to Nash equilibrium, need higher `\(\delta\)` or `\(\theta\)` to sustain cooperation
+]
+]
+
+.pull-right[
+.center[
+![](../images/backstab.jpg)
+]
+]
+
+---
+
+class: inverse, center, middle
+
+# Interpreting Repeated Games
+
+---
+
+# Interpreting Repeated Games
+
+.pull-left[
+.smallest[
+- One-shot game between rational players leads to the predicted result (in PD: mutual defection)
+
+- But (infinitely) repeated games allow us to talk about:
+  - cooperation
+  - altruism
+  - trust
+  - loyalty and betrayal
+  - revenge and vindication
+  - promises and threats
+  
+- These are things that look "irrational" to utility-maximizing *homo economicus*
+
+- People have evolved norms and institutions to enable optimal behavior
+]
+]
+
+.pull-right[
+.center[
+![](../images/emotions.jpg)
+]
+]
+
+---
+
+# Role of Institutions (and Biology?) I
+
+.pull-left[
+.smallest[
+- (The bad side of the) Folk theorem shows us that nearly any set of strategies sustains cooperation
+
+- Main role of institutions is to .hi-turquoise[select an equilibrium] for us to coordinate around
+  - Importance of fairness and efficiency
+  - .hi-purple[Reciprocal altruism]: agent acts against its interest temporarily, in the interest of another, with expectation that other will do the same in the future
+  - “You scratch my back, I'll scratch yours”
+]
+]
+.pull-right[
+.center[
+![](../images/socialgrooming.jpg)
+]
+]
+
+---
+
+# Role of Institutions (and Biology?) I
+
+.pull-left[
+.smallest[
+- Any institution must be a Nash equilibrium in the “game” of life
+
+- In long-run, non Nash-behavior will be eliminated
+  - Later, we'll see such behavior is not “evolutionarily stable”
+
+- .hi-purple[Cultural selection theory]: societies whose institutions select fair and efficient outcomes thrive, while others perish
+    - Akin to biological natural selection
+  
+- We'll see more evolutionary biology applications of game theory shortly
+]
+]
+.pull-right[
+.center[
+![](../images/socialgrooming.jpg)
+]
+]
+
+---
+
+# Biological Cooperation: Stickelback Fish
+
+.pull-left[
+.smallest[
+- When a potential predator appears, one or more sticklebacks approach to check it out
+
+- Costly (dangerous) but provides useful information:
+  - If hungry predator: flee
+  - Otherwise, stay
+    
+- Milinski (1987) found these fish use Tit-for-Tat:
+  - Two fish swim together towards potential predator
+  - "Cooperate": move forward
+  - "Defect": hang back
+  - Clever experiments with mirrors
+]
+
+.source[Milinski, M., 1987 "TIT FOR TAT in sticklebacks and the evolution of cooperation," *Nature* 4(325): 433-435]
+]
+
+.pull-right[
+.center[
+![](../images/sticklebackfish.jpg)
+]
+]
+
+---
+
+# Biological Cooperation: Vampire Bats
+
+.pull-left[
+.smallest[
+- Vampire bats starve after 60 hours
+
+- Feed each other by regurgitating blood
+
+- Sharing food is great benefit to recipient, great cost to giver
+
+- Wilkinson (1984) provides evidence that bats that receive food are more likely to give food in future
+
+- Bats share beyond simple kin-groups
+]
+
+.source[Wilkinson, G, 1984 "Reciprocal Altruism in Bats and Other Mammals," *Ethology and Social Biology* 9(2-4): 85-100]
+
+]
+
+.pull-right[
+.center[
+![](../images/vampirebats.jpg)
+]
+]
+
+---
+
+# *Human* Social Cooperation
+
+.left-column[
+.center[
+![:scale 80%](../images/hume.png)
+
+.smallest[
+David Hume
+
+1711—1776
+]
+]
+]
+
+.right-column[
+
+&gt; “Men being naturally selfish, or endowed only with a confined generosity, they are not easily induced to perform any action for the interest of strangers, except with a view to some reciprocal advantage, which they had no hope of obtaining but by such a performance.”
+
+.source[A Treatise on Human Nature} (1740): Book III, Part II, `\(\S\)` V]
+]
+
+---
+
+# *Human* Social Cooperation
+
+
+.left-column[
+.center[
+![:scale 80%](../images/smith.png)
+
+Adam Smith
+
+1723-1790
+]
+]
+
+.right-column[
+
+.smallest[
+&gt; "In civilized society [man] stands at all times in need of the cooperation and assistance of great multitudes, while his whole life is scarce sufficient to gain the friendship of a few persons...man has almost constant occasion for the help of his brethren, and .hi[it is in vain for him to expect it from their benevolence only]."
+
+&gt; "Whoever offers to another a bargain of any kind, proposes to do this. .hi[Give me that which I want, and you shall have this which you want]...and it is in this manner that we obtain from one another the far greater part of those good offices which we stand in need of. .hi[It is not from the benevolence of the butcher, the brewer, or the baker, that we expect our dinner, but from their regard to their own interest.] (Book I, Chapter 2).
+
+]
+]
+.source[Smith, Adam, 1776, [*An Enquiry into the Nature and Causes of the Wealth of Nations*](https://www.econlib.org/library/Smith/smWN.html)]
+
+---
+
+# Cooperation, Even in Extreme Circumstances
+
+.left-column[
+.center[
+![](../images/trenchwarfare.jpeg)
+]
+]
+
+.right-column[
+
+.smaller[
+- Despite mass killing in WWI, peace would occasionally “flare” up across entrenched lines
+
+- .hi-green[Examples]:
+  - The hour of 8:00-9:00am was regarded as consecrated to "private business"
+  - No shooting during meals
+  - No firing artillery at enemy's supply lines
+
+&gt; “After shooting, a German soldier shouted out 'We are very sorry about that; we hope no one was hurt. It is not our fault, it is that damned Prussian artillery.”
+
+&gt; “A key factor was the realization that if one side would exercise a particular kind of restraint, then the other might reciprocate,” (Axelrod 1984: 78-79)
+
+]
+.source[Axelrod, Robert, 1984, *The Evolutioon of Cooperation*, Ch. 4, The Live-and-Let-Live System in Trench Warfare in World War I]
+]
+
+---
+
+class: inverse, center, middle
+
+# Application I: Reputation
+
+---
+
+# (In)complete Contracts
+
+.pull-left[
+- In economics &amp; contract theory, a .hi[complete contract] specifies all actions or transfers that parties must take under every possible contingency
+
+- In the real world of .hi-purplw[uncertainty], complete contracts are *impossible*
+
+]
+
+.pull-right[
+.center[
+![](../images/breach.jpg)
+]
+]
+
+---
+
+# Consequences of Incomplete Contracts
+
+
+.pull-left[
+
+- Agreements are always incomplete contracts, actions for many (unforeseen) contingencies are unspecified
+
+- Even for specified actions and contingencies, outcomes are indeterminate due to .hi-purple[enforcement costs]
+  - argument about interpretation
+  - slow litigation process, legal fees
+
+- Gives rise to .hi[post-contractual opportunism] (shirking, fraud, renegotiation, hold-up, etc)
+
+
+]
+
+.pull-right[
+.center[
+![](../images/negotiation.jpg)
+]
+]
+
+---
+
+# I Am Altering The Deal...
+
+.center[
+
+&lt;iframe width="980" height="550" src="https://www.youtube.com/embed/qd8hy032uLc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+
+]
+
+---
+
+# ...Pray I Don't Alter it Any Futher
+
+.center[
+&lt;iframe width="980" height="550" src="https://www.youtube.com/embed/OXyH1XkQo44" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+]
+
+---
+
+# Asides: I/O &amp; Theory of Firm
+
+.pull-left[
+.pull-left[
+.center[
+![:scale 75%](../images/io_hex.png)
+
+.smallest[
+[ECON 326 — Industrial Organization](https://ios20.classes.ryansafner.com)
+]
+]
+]
+.pull-right[
+.center[
+![:scale 75%](../images/law_hex.png)
+.smallest[
+[ECON 315 — Economics of th4e Law](https://laws21.classes.ryansafner.com)
+]
+]
+]
+]
+
+.pull-right[
+.smallest[
+- Research in industrial organization about how .hi-purple[firms solve these problems of transaction costs]
+  - vertical integration to prevent post-contractual opportunism
+  - contractual restraints (that look like they create market power but are actually efficient)
+
+- Note this line of research comes directly out of Coase (1937): firms are a solution to high transaction cost situations
+  - Coase (1960): **the law** is another
+]
+]
+
+---
+
+# Using Market Forces to Enforce Contracts: Reputation
+
+&gt; "Since every contingency cannot be cheaply specified in a contract or even known and because legal redress is expensive, transactors will generally also rely on an implicit type of long-term contract that employs a market rather than legal enforcement mechanism, namely, the imposition of a capital loss by the withdrawal of expected future business. This goodwill market-enforcement mechanism undoubtedly is a major element of the contractual alternative to vertical integration," (p.303)
+
+.source[Klein, Benjamin, Robert G Crawford, and Armen A Alchian, 1978, "Vertical Integration, Appropriable Rents, and the Competitive Contracting Process," *Journal of Law and Economics* 21(2): 297-326]
+
+---
+
+# Using Market Forces to Enforce Contracts: Reputation
+
+.smaller[
+&gt; "One way in which this market mechanism of contract enforcement may operate is by offering to the potential cheater a future 'premium,' more precisely, a price sufficiently greater than average variable (that is, avoidable) cost to assure a quasi-rent stream that will exceed the potential gain from cheating. The present-discounted value of this future premium stream must be greater than any increase in wealth that could be obtained by the potential cheater if he, in fact, cheated and were terminated. The offer of such a long-term relationship with the potential cheater will eliminate systematic opportunistic behavior," (p.304).
+
+]
+
+.source[Klein, Benjamin, Robert G Crawford, and Armen A Alchian, 1978, "Vertical Integration, Appropriable Rents, and the Competitive Contracting Process," *Journal of Law and Economics* 21(2): 297-326]
+
+---
+
+# Using Market Forces to Enforce Contracts: Reputation
+
+.smaller[
+
+&gt; "The larger the potential one-time 'theft' by cheating (the longer and more costly to detect a violation, enforce the contract, switch suppliers, and so forth) and the shorter the expected continuing business relationship, the higher this premium will be in a nondeceiving equilibrium. This may therefore partially explain both the reliance by firms on long-term implicit contracts with particular suppliers and the existence of reciprocity agreements among firms...The threat of termination of this relationship mutually suppresses opportunistic behavior. The premium stream can be usefully thought of as insurance payments made by the firm to prevent cheating," (pp.304-5)
+
+]
+.source[Klein, Benjamin, Robert G Crawford, and Armen A Alchian, 1978, "Vertical Integration, Appropriable Rents, and the Competitive Contracting Process," *Journal of Law and Economics* 21(2): 297-326]
+
+---
+
+# Using Market Forces to Enforce Contracts: Reputation
+
+.pull-left[
+- Essentially playing an infinitely repeated Prisoners' Dilemma
+  - Cooperate = fulfill contract
+  - Defect = don't buy, cheat, renege, hold up, opportunism
+
+]
+
+.pull-right[
+.center[
+![](../images/pdpayoffs3.png)
+]
+]
+
+---
+
+# Using Market Forces to Enforce Contracts: Reputation
+
+.smallest[
+&gt; “Any profits are competed away in equilibrium by competitive expenditures on fixed (sunk) assets, such as initial specific investments (for example, a sign) with low or zero salvage value if the firm cheats, necessary to enter and obtain this preferred position of collecting the premium stream. These fixed (sunk) costs of supplying credibility of future performance are repaid or covered by future sales on which a premium is earned. .hi[In equilibrium,the premium stream is then merely a normal rate of return on the 'reputation,' or 'brand-name' capital created by the firm by these initial expenditures.] This brand-name capital, .hi[the value of which is highly specific to contract fulfillment by the firm], is analytically .hi[equivalent to a forfeitable collateral bond put up by the firm which is anticipated to face an opportunity to take advantage of appropriable quasi rents in specialized assets],” (p.306).
+
+]
+
+.source[Klein, Benjamin, Robert G Crawford, and Armen A Alchian, 1978, "Vertical Integration, Appropriable Rents, and the Competitive Contracting Process," *Journal of Law and Economics* 21(2): 297-326]
+
+---
+
+# Using Market Forces to Enforce Contracts: Reputation
+
+.smallest[
+
+&gt; “We can generally say that .hi[the larger the appropriable specialized quasi rents] (and therefore .hi[the larger the potential short-run gain from opportunistic behavior]) and .hi[the larger the premium payments necessary to prevent contractual reneging, the more costly this implicit contractual solution will be]...the lower the appropriable specialized quasi rents, the more likely that transactors will rely on a contractual relationship rather than common ownership. And conversely, .hi[integration by common or joint ownership is more likely], the higher the appropriable specialized quasi rents of the assets involved,” (pp.306-307).
+
+]
+
+.source[Klein, Benjamin, Robert G Crawford, and Armen A Alchian, 1978, "Vertical Integration, Appropriable Rents, and the Competitive Contracting Process," *Journal of Law and Economics* 21(2): 297-326]
+
+---
+
+class: inverse, center, middle
+
+# Application II: Law Merchant &amp; Medieval Trade Fairs
+
+---
+
+# The Revival of International Trade (c.1100)
+.center[
+![](../images/medievaltradefairs.png)
+]
+
+---
+
+# The Revival of International Trade (c.1100)
+
+.pull-left[
+- Commercial Revolution in the 12&lt;sup&gt;th&lt;/sup&gt; Century, developments in economy and technology
+
+- Resumption of long distance international trade (not since Roman era) took place in fairs, like the Champagne Fair
+
+
+]
+
+.pull-right[
+.center[
+![](../images/medievaltown2.jpg)
+]
+]
+
+---
+
+
+# The Revival of International Trade (c.1100)
+
+.pull-left[
+- No established commercial law or State enforcement of contracts
+
+- *International* merchants can’t depend on weak &amp; biased local governments to enforce *international* contracts!
+
+- Transactions at fairs: transfer of goods in exchange for promissory note to be paid *at next fair*
+  - Ample room for dishonest merchants to trade
+  
+]
+
+.pull-right[
+.center[
+![](../images/medievaltown2.jpg)
+]
+]
+
+---
+
+# *Lex Mercatoria*
+
+.pull-left[
+- Merchants adopted their own “laws” and best practices to facilitate commerce &amp; minimize transaction costs
+  - *Lex Mercatoria*
+
+- For-profit merchant courts emerge to settle disputes and enforce international contracts
+  - More efficient, cheaper, and less partisan than Royal courts
+  - Legal and jurisdictional competition
+  
+- Developed contract law and advanced legal instruments — debt, credit, loans, equity contracts
+  
+]
+
+.pull-right[
+.center[
+![](../images/merchantlaw.png)
+]
+]
+
+---
+
+# *Lex Mercatoria*
+
+.pull-left[
+- Not part of government, had no official power to enforce judgments!
+
+- Was successful (and foundation of most international and commercial law today), so must have worked
+  
+]
+
+.pull-right[
+.center[
+![](../images/merchantlaw.png)
+]
+]
+
+---
+
+# Reputation Again
+
+.pull-left[
+
+.smaller[
+- What prevents a merchant from cheating?
+  - Reputation and sanction by other merchants
+  - If two specific merchants repeatedly interact, honesty can be sustained by trigger strategies (sufficiently high `\(\delta\)` or `\(\theta\)`, etc)
+
+- Then why need a legal system? 
+  - Merchants require *information* about other merchants and their histories
+  - Role of third party
+]
+]
+
+.pull-right[
+.center[
+![:scale 80%](../images/merchant3.png)
+]
+]
+
+---
+
+# Reputation Again
+
+.pull-left[
+
+.smallest[
+Milgrom, North, and Weingast (1990) model these interactions as a multi-stage repeated game (p.11):
+
+1. Traders may (at a cost `\(Q&gt;0\)`) ask LM (publicly reports whether any trader has any unpaid judgments) about their current partner
+2. Two traders play a prisoners' dilemma (**Honest** or **Cheat**)
+3. If LM was asked before (in stage 1), either player may **Appeal** outcome to LM at a cost `\(C&gt;0\)`
+4. If **Appealed**, LM awards damages `\((J)\)` to Plaintiff if he was Honest and his partner Cheated; otherwise nothing 
+5. Defendant chooses to **Pay** `\(J\)` or **Not**
+6. Unpaid judgments recorded by LM
+
+]
+
+.source[
+Milgrom, Paul R, Douglass C North, and Barry R Weingast, 1990, “The Role of Institutions in the Revival of Trade: The Law Merchant, Private Judges, and the Champagne Fairs,” *Economics and Politics* 2(1): 1-23
+]
+]
+
+.pull-right[
+.center[
+![](../images/milgromPD.png)
+]
+]
+
+---
+
+# Reputation Again
+
+.pull-left[
+
+- If costs of asking judge are not too high, and if players are sufficiently patient (high enough `\(\delta\)` or `\(\theta)\)`, can sustain honest trade
+
+- Merchant courts have strong incentive to be quick and efficient (promotes commerce)
+  - State/local courts biased against foreigners, inefficient
+
+.source[
+Milgrom, Paul R, Douglass C North, and Barry R Weingast, 1990, “The Role of Institutions in the Revival of Trade: The Law Merchant, Private Judges, and the Champagne Fairs,” *Economics and Politics* 2(1): 1-23
+]
+]
+
+.pull-right[
+.center[
+![:scale 80%](../images/merchant3.png)
+]
+]
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="macros.js"></script>
+<script src="https://platform.twitter.com/widgets.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9",
+"slideNumberFormat": "<div class=\"progress-bar-container\">\n  <div class=\"progress-bar\" style=\"width: calc(%current% / %total% * 100%);\">\n  </div>\n</div>\n"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

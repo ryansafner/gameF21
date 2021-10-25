@@ -71,13 +71,14 @@ lessons:
     content: "3.2-content"
     slides: "3.2-slides"
     
-  - title: "3.3 — Infinitely-Repeated Games"
-
-  - title: "3.4 — The Evolution of Cooperation"
+  - title: "3.3 — The Evolution of Cooperation"
+    content: "3.3-content"
+    slides: "3.3-slides"
   
-  - title: "3.5 — Evolutionarily Stable Strategies"
+  - title: "3.4 — Evolutionarily Stable Strategies"
+    content: "3.4-content"
   
-  - title: "3.6 — Hawk-Dove Games"
+  - title: "3.5 — Hawk-Dove Games"
 
   - title: '<i class="fas fa-laptop-code"></i> **Problem Set 5**'
 
