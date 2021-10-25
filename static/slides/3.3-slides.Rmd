@@ -54,8 +54,8 @@ class: inverse
 # Outline
 
 ### [The Evolution of Cooperation](#3)
-### [The Folk Theorem](#16)
-### [Interpreting Repeated Games](#67)
+### [The Folk Theorem](#6)
+### [Interpreting Repeated Games](#12)
 ### [Application I: Reputation](#67)
 ### [Application II: Law Merchant & Medieval Trade Fairs](#67)
 
@@ -289,7 +289,7 @@ class: inverse, center, middle
 .smallest[
 - One-shot game between rational players leads to the predicted result (in PD: mutual defection)
 
-- But (infinitely) repeated games allow us to talk about:
+- (Infinitely) repeated games allow us to consider:
   - cooperation
   - altruism
   - trust
@@ -366,9 +366,8 @@ class: inverse, center, middle
     
 - Milinski (1987) found these fish use Tit-for-Tat:
   - Two fish swim together towards potential predator
-  - "Cooperate": move forward
-  - "Defect": hang back
-  - Clever experiments with mirrors
+  - "**Cooperate**": move forward
+  - "**Defect**": hang back
 ]
 
 .source[Milinski, M., 1987 "TIT FOR TAT in sticklebacks and the evolution of cooperation," *Nature* 4(325): 433-435]
@@ -476,6 +475,9 @@ Adam Smith
   - No shooting during meals
   - No firing artillery at enemy's supply lines
 
+]
+
+.quitesmall[
 > “After shooting, a German soldier shouted out 'We are very sorry about that; we hope no one was hurt. It is not our fault, it is that damned Prussian artillery.”
 
 > “A key factor was the realization that if one side would exercise a particular kind of restraint, then the other might reciprocate,” (Axelrod 1984: 78-79)
@@ -567,7 +569,7 @@ class: inverse, center, middle
 .center[
 ![:scale 75%](../images/law_hex.png)
 .smallest[
-[ECON 315 — Economics of th4e Law](https://laws21.classes.ryansafner.com)
+[ECON 315 — Economics of the Law](https://laws21.classes.ryansafner.com)
 ]
 ]
 ]
@@ -576,11 +578,10 @@ class: inverse, center, middle
 .pull-right[
 .smallest[
 - Research in industrial organization about how .hi-purple[firms solve these problems of transaction costs]
-  - vertical integration to prevent post-contractual opportunism
-  - contractual restraints (that look like they create market power but are actually efficient)
+  - **vertical integration** to prevent post-contractual opportunism
+  - **contractual restraints** (that look like they create market power but are actually efficient)
 
-- Note this line of research comes directly out of Coase (1937): firms are a solution to high transaction cost situations
-  - Coase (1960): **the law** is another
+- In general .hi-purple[firms are a solution to high transaction cost situations]; .hi-purple[the law] is another
 ]
 ]
 
@@ -711,6 +712,7 @@ class: inverse, center, middle
 # *Lex Mercatoria*
 
 .pull-left[
+.smallest[
 - Merchants adopted their own “laws” and best practices to facilitate commerce & minimize transaction costs
   - *Lex Mercatoria*
 
@@ -719,7 +721,7 @@ class: inverse, center, middle
   - Legal and jurisdictional competition
   
 - Developed contract law and advanced legal instruments — debt, credit, loans, equity contracts
-  
+]
 ]
 
 .pull-right[
