@@ -951,7 +951,7 @@ $$\begin{align*}E[\color{red}{Dove}]&=\color{red}{5}(1-\epsilon)+\color{red}{0}(
 
 - Expected payoff for a **mutant** (Hawk) type:
 $$\begin{align*}E[\color{red}{Dove}]&=\color{red}{10}(1-\epsilon)+\color{red}{4}(\epsilon)\\
-&=10-5\epsilon\\ \end{align*}$$
+&=10-6\epsilon\\ \end{align*}$$
 
 - .hi-purple[Dove is not ESS], will be invaded by Hawks!
 
@@ -1215,7 +1215,7 @@ $$\begin{align*}E[\color{red}{Dove}]&=\color{red}{5}(1-\epsilon)+\color{red}{0}(
 
 - Expected payoff for a **mutant** (Hawk) type:
 $$\begin{align*}E[\color{red}{Hawk}]&=\color{red}{10}(1-\epsilon)+\color{red}{-5}(\epsilon)\\
-&=10-5\epsilon\\ \end{align*}$$
+&=10-15\epsilon\\ \end{align*}$$
 
 ]
 ]
@@ -1243,7 +1243,7 @@ $$\begin{align*}E[\color{red}{Dove}]&=\color{red}{5}(1-\epsilon)+\color{red}{0}(
 
 - Expected payoff for a **mutant** (Hawk) type:
 $$\begin{align*}E[\color{red}{Hawk}]&=\color{red}{10}(1-\epsilon)+\color{red}{-5}(\epsilon)\\
-&=10-5\epsilon\\ \end{align*}$$
+&=10-15\epsilon\\ \end{align*}$$
 
 - Payoff to mutant $>$ payoff to normal 
 

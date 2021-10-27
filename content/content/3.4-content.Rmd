@@ -21,7 +21,7 @@ slides: "3.4-slides"
 
 ## <i class="fas fa-info-circle fa-lg"></i> Overview
 
-Today we look at repeated games.
+Today we look at evolutionary games.
 
 ## <i class="fas fa-book-reader fa-lg"></i> Readings
 
