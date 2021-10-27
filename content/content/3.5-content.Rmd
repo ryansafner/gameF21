@@ -1,7 +1,7 @@
 ---
-title: "3.4 — Evolutionarily Stable Strategies — Class Content"
+title: "3.3 — Repeated Games — Class Content"
 draft: false
-linktitle: "3.4 — Evolutionarily Stable Strategies"
+linktitle: "3.3 — Repeated Games"
 date: "2020-06-08"
 menu:
   content:
@@ -11,11 +11,11 @@ type: docs
 output:
   blogdown::html_page:
     toc: true
-slides: "3.4-slides"
+slides: "3.2-slides"
 ---
 
 {{% alert note %}}
-*Wednesday October 27, 2021*.
+*Wednesday October 20, 2021*.
 {{% /alert %}}
 
 
@@ -25,12 +25,12 @@ Today we look at repeated games.
 
 ## <i class="fas fa-book-reader fa-lg"></i> Readings
 
-- <i class="fas fa-book"></i> Ch. 9 in Dixit and Nalebuff (paperback)
-- <i class="fas fa-book"></i> Chs. 11 in Dixit, Skeath, and Riley (textbook)
+- <i class="fas fa-book"></i> Ch. 3 in Dixit and Nalebuff (paperback)
+- <i class="fas fa-book"></i> Chs. 10 in Dixit, Skeath, and Riley (textbook)
 
 ## Recommended/Primary Sources
 
-- [<i class="fas fa-book"></i> Maynard Smith, 1982, *Evolution and the Theory of Games*, Ch. 2: “The Basic Model”](/readings/maynard-smith-1982-Ch2.pdf)
+- Axelrod, 1984, *The Evolution of Cooperation*
 
 ## <i class="fas fa-chalkboard-teacher"></i> Slides
 
@@ -39,3 +39,6 @@ Below, you can find the slides in two formats. Clicking the image will bring you
 The lower button will allow you to download a PDF version of the slides. I suggest printing the slides beforehand and using them to take additional notes in class (*not everything* is in the slides)!
 
 `r blogdown::shortcode("slide-links")`
+
+## <i class="fas fa-laptop-code"></i> Assignments
+

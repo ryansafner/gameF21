@@ -35,6 +35,9 @@ Today we look at repeated games.
 - [<i class="fas fa-file-pdf"></i> Klein and Leffler (1981), “The Role of Market Forces in Assuring Contractual Performance”](/readings/Klein-Leffler-1981.pdf)
 - [<i class="fas fa-file-pdf"></i> Milgom, North, and Weingast (1990), "The Role of Institutions in the Revival of Trade: The Law Merchant, Private Judges, and the Champagne Fairs"](/readings/Milgrom-North-Weingast-1990.pdf)
 - [<i class="fas fa-file-pdf"></i> Benson (1989), "The Spontaneous Evolution of Commercial Law"](/readings/Benson-1989.pdf)
+- [<i class="fas fa-external-link-square-alt"></i> fivethirtyeight: How to Win a Trade War](https://fivethirtyeight.com/features/how-to-win-a-trade-war/)
+
+The fivethirtyeight article contains a simulation based on Axelrod's prisoners' dilemma tournament (though, in the context of international trade/trade wars) where you can choose your strategy and play with a computer (following their own strategy) to see how you fare after 100 rounds.
 
 ## <i class="fas fa-chalkboard-teacher"></i> Slides
 
