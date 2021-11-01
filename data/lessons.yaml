@@ -80,6 +80,8 @@ lessons:
     slides: '3.4-slides'
   
   - title: "3.5 — Using Game Theory in Research"
+    content: "3.5-content"
+    slides: "3.5-slides"
 
   - title: '<i class="fas fa-laptop-code"></i> **Problem Set 5**'
 
@@ -111,6 +113,7 @@ lessons:
 
   - title: '<i class="fas fa-laptop-code"></i> **Problem Set 7**'
 
-  - title: '<i class="fas fa-laptop-code"></i> **Term Paper** Due Fri May 14'
+  - title: '<i class="fas fa-laptop-code"></i> **Term Paper** Due Mon Dec 6'
+    assignment: "term-paper"
 
   - title: '<i class="fas fa-star"></i> **Final Exam** week of May 16'

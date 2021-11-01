@@ -1,0 +1,40 @@
+---
+title: "3.5 — Using Game Theory in Research — Class Content"
+draft: false
+linktitle: "3.5 — Using Game Theory in Research"
+date: "2020-06-08"
+menu:
+  content:
+    parent: Course content
+    weight: 2
+type: docs
+output:
+  blogdown::html_page:
+    toc: true
+slides: "3.5-slides"
+---
+
+{{% alert note %}}
+*Wednesday October 27, 2021*.
+{{% /alert %}}
+
+
+## <i class="fas fa-info-circle fa-lg"></i> Overview
+
+Today we look at how game theory can be used in research, with some examples from my research, and further discuss your paper assignment.
+
+## <i class="fas fa-book-reader fa-lg"></i> Readings
+
+## Recommended/Primary Sources
+
+- [<i class="fas fa-file-pdf"></i> Safner (2021), "Kickstart My Art: Are Intellectual Property and Crowdfunding Complements or Substitutes?"](/readings/Sanfer-2021b.pdf)
+- [<i class="fas fa-file-pdf"></i> Safner (2021), "Pirate Thy Neighbor: The Protectionist Roots of International Copyright Recognition in the United States"](/readings/Sanfer-2021a.pdf)
+- [<i class="fas fa-file-pdf"></i> Safner (2021), "Honor Among Thieves: How 19th Century American Pirate Publishers Simulated Copyright Protection"](/readings/Sanfer-2021c.pdf)
+
+## <i class="fas fa-chalkboard-teacher"></i> Slides
+
+Below, you can find the slides in two formats. Clicking the image will bring you to the html version of the slides in a new tab. Note while in going through the slides, you can type <kbd>h</kbd> to see a special list of viewing options, and type <kbd>o</kbd> for an outline view of all the slides.
+
+The lower button will allow you to download a PDF version of the slides. I suggest printing the slides beforehand and using them to take additional notes in class (*not everything* is in the slides)!
+
+`r blogdown::shortcode("slide-links")`

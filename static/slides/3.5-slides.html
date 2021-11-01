@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>3.5 — Using Game Theory in Research</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Ryan Safner  Assistant Professor of Economics   safner@hood.edu   ryansafner/gameF21   gameF21.classes.ryansafner.com " />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/remark-css/hygge.css" rel="stylesheet" />
+    <link href="libs/tile-view/tile-view.css" rel="stylesheet" />
+    <script src="libs/tile-view/tile-view.js"></script>
+    <link href="libs/tachyons/tachyons.min.css" rel="stylesheet" />
+    <script src="libs/freezeframe/freezeframe.min.js"></script>
+    <script src="libs/xaringanExtra-freezeframe/freezeframe-init.js"></script>
+    <script id="xaringanExtra-freezeframe-options" type="application/json">{"selector":"img[src$=\"gif\"]","trigger":"click","overlay":false,"responsive":true,"warnings":true}</script>
+    <script src="https://use.fontawesome.com/5235085b15.js"></script>
+    <link rel="stylesheet" href="custom.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# 3.5 — Using Game Theory in Research
+## ECON 316 • Game Theory • Fall 2021
+### Ryan Safner<br> Assistant Professor of Economics <br> <a href="mailto:safner@hood.edu"><i class="fa fa-paper-plane fa-fw"></i>safner@hood.edu</a> <br> <a href="https://github.com/ryansafner/gameF21"><i class="fa fa-github fa-fw"></i>ryansafner/gameF21</a><br> <a href="https://gameF21.classes.ryansafner.com"> <i class="fa fa-globe fa-fw"></i>gameF21.classes.ryansafner.com</a><br>
+
+---
+
+
+
+
+# Game Theory
+
+.pull-left[
+
+.smallest[
+- Game theory appears somewhat tautological
+  - Result of game is baked into the rules of a game specified
+  - Game theorists often know the result even before the players play
+
+- More useful as a **theoretical framework** for understanding strategic interactions
+  - If players were rational and had perfect information — what would they do?
+  - Compare the (theory) prediction with reality
+      - Do players act differently in reality? 
+
+]
+]
+
+.pull-right[
+.center[
+![](../images/firstmove.jpg)
+]
+]
+
+---
+
+# When Results are Not as Predicted
+
+.pull-left[
+
+- Behavioral economists:
+  - Did players make a mistake? Act less than "rational"?
+  - Cognitive biases, behavioral economics explanations
+  - Did players not understand the rules?
+
+- Game theorists:
+  - Did you specify the game correctly?
+  - Are the rules correctly modeled?
+  - Are the payoffs correctly specified?
+
+]
+
+.pull-right[
+.center[
+![](../images/thinker2.jpg)
+]
+]
+
+---
+
+# Research with Game Theory
+
+.pull-left[
+.smallest[
+- Most fruitful part of research (in my biased opinion) is using game theory to understand the role of *institutions* (norms, culture, shared histories, government policies, etc.)
+    - Coordination devices
+    - Focal points
+    - Sorting between multiple Nash equilibria
+    - Path dependent outcomes
+    - Making threats/promises credible
+    - Making exchanges self-enforcing
+    - Resolving asymmetric information problems 
+
+- We'll see this starting this week, and in the papers we'll read
+]
+]
+
+.pull-right[
+.center[
+![](../images/institutions1.jpg)
+]
+]
+
+---
+
+# The Two Major Models of Economics as a “Science”
+
+.pull-left[
+
+## Optimization
+
+- Agents have .hi[objectives] they value
+
+- Agents face .hi[constraints]
+
+- Make .hi[tradeoffs] to maximize objectives within constraints
+
+.center[
+![](../images/optimize.jpeg)
+]
+]
+
+--
+
+.pull-right[
+
+## Equilibrium
+
+- Agents .hi[compete] with others over **scarce** resources
+
+- Agents .hi[adjust] behaviors based on prices
+
+- .hi[Stable outcomes] when adjustments stop
+
+.center[
+![](../images/equilibriumbalance.png)
+]
+
+]
+
+---
+
+# Game Theory vs. Decision Theory Models I
+
+.pull-left[
+.center[
+![:scale 100%](../images/optimize.jpeg)
+]
+]
+
+.pull-right[
+
+- Traditional economic models are often called .hi[“Decision theory”]:
+
+- .hi-purple[Optimization models] **ignore all other agents** and just focus on how can **you** maximize **your** objective within **your** constraints
+  - Consumers max utility; firms max profit, etc.
+
+- **Outcome**: .hi-purple[optimum]: decision where *you* have no better alternatives
+
+]
+
+
+---
+
+# Game Theory vs. Decision Theory Models I
+
+.pull-left[
+
+.center[
+![](../images/crowdartistic.jpg)
+]
+]
+
+.pull-right[
+
+- Traditional economic models are often called .hi[“Decision theory”]:
+
+- .hi-purple[Equilibrium models] assume that there are **so many agents** that **no agent’s decision can affect the outcome**
+  - Firms are price-takers or the *only* buyer or seller
+  - **Ignores all other agents’ decisions**!
+
+- **Outcome**: .hi-purple[equilibrium]: where *nobody* has any better alternative
+
+]
+
+---
+
+# Game Theory vs. Decision Theory Models III
+
+.pull-left[
+.center[
+![:scale 90%](../images/chessknights.jpg)
+]
+]
+
+.pull-right[
+
+- .hi[Game theory models] directly confront .hi-purple[strategic interactions] between players
+  - How each player would optimally respond to a strategy chosen by other player(s)
+  - Lead to a stable outcome where everyone has considered and chosen mutual best responses
+
+- **Outcome**: .hi-purple[Nash equilibrium]: where *nobody* has a better strategy **given the strategies everyone else is playing**
+
+]
+
+
+---
+
+# Equilibrium in Games
+
+.pull-left[
+.center[
+![:scale 90%](../images/chessknights.jpg)
+]
+]
+
+.pull-right[
+
+- .hi-purple[Nash Equilibrium]: 
+  - no player wants to change their strategy **given all other players’ strategies**
+  - each player is playing a **best response** against other players’ strategies
+
+]
+
+---
+
+# A Suggested Framework
+
+.pull-left[
+
+I. Identify the strategic interaction
+  - Who are the players
+  - What choices can they make?
+  - How does the *interaction* of their choices determine outcomes for each player?
+]
+
+.pull-right[
+.center[
+![](../images/institutions1.jpg)
+]
+]
+
+---
+
+# A Suggested Framework
+
+.pull-left[
+
+.smallest[
+II. Model the game: rules, payoffs, etc (*often the hard part!*)
+  - Ordering of choices -- sequential, simultaneous?
+      - Information -- what does each player know and not know
+      - One-shot or repeated?
+      - If repeated: a finite number of times? an infinite number of times? ending with certain probability?
+  - Define the payoffs (*again, the hard part*!)
+      - use *economic theory* to determine how various interactions should affect various outcomes for each player
+      - numerical payoffs make things easy, but constrain you to fewer possibilities
+      - using *variables* in payoffs allows you to solve for the *conditions* that will yield *different Nash equilibria*
+]
+]
+.pull-right[
+.center[
+![](../images/institutions1.jpg)
+]
+]
+
+---
+
+# A Suggested Framework
+
+.pull-left[
+
+III. Predict the outcome(s)
+  - Solve for Nash equilibria
+    - If applicable, consider: pure vs. mixed strategies, one-shot vs. repeated games
+  - If using variables in payoffs, what values of variables will give us various equilibria?
+  - If multiple equilibria -- any reasons we should expect one over others?
+]
+
+.pull-right[
+.center[
+![](../images/institutions1.jpg)
+]
+]
+
+---
+
+# A Suggested Framework
+
+.pull-left[
+.smallest[
+IV. Compare reality with predictions
+  - Are there behavioral reasons players do not reach predicted outcome? 
+  - Are there institutions, policies, norms, ethics, etc. that lead players towards/away from certain outcomes?
+    
+V. Consider changes in the game
+  - What would have to change (payoffs, rules, etc) to get different outcomes?
+  - Are there policies or institutions that might affect or cause this?
+  - Consider welfare of players: how do the players do? How could this be improved?
+]
+]
+.pull-right[
+.center[
+![](../images/institutions1.jpg)
+]
+]
+
+---
+
+class: inverse, center, middle
+
+# Example I: Patronage, Copyright, and Crowdfunding as Alternative Institutions
+
+---
+
+# Patronage
+
+.center[
+![](../images/courtpatron.jpg)
+]
+
+---
+
+# Patronage Today
+
+.center[
+![](../images/streetcello.jpg)
+]
+
+---
+
+# Patronage Today
+
+.center[
+![](../images/streetcellomodern.png)
+]
+
+---
+
+# Patronage Today
+
+.center[
+![](../images/kickstartmusic.png)
+]
+
+---
+
+# Basic Game
+
+.pull-left[
+.smallest[
+- .red[Creator] can produce a (single) expressive work
+  - Fixed cost `\(F\)`
+  - Marginal cost `\(C\)`
+  - If produced, incur cost `\(-(F+C)\)`, and sell at price `\(P\)`
+
+- .blue[Consumer] can consume or copy expressive work
+  - Values it at `\(V\)`
+  - Purchases at price `\(P\)`
+      - `\(V-P\)`: consumer surplus
+  - Copies with replication cost, `\(R\)`
+]
+
+.source[Safner, Ryan, 2021, “Kickstart My Art: Are Crowdfunding and Intellectual Property Complements or Substitutes?”]
+]
+
+.pull-right[
+.center[
+![](../images/patronagegame1.png)
+]
+]
+---
+
+
+# Basic Game
+
+.pull-left[
+- Solve this game by backwards induction:
+
+- Consumer will Purchase when:
+  - `\(R&gt;P\)`: costlier to copy than to purchase
+  - `\(V&gt;P\)`: price to buy is lower than value (i.e. consumer surplus, `\(V-P \geq 0\)`)
+
+- Producer will Produce when:
+  - Consumer Purchases
+  - `\(P&gt;F-C\)`: revenue exceeds cost
+  
+.source[Safner, Ryan, 2021, “Kickstart My Art: Are Crowdfunding and Intellectual Property Complements or Substitutes?”]
+
+]
+
+.pull-right[
+.center[
+![](../images/patronagegame1.png)
+]
+]
+
+---
+
+# Mechanisms to Enhance Cooperation
+
+.pull-left[
+.smallest[
+- An agent ("patron") bears the fixed costs (F) in exchange for some of the following:
+    - Distribution rights (copyrights); personal prestige; portion of profits; rewards
+- Deterrence of pirating &amp; shirking (raise R relative to P)
+    - Technology affects replication costs; Customization, product differentiation, price discrimination; Legal threats; Reputation
+- Compare three systems:
+    1. Patronage of the arts
+    2. Copyright
+    3. Crowdfunding
+]
+
+.source[Safner, Ryan, 2021, “Kickstart My Art: Are Crowdfunding and Intellectual Property Complements or Substitutes?”]
+
+]
+
+.pull-right[
+.center[
+![](../images/courtpatron.jpg)
+]
+]
+
+---
+
+# Patronage of the Arts (&amp; Sciences)
+
+.pull-left[
+.center[
+![](../images/sistinechapel.jpg)
+]
+]
+
+.pull-right[
+.center[
+![](../images/galileodialogue.jpg)
+]
+]
+
+---
+
+# Patronage Version of the Game
+
+.pull-left[
+.smallest[
+- .hi-purple[Patronage of the arts]: institution that changes the rules of the game
+  - .blue[Consumer-Patron] decides to sponsor a .red[Creator] by bearing their fixed costs F
+  - .red[Creator] now in a principal-agent problem: produce or shirk (abscond with F)
+
+- Rules of the game that affect key parameters:
+  - Removes opportunity of copying (custom works) 
+  - F: fixed costs now borne by .blue[patron]
+
+]
+.source[Safner, Ryan, 2021, “Kickstart My Art: Are Crowdfunding and Intellectual Property Complements or Substitutes?”]
+
+]
+
+.pull-right[
+.center[
+![](../images/patronagegame2.png)
+]
+]
+
+---
+
+# Copyright
+
+.pull-left[
+- Cost of replication has plummeted via new technology (both for creators &amp; for copyists)
+
+- Copyright: Individual creator can control distribution rights and seek legal sanctions against copyists 
+
+.source[Safner, Ryan, 2021, “Kickstart My Art: Are Crowdfunding and Intellectual Property Complements or Substitutes?”]
+
+]
+
+.pull-right[
+.center[
+![](../images/printingpress.jpg)
+
+![](../images/copyright.png)
+]
+]
+
+---
+
+# Copyright Version of the Game
+
+.pull-left[
+- .hi-purple[Copyright]: another institution that changes the *payoffs* of the original game
+  - If .blue[Consumer] chooses to Copy, now faces additional:
+  - `\(D\)`: damages from copyright lawsuit
+  - `\(\sigma\)`: probability of getting caught/sued
+  - .red[Creator] gains `\(\sigma D\)` (from lawsuit against .blue[Consumer]), but must pay `\(E\)` for enforcement costs (legal fees)
+    
+.source[Safner, Ryan, 2021, “Kickstart My Art: Are Crowdfunding and Intellectual Property Complements or Substitutes?”]
+
+]
+
+.pull-right[
+.center[
+![](../images/patronagegame3.png)
+]
+]
+
+---
+
+# Copyright Version of the Game
+
+.pull-left[
+    
+- .blue[Consumer] purchases when:
+  - `\(P&lt;R-\sigma D\)`
+  - More likely than first version of game
+
+.source[Safner, Ryan, 2021, “Kickstart My Art: Are Crowdfunding and Intellectual Property Complements or Substitutes?”]
+
+]
+
+.pull-right[
+.center[
+![](../images/patronagegame3.png)
+]
+]
+
+---
+
+# Patronage with Copyright/Crowdfunding Version
+
+.pull-left[
+- .hi-purple[Patronage with Copyright]: *three* players
+  - patron and consumer are different
+  - patron can sponsor creator by bearing `\(F\)`
+  - patron contracts for copyright and some share `\(\alpha\)` of the profits
+
+- .hi-purple[Crowdfunding]: patrons `\(\neq\)` wealthy elites, but a collection of many people contributing towards `\(F\)`
+
+.source[Safner, Ryan, 2021, “Kickstart My Art: Are Crowdfunding and Intellectual Property Complements or Substitutes?”]
+
+]
+
+.pull-right[
+.center[
+![](../images/patronagegame4.png)
+]
+]
+
+---
+
+# Example II: 19&lt;sup&gt;th&lt;/sup&gt; Century American Literary Piracy
+
+.pull-left[
+
+- From 18&lt;sup&gt;th&lt;/sup&gt;—mid 20&lt;sup&gt;th&lt;/sup&gt; century the United States *refused* to respect copyright of *foreign* authors
+
+- American publishing industry expressly built on piracy of foreign works (mostly British novels)
+
+- The U.S. is now the world's copyright policeman, enforcing its copyrights internationally
+  
+.source[Safner, Ryan, 2021, “Pirate Thy Neighbor: The Protectionist Roots of International Copyright Recognition in the United States”
+
+Safner, Ryan, 2021, “Honor Among Thieves: How 19th Century American Pirate Publishers Simulated Copyright Protection”]
+
+]
+
+.pull-right[
+.center[
+![](../images/piratepublishers.jpg)
+]
+]
+
+---
+
+# Example II: 19&lt;sup&gt;th&lt;/sup&gt; Century American Literary Piracy
+
+.pull-left[
+
+.smallest[
+- U.S. publishers' piracy of foreign authors in the 19&lt;sup&gt;th&lt;/sup&gt; century faced a tragedy of the commons:
+  - No exclusive claims over printing foreign works (no copyright `\(\implies\)` no right to exclude)
+
+- Solved this problem by creating a publishing cartel that created "property rights" in piracy of foreign authors
+
+- Enabled protectionist resistance to calls for respecting international copyrights 
+  - System broke down by end of 19&lt;sup&gt;th&lt;/sup&gt; century
+  - Rising U.S. cultural output in 20&lt;sup&gt;th&lt;/sup&gt; century: publishers now advocate for international copyrights
+
+]
+
+.source[Safner, Ryan, 2021, “Pirate Thy Neighbor: The Protectionist Roots of International Copyright Recognition in the United States”
+
+Safner, Ryan, 2021, “Honor Among Thieves: How 19th Century American Pirate Publishers Simulated Copyright Protection”]
+
+]
+
+.pull-right[
+.center[
+![](../images/businesscopyright.jpg)
+]
+]
+
+---
+
+# Game Setup
+
+.pull-left[
+- Two representative American publishers, 1 and 2; two authors `\(A\)`, and `\(B\)`
+
+- Publisher 1 moves first and decides to publish `\(A\)` or `\(B\)` at profit-maximizing price `\(p\)` with cost `\(c\)`
+
+- Publisher 2 moves second and can decide to publish:
+    - the *same* author as 1 ("pirate") at lower cost `\(\hat{p}&lt;p; \hat{c}&lt;c\)` or 
+    - the *other* author at cost `\(c\)`
+
+.source[Safner, Ryan, 2021, “Pirate Thy Neighbor: The Protectionist Roots of International Copyright Recognition in the United States”
+]
+
+]
+
+.pull-right[
+.center[
+![](../images/piracygame.png)
+]
+]
+---
+
+# Game Setup
+
+.pull-left[
+- Consumers will buy only from lower-priced publisher
+    - If publisher 2 pirates, can sell at lower price than publisher 1
+    - If both publish different authors, each earns `\(p_i-c\)`, where `\(i=\{A, B\}\)`
+- Authors `\(A\)` and `\(B\)` may fetch different prices `\(p_A\)` and `\(p_B\)` depending on market demand
+
+.source[Safner, Ryan, 2021, “Pirate Thy Neighbor: The Protectionist Roots of International Copyright Recognition in the United States”
+]
+
+]
+
+.pull-right[
+.center[
+![](../images/piracygame.png)
+]
+]
+
+---
+# Game Setup
+
+.pull-left[
+- Piracy/original publishing depends on: 
+  - relative value of author `\(A\)` vs `\(B\)`
+  - profits of original sales `\((p_i-c)\)` vs. profits of pirate sales `\((\hat{p_i}-\hat{c})\)`
+    - both demand for pirated works `\((\hat{p_i})\)` and reproduction technology `\((\hat{c})\)`
+
+.source[Safner, Ryan, 2021, “Pirate Thy Neighbor: The Protectionist Roots of International Copyright Recognition in the United States”
+]
+
+]
+
+.pull-right[
+.center[
+![](../images/piracygame.png)
+]
+]
+
+---
+
+# Game Outcome - Role of Institutions
+
+.pull-left[
+- Parameters `\(p_A\)`, `\(p_B\)`, `\(c\)`, and `\(\hat{c}\)` are determined by market conditions and institutions:
+
+- Historically, several methods to secure property rights and deter piracy from other publishers
+  - Arts patronage
+  - Monopoly/guild (Stationers' Company of London)
+  - Internal trade organizations
+  - Copyright law
+  
+.source[Safner, Ryan, 2021, “Pirate Thy Neighbor: The Protectionist Roots of International Copyright Recognition in the United States”]
+
+]
+
+.pull-right[
+.center[
+![](../images/piracygame.png)
+]
+]
+
+---
+
+# The Cartel Solution: “Courtesy of the Trade”
+
+.pull-left[
+.smaller[
+- 1790—1891 U.S. did not recognize copyrights to foreign authors
+
+- U.S. publishing industry largely pirated famous British authors
+ - Set up “courtesy of the trade” system of voluntary norms to avoid tragedy of commons
+ - Created pseudo-property rights in foreign authors works
+ - Ended up paying authors despite no obligation to, nor any legal protection earned
+
+]
+
+.source[Safner, Ryan, 2021, “Pirate Thy Neighbor: The Protectionist Roots of International Copyright Recognition in the United States”
+
+Safner, Ryan, 2021, “Honor Among Thieves: How 19th Century American Pirate Publishers Simulated Copyright Protection”]
+
+]
+.pull-right[
+.center[
+![](../images/cartel.jpg)
+]
+]
+
+---
+
+# The Cartel Solution: “Courtesy of the Trade”
+
+.pull-left[
+.smallest[
+- 1790—1891 U.S. did not recognize copyrights to foreign authors
+
+- Resolved the tragedy of the commons problem via a cartel
+- A publisher would announce which foreign author they would publish and stake their "claim"
+  - Other publishers would refrain from republishing that author, in hopes that when they stake a claim on a different author, others would respect it
+  - If didn't respect claims, retaliation: nobody would respect their future claims 
+
+]
+
+.source[Safner, Ryan, 2021, “Pirate Thy Neighbor: The Protectionist Roots of International Copyright Recognition in the United States”
+
+Safner, Ryan, 2021, “Honor Among Thieves: How 19th Century American Pirate Publishers Simulated Copyright Protection”]
+
+]
+.pull-right[
+.center[
+![](../images/cartel.jpg)
+]
+]
+
+---
+
+# More General Solutions
+
+.pull-left[
+
+- 1891 International Copyright Act “respects” foreign copyrights in U.S.
+  - “Manufacturing clause” required foreign works to be printed in U.S.
+  - Rationale for “trade courtesy” cartel disappears
+
+- U.S. publishers begin publishing U.S. authors
+  - Now in their interest to push for other countries to respect U.S. copyright
+  
+.source[Safner, Ryan, 2021, “Pirate Thy Neighbor: The Protectionist Roots of International Copyright Recognition in the United States”]
+
+]
+
+.pull-right[
+.center[
+![](../images/businesscopyright.jpg)
+]
+]
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="macros.js"></script>
+<script src="https://platform.twitter.com/widgets.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9",
+"slideNumberFormat": "<div class=\"progress-bar-container\">\n  <div class=\"progress-bar\" style=\"width: calc(%current% / %total% * 100%);\">\n  </div>\n</div>\n"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
