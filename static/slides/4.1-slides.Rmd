@@ -1059,3 +1059,11 @@ class: inverse, center, middle
 .center[
 <iframe width="980" height="550" src="https://www.youtube.com/embed/Fn7d_a0pmio" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 ]
+
+---
+
+# “Total Commitment” in *Dr. Strangelove*
+
+.center[
+<iframe width="980" height="550" src="https://www.youtube.com/embed/PSofqNSuVy8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+]
