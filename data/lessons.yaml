@@ -83,17 +83,19 @@ lessons:
     content: "3.5-content"
     slides: "3.5-slides"
 
-  - title: '<i class="fas fa-laptop-code"></i> **Problem Set 5**'
-
   - title: '<span class="fake-header-table">IV. Commitment, Credibility, & Information</span>'
     header: True
 
   - title: "4.1 — Subgame Perfection"
+    content: "4.1-content"
+    slides: "4.1-slides"
 
   - title: "4.2 — Strategic Moves & Commitment"
 
   - title: "4.3 — Political Economy of Credible Commitment"
     
+  - title: '<i class="fas fa-laptop-code"></i> **Problem Set 5**'
+
   - title: "4.4 — Asymmetric Information"
 
   - title: "4.5 — Bayesian Games & Signalling"
