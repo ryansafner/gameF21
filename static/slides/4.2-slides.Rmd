@@ -53,23 +53,22 @@ class: inverse
 
 # Outline
 
-### [Subgame Perfection](#3)
-### [Subgames](#9)
-### [Entry Game Example](#27)
-### [Strategic Moves](#40)
+### [Credible Commitments](#3)
+### [Threats and Applications](#9)
+### [Promises and Applications](#27)
 
 ---
 
 class: inverse, center, middle
 
-# Subgame Perfection
+# Credible Commitments
 
 ---
 
 # Another Motivating Example: Why Professors Are Mean
 
 .pull-left[
-.smaller[
+.smallest[
 - Most professors have a lateness policy where late homework is either not accepted, or points are lost
 
 - Not (necessarily) because professors are mean!
@@ -442,10 +441,10 @@ Economics Nobel 2005
 
 .pull-left[
 
-- .red[Hernan Cortes] and the .red[Spanish conquistadors] invade Mexico in the early 16<sup>th</sup> century, ruled by .blue[Aztecs]
+- .blue[Hernan Cortes] and the .blue[Spanish conquistadors] invade Mexico in the early 16<sup>th</sup> century, ruled by .red[Aztecs]
 
 - If both sides fight, worst outcome for both
-  - .red[Spaniards] have inferior numbers than .blue[Aztecs], heavier losses
+  - .blue[Spaniards] have inferior numbers than .red[Aztecs], heavier losses
 
 - If one side fights and the other runs, the fighter gets more than runner
 
@@ -1269,7 +1268,7 @@ class: inverse, center, middle
   - $\alpha = 0$: hostage has no value to .red[Principal]
   - $\alpha = 1$: cash
 
-- If $H >150$ and $\alphaH > 100$, .hi-purple[SPNE]: (.red[Invest, Don't], .blue[Bond, Share, Keep])
+- If $H >150$ and $\alpha H > 100$, .hi-purple[SPNE]: (.red[Invest, Don't], .blue[Bond, Share, Keep])
 
 ]
 ]
