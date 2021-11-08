@@ -373,7 +373,7 @@ Economics Nobel 2005
 # Cut off Communication
 
 .center[
-<iframe width="980" height="550" src="https://www.youtube.com/embed/u7hZ9jKrwvo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="980" height="550" src="https://www.youtube.com/embed/PSofqNSuVy8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 ]
 
 ---
@@ -419,10 +419,10 @@ Economics Nobel 2005
 
 .pull-left[
 
-- .red[Hernan Cortes] and the .red[Spanish conquistadors] invade Mexico in the early 16<sup>th</sup> century, ruled by .blue[Aztecs]
+- .blue[Hernan Cortes] and the .blue[Spanish conquistadors] invade Mexico in the early 16<sup>th</sup> century, ruled by .red[Aztecs]
 
 - If both sides fight, worst outcome for both
-  - .red[Spaniards] have inferior numbers than .blue[Aztecs], heavier losses
+  - .blue[Spaniards] have inferior numbers than .red[Aztecs], heavier losses
 
 - If one side fights and the other runs, the fighter gets more than runner
 
@@ -529,7 +529,7 @@ Economics Nobel 2005
 
 .pull-right[
 .center[
-![](../images/cortes_game_commitment.png)
+![](../images/cortes_game_commitment_spne.png)
 ]
 ]
 
@@ -543,7 +543,7 @@ Economics Nobel 2005
 ]
 ]
 
-.right-column[
+.pull-right[
 
 > “If you want to take the island, burn the boats.” — Julius Caesar before his invasion of Britannia (55 B.C.)
 
@@ -559,7 +559,7 @@ Economics Nobel 2005
 ]
 ]
 
-.right-column[
+.pull-right[
 
 > “At the critical moment, the leader of an army acts like one who has climbed up a height, and then kicks away the ladder behind him” — Sun Tzu, *The Art of War* (c.500 B.C.)
 
@@ -1235,4 +1235,68 @@ class: inverse, center, middle
 
 ---
 
+# Making Promises Credible
 
+.pull-left[
+.smallest[
+- One solution: .hi-purple[reputation], which acts like a forfeitable .hi-purple[bond]
+
+- If .blue[Agent] chooses to .blue[Keep], will lose -H, which is “hostage” value
+  - .red[Principal] will earn $\alpha H$, where $\alpha$ is the faction of $H$ that is valuable to .red[Principal]
+  - $\alpha = 0$: hostage has no value to .red[Principal]
+  - $\alpha = 1$: cash
+
+]
+]
+
+.pull-right[
+.center[
+![](../images/investment_game_commitment.png)
+]
+
+]
+
+---
+
+# Making Promises Credible
+
+.pull-left[
+.smallest[
+- One solution: .hi-purple[reputation], which acts like a forfeitable .hi-purple[bond]
+
+- If .blue[Agent] chooses to .blue[Keep], will lose -H, which is “hostage” value
+  - .red[Principal] will earn $\alpha H$, where $\alpha$ is the faction of $H$ that is valuable to .red[Principal]
+  - $\alpha = 0$: hostage has no value to .red[Principal]
+  - $\alpha = 1$: cash
+
+- If $H >150$ and $\alphaH > 100$, .hi-purple[SPNE]: (.red[Invest, Don't], .blue[Bond, Share, Keep])
+
+]
+]
+
+.pull-right[
+.center[
+![](../images/investment_game_commitment_spne.png)
+]
+
+]
+
+---
+
+# In The Old Days, These Were *Actual* Hostages
+
+.center[
+![:scale 50%](../images/theon.png)
+]
+
+.source[Williamson, Oliver E, 1983, “Credible Commitments: Using Hostages to Support Exchange,” *American Economic Review* 73(4): 519–540]
+
+---
+
+# Today We Often Hold Property Hostage as Collateral
+
+.center[
+![](../images/mortgageapp.jpg)
+]
+
+.source[Williamson, Oliver E, 1983, “Credible Commitments: Using Hostages to Support Exchange,” *American Economic Review* 73(4): 519–540]
