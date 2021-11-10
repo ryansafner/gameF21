@@ -26,6 +26,7 @@ Today we discuss several examples of the credible commitment problem in politica
 ## <i class="fas fa-book-reader fa-lg"></i> Readings
 
 - <i class="fas fa-book"></i> Chs. 10 in Dixit, Skeath, and Riley (textbook)
+- [<i class="fas fa-file-pdf"></i> Greif, Milgrom, and Weingast (1994), "Coordination, Commitment, and Enforcement: The Case of the Merchant Guild"](/readings/Greif-Milgrom-Weingast-1994.pdf)
 - [<i class="fas fa-file-pdf"></i> Weingast (1995), "The Economic Role of Political Institutions: Market-Preserving Federalism and Economic Development"](/readings/Weingast-1995.pdf)
 - [<i class="fas fa-file-pdf"></i> Fearon (1995), "Rationalist Explanations for War"](/readings/Fearon-1995.pdf)
 - [<i class="fas fa-file-pdf"></i> Allison (2015), "The Thucydides Trap: Are the U.S. and China Headed for War?", *The Atlantic*](https://www.theatlantic.com/international/archive/2015/09/united-states-china-war-thucydides-trap/406756)

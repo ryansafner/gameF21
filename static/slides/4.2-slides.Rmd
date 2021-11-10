@@ -1322,3 +1322,54 @@ class: inverse, center, middle
 ]
 
 .source[Williamson, Oliver E, 1983, “Credible Commitments: Using Hostages to Support Exchange,” *American Economic Review* 73(4): 519–540]
+
+---
+
+# Contract Law: Making Promises Credible
+
+.pull-left[
+- Suppose instead we have courts enforce a promise to .blue[Keep]
+  - Court will force .blue[Agent] to give $150 to .red[Principal]
+  - Litigation cost of using courts $c$ to each party
+]
+
+.pull-right[
+.center[
+![](../images/agencygamecontractlaw.png)
+]
+]
+
+---
+
+# Contract Law: Making Promises Credible
+
+.pull-left[
+- Suppose instead we have courts enforce a promise to .blue[Keep]
+  - Court will force .blue[Agent] to give $150 to .red[Principal]
+  - Litigation cost of using courts $c$ to each party
+  
+- With $c>0$, .hi-purple[SPNE]: (.red[Invest], .blue[Share])
+  - (One main) purpose of contract law is to .hi-purple[make promises credible]
+]
+
+.pull-right[
+.center[
+![](../images/agencygamecontractlawNE.png)
+]
+]
+
+---
+
+# Making Promises Credible: Engagement
+
+.pull-left[
+.center[
+![](../images/engagementring.png)
+]
+]
+
+.pull-right[
+.center[
+![](../images/weddingcoldfeet.jpg)
+]
+]
