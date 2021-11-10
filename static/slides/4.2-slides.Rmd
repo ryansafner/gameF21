@@ -1282,6 +1282,29 @@ class: inverse, center, middle
 
 ---
 
+# Making Promises Credible
+
+.pull-left[
+.smallest[
+- Common type of bond is reputation, which people can invest in and is “held hostage” for good behavior
+  - reneging on commitments destroys reputation
+  - works best with repeat interactions, high discount rates (folk theorem!)
+  
+- Another is some collateral property that is forfeit if the contract is breached
+  - Mortgages, secured loans, etc
+
+]
+]
+
+.pull-right[
+.center[
+![](../images/amazonreviews2.png)
+]
+
+]
+
+---
+
 # In The Old Days, These Were *Actual* Hostages
 
 .center[
