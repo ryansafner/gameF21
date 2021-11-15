@@ -1367,6 +1367,29 @@ E[War]&=[0.50(100)+0.5(0)]-10\\
 
 ---
 
+# Explanation II: Credible Commitment Problems
+
+.left-column[
+.center[
+![:scale 80%](../images/fearon.jpg)
+.smallest[
+James Fearon
+
+1963-
+]
+]
+]
+
+.right-column[
+
+> “In words (roughly), if B's expected decline in military power is too large relative to B's costs for war, then state A's inability to commit to restrain its foreign policy demands after it gains power makes preventative attack rational for state B,” (p.402).
+
+.source[Fearon, James, 1995, “Rationalist Explanations for War,” *International Organization* 49(3): 379-414]
+]
+
+---
+
+
 # The Thucydides Trap
 
 .left-column[
@@ -1410,7 +1433,7 @@ Graham Allison
 "In 12 of 16 past cases in which a rising power has confronted a ruling power, the result has been bloodshed."
 
 .center[
-![:scale 50%](../images/thucydidestrap.png)
+![:scale 45%](../images/thucydidestrap.png)
 ]
 
 .source[Allison, Graham, 2015, [“The Thucydides Trap: Are the U.S. and China Headed for War?”](https://www.theatlantic.com/international/archive/2015/09/united-states-china-war-thucydides-trap/406756), *The Atlantic*]
