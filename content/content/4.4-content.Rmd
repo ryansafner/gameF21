@@ -1,0 +1,41 @@
+---
+title: "4.4 — Incomplete & Asymmetric Information & Bayesian Games — Class Content"
+draft: false
+linktitle: "4.4 — Incomplete & Asymmetric Information & Bayesian Games"
+date: "2020-06-08"
+menu:
+  content:
+    parent: Course content
+    weight: 2
+type: docs
+output:
+  blogdown::html_page:
+    toc: true
+slides: "4.4-slides"
+---
+
+{{% alert note %}}
+*Monday November 15, 2021*
+{{% /alert %}}
+
+## <i class="fas fa-info-circle fa-lg"></i> Overview
+
+Today we begin to relax our assumption of perfect information in games, and look at games with imperfect, and incomplete information. The typical type of incomplete information game is a game of asymmetric information — where (at least) one player has private information (about their type), that the other player(s) does not know. These are considered Bayesian games, since the players must act on their *beliefs* about the other players, and update their beliefs based on their actions accordingly.
+
+## <i class="fas fa-book-reader fa-lg"></i> Readings
+
+- <i class="fas fa-book"></i> Ch. 6.3, 8 in Dixit, Skeath, and Riley (textbook)
+
+Chapter 6.3 talks about information sets and sequential games. Chapter 8 is about incomplete information, though unfortunately the textbook does not go into great detail about Bayesian games. 
+
+Below is the famous paper by Harsanyi that introduces Bayesian games and the common strategy for dealing with incomplete information. 
+
+- [<i class="fas fa-file-pdf"></i> Harsanyi (1967), "Games with Incomplete Information Played by ‘Bayesian’ Players I-III, Part I: The Basic Model"](/readings/Harsanyi-1967.pdf)
+
+## <i class="fas fa-chalkboard-teacher"></i> Slides
+
+Below, you can find the slides in two formats. Clicking the image will bring you to the html version of the slides in a new tab. Note while in going through the slides, you can type <kbd>h</kbd> to see a special list of viewing options, and type <kbd>o</kbd> for an outline view of all the slides.
+
+The lower button will allow you to download a PDF version of the slides. I suggest printing the slides beforehand and using them to take additional notes in class (*not everything* is in the slides)!
+
+`r blogdown::shortcode("slide-links")`

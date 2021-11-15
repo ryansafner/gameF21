@@ -98,12 +98,17 @@ lessons:
     content: "4.3-content"
     slides: "4.3-slides"
     
-  - title: '<i class="fas fa-laptop-code"></i> **Problem Set 5**'
+  - title: '<i class="fas fa-laptop-code"></i> **Problem Set 5** due Mon Nov 22'
+    assignment: "05-problem-set"
 
-  - title: "4.4 — Asymmetric Information"
-
-  - title: "4.5 — Bayesian Games & Signalling"
+  - title: "4.4 — Incomplete & Asymmetric Information & Bayesian Games"
+    content: "4.4-content"
+    slides: "4.4-slides"
     
+  - title: "4.5 — Bayesian Players & Sequential Bayesian Games"
+    
+  - title: "4.6 — Screening & Signalling"
+
   - title: "4.7 — Preference Falsification"
 
   - title: '<i class="fas fa-laptop-code"></i> **Problem Set 6**'

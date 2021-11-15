@@ -25,7 +25,8 @@ Today we begin looking at how players can make promises and threats that are cre
 
 ## <i class="fas fa-book-reader fa-lg"></i> Readings
 
-- <i class="fas fa-book"></i> Chs. 10 in Dixit, Skeath, and Riley (textbook)
+- <i class="fas fa-book"></i> Chs. 9 in Dixit, Skeath, and Riley (textbook)
+- [<i class="fas fa-file-pdf"></i> Brining (1990), "Rings and Promises"](/readings/Brining-1990.pdf)
 
 ## <i class="fas fa-chalkboard-teacher"></i> Slides
 
