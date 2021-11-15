@@ -4,6 +4,7 @@
     {{- range .Site.Data.lessons }}
         {{- range . }}
         <tr>
+            <td style="width:50%;text-align:left">{{ .title | markdownify }}</td>
 
             {{- if .header }}
 
