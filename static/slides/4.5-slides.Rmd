@@ -473,8 +473,8 @@ $$\color{green}{P(B|A)} = \frac{P(A \text{ and } B)}{\color{red}{P(A)}}$$
 $$\color{orange}{P(A|B)} = \frac{P(A \text{ and } B)}{\color{blue}{P(B)}}$$
 
 $$\color{orange}{P(A|B)}\color{blue}{P(B)} = P(A \text{ and }B) = \color{green}{P(B|A)}\color{red}{P(A)}$$
-- If you divide everything by .blue[P(B)], you get....hi[Bayes’ rule]:
-$$\color{purple}{P(A|B)} = \frac{\color{magenta}{P(B|A)}\color{red}{P(A)}}{\color{blue}{P(B)}}$$
+- Divide everything by .blue[P(B)], you get, famously, .hi[Bayes’ rule]:
+$$\color{orange}{P(A|B)} = \frac{\color{green}{P(B|A)}\color{red}{P(A)}}{\color{blue}{P(B)}}$$
 ]
 ]
 
