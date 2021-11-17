@@ -1,0 +1,43 @@
+---
+title: "4.5 — Incomplete & Asymmetric Information & Bayesian Games — Class Content"
+draft: false
+linktitle: "4.5 — Incomplete & Asymmetric Information & Bayesian Games"
+date: "2020-06-08"
+menu:
+  content:
+    parent: Course content
+    weight: 2
+type: docs
+output:
+  blogdown::html_page:
+    toc: true
+slides: "4.5-slides"
+---
+
+{{% alert note %}}
+*Wednesday November 17, 2021*
+{{% /alert %}}
+
+## <i class="fas fa-info-circle fa-lg"></i> Overview
+
+We saw from last class that to deal with games of incomplete information, assuming Bayesian players, we can transform it into a game of complete, but imperfect, information. What does Harsanyi mean by “Bayesian” players? I will now introduce you to the wonderful world of [Bayesian statistics](https://en.wikipedia.org/wiki/Bayesian_inference) — a bit of a detour from game theory, but worth knowing in and of itself. We will then need this in order to solve for equilibria in sequential Bayesian games, coming up next.
+
+The main feature of Bayesian thinking is [Bayes’ rule/theorem](https://en.wikipedia.org/wiki/Bayes_rule):
+
+$$P(A|B)=\frac{P(B|A)P(A)}{P(B)}$$
+## <i class="fas fa-book-reader fa-lg"></i> Readings
+
+Bayes’ Rule is very standard in statistics, and so there are lots of great resources explaning it and providing examples. My favorite comes from the Youtube channel 3Blue1Brown: 
+
+- [<i class="fab fa-youtube"></i> 3Blue1Brown Youtube: “Bayes theorem, the geometry of changing beliefs”](https://www.youtube.com/watch?v=HZGCoVF3YvM)
+- [<i class="fab fa-youtube"></i> 3Blue1Brown Youtube: “The medical test paradox, and redesigning Bayes’ rule”](https://www.youtube.com/watch?v=lG4VkPoG3ko)
+- [<i class="fab fa-youtube"></i> 3Blue1Brown Youtube: “The quick proof of Bayes’ theorem](https://www.youtube.com/watch?v=U_85TaXbeIo)
+- [<i class="fas fa-book"></i> The Theory That Would Not Die: How Bayes' Rule Cracked the Enigma Code, Hunted Down Russian Submarines, and Emerged Triumphant from Two Centuries of Controversy](https://www.amazon.com/Theory-That-Would-Not-Die/dp/0300188226)
+
+## <i class="fas fa-chalkboard-teacher"></i> Slides
+
+Below, you can find the slides in two formats. Clicking the image will bring you to the html version of the slides in a new tab. Note while in going through the slides, you can type <kbd>h</kbd> to see a special list of viewing options, and type <kbd>o</kbd> for an outline view of all the slides.
+
+The lower button will allow you to download a PDF version of the slides. I suggest printing the slides beforehand and using them to take additional notes in class (*not everything* is in the slides)!
+
+`r blogdown::shortcode("slide-links")`

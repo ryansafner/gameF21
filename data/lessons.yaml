@@ -105,9 +105,11 @@ lessons:
     content: "4.4-content"
     slides: "4.4-slides"
     
-  - title: "4.5 — Bayesian Players & Sequential Bayesian Games"
+  - title: "4.5 — Bayesian Players"
+    content: "4.5-content"
+    slides: "4.5-slides"
     
-  - title: "4.6 — Screening & Signalling"
+  - title: "4.6 — Sequential Bayesian Games: Screening & Signalling"
 
   - title: "4.7 — Preference Falsification"
 
