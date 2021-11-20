@@ -21,8 +21,7 @@ Please read the [instructions](/assignments/problem-sets) for completing homewor
 # Concepts
 
 ## Question 1
-
-1. What is the difference between a **finitely** repeated game and an **infinitely** repeated game? What is the pure strategy Nash equilibrium in a finitely-repeated game (with a unique Nash equilibrium in a one-shot version)? Describe *two* interpretations of *infinitely* repeated games. 
+What is the difference between a **finitely** repeated game and an **infinitely** repeated game? What is the pure strategy Nash equilibrium in a finitely-repeated game (with a unique Nash equilibrium in a one-shot version)? Describe *two* interpretations of *infinitely* repeated games. 
 
 ## Question 2
 
@@ -85,7 +84,7 @@ Under the new environment, is **Stag** evolutionarily stable (ESS)?
 
 ### Part F
 
-Given what we learned in class about the relationship between (pure strategy) Nash equilibria and evolutionarily stable strategies, we now need a new refinement. Define a **\emph{strict} Nash equilibrium** in pure strategies to mean that each player is playing a **strict** (or **unique**) best response to other players, i.e. there is no *other* strategy that is *also* a best response to another player. In the one-shot game in part d, which PSNE are **strict**, and which are not (i.e. "weak" PSNE? What do you then think is the relationship between ESS and strict/non-strict PSNE?
+Given what we learned in class about the relationship between (pure strategy) Nash equilibria and evolutionarily stable strategies, we now need a new refinement. Define a **_strict_ Nash equilibrium** in pure strategies to mean that each player is playing a **strict** (or **unique**) best response to other players, i.e. there is no *other* strategy that is *also* a best response to another player. In the one-shot game in part d, which PSNE are **strict**, and which are not (i.e. "weak" PSNE? What do you then think is the relationship between ESS and strict/non-strict PSNE?
 
 ## Question 9
 
@@ -117,11 +116,11 @@ Find the evolutionarily stable (polymorphic) equilibrium distribution of **Hawks
 
 ## Question 10
 
-Consider the following game between two roommates. Roommate \textcolor{red}{A} has a very difficult exam the next morning, while Roommate \textcolor{blue}{B} does not. The two of them can each decide to Study or Go Out that evening. Both would rather do something together, while \textcolor{red}{A} would certainly prefer they both Study and \textcolor{blue}{B} would prefer they both Go Out.
+Consider the following game between two roommates. Roommate A has a very difficult exam the next morning, while Roommate B does not. The two of them can each decide to Study or Go Out that evening. Both would rather do something together, while A would certainly prefer they both Study and B would prefer they both Go Out.
 
 ### Part A
 
-Suppose they both agree that \textcolor{red}{A} gets to decide first and \textcolor{blue}{B} must respond, as in the following game:
+Suppose they both agree that A gets to decide first and B must respond, as in the following game:
 
 <img src="../../images/hw_5_roommates.png" width="350">
 

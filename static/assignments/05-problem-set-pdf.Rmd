@@ -1,0 +1,99 @@
+---
+title: "Problem Set 4"
+author: "ECON 316 — Game Theory — Fall 2021"
+date: "Due by Wednesday October 13"
+output:
+  pdf_document:
+    latex_engine: xelatex
+header-includes:
+- \usepackage{amsmath, multirow, multicol, booktabs, caption}
+
+#mainfont: "Fira Sans Condensed"
+#monofont: "Fira Code"
+#mathfont: "Fira Sans"
+#fontsize: 11pt
+---
+
+# Concepts
+
+1. What is the difference between a **finitely** repeated game and an **infinitely** repeated game? What is the pure strategy Nash equilibrium in a finitely-repeated game (with a unique Nash equilibrium in a one-shot version)? Describe *two* interpretations of *infinitely* repeated games. 
+
+\vspace{3in}
+
+2. Describe, in your own words, the simple version (or implications) of the **folk theorem** for sustaining cooperation.
+
+\clearpage
+
+3. Describe what a **subgame** means, and circle all subgames in the following game tree.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=3in]{../images/hw_hansel_gretel.png}
+\end{figure}
+
+\clearpage
+
+4. Define **subgame perfect Nash equilibrium**.
+
+\vspace{3in}
+
+5. Explain what **strategic moves** are, and explain the three major types of strategic moves.
+
+\clearpage
+
+6. What makes a *promise* **credible**? What makes a *threat* **credible**? Give some examples of each, and in your answers, use the concept of **subgame perfection.**
+
+
+\vspace{3in}
+
+7. What makes a strategy **evolutionarily stable** (ESS)? Describe the difference between **monomorphic** and **polymorphic** equilibria.
+
+\clearpage
+
+# Problems
+
+8. Consider an evolutionary version of the Stag Hunt game, where members of a species can decide to cooperate and hunt a **Stag** together, or defect and go after a **Hare** on their own.
+ 
+\begin{figure}
+  \centering
+  \includegraphics[width=3in]{../images/stag_hunt_abstract.png}
+\end{figure}
+
+a. Is **Stag** an evolutionarily stable strategy (ESS)?
+b. Is **Hare** an evolutionarily stable strategy (ESS)?
+c. What are the pure strategy Nash equilibria (PSNE) of this game? Reconcile this with your answers in parts a and b.
+d. Suppose the environment changes such that hunting a large **Hare** *alone* is equally rewarding to the cooperative hunt of a **Stag** (but if they both hunt **Hare**, it is less rewarding).
+\begin{figure}
+  \centering
+  \includegraphics[width=3in]{../images/stag_hunt_equal_hare.png}
+\end{figure}
+Under the new environment, is **Hare** evolutionarily stable (ESS)?
+e. Under the new environment, is **Stag** evolutionarily stable (ESS)?
+f. Given what we learned in class about the relationship between (pure strategy) Nash equilibria and evolutionarily stable strategies, we now need a new refinement. Define a **_strict_ Nash equilibrium** in pure strategies to mean that each player is playing a **strict** (or **unique**) best response to other players, i.e. there is no *other* strategy that is *also* a best response to another player. In the one-shot game in part d, which PSNE are **strict**, and which are not (i.e. "weak" PSNE? What do you then think is the relationship between ESS and strict/non-strict PSNE?
+
+\clearpage
+
+9. Consider the evolutionary Hawk-Dove game, where members of a species are competing over a resource valued at 12, with a cost of losing a fight being $-15$.
+
+a. Draw the payoff matrix for the game.
+b. Find the pure strategy Nash equilibria.
+c. Is **Hawk** evolutionarily stable?
+d. Is **Dove** evolutionarily stable?
+e. Reconcile your answers in parts c and d to your answer in part b.
+f. Find the evolutionarily stable (polymorphic) equilibrium distribution of **Hawks** and **Doves.** [Hint: let $p$ be the probability the *other* player is a **Hawk**.]
+
+\clearpage
+
+10. Consider the following game between two roommates. Roommate \textcolor{red}{A} has a very difficult exam the next morning, while Roommate \textcolor{blue}{B} does not. The two of them can each decide to Study or Go Out that evening. Both would rather do something together, while \textcolor{red}{A} would certainly prefer they both Study and \textcolor{blue}{B} would prefer they both Go Out.
+
+a. Suppose they both agree that \textcolor{red}{A} gets to decide first and \textcolor{blue}{B} must respond, as in the following game:
+\begin{figure}
+  \centering
+  \includegraphics[width=3in]{../images/hw_5_roommates.png}
+\end{figure}
+Solve this game for the rollback equilibrium using backwards induction.
+b. Circle all subgames on the game tree.
+c. Carefully convert this game from extensive form to strategic form. (Be mindful of how many potential strategies each player has!) Then, find any Nash equilibria in strategic form.
+d. Which Nash equilibrium is subgame perfect? Why?
+e. Suppose in an attempt to get A to Go Out, B says they will Go Out regardless of what A does. If A still gets to decide first (i.e. it is the same game as in part a), what should A make of this?
+
