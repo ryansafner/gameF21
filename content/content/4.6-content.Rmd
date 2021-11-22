@@ -30,8 +30,8 @@ The latter type have many famous examples in game theory and applications, and w
 
 ## <i class="fas fa-book-reader fa-lg"></i> Readings
 
-- [<i class="fas fa-file-pdf"></i> Akerlof, 1970, “The Market for Lemons”](/readings/Akerlof-1970.pdf)
-- [<i class="fas fa-file-pdf"></i> Spence, 1973, “Job Market Signaling”](/readings/Leeson-2012.pdf)
+- [<i class="fas fa-file-pdf"></i> Akerlof, 1970, “The Market for ‘Lemons’: Quality Uncertainty and the Market Mechanism”](/readings/Akerlof-1970.pdf)
+- [<i class="fas fa-file-pdf"></i> Spence, 1973, “Job Market Signaling”](/readings/Spence-1973.pdf)
 - [<i class="fas fa-file-pdf"></i> Leeson, 2012, “Ordeals”](/readings/Leeson-2012.pdf)
 
 ## <i class="fas fa-chalkboard-teacher"></i> Slides

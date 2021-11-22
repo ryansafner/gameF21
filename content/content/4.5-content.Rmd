@@ -25,6 +25,7 @@ We saw from last class that to deal with games of incomplete information, assumi
 The main feature of Bayesian thinking is [Bayes’ rule/theorem](https://en.wikipedia.org/wiki/Bayes_rule):
 
 $$P(A|B)=\frac{P(B|A)P(A)}{P(B)}$$
+
 ## <i class="fas fa-book-reader fa-lg"></i> Readings
 
 Bayes’ Rule is very standard in statistics, and so there are lots of great resources explaning it and providing examples. My favorite comes from the Youtube channel 3Blue1Brown: 
