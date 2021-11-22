@@ -1,0 +1,43 @@
+---
+title: "4.6 — Sequential Bayesian Games: Screening & Signaling — Class Content"
+draft: false
+linktitle: "4.6 — Sequential Bayesian Games: Screening & Signaling"
+date: "2020-06-08"
+menu:
+  content:
+    parent: Course content
+    weight: 2
+type: docs
+output:
+  blogdown::html_page:
+    toc: true
+slides: "4.6-slides"
+---
+
+{{% alert note %}}
+*Monday November 22, 2021*
+{{% /alert %}}
+
+## <i class="fas fa-info-circle fa-lg"></i> Overview
+
+Finally, we apply what we have learned about dealing with asymmetric information to the case of sequential games. We consider two types of these games (to varying levels of detail and examples):
+
+- **Screening games** where the uninformed player moves first, typically offering several options to the informed player, hoping to get the informed player to reveal their type by *self-selecting*.
+
+- **Signaling games** where the informed player moves first, and may try to *signal* their type to the uninformed player, who must respond.
+
+The latter type have many famous examples in game theory and applications, and we will look at several examples of signaling games.
+
+## <i class="fas fa-book-reader fa-lg"></i> Readings
+
+- [<i class="fas fa-file-pdf"></i> Akerlof, 1970, “The Market for Lemons”](/readings/Akerlof-1970.pdf)
+- [<i class="fas fa-file-pdf"></i> Spence, 1973, “Job Market Signaling”](/readings/Leeson-2012.pdf)
+- [<i class="fas fa-file-pdf"></i> Leeson, 2012, “Ordeals”](/readings/Leeson-2012.pdf)
+
+## <i class="fas fa-chalkboard-teacher"></i> Slides
+
+Below, you can find the slides in two formats. Clicking the image will bring you to the html version of the slides in a new tab. Note while in going through the slides, you can type <kbd>h</kbd> to see a special list of viewing options, and type <kbd>o</kbd> for an outline view of all the slides.
+
+The lower button will allow you to download a PDF version of the slides. I suggest printing the slides beforehand and using them to take additional notes in class (*not everything* is in the slides)!
+
+`r blogdown::shortcode("slide-links")`

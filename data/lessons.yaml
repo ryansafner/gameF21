@@ -109,7 +109,9 @@ lessons:
     content: "4.5-content"
     slides: "4.5-slides"
     
-  - title: "4.6 — Sequential Bayesian Games: Screening & Signalling"
+  - title: "4.6 — Sequential Bayesian Games: Screening & Signaling"
+    content: "4.6-content"
+    slides: "4.6-slides"
 
   - title: "4.7 — Preference Falsification"
 
