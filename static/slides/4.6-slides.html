@@ -70,6 +70,10 @@ class: inverse, center, middle
 .pull-left[
 .smallest[
 - We needed Bayes’ Rule because we will use it to describe how rational players .hi-purple[update their beliefs] (about others’ type) when presented with new evidence (i.e., the other player makes a move)
+
+- Players share common (prior) belief about likelihood of encountering a player-type `\((p)\)`
+
+- .blue[Informed player] with private information (their type) will make a move, .red[uninformed player] will **update** their belief about .blue[that player]’s type
 ]
 ]
 .pull-right[
@@ -82,6 +86,7 @@ class: inverse, center, middle
 # Our Previous Bayesian Example as a Signalling Game
 
 .pull-left[
+.smallest[
 - Consider our previous game in sequential form
 
 - A .hi[signalling game] where .blue[Colin] moves first
@@ -91,7 +96,26 @@ class: inverse, center, middle
 - We could again find what conditions lead to valid .hi-purple[pooling equilibria] and .hi-purple[separating equilibria]
     - But I'd rather focus on applications of these famous models
 ]
+]
+.pull-right[
+.center[
+![](../images/colin-rowena-signalling.png)
+]
+]
 
+---
+
+# Our Previous Bayesian Example as a Signalling Game
+
+.pull-left[
+.smallest[
+- Essentially, .blue[Colin] makes a move, either .blue[Cooperate] or .blue[Defect]
+
+- .red[Rowena]’s prior beliefs about .blue[Colin]’s type `\((p)\)` get updated based on .blue[Colin]’s move
+
+- Then .red[Rowena] must decide how to respond, given her (updated) posterior belief about .blue[Colin]’s type
+]
+]
 .pull-right[
 .center[
 ![](../images/colin-rowena-signalling.png)
@@ -104,7 +128,7 @@ class: inverse, center, middle
 
 .pull-left[
 .smallest[
-- A possible solution for a sequential game with incomplete (asymmetric) information is known as an .hi[assessment] which has two parts:
+- A possible solution for a sequential game with incomplete (asymmetric) information is known as an .hi[assessment] which has **two parts**:
 
 1. A .hi-purple[behavioral strategy profile]: complete plan of action for each player about how to play at each information set
 
@@ -398,7 +422,7 @@ class: inverse, center, middle
 
 .pull-right[
 .center[
-![](../images/usedcar.jpg)
+![:scale 100%](../images/usedcar.jpg)
 ]
 ]
 
@@ -652,9 +676,9 @@ P(\text{good|offer})&amp;= q\\
 .smallest[
 - Suppose **both types of Dealer offer**
 
-- If `\(p &lt; c\)` and `\(E[Buy]&gt;0\)`, the following is a .hi-purple[PBNE]:
-  - Behavioral strategy: {.red[Buy], .blue[(Good: Offer, Bad: Offer)]}
-  - Belief system: `\(P(\text{good|offer})=q\)`
+- If `\(p &gt; c\)` and `\(E[Buy]&gt;0\)`, the following is a .hi-purple[PBNE]:
+  - **Behavioral strategy**: {.red[Buy], .blue[(Good: Offer, Bad: Offer)]}
+  - **Belief system**: `\(P(\text{good|offer})=q\)`
 
 ]
 ]
@@ -736,8 +760,8 @@ P(\text{good|offer})&amp;= q\\
 - Suppose **both types of Dealer hold**
 
 - The following is a .hi-purple[PBNE]:
-  - Behavioral strategy: {.red[Don't], .blue[(Good: Hold, Bad: Hold)]}
-  - Belief system: `\(P(\text{good|offer})=0\)`
+  - **Behavioral strategy**: {.red[Don't], .blue[(Good: Hold, Bad: Hold)]}
+  - **Belief system**: `\(P(\text{good|offer})=0\)`
 
 - A .hi[market failure]: the .hi-purple[market unravels] because of a few lemons
 ]
@@ -823,8 +847,8 @@ P(\text{good|offer})&amp;= q\\
 - Suppose **Good Dealers offer and Bad Dealers hold**
 
 - The following is a .hi-purple[PBNE]:
-  - Behavioral strategy: {.red[Buy], .blue[(Good: Offer, Bad: Hold)]}
-  - Belief system: `\(P(\text{good|offer})=0\)`
+  - **Behavioral strategy**: {.red[Buy], .blue[(Good: Offer, Bad: Hold)]}
+  - **Belief system**: `\(P(\text{good|offer})=0\)`
 
 - This is the important PBNE, we will return to it
 ]
@@ -861,7 +885,7 @@ P(\text{good|offer})&amp;= q\\
 .pull-left[
 - Suppose **Good Dealers hold and Bad Dealers offer**
 
-- Bayes’ Law would imply your beliefs must be:
+- Bayes’ Law would imply your beliefs:
 `$$P(\text{Good|Offer})=0$$`
 
 ]
@@ -881,7 +905,7 @@ P(\text{good|offer})&amp;= q\\
 .pull-left[
 - Suppose **Good Dealers hold and Bad Dealers offer**
 
-- Bayes’ Law would imply your beliefs must be:
+- Bayes’ Law would imply your beliefs:
 `$$P(\text{Good|Offer})=0$$`
 
 - .red[You Don't Buy] if any .blue[Dealer Offers]
@@ -904,7 +928,7 @@ P(\text{good|offer})&amp;= q\\
 .pull-left[
 - Suppose **Good Dealers hold and Bad Dealers offer**
 
-- Bayes’ Law would imply your beliefs must be:
+- Bayes’ Law would imply your beliefs:
 `$$P(\text{Good|Offer})=0$$`
 
 - .red[You Don't Buy] if any .blue[Dealer Offers]
@@ -943,7 +967,7 @@ P(\text{good|offer})&amp;= q\\
 # The Market for Lemons
 
 .pull-left[
-.smallest[
+.quitesmall[
 - Conditions under which the following could be PBNE:
 
 1. .hi-purple[Pooling eq. I]: Both Types of .blue[Dealer] Offer
@@ -965,7 +989,7 @@ P(\text{good|offer})&amp;= q\\
 ]
 .pull-right[
 .center[
-![](../images/usedcar.jpg)
+![:scale 100%](../images/usedcar.jpg)
 ]
 ]
 
@@ -1098,145 +1122,6 @@ class: inverse, center, middle
 ]
 
 ---
-# Spence’s Model
-
-.pull-left[
-- Suppose there are two types of workers:
-  - H: high ability, in proportion `\(q\)`
-  - L: low ability, in proportion `\(1-q\)`
-
-- Workers output (productivity) is equal to
-  - `\(H\)` if high ability
-  - `\(L\)` if low ability
-  
-]
-
-.pull-right[
-.center[
-![](../images/hardandlazyworkers.jpg)
-]
-]
-
----
-
-# Spence’s Model
-
-.pull-left[
-- Workers choose to get (high) education or no (low) education
-  - Low education costs nothing
-  - High education costs:
-      - `\(c_H\)` to high ability worker
-      - `\(c_L\)` to low ability worker
-
-- Education has **no impact** on worker's output (productivity)!
-]
-
-.pull-right[
-.center[
-![](../images/hardandlazyworkers.jpg)
-]
-]
-
----
-
-# Spence’s Model
-
-.pull-left[
-- Assume labor markets are competitive
-  - A worker's wage is equal to their expected output
-
-- .hi-turquoise[If employers could know a worker’s ability:]
-  - Wages would then be:
-    - `\(w_H=H\)` for high ability
-    - `\(w_L=L\)` for low ability
-
-- In this scenario, nobody gets any education!
-  - Best outcome for High ability workers
-
-]
-
-.pull-right[
-.center[
-![](../images/hardandlazyworkers.jpg)
-]
-]
-
----
-
-# Spence’s Model
-
-.pull-left[
-.smallest[
-- .hi-turquoise[If employers could *not* know a worker’s ability:]
-  - Wages only depend on level of education
-]
-]
-
-.pull-right[
-.center[
-![](../images/hardandlazyworkers.jpg)
-]
-]
-
----
-
-# Spence’s Model
-
-.pull-left[
-.smallest[
-- .hi-turquoise[If employers could *only* observe a worker’s education level:]
-  - Wages only depend on level of education
-]
-]
-
-.pull-right[
-.center[
-![](../images/hardandlazyworkers.jpg)
-]
-]
-
----
-
-# Spence’s Model
-
-.pull-left[
-.smallest[
-- .hi-turquoise[If employers could *only* observe a worker's education level:]
-  - Wages only depend on level of education
-
-- To offer a wage, employers must form **beliefs** about workers’ ability (given their education level)
-  - `\(p_H\)`: employer's belief that worker with high *education* is high *ability*
-  - `\(p_L\)`: employer's belief that worker with how *education* is high *ability*
-]
-]
-
-.pull-right[
-.center[
-![](../images/hardandlazyworkers.jpg)
-]
-]
-
----
-
-# Spence’s Model
-
-.pull-left[
-.smallest[
-- .hi-turquoise[If employers could *only* observe a worker's education level:]
-  - Wages only depend on level of education
-
-- To offer a wage, employers must form **beliefs** about workers’ ability (given their education level)
-
-]
-]
-
-.pull-right[
-.center[
-![](../images/hardandlazyworkers.jpg)
-]
-]
-
----
 
 # Job Market Signalling
 
@@ -1280,7 +1165,7 @@ Economics Nobel 2001
 
 .right-column[
 
-.smallest[
+.quitesmall[
 &gt; “Primary interest attaches to how the employer perceives the lottery, for it is these perceptions that determine the wages he offers to pay. We have stipulated that the employer cannot directly observe the marginal product prior to hiring. What he does observe is a plethora of personal data in the form of observable characteristics and attributes of the individual, and it is these that must ultimately determine his assessment of the lottery he is buying. (The image that the individual presents includes education, previous work, race, sex, criminal and service records, and a host of other data.) This essay is about the endogenous market process whereby the employer requires (and the individual transmits) information about the potential employee, which ultimately determines the implicit lottery involved in hiring, the offered wages, and in the end the allocation of jobs to people and people to jobs in the market,” (pp.356-357).
 
 ]
@@ -1438,11 +1323,11 @@ E[W]&amp;=2-q_1\\ \end{align*}$$`
 # Spence’s Model
 
 .pull-left[
-
+.smallest[
 - Suppose firms believe there is some amount of education `\(y^\star\)` such that if:
   - a worker has *less than* `\(y^\star\)` education, they are low ability (Group I), thus firm offers them wage of 1
   - a worker has *at least* `\(y^\star\)` education, they are high ability (Group II), thus firm offers them wage of 2
-
+]
 ]
 
 .pull-right[
@@ -1456,7 +1341,7 @@ E[W]&amp;=2-q_1\\ \end{align*}$$`
 # Spence’s Model
 
 .pull-left[
-
+.smallest[
 - Suppose firms believe there is some amount of education `\(y^\star\)` such that if:
   - a worker has *less than* `\(y^\star\)` education, they are low ability (Group I) 
   - a worker has *at least* `\(y^\star\)` education, they are high ability (Group II)
@@ -1464,6 +1349,7 @@ E[W]&amp;=2-q_1\\ \end{align*}$$`
 - Then Group I will get no education `\(y=0\)` (so long as `\(2-y^\star &lt;1)\)`, and Group II will get `\(y^\star\)` education (so long as `\(2-\frac{y^\star}{2} &gt; 1)\)`
 
 - This .hi[signalling equilibrium] occurs when `\(1&lt;y^*&lt;2\)`
+]
 ]
 
 .pull-right[

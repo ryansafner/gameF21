@@ -329,15 +329,21 @@ Rev. Thomas Bayes
 
 ---
 
-# Conditional Probability and Bayes’ Rule
+# Bayes’ Rule: Hypotheses and Evidence
 
 .pull-left[
-
+.smallest[
 - The `\(A\)`’s and `\(B\)`’s are rather difficult to remember if you don’t use this often
 
 - A lot of people prefer to think of .hi[Bayes’ rule] in terms of a hypothesis you have `\((H)\)`, and new evidence or data `\(e\)`
 
 `$$P(H|e) = \frac{P(e|H)p(H)}{P(e)}$$`
+
+- `\(P(H|e)\)`: .hi-purple[posterior ] your hypothesis is correct given the new evidence
+- `\(P(e|H)\)`: .hi-purple[likelihood] of seeing the evidence under your hypothesis
+- `\(P(H)\)`: .hi-purple[prior belief] in of your hypothesis
+- `\(P(e)\)`: .hi-purple[average likelihood] of seeing the evidence under *any/all* hypothesis
+]
 ]
 
 .pull-right[
@@ -479,10 +485,15 @@ class: inverse, center, middle
 .pull-left[
 .smallest[
 - What is the total probability of `\(+\)`?
+]
 
+.quitesmall[
 `$$\begin{align*}P(+)&amp;=P(+ \text{ and Disease})+P(+ \text{ and } \neg \text{ Disease})\\
 &amp;=P(+|\text{Disease})P(\text{Disease})+P(+|\neg \text{Disease})P(\neg \text{Disease}) \\ \end{align*}$$`
 
+]
+
+.smallest[
 - `\(P(\text{Disease}) = 0.01\)`
 - `\(P(+|\text{Disease}) =0.95\)`
 
@@ -501,10 +512,15 @@ class: inverse, center, middle
 .pull-left[
 .smallest[
 - What is the total probability of `\(+\)`?
+]
 
+.quitesmall[
 `$$\begin{align*}P(+)&amp;=P(+ \text{ and Disease})+P(+ \text{ and } \neg \text{ Disease})\\
 &amp;=P(+|\text{Disease})P(\text{Disease})+P(+|\neg \text{Disease})P(\neg \text{Disease}) \\ \end{align*}$$`
 
+]
+
+.smallest[
 - `\(P(\text{Disease}) = 0.01\)`
 - `\(P(+|\text{Disease}) =0.95\)`
 
