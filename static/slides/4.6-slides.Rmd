@@ -54,10 +54,10 @@ class: inverse
 # Outline
 
 ### [Sequential Bayesian Games](#3)
-### [Screening Games](#18)
-### [Signaling Example I: Akerlof (1970) — The Market for Lemons](#)
-### [Signaling Example II: Spence (1973) Job-Market Signaling](#)
-
+### [Screening Games](#12)
+### [Signaling Example I: Akerlof (1970) — The Market for Lemons](#20)
+### [Signaling Example II: Spence (1973) Job-Market Signaling](#51)
+### [Signaling Example III: Leeson (2012) Ordeals](#73)
 
 ---
 
@@ -1436,6 +1436,157 @@ Economics Nobel 2001
 
 .source[Spence, A Michael, 1973, “Job Market Signaling” *Quarterly Journal of Economics* 87(3): 355-374]
 
+]
+
+---
+
+# Essence of the Signaling Model of Education
+
+.pull-left[
+- Suppose there are two types of workers:
+  - H: high ability, in proportion $q$
+  - L: low ability, in proportion $1-q$
+
+- Workers output (productivity) is equal to
+  - $H$ if high ability
+  - $L$ if low ability
+]
+
+.pull-right[
+.center[
+![](../images/hardandlazyworkers.jpg)
+]
+]
+
+---
+
+# Essence of the Signaling Model of Education
+
+.pull-left[
+- Workers choose to get (high) education or no (low) education
+  - Low education costs nothing
+  - High education costs:
+      - $c_H$ to high ability worker
+      - $c_L$ to low ability worker
+
+- Education has **no impact** on worker's output (productivity)!
+]
+
+.pull-right[
+.center[
+![](../images/hardandlazyworkers.jpg)
+]
+]
+
+---
+
+# Essence of the Signaling Model of Education
+
+.pull-left[
+- Assume labor markets are competitive
+  - A worker's wage is equal to their expected output
+
+- .hi-turquoise[If employers could know a worker’s ability:]
+  - Wages would then be:
+    - $w_H=H$ for high ability
+    - $w_L=L$ for low ability
+
+- In this scenario, nobody gets any education!
+  - Best outcome for High ability workers
+
+]
+
+.pull-right[
+.center[
+![](../images/hardandlazyworkers.jpg)
+]
+]
+
+---
+
+# Essence of the Signaling Model of Education
+
+.pull-left[
+.smallest[
+- .hi-turquoise[If employers could *only* observe a worker's education level:]
+  - Wages only depend on level of education
+
+- To offer a wage, employers must form **beliefs** about workers’ ability (given their education level)
+]
+]
+
+.pull-right[
+.center[
+![](../images/hardandlazyworkers.jpg)
+]
+]
+
+---
+
+# Essence of the Signaling Model of Education
+
+.pull-left[
+.smallest[
+- Consider the conditions for one .hi-purple[separating equilibrium] where:
+  - high-ability workers acquire (more) education
+  - low-ability workers acquire no (or less) education
+
+- Employers offer wages:
+  - $w_H=H$
+  - $w_L=L$
+
+- Employer beliefs: 
+  - $P(\text{High Ability}|\text{Education})=1$
+  - $P(\text{Low Ability}|\text{No Education})=1$
+
+]
+]
+
+.pull-right[
+.center[
+![](../images/hardandlazyworkers.jpg)
+]
+]
+
+---
+
+# Essence of the Signaling Model of Education
+
+.pull-left[
+.smallest[
+
+- High-ability workers: choose to get Education if $H-c_H>L$
+- Low-ability workers: choose to get No Education if $L>H-c_L$
+
+- Main condition: $c_H < H-L < c_L$
+
+]
+]
+
+.pull-right[
+.center[
+![](../images/hardandlazyworkers.jpg)
+]
+]
+
+---
+# Essence of the Signaling Model of Education
+
+.pull-left[
+.smallest[
+- Higher education contributes nothing to productivity, but is *more* costly for low ability workers
+    - High ability workers incur the cost of high education **just to signal they are high ability**
+    - Low ability workers cannot afford to incur the cost, and don't get high education
+
+- In signalling equilibrium, high ability workers are worse off by $c_H$
+
+]
+]
+
+.pull-right[
+.center[
+![](../images/caplaneducation.jpg)
+]
 ]
 
 ---
