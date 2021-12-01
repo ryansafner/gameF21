@@ -1876,7 +1876,7 @@ Grafen, A, 1990, “Biological signals as handicaps,” *Journal of Theoretical 
 .pull-left[
 .smallest[
 - Signaling is an **ex ante** *commitment* via a **promise**
-> “I, a stranger, am demonstrating to you before we establish a relationship that I am trustworthy”*
+> “I, a stranger, am demonstrating to you before we establish a relationship that I am trustworthy”
 
 - A *good* (credible) signal:
   - Must be costly, not free
@@ -1890,7 +1890,7 @@ Grafen, A, 1990, “Biological signals as handicaps,” *Journal of Theoretical 
 ]
 .pull-right[
 .center[
-![](../images/businesslie.png)
+![:scale 100%](../images/businesslie.png)
 ]
 ]
 
@@ -1916,7 +1916,7 @@ Grafen, A, 1990, “Biological signals as handicaps,” *Journal of Theoretical 
 
 .pull-left[
 .center[
-![](../images/marcopolo2.png)
+![:scale 80%](../images/marcopolo2.png)
 
 .smallest[
 Venetian trader Marco Polo in Yuan Dynasty dress
