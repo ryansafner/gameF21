@@ -113,22 +113,13 @@ lessons:
     content: "4.6-content"
     slides: "4.6-slides"
 
-  - title: "4.7 — Preference Falsification"
-
-  - title: '<i class="fas fa-laptop-code"></i> **Problem Set 6**'
-
-  - title: '<span class="fake-header-table">V. Further Applications </span>'
-    header: True
-
-  - title: "5.1 — Voting"
-  
-  - title: "5.2 — Auctions"
-  
-  - title: "5.3 — Bargaining"
-
-  - title: '<i class="fas fa-laptop-code"></i> **Problem Set 7**'
+  - title: "4.7 — Preference Falsification & Information Cascades"
+    content: "4.7-content"
+    slides: "4.7-slides"
+    
+  - title: '<i class="fas fa-laptop-code"></i> **Problem Set 6** (ungraded)'
 
   - title: '<i class="fas fa-laptop-code"></i> **Term Paper** Due Mon Dec 6'
     assignment: "term-paper"
 
-  - title: '<i class="fas fa-star"></i> **Final Exam** week of May 16'
+  - title: '<i class="fas fa-star"></i> **Final Exam** Fri Dec 10'

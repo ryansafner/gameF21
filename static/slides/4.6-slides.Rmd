@@ -1815,3 +1815,91 @@ Peter Leeson
 .center[
 <iframe width="980" height="550" src="https://www.youtube.com/embed/rN7pkFNEg5c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 ]
+
+---
+
+class: inverse, center, middle
+
+# Signaling Takeaways
+
+---
+
+# Signalling in Biology
+
+.pull-left[
+
+- The peacock's famous tail is a quintessential example
+
+- Why do we observe traits in species that *reduce* fitness?
+  - Because they are costly signals!
+
+- .hi-purple[Handicap Principle]: reliable signals **must be costly** to the signaler such that it is prohibitively costly for a weaker individual
+
+.source[Zahavi, A, 1975, “Mate selection - a selection for a handicap,” *Journal of Theoretical Biology*
+
+Grafen, A, 1990, “Biological signals as handicaps,” *Journal of Theoretical Biology*]
+]
+
+.pull-right[
+.center[
+![](../images/peacockandpeahen.jpg)
+]
+]
+
+---
+
+# Sustaining Cooperation: Signaling vs. Reputation
+
+.pull-left[
+
+- (Credible) signals and reputation both encourage cooperation, but via different mechanisms
+
+- Reputation is an **ex post** enforcement mechanism for cooperation
+> “If you cheat, then I will sever our existing relationship in the future and tell all my friends not to trust you”
+  - .hi-purple[Folk theorem] requires repeat interaction and high discount rates
+  - Limited to your social network, where you can spread the word]
+
+.pull-right[
+.center[
+![](../images/feedback.png)
+]
+]
+
+---
+
+# Sustaining Cooperation: Signaling vs. Reputation
+
+.pull-left[
+
+- Signaling is an **ex ante** *commitment*
+>“I, a stranger, am demonstrating to you before we establish a relationship that I am trustworthy”*
+
+- A *good* (credible) signal:
+  - Must be costly, not free
+  - But more costly for “bad” type than “good” type
+    
+- A *bad* (non-credible) signal: 
+  - May be free
+  - Or may have same cost for all types 
+
+.pull-right[
+.center[
+![](../images/businesslie.png)
+]
+]
+
+---
+
+# Sustaining Cooperation: Signaling vs. Reputation
+
+.pull-left[
+.center[
+![](../images/engagementring.png)
+]
+]
+
+.pull-right[
+.center[
+![](../images/bankmarblefloor.jpg)
+]
+]
