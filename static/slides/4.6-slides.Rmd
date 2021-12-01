@@ -1916,7 +1916,7 @@ Grafen, A, 1990, “Biological signals as handicaps,” *Journal of Theoretical 
 
 .pull-left[
 .center[
-![:scale 80%](../images/marcopolo2.png)
+![:scale 60%](../images/marcopolo2.png)
 
 .smallest[
 Venetian trader Marco Polo in Yuan Dynasty dress
