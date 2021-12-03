@@ -27,9 +27,9 @@ Today we look at how game theory can be used in research, with some examples fro
 
 ## Recommended/Primary Sources
 
-- [<i class="fas fa-file-pdf"></i> Safner (2021), "Kickstart My Art: Are Intellectual Property and Crowdfunding Complements or Substitutes?"](/readings/Sanfer-2021b.pdf)
-- [<i class="fas fa-file-pdf"></i> Safner (2021), "Pirate Thy Neighbor: The Protectionist Roots of International Copyright Recognition in the United States"](/readings/Sanfer-2021a.pdf)
-- [<i class="fas fa-file-pdf"></i> Safner (2021), "Honor Among Thieves: How 19th Century American Pirate Publishers Simulated Copyright Protection"](/readings/Sanfer-2021c.pdf)
+- [<i class="fas fa-file-pdf"></i> Safner (2021), "Kickstart My Art: Are Intellectual Property and Crowdfunding Complements or Substitutes?"](/readings/Safner-2021b.pdf)
+- [<i class="fas fa-file-pdf"></i> Safner (2021), "Pirate Thy Neighbor: The Protectionist Roots of International Copyright Recognition in the United States"](/readings/Safner-2021a.pdf)
+- [<i class="fas fa-file-pdf"></i> Safner (2021), "Honor Among Thieves: How 19th Century American Pirate Publishers Simulated Copyright Protection"](/readings/Safner-2021c.pdf)
 
 ## <i class="fas fa-chalkboard-teacher"></i> Slides
 
