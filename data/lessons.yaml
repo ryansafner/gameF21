@@ -118,6 +118,7 @@ lessons:
     slides: "4.7-slides"
     
   - title: '<i class="fas fa-laptop-code"></i> **Problem Set 6** (ungraded)'
+    assignment: "06-problem-set"
 
   - title: '<i class="fas fa-laptop-code"></i> **Term Paper** Due Mon Dec 6'
     assignment: "term-paper"
