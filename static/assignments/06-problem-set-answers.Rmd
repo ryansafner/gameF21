@@ -155,7 +155,7 @@ We now consider <span style=color:red;>Local</span>'s expected payoff of <span s
 
 $$E[\color{red}{Fight}]=\color{red}{2}(0.5)+\color{red}{-1}(0.5)=\color{red}{1.5}$$
 
-$$E[\color{red}{Ignore}]=\color{red}{0}(0.5)+\coloor{red}{0}(0.5)=\color{red}{0}$$
+$$E[\color{red}{Ignore}]=\color{red}{0}(0.5)+\color{red}{0}(0.5)=\color{red}{0}$$
 
 <span style=color:red;>Local</span> gets a higher expected payoff from <span style=color:red;>Fight</span> so that is what they will do against any <span style=color:blue;>Beer</span>-drinking <span style=color:blue;>Stranger</span>.
 
@@ -167,16 +167,103 @@ Thus, since *both* types of <span style=color:blue;>Stranger</span> would *not* 
 
 ### Part B
 
-Under what conditions (if any) can a **pooling BPNE equilibrium** exist where *both* types of <span style=color:blue;>Stranger</span> choose <span style=color:blue;>Quiche</span>?
+#### Under what conditions (if any) can a **pooling BPNE equilibrium** exist where *both* types of <span style=color:blue;>Stranger</span> choose <span style=color:blue;>Quiche</span>?
+
+If both types of <span style=color:blue;>Stranger</span> choose <span style=color:blue;>Quiche</span>, <span style=color:red;>Local</span> must believe
+$$p(\color{blue}{Tough}|\color{blue}{Quiche})=0.5$$
+
+Note that any belief is possible for $p(\color{blue}{Tough}|\color{blue}{Beer})$, since we never reach the left information set (where <span style=color:blue;>Stranger</span> has chosen <span style=color:blue;>Beer</span>)! 
+
+That is, conditional on observing the <span style=color:blue;>Stranger</span> choose <span style=color:blue;>Quiche</span>, they are 50% likely to be *tough* (because *all* types of <span style=color:blue;>Stranger</span> choose <span style=color:blue;>Quiche</span>, and 50% of <span style=color:blue;>Strangers</span> are *tough*!)
+
+We now consider <span style=color:red;>Local</span>'s expected payoff of <span style=color:red;>Fight</span> vs. <span style=color:red;>Ignore</span> a <span style=color:blue;>Quiche</span>-eating <span style=color:blue;>Stranger</span> (of unknown type). Recall we know $Prob(tough)=Prob(weak)=p=0.50$. 
+
+$$E[\color{red}{Fight}]=\color{red}{2}(0.5)+\color{red}{-1}(0.5)=\color{red}{1.5}$$
+
+$$E[\color{red}{Ignore}]=\color{red}{0}(0.5)+\color{red}{0}(0.5)=\color{red}{0}$$
+
+<span style=color:red;>Local</span> gets a higher expected payoff from <span style=color:red;>Fight</span> so that is what they will do against any <span style=color:blue;>Quiche</span>-eating <span style=color:blue;>Stranger</span>.
+
+A *weak* <span style=color:blue;>Stranger</span>, knowing if he chooses <span style=color:blue;>Quiche</span> will cause a Fight (where he earns $\color{blue}{2}$), is fine with this, since if he chose <span style=color:blue;>Beer</span>, he would earn \color{blue}{$-1$} against a fighting <span style=color:red;>Local</span>. 
+
+Here is the only slight difficulty: a *strong* <span style=color:blue;>Stranger</span>, knowing if he chooses <span style=color:blue;>Quiche</span> will cause a Fight (where he earns $\color{blue}{2}$), might actually want to switch to <span style=color:blue;>Beer</span> if <span style=color:red;>Local</span> were to <span style=color:red;>Ignore</span> (then <span style=color:blue;>Stranger</span> would earn <span style=color:blue;>3</span>)...This would upset our scenario as a possible equilibrium. For it to remain an equilibrium, <span style=color:red;>Local</span> would have to believe $p(\color{blue}{Weak}|\color{blue}{Beer})=1$, that is, any <span style=color:blue;>Beer</span>-drinker must be *weak*, and thus he would provoke a Fight. This belief would keep a *strong* <span style=color:blue;>Stranger</span> from wanting to switch from <span style=color:blue;>Quiche</span> to <span style=color:blue;>Beer</span>.
+
+With these conditions, since *both* types of <span style=color:blue;>Stranger</span> would not want to switch to <span style=color:blue;>Beer</span>, this outcome can be sequentially rational. Thus, this **pooling PBNE** is possible under the following conditions:
+
+1. Behavioral strategy profile: {<span style=color:red;>(Beer: Fight, Quiche: Fight)</span>, <span style=color:blue;>(Tough: Quiche, Weak: Quiche)</span>}
+2. Beliefs:
+    - $p(Tough|Quiche)=0.5$
+    - $p(Weak|Beer)=1$
+
+<img src="../images/beer_quiche_game_pooling_II.png" width="750">
+
 
 ### Part C
 
-Under what conditions (if any) can a **separating BPNE equilibrium** exist where a *weak* <span style=color:blue;>Stranger</span> chooses <span style=color:blue;>Beer</span> and a *tough* <span style=color:blue;>Stranger</span> chooses <span style=color:blue;>Quiche</span>?
+#### Under what conditions (if any) can a **separating BPNE equilibrium** exist where a *weak* <span style=color:blue;>Stranger</span> chooses <span style=color:blue;>Beer</span> and a *tough* <span style=color:blue;>Stranger</span> chooses <span style=color:blue;>Quiche</span>?
+
+<img src="../images/beer_quiche_game_separating_I.png" width="750">
+
+Our assessment
+
+If only weak <span style=color:blue;>Strangers</span> choose <span style=color:blue;>Beer</span> and tough <span style=color:blue;>Strangers</span> choose <span style=color:blue;>Quiche</span>, <span style=color:red;>Local</span> must believe
+
+$$\begin{align*}
+p(\color{blue}{Tough}|\color{blue}{Quiche})&=1\\
+p(\color{blue}{Weak}|\color{blue}{Beer})&=1\\
+\end{align*}$$
+
+If that is the case, consider <span style=color:red;>Local's</span> response to observing a <span style=color:blue;>Stranger</span> choose <span style=color:blue;>Quiche</span>:
+<span style=color:red;>Local</span> would know this <span style=color:blue;>Stranger</span> is *tough*, and would thus want to <span style=color:red;>Ignore</span> and earn <span style=color:red;>0</span> over <span style=color:red;>Fight</span> (which earns him only <span style=color:red;>-1</span>).
+
+Next, consider <span style=color:red;>Local's</span> response to observing a <span style=color:blue;>Stranger</span> choose <span style=color:blue;>Beer</span>:
+<span style=color:red;>Local</span> would know this <span style=color:blue;>Stranger</span> is *weak*, and would thus want to <span style=color:red;>Fight</span> and earn <span style=color:red;>2</span> over <span style=color:red;>Ignore</span> (which earns him only <span style=color:red;>0</span>).
+
+Given these reactions, a *tough* <span style=color:blue;>Stranger</span>, knowing <span style=color:red;>Local</span> will <span style=color:red;>Ignore</span> if he orders <span style=color:blue;>Quiche</span> and <span style=color:red;>Fight</span> if he orders <span style=color:blue;>Beer</span>, prefers <span style=color:blue;>Quiche</span> which earns him <span style=color:blue;>4</span> over <span style=color:blue;>Beer</span> (where he would earn only <span style=color:blue;>1</span>).
+
+A *weak* <span style=color:blue;>Stranger</span>, knowing <span style=color:red;>Local</span> will <span style=color:red;>Ignore</span> if he orders <span style=color:blue;>Quiche</span> and <span style=color:red;>Fight</span> if he orders <span style=color:blue;>Beer</span>, actually prefers to **switch** to <span style=color:blue;>Quiche</span> which earns him <span style=color:blue;>4</span> over <span style=color:blue;>Beer</span> (where he would earn <span style=color:blue;>-1</span>).
+
+Thus, since the <span style=color:blue;>weak Stranger</span> would prefer <span style=color:blue;>Quiche</span> as well as the <span style=color:blue;>tough Stranger</span>, this candidate scenario **can not be a BPNE** since it is not sequentially rational for a *tough* <span style=color:blue;>Stranger</span> to choose <span style=color:blue;>Quiche</span>.
+
+<img src="../images/beer_quiche_game_separating_I-2.png" width="750">
+
+Actual BPNE
 
 ### Part D
 
-Under what conditions (if any) can the **separating BPNE equilibrium** exist where a *weak* <span style=color:blue;>Stranger</span> chooses <span style=color:blue;>Quiche</span> and a *tough* <span style=color:blue;>Stranger</span> chooses <span style=color:blue;>Beer</span>? 
+#### Under what conditions (if any) can the **separating BPNE equilibrium** exist where a *weak* <span style=color:blue;>Stranger</span> chooses <span style=color:blue;>Quiche</span> and a *tough* <span style=color:blue;>Stranger</span> chooses <span style=color:blue;>Beer</span>? 
+
+If only weak <span style=color:blue;>Strangers</span> choose <span style=color:blue;>Quiche</span> and tough <span style=color:blue;>Strangers</span> choose <span style=color:blue;>Beer</span>, <span style=color:red;>Local</span> must believe:
+
+$$\begin{align*}
+p(\color{blue}{Tough}|\color{blue}{Beer})&=1\\
+p(\color{blue}{Weak}|\color{blue}{Quiche})&=1\\
+\end{align*}$$
+
+If that is the case, consider <span style=color:red;>Local's</span> response to observing a <span style=color:blue;>Stranger</span> choose <span style=color:blue;>Quiche</span>: 
+<span style=color:red;>Local</span> would know this <span style=color:blue;>Stranger</span> is *weak*, and would thus want to <span style=color:red;>Fight</span> and earn <span style=color:red;>2</span> over <span style=color:blue;>Ignore</span> (which earns him only <span style=color:red;>0</span>).
+
+Next, consider <span style=color:red;>Local's</span> response to observing a <span style=color:blue;>Stranger</span> choose <span style=color:blue;>Beer</span>: 
+<span style=color:red;>Local</span> would know this <span style=color:blue;>Stranger</span> is *tough*, and would thus want to <span style=color:red;>Ignore</span> and earn <span style=color:red;>0</span> over <span style=color:red;>Fight</span> (which earns him only<span style=color:red;>-1</span>).
+
+Given these reactions, a *tough* <span style=color:blue;>Stranger</span>, knowing <span style=color:red;>Local</span> will <span style=color:red;>Fight</span> if he orders <span style=color:blue;>Quiche</span> and <span style=color:red;>Ignore</span> if he orders <span style=color:blue;>Beer</span>, prefers <span style=color:blue;>Beer</span> which earns him <span style=color:blue;>3</span> over <span style=color:blue;>Quiche</span> (where he would earn only <span style=color:blue;>2</span>).
+
+A *weak* <span style=color:blue;>Stranger</span>, knowing <span style=color:red;>Local</span> will <span style=color:red;>Fight</span> if he orders <span style=color:blue;>Quiche</span> and <span style=color:red;>Ignore</span> if he orders <span style=color:blue;>Beer</span>, prefers <span style=color:blue;>Quiche</span> which earns him <span style=color:blue;>2</span> over <span style=color:blue;>Beer</span> (where he would earn only <span style=color:blue;>1</span>). Thus, this **separating PBNE** is possible under the following conditions:
+
+1. Behavioral strategy profile: {<span style=color:red;>(Beer: Ignore, Quiche: Fight)</span>, <span style=color:blue;>(Tough: Beer, Weak: Quiche)</span>}
+2. Beliefs:
+    - $p(Tough|Beer)=1$
+    - $p(Weak|Quiche)=1$
+
+<img src="../images/beer_quiche_game_separating_II.png" width="750">
 
 ### Part E
 
-Describe why the signal sent in this game can successfully achieve a separating equilibrium.
+#### Describe why the signal sent in this game can successfully achieve a separating equilibrium.
+
+The separating equilibrium in part d — where weak strangers order quiche and tough strangers order beer — is achieved precisely since the question prompt states that:
+
+1. Ordering beer is costly (where quiche is free)
+2. Beer costs *more* to a *weak* type ($-3$) vs. a *tough* type ($-1$)
+
+Thus, while weak types may want to pretend they are tough (and discourage a fight) by ordering beer, it is too costly for them to imitate tough types since it costs them more to order a beer than it would a tough type.  
