@@ -47,7 +47,11 @@ Hint: make this a sequential game with discrete strategies by letting each firm 
 
 ## Question 3
 
-Watch the [famous Mexican standoff scene](https://www.youtube.com/watch?v=aJCSNIl2Pls) near the end of Sergio Leone's 1966 masterpiece *The Good, the Bad, and the Ugly.* This is a game of both incomplete information and strategic moves. "Blondie" (Clint Eastwood) claims to know the specific grave in a graveyard where Confederate gold is buried. After coercing Tuco (Eli Wallach) to dig for the gold (and secretly having removed the bullets from Tuco's gun, which Tuco is unaware of), they are approached by the villainous "Angel Eyes" (Lee van Cleef), who holds both men up at gunpoint to demand knowledge of where the gold is. Blondie says that he will write down the name of the grave with the buried gold on a rock, which he places equidistant from the three of them. *None of the men particularly trust one another,* and each man draws his gun. 
+Watch the famous Mexican standoff scene near the end of Sergio Leone's 1966 masterpiece *The Good, the Bad, and the Ugly* ([Link](https://www.youtube.com/watch?v=aJCSNIl2Pls)])
+
+<iframe width="980" height="550" src="https://www.youtube.com/embed/aJCSNIl2Pls" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+This is a game of both incomplete information and strategic moves. "Blondie" (Clint Eastwood) claims to know the specific grave in a graveyard where Confederate gold is buried. After coercing Tuco (Eli Wallach) to dig for the gold (and secretly having removed the bullets from Tuco's gun, which Tuco is unaware of), they are approached by the villainous "Angel Eyes" (Lee van Cleef), who holds both men up at gunpoint to demand knowledge of where the gold is. Blondie says that he will write down the name of the grave with the buried gold on a rock, which he places equidistant from the three of them. *None of the men particularly trust one another,* and each man draws his gun. 
 
 Assuming each is rational, and given each man's beliefs, whom does each man shoot, and why? How does this line up with what actually happens?
 
