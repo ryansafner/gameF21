@@ -20,6 +20,8 @@ Choose two (2) problems from Section I and three (3) conceptual essays from Sect
 
 Questions draw from course lectures, discussions, and readings, so no outside sources are required to answer sufficiently. Your answers, given the time and resources at your disposal, should be complete yet concise (e.g. 2-3 well-reasoned paragraphs with no filler, for essays). Show your work for math questions or explain as best you can to attain partial credit for wrong answers. You may discuss questions with your classmates, but you must turn in individual answers, and answers that are blatantly identical will be interpreted as cheating. 
 
+**Please do not answer more than the required number of questions.** If you do, I will only grade the first 2 from Section I and 3 from Section II.
+
 You will be graded both on your use of reasoning and game theoretic concepts, and ability (when relevant) to accurately describe the arguments in the readings. Where asked for your opinion, you will not be graded on your conclusion, only your reasoning. Where applicable, you must be able to talk with some familiarity about arguments put forth in our readings (informally, as in “According to Weingast”). You do *not* need formal citations, but it should be clear when you are referencing the readings vs. your own thinking.
 
 This exam is due to me by email no later than 8:00 PM Friday December 10. Starting at 8:01PM, 2 points will be deducted for every hour it is late.
