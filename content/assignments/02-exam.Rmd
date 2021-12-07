@@ -1,0 +1,91 @@
+---
+title: "Midterm Exam"
+draft: false
+linktitle: "Midterm Exam"
+date: "2020-06-08"
+menu:
+  assignments:
+    parent: Exams
+    weight: 1
+type: docs
+---
+
+{{% alert note %}}
+Due by email 8 PM Friday, December 10. 
+{{% /alert %}}
+
+# Instructions
+
+Choose two (2) problems from Section I and three (3) conceptual essays from Section II (5 questions in total) to answer. **Each question is worth 20 points.**
+
+Questions draw from course lectures, discussions, and readings, so no outside sources are required to answer sufficiently. Your answers, given the time and resources at your disposal, should be complete yet concise (e.g. 2-3 well-reasoned paragraphs with no filler, for essays). Show your work for math questions or explain as best you can to attain partial credit for wrong answers. You may discuss questions with your classmates, but you must turn in individual answers, and answers that are blatantly identical will be interpreted as cheating. 
+
+You will be graded both on your use of reasoning and game theoretic concepts, and ability (when relevant) to accurately describe the arguments in the readings. Where asked for your opinion, you will not be graded on your conclusion, only your reasoning. Where applicable, you must be able to talk with some familiarity about arguments put forth in our readings (informally, as in “According to Weingast”). You do *not* need formal citations, but it should be clear when you are referencing the readings vs. your own thinking.
+
+This exam is due to me by email no later than 8:00 PM Friday December 10. Starting at 8:01PM, 2 points will be deducted for every hour it is late.
+
+# Section I (Problems) — Choose Two (2)
+
+## Question 1
+
+You are a contestant on a game show and are presented with three doors. Behind one of the doors is a new car. Behind the other two doors are nothing. You are asked to pick a door. Suppose you pick **Door 1**. The host, who knows what is behind each door, chooses to open another door for you, suppose it's **Door 3**, which he reveals to be empty. The host then asks if you would like to switch to **Door 2**. Should you?
+
+## Question 2
+
+Suppose two firms, *Leader* and *Follower*, produce sequentially in a market with inverse demand:
+
+$$\begin{align*}
+p&=12-Q\\
+Q&=q_L+q_F\\
+\end{align*}$$
+
+Each firm has constant marginal costs of 0. *Leader* produces first and then *Follower,* who can observe *Leader*'s output (and *Leader* knows this). Suppose before the game, *Follower* threatens that if *Leader* does not produce the Cournot-Nash equilibrium (“Cournot”) amount, *Follower* will produce the Cournot amount during its turn. 
+
+Is this a credible threat?
+
+Hint: make this a sequential game with discrete strategies by letting each firm have a choice to produce the Cournot-Nash equilibrium amount or the Stackelberg-equilibrium amount of output. If *Leader* produces Cournot amount, *Follower*'s only option is to produce Cournot. If *Leader* produces Stackelberg, *Follower* can choose to produce either the Cournot or Stackelberg amount.
+
+## Question 3
+
+Watch the [famous Mexican standoff scene](https://www.youtube.com/watch?v=aJCSNIl2Pls) near the end of Sergio Leone's 1966 masterpiece *The Good, the Bad, and the Ugly.* This is a game of both incomplete information and strategic moves. "Blondie" (Clint Eastwood) claims to know the specific grave in a graveyard where Confederate gold is buried. After coercing Tuco (Eli Wallach) to dig for the gold (and secretly having removed the bullets from Tuco's gun, which Tuco is unaware of), they are approached by the villainous "Angel Eyes" (Lee van Cleef), who holds both men up at gunpoint to demand knowledge of where the gold is. Blondie says that he will write down the name of the grave with the buried gold on a rock, which he places equidistant from the three of them. *None of the men particularly trust one another,* and each man draws his gun. 
+
+Assuming each is rational, and given each man's beliefs, whom does each man shoot, and why? How does this line up with what actually happens?
+
+## Question 4
+
+Consider a version of the Entry game between an <span style=color:blue;>Incumbent</span> monopolist and a potential<span style=color:red;>Entrant</span>. The <span style=color:blue;>Incumbent</span> can be a nimble *low-cost* firm or a sluggish *high-cost* firm, but <span style=color:red;>Entrant</span> cannot determine <span style=color:blue;>Incumbent's</span> type. <span style=color:blue;>Incumbent</span> chooses to charge a <span style=color:blue;>Low Price</span> or a <span style=color:blue;>High Price</span>, and given this, <span style=color:red;>Entant</span> decides to <span style=color:red;>Enter</span> or <span style=color:red;>Stay Out</span>. The payoffs of the game are given in the tree below: 
+<img src="../../images/final_entry_game.png" width="750">
+
+Describe what conditions are necessary (a behavioral strategy profile and a set of beliefs) under which we get a unique separating equilibrium. What makes this a good signal?
+
+## Question 5
+
+Consider an asymmetric evolutionary Hawk-Dove game where player 1 is an **Owner** and player 2 is an **Intruder** of some resource, valued at 10, with a cost of fighting of $-20$. Individuals are randomly matched and find themselves in either position with probability $p=0.50$. Show that Maynard Smith's **"Bourgeois" strategy** $\{$if owner: play **Hawk**, if intruder: play **Dove**$\}$ is an evolutionarily stable strategy.
+
+Hints: You now have a 3x3 payoff matrix. Fill out the payoffs for each cell in the table first. When considering the Bourgeois strategy, recall 50% of the time it's playing Hawk, 50% Dove. With 3 strategies, to find ESS requires a bit more tools — for our purposes, it is sufficient for you to separately show both that (1) Bourgeois is ESS against mutant Hawks, and (2) that Bourgeois is ESS against mutant Doves. 
+
+# Section II (Conceptual Essays) — Choose Three (3)
+
+## Question 6
+
+Explain precisely how belief in superstition can, under the right conditions, accurately determine a person's innocence or guilt.
+
+## Question 7
+
+If we conceptualize human social interaction as a prisoners’ dilemma, precisely describe at least 3 different game-theoretic mechanisms, ideas, or concepts that help us sustain cooperation in the real world, and give an example of each.
+
+## Question 8
+
+In game-theoretic terms, what are the political & economic functions of constitutional rules (for example, the U.S. Constitution) in a society?
+
+## Question 9
+
+Explain both the human capital model and the signaling model explaining the effect of education on labor market outcomes. In your opinion, how much of the effect of higher education on wages in the job market do you believe is explained by signaling, and how much is explained by human capital acquisition? Why?
+
+## Question 10
+
+What idea, reading, and/or concept(s) this semester was your favorite, or you found most interesting or surprising, and why?
+
+# Section III (Bonus)
+
+Write down whether you would like **4 points** or **8 points** added to your final exam grade. If more than 4 students select **8 points**, then everyone gets **0 points** added.
