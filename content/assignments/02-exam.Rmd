@@ -11,7 +11,7 @@ type: docs
 ---
 
 {{% alert note %}}
-Due by email 8 PM Friday, December 10. 
+Due by email 8:00 PM Friday, December 10. 
 {{% /alert %}}
 
 # Instructions
@@ -47,7 +47,7 @@ Hint: make this a sequential game with discrete strategies by letting each firm 
 
 ## Question 3
 
-Watch the famous Mexican standoff scene near the end of Sergio Leone's 1966 masterpiece *The Good, the Bad, and the Ugly* ([Link](https://www.youtube.com/watch?v=aJCSNIl2Pls)])
+Watch the famous Mexican standoff scene near the end of Sergio Leone's 1966 masterpiece *The Good, the Bad, and the Ugly* ([Link](https://www.youtube.com/watch?v=aJCSNIl2Pls))
 
 <iframe width="980" height="550" src="https://www.youtube.com/embed/aJCSNIl2Pls" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -57,14 +57,16 @@ Assuming each is rational, and given each man's beliefs, who should each man sho
 
 ## Question 4
 
-Consider a version of the Entry game between an <span style=color:blue;>Incumbent</span> monopolist and a potential<span style=color:red;>Entrant</span>. The <span style=color:blue;>Incumbent</span> can be a nimble *low-cost* firm or a sluggish *high-cost* firm, but <span style=color:red;>Entrant</span> cannot determine <span style=color:blue;>Incumbent's</span> type. <span style=color:blue;>Incumbent</span> chooses to charge a <span style=color:blue;>Low Price</span> or a <span style=color:blue;>High Price</span>, and given this, <span style=color:red;>Entant</span> decides to <span style=color:red;>Enter</span> or <span style=color:red;>Stay Out</span>. The payoffs of the game are given in the tree below: 
+Consider a version of the Entry game between an <span style=color:blue;>Incumbent</span> monopolist and a potential <span style=color:red;>Entrant</span>. The <span style=color:blue;>Incumbent</span> can be a nimble *low-cost* firm or a sluggish *high-cost* firm, but <span style=color:red;>Entrant</span> cannot determine <span style=color:blue;>Incumbent's</span> type. <span style=color:blue;>Incumbent</span> chooses to charge a <span style=color:blue;>Low Price</span> or a <span style=color:blue;>High Price</span>, and given this, <span style=color:red;>Entant</span> decides to <span style=color:red;>Enter</span> or <span style=color:red;>Stay Out</span>. The payoffs of the game are given in the tree below: 
 <img src="../../images/final_entry_game.png" width="750">
 
 Describe what conditions are necessary (a behavioral strategy profile and a set of beliefs) under which we get a unique separating equilibrium. What makes this a good signal?
 
 ## Question 5
 
-Consider an asymmetric evolutionary Hawk-Dove game where player 1 is an **Owner** and player 2 is an **Intruder** of some resource, valued at 10, with a cost of fighting of $-20$. Individuals are randomly matched and find themselves in either position with probability $p=0.50$. Show that Maynard Smith's **"Bourgeois" strategy** $\{$if owner: play **Hawk**, if intruder: play **Dove**$\}$ is an evolutionarily stable strategy.
+Consider an asymmetric evolutionary Hawk-Dove game where player 1 is an **Owner** and player 2 is an **Intruder** of some resource, valued at $10$, with a cost of fighting of $-20$. Individuals randomly encounter one another and find themselves in either position with probability $p=0.50$.
+
+Show that Maynard Smith's **"Bourgeois" strategy** $\{$if owner: play **Hawk**, if intruder: play **Dove**$\}$ is an evolutionarily stable strategy.
 
 Hints: You now have a 3x3 payoff matrix. Fill out the payoffs for each cell in the table first. When considering the Bourgeois strategy, recall 50% of the time it's playing Hawk, 50% Dove. With 3 strategies, to find ESS requires a bit more tools — for our purposes, it is sufficient for you to separately show both that (1) Bourgeois is ESS against mutant Hawks, and (2) that Bourgeois is ESS against mutant Doves. 
 
