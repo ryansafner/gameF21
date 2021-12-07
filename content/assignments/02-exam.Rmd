@@ -1,12 +1,12 @@
 ---
-title: "Midterm Exam"
+title: "Final Exam"
 draft: false
-linktitle: "Midterm Exam"
+linktitle: "Final Exam"
 date: "2020-06-08"
 menu:
   assignments:
     parent: Exams
-    weight: 1
+    weight: 2
 type: docs
 ---
 
@@ -53,7 +53,7 @@ Watch the famous Mexican standoff scene near the end of Sergio Leone's 1966 mast
 
 This is a game of both incomplete information and strategic moves. "Blondie" (Clint Eastwood) claims to know the specific grave in a graveyard where Confederate gold is buried. After coercing Tuco (Eli Wallach) to dig for the gold (and secretly having removed the bullets from Tuco's gun, which Tuco is unaware of), they are approached by the villainous "Angel Eyes" (Lee van Cleef), who holds both men up at gunpoint to demand knowledge of where the gold is. Blondie says that he will write down the name of the grave with the buried gold on a rock, which he places equidistant from the three of them. *None of the men particularly trust one another,* and each man draws his gun. 
 
-Assuming each is rational, and given each man's beliefs, whom does each man shoot, and why? How does this line up with what actually happens?
+Assuming each is rational, and given each man's beliefs, who should each man shoot, and why? How does this line up with what actually happens?
 
 ## Question 4
 
